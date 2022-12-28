@@ -1,0 +1,23 @@
+<svg id="School_Magement" data-name="School Magement" xmlns="http://www.w3.org/2000/svg" width="35" height="39" viewBox="0 0 35 39">
+  <path id="Path_2525" data-name="Path 2525" d="M3.435,18.229c-.667-4.289-1-6.434.2-7.831S7,9,11.34,9H23.66C28,9,30.17,9,31.368,10.4s.864,3.542.2,7.831l-1.555,10c-.5,3.231-.754,4.847-1.877,5.809S25.374,35,22.1,35H12.9c-3.27,0-4.9,0-6.028-.962S5.493,31.46,4.991,28.229Z" fill="#65799d"/>
+  <rect id="Rectangle_1664" data-name="Rectangle 1664" width="11" height="18" rx="4" transform="translate(13)" fill="#262838"/>
+  <rect id="Rectangle_1665" data-name="Rectangle 1665" width="35" height="6" rx="2" transform="translate(0 33)" fill="#dfb66c"/>
+  <rect id="Rectangle_1666" data-name="Rectangle 1666" width="5" height="6" transform="translate(16 12)" fill="#af5555"/>
+  <path id="Path_2526" data-name="Path 2526" d="M7,22a6,6,0,0,1,6-6H23a6,6,0,0,1,6,6V33H7Z" fill="#1a2e35"/>
+  <line id="Line_458" data-name="Line 458" y2="11" transform="translate(11.25 22)" fill="none" stroke="#4a585e" stroke-width="0.5"/>
+  <line id="Line_459" data-name="Line 459" y2="11" transform="translate(25.25 22)" fill="none" stroke="#4a585e" stroke-width="0.5"/>
+  <path id="Path_2527" data-name="Path 2527" d="M18,28,13.5,16h9Z" fill="#d9d9d9"/>
+  <path id="Path_2528" data-name="Path 2528" d="M13,22.5l.5-6.5L18,28l-3-2V22.5Z" fill="#46646f"/>
+  <path id="Path_2529" data-name="Path 2529" d="M23,22.5,22.5,16,18,28l3-2V22.5Z" fill="#46646f"/>
+  <circle id="Ellipse_320" data-name="Ellipse 320" cx="0.5" cy="0.5" r="0.5" transform="translate(18 29)" fill="#d9d9d9"/>
+  <circle id="Ellipse_321" data-name="Ellipse 321" cx="0.5" cy="0.5" r="0.5" transform="translate(18 32)" fill="#d9d9d9"/>
+  <path id="Path_2530" data-name="Path 2530" d="M18,17.5,16,16h5Z" fill="#af5555"/>
+  <path id="Path_2531" data-name="Path 2531" d="M18,19.5,16.5,24,18,28l1.5-4Z" fill="#ce2e2e"/>
+  <path id="Path_2532" data-name="Path 2532" d="M18,19.5,17,18l1-.5,1,.5Z" fill="#ce2e2e"/>
+  <path id="Path_2533" data-name="Path 2533" d="M16,19V16l2,1,3-1-1,3-2-1.5Z" fill="#fff"/>
+  <rect id="Rectangle_1667" data-name="Rectangle 1667" width="9" height="12" rx="4" transform="translate(14 2)" fill="#c16c6c"/>
+  <path id="Path_2534" data-name="Path 2534" d="M13,8a1,1,0,0,1,1-1h1V9H14A1,1,0,0,1,13,8Z" fill="#c16c6c"/>
+  <path id="Path_2535" data-name="Path 2535" d="M24,8a1,1,0,0,0-1-1H22V9h1A1,1,0,0,0,24,8Z" fill="#c16c6c"/>
+  <rect id="Rectangle_1668" data-name="Rectangle 1668" width="9" height="4" rx="1" transform="translate(14 2)" fill="#262838"/>
+  <path id="Path_2536" data-name="Path 2536" d="M19,2.03c-2.909-.353-3.879,2.5-4,3.97h.727A5.608,5.608,0,0,1,19,2.03Z" fill="#65677c"/>
+</svg>

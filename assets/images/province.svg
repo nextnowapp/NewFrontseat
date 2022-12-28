@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_571" data-name="Rectangle 571" width="16" height="16" rx="2" transform="translate(47 410)" fill="#222744"/>
+    </clipPath>
+  </defs>
+  <g id="Group_989" data-name="Group 989" transform="translate(-11994 -7350)">
+    <rect id="Rectangle_570" data-name="Rectangle 570" width="16" height="16" rx="4" transform="translate(11994 7350)" fill="#222744"/>
+    <g id="Mask_Group_38" data-name="Mask Group 38" transform="translate(11947 6940)" clip-path="url(#clip-path)">
+      <g id="Group_434" data-name="Group 434" transform="translate(-2.5 0.5)">
+        <line id="Line_105" data-name="Line 105" y1="12" x2="13" transform="translate(47.5 408.5)" fill="none" stroke="#fff" stroke-width="1"/>
+        <path id="Path_703" data-name="Path 703" d="M-.837,13.262,13,0" transform="translate(53.5 413.5)" fill="none" stroke="#fff" stroke-width="1"/>
+        <line id="Line_107" data-name="Line 107" x2="6" y2="6" transform="translate(60.5 419.5)" fill="none" stroke="#fff" stroke-width="1"/>
+      </g>
+    </g>
+    <g id="Mask_Group_56" data-name="Mask Group 56" transform="translate(11947 6940)" clip-path="url(#clip-path)">
+      <g id="Group_987" data-name="Group 987" transform="translate(-2.5 0.5)">
+        <line id="Line_270" data-name="Line 270" y1="12" x2="13" transform="translate(47.5 408.5)" fill="none" stroke="#fff" stroke-width="1"/>
+        <path id="Path_1807" data-name="Path 1807" d="M-.837,13.262,13,0" transform="translate(53.5 413.5)" fill="none" stroke="#fff" stroke-width="1"/>
+        <line id="Line_271" data-name="Line 271" x2="6" y2="6" transform="translate(60.5 419.5)" fill="none" stroke="#fff" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>

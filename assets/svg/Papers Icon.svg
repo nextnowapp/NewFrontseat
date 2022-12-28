@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="37" height="48" viewBox="0 0 37 48">
+  <g id="Group_632" data-name="Group 632" transform="translate(-80 -234)">
+    <rect id="Rectangle_660" data-name="Rectangle 660" width="32" height="43" rx="4" transform="translate(85 234)" fill="#bfcfe7"/>
+    <rect id="Rectangle_659" data-name="Rectangle 659" width="32" height="44" rx="4" transform="translate(83 236)" fill="#d5e0ef"/>
+    <rect id="Rectangle_658" data-name="Rectangle 658" width="32" height="44" rx="4" transform="translate(80 238)" fill="#f1f7ff"/>
+    <line id="Line_195" data-name="Line 195" x2="25" transform="translate(83.5 253.5)" fill="none" stroke="#d5e0ef" stroke-linecap="round" stroke-width="2"/>
+    <line id="Line_196" data-name="Line 196" x2="25" transform="translate(83.5 260.5)" fill="none" stroke="#d5e0ef" stroke-linecap="round" stroke-width="2"/>
+    <line id="Line_197" data-name="Line 197" x2="25" transform="translate(83.5 267.5)" fill="none" stroke="#d5e0ef" stroke-linecap="round" stroke-width="2"/>
+    <line id="Line_198" data-name="Line 198" x2="18" transform="translate(83.5 274.5)" fill="none" stroke="#d5e0ef" stroke-linecap="round" stroke-width="2"/>
+    <path id="Rectangle_661" data-name="Rectangle 661" d="M2,0H24a2,2,0,0,1,2,2V5a2,2,0,0,1-2,2H2A2,2,0,0,1,0,5V2A2,2,0,0,1,2,0Z" transform="translate(83 242)" fill="#fff" opacity="0.64"/>
+  </g>
+</svg>

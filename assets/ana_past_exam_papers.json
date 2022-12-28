@@ -1,0 +1,5294 @@
+[
+  {
+    "id": 1,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-Afrikaans-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-Afrikaans-HL-Memo-2.pdf"
+  },
+  {
+    "id": 2,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-Afrikaans-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-Afrikaans-Maths-Memo.pdf"
+  },
+  {
+    "id": 3,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-English-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-English-HL-Memo.pdf"
+  },
+  {
+    "id": 4,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-English-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-English-Maths-Memo.pdf"
+  },
+  {
+    "id": 5,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Isindebele",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-IsiNdebele-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-Isindebele-HL-Memo.pdf"
+  },
+  {
+    "id": 6,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Isixhosa",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-Isixhosa-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-Isixhosa-HL-Memo.pdf"
+  },
+  {
+    "id": 7,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-Isixhosa-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-IsiXhosa-Maths-Memo.pdf"
+  },
+  {
+    "id": 8,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Isizulu",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-IsiZulu-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-IsiZulu-HL-Memo.pdf"
+  },
+  {
+    "id": 9,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-IsiZulu-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-IsiZulu-Maths-Memo.pdf"
+  },
+  {
+    "id": 10,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Sepedi",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-Sepedi-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-Sepedi-HL-Memo.pdf"
+  },
+  {
+    "id": 11,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-Sepedi-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-Sepedi-Maths-Memo.pdf"
+  },
+  {
+    "id": 12,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Sesotho",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-Sesotho-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-Sesotho-HL-Memo.pdf"
+  },
+  {
+    "id": 13,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Setswana",
+    "language": "Setswana",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-Setswana-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-Setswana-HL-Memo.pdf"
+  },
+  {
+    "id": 14,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Setswana",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-Setswana-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-Setswana-Maths-Memo.pdf"
+  },
+  {
+    "id": 15,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Siswati",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-Siswati-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-Siswati-HL-Memo.pdf"
+  },
+  {
+    "id": 16,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-Siswati-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-Siswati-Maths-Memo.pdf"
+  },
+  {
+    "id": 17,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Tshivenda",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-Tshivenda-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-Tshivenda-HL-Memo.pdf"
+  },
+  {
+    "id": 18,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-Tshivenda-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-Tshivenda-Maths-Memo.pdf"
+  },
+  {
+    "id": 19,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Xitsonga",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-Xitsonga-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-Xitsonga-HL-Memo.pdf"
+  },
+  {
+    "id": 20,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-Xitsonga-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-Xitsonga-Maths-Memo.pdf"
+  },
+  {
+    "id": 21,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-Afrikaans-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-Afrikaans-HL-Memo.pdf"
+  },
+  {
+    "id": 22,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-Afrikaans-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-Afrikaans-Maths-Memo.pdf"
+  },
+  {
+    "id": 23,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-English-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-English-HL-Memo.pdf"
+  },
+  {
+    "id": 24,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-English-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-English-Maths-Memo.pdf"
+  },
+  {
+    "id": 25,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Isindebele",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-IsiNdebele-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-IsiNdebele-HL-Memo.pdf"
+  },
+  {
+    "id": 26,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-IsiNdebele-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-IsiNdebele-Maths-Memo.pdf"
+  },
+  {
+    "id": 27,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Isixhosa",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-Isixhosa-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-Isixhosa-Memo.pdf"
+  },
+  {
+    "id": 28,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-Isixhosa-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-IsiXhosa-Maths-Memo.pdf"
+  },
+  {
+    "id": 29,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Isizulu",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-IsiZulu-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-IsiZulu-HL-Memo.pdf"
+  },
+  {
+    "id": 30,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-IsiZulu-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-IsiZulu-Maths-Memo.pdf"
+  },
+  {
+    "id": 31,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Sepedi",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-Sepedi-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-Sepedi-HL-Memo.pdf"
+  },
+  {
+    "id": 32,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-Sepedi-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-Sepedi-Maths-Memo.pdf"
+  },
+  {
+    "id": 33,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Sesotho",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-Sesotho-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-Sesotho-HL-Memo.pdf"
+  },
+  {
+    "id": 34,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-Sesotho-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-Sesotho-Maths-Memo.pdf"
+  },
+  {
+    "id": 35,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Setswana",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-Setswana-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-Setswana-Maths-Memo.pdf"
+  },
+  {
+    "id": 36,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Siswati",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-Siswati-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-Siswati-HL-Memo.pdf"
+  },
+  {
+    "id": 37,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Tshivenda",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-Tshivenda-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-Tshivenda-HL-Memo.pdf"
+  },
+  {
+    "id": 38,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-Tshivenda-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-Tshivenda-Maths-Memo.pdf"
+  },
+  {
+    "id": 39,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Xitsonga",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-Xitsonga-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-Xitsonga-HL-Memo.pdf"
+  },
+  {
+    "id": 40,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-Xitsonga-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-Xitsonga-Maths-Memo.pdf"
+  },
+  {
+    "id": 41,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-Afrikaans-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-Afrikaans-HL-Memo.pdf"
+  },
+  {
+    "id": 42,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-Afrikaans-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-Afrikaans-Maths-Memo.pdf"
+  },
+  {
+    "id": 43,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-English-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-English-HL-Memo.pdf"
+  },
+  {
+    "id": 44,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-English-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-English-Maths-Memo.pdf"
+  },
+  {
+    "id": 45,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Isindebele",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-IsiNdebele-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-IsiNdebele-HL-Memo.pdf"
+  },
+  {
+    "id": 46,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-IsiNdebele-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-IsiNdebele-Maths-Memo.pdf"
+  },
+  {
+    "id": 47,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Isixhosa",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-Isixhosa-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-Isixhosa-Memo.pdf"
+  },
+  {
+    "id": 48,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-Isixhosa-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-IsiXhosa-Maths-Memo.pdf"
+  },
+  {
+    "id": 49,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Isizulu",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-IsiZulu-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-IsiZulu-HL-Memo.pdf"
+  },
+  {
+    "id": 50,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-IsiZulu-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-IsiZulu-Maths-Memo.pdf"
+  },
+  {
+    "id": 51,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Sepedi",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-Sepedi-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-Sepedi-HL-Memo.pdf"
+  },
+  {
+    "id": 52,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-Sepedi-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-Sepedi-Maths-Memo.pdf"
+  },
+  {
+    "id": 53,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Sesotho",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-Sesotho-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-Sesotho-HL-Memo.pdf"
+  },
+  {
+    "id": 54,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-Sesotho-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-Sesotho-Maths-Memo.pdf"
+  },
+  {
+    "id": 55,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Setswana",
+    "language": "Setswana",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-Setswana-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-Setswana-HL-Memo.pdf"
+  },
+  {
+    "id": 56,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Siswati",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-Siswati-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-Siswati-3-HL-Memo.pdf"
+  },
+  {
+    "id": 57,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-Siswati-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-Siswati-Maths-Memo.pdf"
+  },
+  {
+    "id": 58,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Tshivenda",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-Tshivenda-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-Tshivenda-HL-Memo.pdf"
+  },
+  {
+    "id": 59,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-Tshivenda-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-Tshivenda-Maths-Memo.pdf"
+  },
+  {
+    "id": 60,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Xitsonga",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-Xitsonga-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-Xitsonga-HL-Memo.pdf"
+  },
+  {
+    "id": 61,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-Xitsonga-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-Xitsonga-Maths-Memo.pdf"
+  },
+  {
+    "id": 62,
+    "year": 2012,
+    "grade": "Grade-4",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-4-Afrikaana-FAL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-4-Afrikaans-FAL-Memo.pdf"
+  },
+  {
+    "id": 63,
+    "year": 2012,
+    "grade": "Grade-4",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-4-Afrikaans-HL.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 64,
+    "year": 2012,
+    "grade": "Grade-4",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-4-English-FAL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-4-English-FAL-Memo.pdf"
+  },
+  {
+    "id": 65,
+    "year": 2012,
+    "grade": "Grade-4",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-4-English-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-4-English-HL-Memo.pdf"
+  },
+  {
+    "id": 66,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-Afrikaans-HL-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-Afrikaans-HL-Exemplar-Memo.pdf"
+  },
+  {
+    "id": 67,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-Afrikaans-Mathematics-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-Afrikaans-Mathematics-Exemplar-Memo.pdf"
+  },
+  {
+    "id": 68,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-English-HL-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-English-HL-Exemplar-Memo.pdf"
+  },
+  {
+    "id": 69,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-English-Mathematics-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-English-Mathematics-Exemplar-Memo.pdf"
+  },
+  {
+    "id": 70,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Isindebele",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-IsiNdebele-HL-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-IsiNdebele-Exemplar-Memo.pdf"
+  },
+  {
+    "id": 71,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-IsiNdebele-Mathematics-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-IsiNdebele-Mathematics-Exemplar-Memo.pdf"
+  },
+  {
+    "id": 72,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Isixhosa",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-IsiXhosa-HL-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-IsiXhosa-HL-Exemplar-Memo.pdf"
+  },
+  {
+    "id": 73,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-IsiXhosa-Mathematics-Exampler.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-IsiXhosa-Mathematics-Exemplar-Memo.pdf"
+  },
+  {
+    "id": 74,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Isizulu",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-IsiZulu-HL-Exampler.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-IsiZulu-HL-Exampler-Memo.pdf"
+  },
+  {
+    "id": 75,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-IsiZulu-Mathematics-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-IsiZulu-Maths-Exemplar-Memo.pdf"
+  },
+  {
+    "id": 76,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Sepedi",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-Sepedi-HL-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-Sepedi-HL-Exempler-Memo.pdf"
+  },
+  {
+    "id": 77,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-Sepedi-Mathematics-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-Sepedi-Mathematics-Exempler-Memo.pdf"
+  },
+  {
+    "id": 78,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Sesotho",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-Sesotho-HL-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-Sesotho-HL-Exemplar-Memo.pdf"
+  },
+  {
+    "id": 79,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-Sesotho-Mathematics-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-Sesotho-Mathematics-2013-Memo.pdf"
+  },
+  {
+    "id": 80,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Setswana",
+    "language": "Setswana",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-Setswana-HL-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-Setswana-HL-Exemplar-Memo.pdf"
+  },
+  {
+    "id": 81,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Setswana",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-Setswana-Mathematics-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-Setswana-Mathematics-Exemplar-Memo.pdf"
+  },
+  {
+    "id": 82,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Siswati",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-Siswati-HL-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-Siswati-HL-Exemplar-Memo.pdf"
+  },
+  {
+    "id": 83,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-Siswati-Mathematics-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-Siswati-Mathematics-Exemplar-Memo.pdf"
+  },
+  {
+    "id": 84,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Tshivenda",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-Tshivenda-HL-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-Tshivenda-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 85,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-Tshivenda-Mathematics-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-Tshivenda-Mathematics-Exemplar-Memo.pdf"
+  },
+  {
+    "id": 86,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Xitsonga",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-Xitsonga-HL-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-Xitsonga-HL-Exemplar-Memo.pdf"
+  },
+  {
+    "id": 87,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-Xitsonga-Mathematics-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-Xitsonga-Mathematics-Memo.pdf"
+  },
+  {
+    "id": 88,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-2-Afrikaans-HL-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-Afrikaans-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 89,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-2-English-HL-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-2-English-HL-English-Exemplar-Memo.pdf"
+  },
+  {
+    "id": 90,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-2-English-Mathematics-Exemplar.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 91,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Isindebele",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-2-IsiNdebele-HL-Examplers.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-IsiNdebele-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 92,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-2-IsiNdebele-Maths-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-IsiNdeble-Mathematics-2013-Memo.pdf"
+  },
+  {
+    "id": 93,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Isizulu",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-2-IsiZulu-HL-Exampler.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-IsiZulu-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 94,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-2-IsiZulu-Mathematics-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-2-IsiZulu-Mathematics-Exemplar-Memo.pdf"
+  },
+  {
+    "id": 95,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Sepedi",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-2-Sepedi-HL-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-Sepedi-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 96,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-2-Sepedi-Mathematics-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-2-Sepedi-Mathematics-Exemplar-Memo.pdf"
+  },
+  {
+    "id": 97,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-2-Sesotho-Mathematics-Exemplar.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 98,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Setswana",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-2-Setswana-Mathematics-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-2-Setswana-Mathematics-Exemplar-Memo.pdf"
+  },
+  {
+    "id": 99,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-2-Siswati-Mathematics-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-2-Siswati-Mathematics-Exemplar-Memo.pdf"
+  },
+  {
+    "id": 100,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Tshivenda",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-2-Tshivenda-HL-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-2-Tshivenda-HL-Exemplar-Memo.pdf"
+  },
+  {
+    "id": 101,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Xitsonga",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-2-Xitsonga-HL-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-Xitsonga-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 102,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-2-Xitsonga-Mathematics-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-2-Xitsonga-Mathematics-Exemplar-Memo.pdf"
+  },
+  {
+    "id": 103,
+    "year": 2013,
+    "grade": "Grade-3",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-3-English-HL-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-3-English-HL-Exemplar-Memo.pdf"
+  },
+  {
+    "id": 104,
+    "year": 2013,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-3-IsiNdebele-Maths-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-3-IsiNdebele-Maths-Exemplar-Memo.pdf"
+  },
+  {
+    "id": 105,
+    "year": 2013,
+    "grade": "Grade-3",
+    "subject": "Isizulu",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-3-IsiZulu-HL-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-3-IsiZulu-HL-Exemplar-Memo.pdf"
+  },
+  {
+    "id": 106,
+    "year": 2013,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-3-Sesotho-Mathematics-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-Sesotho-Mathematics-2013-Memo.pdf"
+  },
+  {
+    "id": 107,
+    "year": 2013,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-3-Tshivenda-Mathematics-Exemplar.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-3-Tshivenda-Mathematics-Exemplar-Memo.pdf"
+  },
+  {
+    "id": 108,
+    "year": 2014,
+    "grade": "Grade-1",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-Afrikaans-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-Afrikaans-HL-Memo.pdf"
+  },
+  {
+    "id": 109,
+    "year": 2014,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-Afrikaans-Mathematics.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 110,
+    "year": 2014,
+    "grade": "Grade-1",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-English-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-English-HL-Memo.pdf"
+  },
+  {
+    "id": 111,
+    "year": 2014,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-English-Mathematics.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-English-Mathematics-Memo.pdf"
+  },
+  {
+    "id": 112,
+    "year": 2014,
+    "grade": "Grade-1",
+    "subject": "Isindebele",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-Isindebele-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-IsiNdebele-HL-Memo.pdf"
+  },
+  {
+    "id": 113,
+    "year": 2014,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-IsiNdebele-Mathematics.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-IsiNdebele-Mathematics-Memo.pdf"
+  },
+  {
+    "id": 114,
+    "year": 2014,
+    "grade": "Grade-1",
+    "subject": "Isixhosa",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-IsiXhosa-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-IsiXhosa-HL-Memo.pdf"
+  },
+  {
+    "id": 115,
+    "year": 2014,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-IsiXhosa-Mathematics.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-IsiXhosa-Mathematics-Memo.pdf"
+  },
+  {
+    "id": 116,
+    "year": 2014,
+    "grade": "Grade-1",
+    "subject": "Isizulu",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-IsiZulu-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-IsiZulu-HL-Memo.pdf"
+  },
+  {
+    "id": 117,
+    "year": 2014,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-IsiZulu-Maths-2.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-IsiZulu-Mathematics-Memo.pdf"
+  },
+  {
+    "id": 118,
+    "year": 2014,
+    "grade": "Grade-1",
+    "subject": "Sepedi",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-Sepedi-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-Sepedi-HL-Memo.pdf"
+  },
+  {
+    "id": 119,
+    "year": 2014,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-Sepedi-Mathematics.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-Sepedi-Mathematics-Memo.pdf"
+  },
+  {
+    "id": 120,
+    "year": 2014,
+    "grade": "Grade-1",
+    "subject": "Sesotho",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-Sesotho-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-Sesotho-HL-Memo.pdf"
+  },
+  {
+    "id": 121,
+    "year": 2014,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-Sesotho-Mathematics.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-Sesotho-Mathematics-Memo.pdf"
+  },
+  {
+    "id": 122,
+    "year": 2014,
+    "grade": "Grade-1",
+    "subject": "Setswana",
+    "language": "Setswana",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-Setswana-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-Setswana-HL-Memo.pdf"
+  },
+  {
+    "id": 123,
+    "year": 2014,
+    "grade": "Grade-1",
+    "subject": "Siswati",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-Siswati-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-Siswati-HL-Memo.pdf"
+  },
+  {
+    "id": 124,
+    "year": 2014,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-Siswati-Mathematics.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-Siswati-Mathematics-Memo.pdf"
+  },
+  {
+    "id": 125,
+    "year": 2014,
+    "grade": "Grade-1",
+    "subject": "Tshivenda",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-TshiVenda-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-Tshivenda-HL-Memo.pdf"
+  },
+  {
+    "id": 126,
+    "year": 2014,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-TshiVenda-Mathematics.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-Tshivenda-Mathematics-Memo.pdf"
+  },
+  {
+    "id": 127,
+    "year": 2014,
+    "grade": "Grade-1",
+    "subject": "Xitsonga",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-Xitsonga-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-Xitsonga-HL-Memo.pdf"
+  },
+  {
+    "id": 128,
+    "year": 2014,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-Afrikaans-Mathematics.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-Afrikaans-Mathematics-Memo.pdf"
+  },
+  {
+    "id": 129,
+    "year": 2014,
+    "grade": "Grade-2",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-English-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-English-HL-Memo.pdf"
+  },
+  {
+    "id": 130,
+    "year": 2014,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-English-Mathematics.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-English-Mathematics-Memo.pdf"
+  },
+  {
+    "id": 131,
+    "year": 2014,
+    "grade": "Grade-2",
+    "subject": "Isindebele",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-IsiNdebele-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-isiNdebele-HL-Memo-2014.pdf"
+  },
+  {
+    "id": 132,
+    "year": 2014,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-IsiNdebele-Mathematics.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-IsiNdebele-Mathematics-Memo.pdf"
+  },
+  {
+    "id": 133,
+    "year": 2014,
+    "grade": "Grade-2",
+    "subject": "Isixhosa",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-IsiXhosa-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-IsiXhosa-HL-Memo.pdf"
+  },
+  {
+    "id": 134,
+    "year": 2014,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-IsiXhosa-Mathematics.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-IsiXhosa-Mathematics-Memo.pdf"
+  },
+  {
+    "id": 135,
+    "year": 2014,
+    "grade": "Grade-2",
+    "subject": "Isizulu",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-IsiZulu-HL-2.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-IsiZulu-HL-Memo.pdf"
+  },
+  {
+    "id": 136,
+    "year": 2014,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-IsiZulu-Mathematics.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-isiZulu-Mathematics-Memo.pdf"
+  },
+  {
+    "id": 137,
+    "year": 2014,
+    "grade": "Grade-2",
+    "subject": "Sepedi",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-Sepedi-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-Sepedi-HL-Memo.pdf"
+  },
+  {
+    "id": 138,
+    "year": 2014,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-Sepedi-Mathematics.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-Sepedi-Mathematics-Memo.pdf"
+  },
+  {
+    "id": 139,
+    "year": 2014,
+    "grade": "Grade-2",
+    "subject": "Sesotho",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-Sesotho-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-Sesotho-HL-Memo.pdf"
+  },
+  {
+    "id": 140,
+    "year": 2014,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-Sesotho-Mathematics.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-Sesotho-Mathematics-Memo.pdf"
+  },
+  {
+    "id": 141,
+    "year": 2014,
+    "grade": "Grade-2",
+    "subject": "Setswana",
+    "language": "Setswana",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-Setswana-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-Setswana-HL-Memo.pdf"
+  },
+  {
+    "id": 142,
+    "year": 2014,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Setswana",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-Setswana-Mathematics.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-Setswana-Mathematics-Memo.pdf"
+  },
+  {
+    "id": 143,
+    "year": 2014,
+    "grade": "Grade-2",
+    "subject": "Siswati",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-Siswati-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-Siswati-HL-Memo.pdf"
+  },
+  {
+    "id": 144,
+    "year": 2014,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-Siswati-Mathematics.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 145,
+    "year": 2014,
+    "grade": "Grade-2",
+    "subject": "Tshivenda",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-TshiVenda-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-Tshivenda-HL-Memo.pdf"
+  },
+  {
+    "id": 146,
+    "year": 2014,
+    "grade": "Grade-2",
+    "subject": "Xitsonga",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-Xitsonga-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-Xitsonga-HL-Memo.pdf"
+  },
+  {
+    "id": 147,
+    "year": 2014,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-Xitsonga-Mathematics.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-Xitsonga-Mathematics-Memo.pdf"
+  },
+  {
+    "id": 148,
+    "year": 2014,
+    "grade": "Grade-3",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-Afrikaans-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-Afrikaans-HL-Memo.pdf"
+  },
+  {
+    "id": 149,
+    "year": 2014,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-Afrikaans-Mathematics-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 150,
+    "year": 2014,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-English-Mathematics.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-English-Maths-Memo.pdf"
+  },
+  {
+    "id": 151,
+    "year": 2014,
+    "grade": "Grade-3",
+    "subject": "Isindebele",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-IsiNdebele-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-IsiNdebele-HL-Memo.pdf"
+  },
+  {
+    "id": 152,
+    "year": 2014,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-IsiNdebele-Mathematics.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-IsiNdebele-Maths-Memo.pdf"
+  },
+  {
+    "id": 153,
+    "year": 2014,
+    "grade": "Grade-3",
+    "subject": "Isixhosa",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-IsiXhosa-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-IsiXhosa-HL-Memo.pdf"
+  },
+  {
+    "id": 154,
+    "year": 2014,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-IsiXhosa-Mathematics.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-IsiXhosa-Maths-Memo.pdf"
+  },
+  {
+    "id": 155,
+    "year": 2014,
+    "grade": "Grade-3",
+    "subject": "Isizulu",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-IsiZulu-HL..pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-IsiZulu-HL-Memo.pdf"
+  },
+  {
+    "id": 156,
+    "year": 2014,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-IsiZulu-Mathematics.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-IsiZulu-Maths-Memo.pdf"
+  },
+  {
+    "id": 157,
+    "year": 2014,
+    "grade": "Grade-3",
+    "subject": "Sepedi",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-Sepedi-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-Sepedi-HL-Memo.pdf"
+  },
+  {
+    "id": 158,
+    "year": 2014,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-Sepedi-Mathematicst.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-Sepedi-Maths-Memo.pdf"
+  },
+  {
+    "id": 159,
+    "year": 2014,
+    "grade": "Grade-3",
+    "subject": "Sesotho",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-Sesotho-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-Sesotho-HL-Memo.pdf"
+  },
+  {
+    "id": 160,
+    "year": 2014,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-Sesotho-Mathematics.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-Sesotho-Maths-Memo.pdf"
+  },
+  {
+    "id": 161,
+    "year": 2014,
+    "grade": "Grade-3",
+    "subject": "Setswana",
+    "language": "Setswana",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-Setswana-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-Setswana-HL-Memo.pdf"
+  },
+  {
+    "id": 162,
+    "year": 2014,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Setswana",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-Setswana-Mathematics.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-Setswana-Maths-Memo.pdf"
+  },
+  {
+    "id": 163,
+    "year": 2014,
+    "grade": "Grade-3",
+    "subject": "Siswati",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-Siswati-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-Siswati-HL-Memo.pdf"
+  },
+  {
+    "id": 164,
+    "year": 2014,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-Siswati-Mathematics.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-Siswati-Maths-Memo.pdf"
+  },
+  {
+    "id": 165,
+    "year": 2014,
+    "grade": "Grade-3",
+    "subject": "Tshivenda",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-TshiVenda-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-Tshivenda-HL-Memo.pdf"
+  },
+  {
+    "id": 166,
+    "year": 2014,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-TshiVenda-Mathematics.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-Tshivenda-Maths-Memo.pdf"
+  },
+  {
+    "id": 167,
+    "year": 2014,
+    "grade": "Grade-3",
+    "subject": "Xitsonga",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-Xitsonga-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-Xitsonga-HL-Memo.pdf"
+  },
+  {
+    "id": 168,
+    "year": 2014,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-Xitsonga-Mathematics.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-Xitsonga-Maths-Memo.pdf"
+  },
+  {
+    "id": 169,
+    "year": 2014,
+    "grade": "Grade-4",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-4-Afrikaans-FAL-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-4-Afrikaans-FAL-Memo.pdf"
+  },
+  {
+    "id": 170,
+    "year": 2014,
+    "grade": "Grade-4",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-4-Afrikaans-FAL-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-4-Afrikaans-HL-Memo.pdf"
+  },
+  {
+    "id": 171,
+    "year": 2014,
+    "grade": "Grade-4",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-4-Afrikaans-HL-Assessment-Guidelines.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 172,
+    "year": 2014,
+    "grade": "Grade-4",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-4-Afrikaans-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 173,
+    "year": 2014,
+    "grade": "Grade-4",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-4-Afrikaans-Mathematics.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-4-Mathematics-Afrikaans-Memo.pdf"
+  },
+  {
+    "id": 174,
+    "year": 2014,
+    "grade": "Grade-4",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-4-English-FAL-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-4-English-FAL-Memo.pdf"
+  },
+  {
+    "id": 175,
+    "year": 2014,
+    "grade": "Grade-4",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-4-English-FAL-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-4-English-HL-Memo.pdf"
+  },
+  {
+    "id": 176,
+    "year": 2014,
+    "grade": "Grade-4",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-4-English-HL-Assessment-Guidelines.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 177,
+    "year": 2014,
+    "grade": "Grade-4",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-4-English-HL.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 178,
+    "year": 2014,
+    "grade": "Grade-4",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-4-English-Mathematics.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-4-Mathematics-English-Memo-Final.pdf"
+  },
+  {
+    "id": 179,
+    "year": 2014,
+    "grade": "Grade-5",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-5-Afrikaans-FAL-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-5-Afrikaans-FAL-Memo.pdf"
+  },
+  {
+    "id": 180,
+    "year": 2014,
+    "grade": "Grade-5",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-5-Afrikaans-FAL-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-5-Afrikaans-HL-Memo.pdf"
+  },
+  {
+    "id": 181,
+    "year": 2014,
+    "grade": "Grade-5",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-5-Afrikaans-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 182,
+    "year": 2014,
+    "grade": "Grade-5",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-5-Afrikaans-Mathematics.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-5-Mathematics-Afrikaans-Memo.pdf"
+  },
+  {
+    "id": 183,
+    "year": 2014,
+    "grade": "Grade-5",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-5-English-FAL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-5-English-FAL-Memo.pdf"
+  },
+  {
+    "id": 184,
+    "year": 2014,
+    "grade": "Grade-5",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-5-English-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-5-English-HL-Memo.pdf"
+  },
+  {
+    "id": 185,
+    "year": 2014,
+    "grade": "Grade-5",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-5-English-Mathematics.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-5-Mathematics-English-Memo.pdf"
+  },
+  {
+    "id": 186,
+    "year": 2014,
+    "grade": "Grade-6",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-6-Afrikaans-FAL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-6-Afrikaans-FAL-Memo.pdf"
+  },
+  {
+    "id": 187,
+    "year": 2014,
+    "grade": "Grade-6",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-6-Afrikaans-HL-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-6-Afrikaans-HL-Memo.pdf"
+  },
+  {
+    "id": 188,
+    "year": 2014,
+    "grade": "Grade-6",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-6-Afrikaans-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 189,
+    "year": 2014,
+    "grade": "Grade-6",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-6-Afrikaans-Mathematics.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-6-Mathematics-Afrikaans-Memo.pdf"
+  },
+  {
+    "id": 190,
+    "year": 2014,
+    "grade": "Grade-6",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-6-English-FAL-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-6-English-FAL-Memo.pdf"
+  },
+  {
+    "id": 191,
+    "year": 2014,
+    "grade": "Grade-6",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-6-English-HL-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-6-English-HL-Memo.pdf"
+  },
+  {
+    "id": 192,
+    "year": 2014,
+    "grade": "Grade-6",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-6-English-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 193,
+    "year": 2014,
+    "grade": "Grade-6",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-6-English-Mathematics.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-6-Mathematics-English-Memo.pdf"
+  },
+  {
+    "id": 194,
+    "year": 2014,
+    "grade": "Grade-6",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-6-FAL-English-Assessment-Guidelines.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 195,
+    "year": 2014,
+    "grade": "Grade-7",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-7-Afrikaans-FAL-Assessment-Guidelines.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 196,
+    "year": 2014,
+    "grade": "Grade-7",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-7-Afrikaans-HL-Assessment-Guidelines.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 197,
+    "year": 2014,
+    "grade": "Grade-8",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-8-Afrikaans-FAL-Assessment-Guidelines.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 198,
+    "year": 2014,
+    "grade": "Grade-8",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-8-Afrikaans-HL-Assessment-Guidelines.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 199,
+    "year": 2014,
+    "grade": "Grade-8",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-8-Eng-HL-Assessment-Guidelines-FINAL-docx.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 200,
+    "year": 2014,
+    "grade": "Grade-9",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-9-Afrikaans-FAL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-9-Afrikaans-FAL-Memo.pdf"
+  },
+  {
+    "id": 201,
+    "year": 2014,
+    "grade": "Grade-9",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-9-Afrikaans-HL-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-9-Afrikaans-HL-Memo.pdf"
+  },
+  {
+    "id": 202,
+    "year": 2014,
+    "grade": "Grade-9",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-9-Afrikaans-HL.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 203,
+    "year": 2014,
+    "grade": "Grade-9",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-9-Afrikaans-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-9-Mathematics-Afrikaans-Memo.pdf"
+  },
+  {
+    "id": 204,
+    "year": 2014,
+    "grade": "Grade-9",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-9-Eng-FAL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-9-English-FAL-Memo.pdf"
+  },
+  {
+    "id": 205,
+    "year": 2014,
+    "grade": "Grade-9",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-9-English-FAL-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-9-English-HL-Memo.pdf"
+  },
+  {
+    "id": 206,
+    "year": 2014,
+    "grade": "Grade-9",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-9-English-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 207,
+    "year": 2014,
+    "grade": "Grade-9",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-9-English-Mathematics.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-9-Mathematics-English-Memo.pdf"
+  },
+  {
+    "id": 208,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-1-Afrikaans-HL-Guidelines-2015.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-Afrikaans-HL-Memo-2015.pdf"
+  },
+  {
+    "id": 209,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-1-English-HL-Guidelines-2015.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-English-HL-Memo-2015.pdf"
+  },
+  {
+    "id": 210,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Isindebele",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-1-IsiNdebele-HL-Guidelines-2015.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-IsiNdebele-HL-Memo-2015.pdf"
+  },
+  {
+    "id": 211,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Isixhosa",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-1-IsiXhosa-HL-Guidelines-2015.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 212,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Isizulu",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-1-IsiZulu-HL-Guidelines-2015.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-IsiZulu-HL-Memo-2015.pdf"
+  },
+  {
+    "id": 213,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-1-Mathematics-Afrikaans-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-Mathematics-Afrikaans-Memo.pdf"
+  },
+  {
+    "id": 214,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-1-Mathematics-English-Assessment-Guideline.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-Mathematics-English-Memo.pdf"
+  },
+  {
+    "id": 215,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-1-Mathematics-IsiNdebele-Assessment-Guideline.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-Mathematics-IsiNdebele-Memo.pdf"
+  },
+  {
+    "id": 216,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-1-Mathematics-IsiXhosa-Assessment-Guideline.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-Mathematics-IsiXhosa-Memo.pdf"
+  },
+  {
+    "id": 217,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-1-Mathematics-IsiZulu-Assessment-Guideline.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-Mathematics-IsiZulu-Memo.pdf"
+  },
+  {
+    "id": 218,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-1-Mathematics-Sepedi-Assessment-Guideline.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 219,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-1-Mathematics-Sesotho-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-Mathematics-Sesotho-Memo.pdf"
+  },
+  {
+    "id": 220,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Setswana",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-1-Mathematics-Setswana-Assessment-Guideline.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-Mathematics-Setswana-Memo.pdf"
+  },
+  {
+    "id": 221,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-1-Mathematics-Siswati-Assessment-Guideline.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-Mathematics-Siswati-Memo.pdf"
+  },
+  {
+    "id": 222,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-1-Mathematics-Tshivenda-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-Mathematics-Tshivenda-Memo.pdf"
+  },
+  {
+    "id": 223,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-1-Mathematics-Xitsonga-Assessment-Guideline.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-Mathematics-Xitsonga-Memo.pdf"
+  },
+  {
+    "id": 224,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Sepedi",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-1-Sepedi-HL-Guidelines-2015.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-Sepedi-HL-Memo-2015.pdf"
+  },
+  {
+    "id": 225,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Sesotho",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-1-Sesotho-HL-Guidelines-2015.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 226,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Setswana",
+    "language": "Setswana",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-1-Setswana-HL-Guidelines-2015.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 227,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Siswati",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-1-Siswati-HL-Guidelines-2015.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-Siswati-HL-Memo-2015.pdf"
+  },
+  {
+    "id": 228,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Tshivenda",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-1-Tshivenda-HL-Guidelines-2015.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 229,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Xitsonga",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-1-Xitsonga-HL-Guidelines-2015.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 230,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-2-Afrikaans-HL-Guidelines-2015.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-Afrikaans-HL-Memo.pdf"
+  },
+  {
+    "id": 231,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-2-English-HL-Guidelines-2015.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-English-HL-Memo.pdf"
+  },
+  {
+    "id": 232,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Isixhosa",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-2-IsiXhosa-HL-Guidelines-2015.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-IsiXhosa-HL-Memo.pdf"
+  },
+  {
+    "id": 233,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Isizulu",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-2-IsiZulu-HL-Guidelines-2015.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-IsiZulu-HL-Memo.pdf"
+  },
+  {
+    "id": 234,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-2-Mathematics-Afrikaans-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-Mathematics-Afrikaans-Memo.pdf"
+  },
+  {
+    "id": 235,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-2-Mathematics-English-Assessment-Guideline.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-Mathematics-English-Memo.pdf"
+  },
+  {
+    "id": 236,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-2-Mathematics-IsiNdebele-Assessment-Guideline.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-Mathematics-IsiNdebele-Memo.pdf"
+  },
+  {
+    "id": 237,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-2-Mathematics-IsiXhosa-Assessment-Guideline.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-Mathematics-IsiXhosa-Memo.pdf"
+  },
+  {
+    "id": 238,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-2-Mathematics-IsiZulu-Assessment-Guideline.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-Mathematics-IsiZulu-Memo.pdf"
+  },
+  {
+    "id": 239,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-2-Mathematics-Sepedi-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-Mathematics-Sepedi-Memo.pdf"
+  },
+  {
+    "id": 240,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-2-Mathematics-Sesotho-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-Mathematics-Sesotho-Memo.pdf"
+  },
+  {
+    "id": 241,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Setswana",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-2-Mathematics-Setswana-Assessment-Guideline.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-Mathematics-Setswana-Memo.pdf"
+  },
+  {
+    "id": 242,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-2-Mathematics-Siswati-Assessment-Guideline.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-Mathematics-Siswati-Memo.pdf"
+  },
+  {
+    "id": 243,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-2-Mathematics-Tshivenda-Assessment-Guideline.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-Mathematics-Tshivenda-Memo.pdf"
+  },
+  {
+    "id": 244,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-2-Mathsematics-Xitsonga-Assessment-Guideline.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 245,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Sepedi",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-2-Sepedi-HL-Guidelines-2015.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-Sepedi-HL-Memo.pdf"
+  },
+  {
+    "id": 246,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Sesotho",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-2-Sesotho-HL-Guidelines-2015.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 247,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Setswana",
+    "language": "Setswana",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-2-Setswana-HL-Guidelines-2015.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-Setswana-HL-Memo.pdf"
+  },
+  {
+    "id": 248,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Siswati",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-2-Siswati-HL-Guidelines-2015.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-Siswati-HL-Memo.pdf"
+  },
+  {
+    "id": 249,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Tshivenda",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-2-Tshivenda-HL-Guidelines-2015.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 250,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Xitsonga",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-2-Xitsonga-HL-Guidelines-2015.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-Xitsonga-HL-Memo.pdf"
+  },
+  {
+    "id": 251,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-3-Afrikaans-HL-Guidelines-2015.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-Afrikaans-HL-Memo.pdf"
+  },
+  {
+    "id": 252,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-3-English-HL-Guidelines-2015.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-English-HL-Memo.pdf"
+  },
+  {
+    "id": 253,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Isindebele",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-3-IsiNdebele-HL-Guidelines-2015.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-IsiNdebele-HL-Memo.pdf"
+  },
+  {
+    "id": 254,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Isixhosa",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-3-IsiXhosa-HL-Guidelines-2015.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 255,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Isizulu",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-3-IsiZulu-HL-Guidelines-2015.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-IsiZulu-HL-Memo.pdf"
+  },
+  {
+    "id": 256,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-3-Mathematics-Afrikaans-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-Mathematics-Afrikaans-Memo.pdf"
+  },
+  {
+    "id": 257,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-3-Mathematics-English-Assessment-Guideline.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-Mathematics-English-Memo.pdf"
+  },
+  {
+    "id": 258,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-3-Mathematics-IsiNdebele-Assessment-Guideline.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-Mathematics-IsiNdebele-Memo.pdf"
+  },
+  {
+    "id": 259,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-3-Mathematics-IsiXhosa-Assessment-Guideline.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-Mathematics-IsiXhosa-Memo.pdf"
+  },
+  {
+    "id": 260,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-3-Mathematics-IsiZulu-Assessment-Guideline.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-Mathematics-IsiZulu-Memo.pdf"
+  },
+  {
+    "id": 261,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-3-Mathematics-Sepedi-Assessment-Guideline.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-Mathematics-Sepedi-Memo.pdf"
+  },
+  {
+    "id": 262,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-3-Mathematics-Sesotho-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-Mathematics-Sesotho-Memo.pdf"
+  },
+  {
+    "id": 263,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Setswana",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-3-Mathematics-Setswana-Assessment-Guideline.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-Mathematics-Setswana-Memo.pdf"
+  },
+  {
+    "id": 264,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-3-Mathematics-Siswati-Assessmment-Guideline.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-Mathematics-Siswati-Memo.pdf"
+  },
+  {
+    "id": 265,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-3-Mathematics-Tshivenda-Assessment-Guideline.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 266,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-3-Mathematics-Xitsonga-Assessment-Guideline.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-Mathematics-Xitsonga-Memo.pdf"
+  },
+  {
+    "id": 267,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Sepedi",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-3-Sepedi-HL-Guidelines-2015-doc.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-Sepedi-HL-Memo.pdf"
+  },
+  {
+    "id": 268,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Sesotho",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-3-Sesotho-HL-Guidelines-2015.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-Sesotho-HL-Memo-2.pdf"
+  },
+  {
+    "id": 269,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Setswana",
+    "language": "Setswana",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-3-Setswana-HL-Guidelines-2015.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-Setswana-HL-Memo.pdf"
+  },
+  {
+    "id": 270,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Siswati",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-3-Siswati-HL-Guidelines-2015.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-Siswati-HL-Memo.pdf"
+  },
+  {
+    "id": 271,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Tshivenda",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-3-Tshivenda-HL-Guidelines-2015.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-Tshivenda-HL-Memo.pdf"
+  },
+  {
+    "id": 272,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Xitsonga",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-3-Xitsonga-HL-Guideline-2015.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-Xitsonga-HL-Memo.pdf"
+  },
+  {
+    "id": 273,
+    "year": 2015,
+    "grade": "Grade-4",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-4-Afrikaans-FAL-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-4-Afrikaans-FAL-Memo.pdf"
+  },
+  {
+    "id": 274,
+    "year": 2015,
+    "grade": "Grade-4",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-4-Afrikaans-HL-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-4-Afrikaans-HL-Memo.pdf"
+  },
+  {
+    "id": 275,
+    "year": 2015,
+    "grade": "Grade-4",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-4-Afrikaans-Maths-Assessment-Guidelines.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 276,
+    "year": 2015,
+    "grade": "Grade-4",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-4-English-FAL-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-4-English-FAL-Memo.pdf"
+  },
+  {
+    "id": 277,
+    "year": 2015,
+    "grade": "Grade-4",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-4-English-HL-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-4-English-HL-Memo.pdf"
+  },
+  {
+    "id": 278,
+    "year": 2015,
+    "grade": "Grade-4",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-4-English-Maths-Assessment-Guidelines.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 279,
+    "year": 2015,
+    "grade": "Grade-4",
+    "subject": "Mathematics",
+    "language": "Dutch",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-4-Math-Dutch-2015.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-4-Math-Dutch-Memo-2015.pdf"
+  },
+  {
+    "id": 280,
+    "year": 2015,
+    "grade": "Grade-4",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-4-Mathematics-Test-2015K.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 281,
+    "year": 2015,
+    "grade": "Grade-5",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-5-Afrikaaans-Maths-Assessment-Guidelines.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 282,
+    "year": 2015,
+    "grade": "Grade-5",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-5-Afrikaans-FAL-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-5-Afrikaans-FAL-Memo.pdf"
+  },
+  {
+    "id": 283,
+    "year": 2015,
+    "grade": "Grade-5",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-5-Afrikaans-HL-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-5-Afrikaans-HL-Memo.pdf"
+  },
+  {
+    "id": 284,
+    "year": 2015,
+    "grade": "Grade-5",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-5-English-FAL-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-5-English-FAL-Memo.pdf"
+  },
+  {
+    "id": 285,
+    "year": 2015,
+    "grade": "Grade-5",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-5-English-HL-Assessment-Guidelins.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-5-English-HL-Memo.pdf"
+  },
+  {
+    "id": 286,
+    "year": 2015,
+    "grade": "Grade-5",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-5-English-Maths-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-5-Mathematics-Memo-2015.pdf"
+  },
+  {
+    "id": 287,
+    "year": 2015,
+    "grade": "Grade-5",
+    "subject": "Mathematics",
+    "language": "Dutch",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-5-Math-Dutch-2015.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 288,
+    "year": 2015,
+    "grade": "Grade-5",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-5-Mathematics-Test-2015.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 289,
+    "year": 2015,
+    "grade": "Grade-6",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-6-Afrikaans-FAL-Assessment-Guidleines.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 290,
+    "year": 2015,
+    "grade": "Grade-6",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-6-Afrikaans-HL-Assessment-Guidelines.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 291,
+    "year": 2015,
+    "grade": "Grade-6",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-6-Afrikaans-Maths-Assessment-Guidelines.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 292,
+    "year": 2015,
+    "grade": "Grade-6",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-6-English-FAL-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-6-English-FAL-Memo.pdf"
+  },
+  {
+    "id": 293,
+    "year": 2015,
+    "grade": "Grade-6",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-6-English-HL-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-6-English-HL-Memo.pdf"
+  },
+  {
+    "id": 294,
+    "year": 2015,
+    "grade": "Grade-6",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-6-English-Maths-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-6-Mathematics-Memo-2015.pdf"
+  },
+  {
+    "id": 295,
+    "year": 2015,
+    "grade": "Grade-6",
+    "subject": "Mathematics",
+    "language": "Dutch",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-6-Math-Dutch-2015.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-6-Math-Dutch-Memo-2015.pdf"
+  },
+  {
+    "id": 296,
+    "year": 2015,
+    "grade": "Grade-6",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-6-Mathematics-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 297,
+    "year": 2015,
+    "grade": "Grade-7",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-7-Afrikaans-FAL-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-7-Afrikaans-FAL-Memo.pdf"
+  },
+  {
+    "id": 298,
+    "year": 2015,
+    "grade": "Grade-7",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-7-Afrikaans-HL-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-7-Afrikaans-HL-Memo.pdf"
+  },
+  {
+    "id": 299,
+    "year": 2015,
+    "grade": "Grade-7",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-7-Afrikaans-Maths-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-7-Mathematics-Afrikaans-Memo.pdf"
+  },
+  {
+    "id": 300,
+    "year": 2015,
+    "grade": "Grade-7",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-7-English-FAL-Assessment-Guidelines-2015.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-7-English-FAL-Memo.pdf"
+  },
+  {
+    "id": 301,
+    "year": 2015,
+    "grade": "Grade-7",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-7-English-HL-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-7-English-HL-Memo.pdf"
+  },
+  {
+    "id": 302,
+    "year": 2015,
+    "grade": "Grade-7",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-7-English-Maths-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-7-Mathematics-English-Memo.pdf"
+  },
+  {
+    "id": 303,
+    "year": 2015,
+    "grade": "Grade-7",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-7-Mathematics-Afrikaans-Wiskunde-Toets-2015.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 304,
+    "year": 2015,
+    "grade": "Grade-7",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-7-Mathematics-Test-2015.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 305,
+    "year": 2015,
+    "grade": "Grade-8",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-8-Afrikaans-Assessment-Guideline.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 306,
+    "year": 2015,
+    "grade": "Grade-8",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-8-Afrikaans-FAL-Assessment-Guidelines.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 307,
+    "year": 2015,
+    "grade": "Grade-8",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-8-Afrikaans-HL-Assessment-guidelines-2015.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 308,
+    "year": 2015,
+    "grade": "Grade-8",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-8-English-FAL-Assessment-Guidelines.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 309,
+    "year": 2015,
+    "grade": "Grade-8",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-8-English-HL-Assessment-Guidelines.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 310,
+    "year": 2015,
+    "grade": "Grade-8",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-8-English-Maths-Assessment-Guidelines.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 311,
+    "year": 2015,
+    "grade": "Grade-9",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-9-Afrikaans-FAL-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-9-Afrikaans-FAL-Memo.pdf"
+  },
+  {
+    "id": 312,
+    "year": 2015,
+    "grade": "Grade-9",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-9-Afrikaans-HL-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-9-Afrikaans-HL-Memo.pdf"
+  },
+  {
+    "id": 313,
+    "year": 2015,
+    "grade": "Grade-9",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-9-Afrikaans-Maths-Assessment-Guideline.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-9-Mathematics-Afrikaans-Memo.pdf"
+  },
+  {
+    "id": 314,
+    "year": 2015,
+    "grade": "Grade-9",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-9-English-FAL-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-9-English-HL-Memo.pdf"
+  },
+  {
+    "id": 315,
+    "year": 2015,
+    "grade": "Grade-9",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-9-English-HL-Assessment-Guidelines.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 316,
+    "year": 2015,
+    "grade": "Grade-9",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-9-English-Maths-Assessment-Guidelines.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-9-Mathematics-English-Memo.pdf"
+  },
+  {
+    "id": 317,
+    "year": 2015,
+    "grade": "Grade-9",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-ANA-Grade-9-Mathematics-Test-2015.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 318,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-Afrikaans-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 319,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-English-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 320,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Isindebele",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-IsiNdebele-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 321,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Isixhosa",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-IsiXhosa-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 322,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Isizulu",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-IsiZulu-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 323,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-Mathematics-Afrikaans-Test-PRINT.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 324,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-Mathematics-English-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 325,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-Mathematics-IsiNdebele-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 326,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-Mathematics-IsiXhosa-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 327,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-Mathematics-IsiZuluk-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 328,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-Mathematics-Sepedi-TestK.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 329,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Setswana",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-Mathematics-SetswanaTest.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 330,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-Mathematics-Siswati-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 331,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-Mathematics-Tshivenda-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 332,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-Mathematics-Xitsonga-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 333,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Sepedi",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-Sepedi-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 334,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Sesotho",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-Sesotho-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 335,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Setswana",
+    "language": "Setswana",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-Setswana-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 336,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Tshivenda",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-Tshivenda-HL-Memo1-2015.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 337,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Tshivenda",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-Tshivenda-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 338,
+    "year": 2015,
+    "grade": "Grade-1",
+    "subject": "Xitsonga",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-1-Xitsonga-HL-Memo1-2015.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 339,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-Afrikaans-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 340,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-English-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 341,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Isindebele",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-IsiNdebele-HL-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-IsiNdebele-HL-Memo.pdf"
+  },
+  {
+    "id": 342,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Isixhosa",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-IsiXhosa-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 343,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-Mathematics-Afrikaans-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 344,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-Mathematics-English-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 345,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-Mathematics-IsiNdebele-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 346,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-Mathematics-IsiXhosa-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 347,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-Mathematics-IsiZulu-TestK.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 348,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-Mathematics-Sepedi-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 349,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-Mathematics-Sesotho-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 350,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Setswana",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-Mathematics-Setswana-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 351,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-Mathematics-Tshivenda-TestK.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 352,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-Mathematics-Xitsonga-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 353,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Sepedi",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-Sepedi-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 354,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Sesotho",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-Sesotho-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 355,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Setswana",
+    "language": "Setswana",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-Setswana-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 356,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Siswati",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-Siswati-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 357,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Tshivenda",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-Tshivenda-HL-Memo1.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 358,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Tshivenda",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-Tshivenda-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 359,
+    "year": 2015,
+    "grade": "Grade-2",
+    "subject": "Xitsonga",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-2-Xitsonga-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 360,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-Afrikaans-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 361,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-English-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 362,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Isindebele",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-isiNdebele-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 363,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Isizulu",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-IsiZulu-HLang-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 364,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-Mathematics-Afrikaans-TestK.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 365,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-Mathematics-English-TestK.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 366,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-Mathematics-IsiXhosa-TestK.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 367,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-Mathematics-IsiZulu-TestK.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 368,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-Mathematics-Sepedi-TestKK.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 369,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-Mathematics-SesothoTestK.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 370,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-Mathematics-Tshivenda-TestK.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 371,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-Mathematics-Xitsonga-TestK.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 372,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Sepedi",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-Sepedi-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 373,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Sesotho",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-Sesotho-HL-Test-2.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 374,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Setswana",
+    "language": "Setswana",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-Setswana-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 375,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Siswati",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-Siswati-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 376,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Tshivenda",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-Tshivenda-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 377,
+    "year": 2015,
+    "grade": "Grade-3",
+    "subject": "Xitsonga",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-3-Xitsonga-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 378,
+    "year": 2015,
+    "grade": "Grade-4",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-4-Afrikaans-FAL-Testk.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 379,
+    "year": 2015,
+    "grade": "Grade-4",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-4-Afrikaans-HL-Testk.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 380,
+    "year": 2015,
+    "grade": "Grade-4",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-4-English-FAL-Testk.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 381,
+    "year": 2015,
+    "grade": "Grade-4",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-4-English-HL-Testk.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 382,
+    "year": 2015,
+    "grade": "Grade-5",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-5-Afrikaans-FAL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 383,
+    "year": 2015,
+    "grade": "Grade-5",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-5-English-FAL-Testk.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 384,
+    "year": 2015,
+    "grade": "Grade-5",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-5-English-HL-TestKK.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 385,
+    "year": 2015,
+    "grade": "Grade-6",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-6-Afrikaans-FAL-TestK.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 386,
+    "year": 2015,
+    "grade": "Grade-6",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-6-English-FAL-TestK.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 387,
+    "year": 2015,
+    "grade": "Grade-6",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-6-English-HL-TestK.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 388,
+    "year": 2015,
+    "grade": "Grade-7",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-7-Afrikaans-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 389,
+    "year": 2015,
+    "grade": "Grade-7",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-7-English-FAL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 390,
+    "year": 2015,
+    "grade": "Grade-7",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-7-English-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 391,
+    "year": 2015,
+    "grade": "Grade-9",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-9-Afrikaans-FALTest.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 392,
+    "year": 2015,
+    "grade": "Grade-9",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Grade-9-English-HL-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 393,
+    "year": 2015,
+    "grade": "Grade-9",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/2015-Mathematics-Afrikaans-ANA-Grade-9-2015.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 394,
+    "year": 2014,
+    "grade": "Grade-4",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/ANA-Grade-4-Mathematics-Ass-Guidelines-ANA-2014.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 395,
+    "year": 2014,
+    "grade": "Grade-5",
+    "subject": "Mathematics",
+    "language": "Dutch",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/ANA-Grade-5-Math-Dutch-ANA-2014.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 396,
+    "year": 2014,
+    "grade": "Grade-5",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/ANA-Grade-5-Mathematics-Ass-Guidelines-ANA-2014.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 397,
+    "year": 2014,
+    "grade": "Grade-6",
+    "subject": "Mathematics",
+    "language": "Dutch",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/ANA-Grade-6-Math-Dutch-ANA-2014.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 398,
+    "year": 2014,
+    "grade": "Grade-6",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/ANA-Grade-6-Mathematics-Ass-Guidelines-ANA-2014.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 399,
+    "year": 2014,
+    "grade": "Grade-7",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/ANA-Grade-7-Eng-HL-Assessment-Guidelines-2014.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 400,
+    "year": 2014,
+    "grade": "Grade-7",
+    "subject": "Mathematics",
+    "language": "Dutch",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/ANA-Grade-7-Math-Dutch-ANA-2014.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 401,
+    "year": 2014,
+    "grade": "Grade-7",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/ANA-Grade-7-Mathematics-Ass-Guidelines-ANA-2014.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 402,
+    "year": 2014,
+    "grade": "Grade-8",
+    "subject": "Mathematics",
+    "language": "Dutch",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/ANA-Grade-8-Math-Dutch-ANA-2014.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 403,
+    "year": 2014,
+    "grade": "Grade-8",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/ANA-Grade-8-Mathematics-Assessment-Guidelines-ANA-2014.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 404,
+    "year": 2014,
+    "grade": "Grade-9",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/ANA-Grade-9-English-HL-Assessment-Guidelines-2014.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 405,
+    "year": 2014,
+    "grade": "Grade-9",
+    "subject": "Mathematics",
+    "language": "Dutch",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/ANA-Grade-9-Math-Dutch-ANA-2014.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 406,
+    "year": 2014,
+    "grade": "Grade-9",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/ANA-Grade-9-Mathematics-Assessment-Guidelines-ANA-2014.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 407,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-Afrikaans-HL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-Afrikaans-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 408,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-Afrikaans-Mathematics-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-Afrikaans-Mathematics-2013-Memo.pdf"
+  },
+  {
+    "id": 409,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-English-HL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-English-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 410,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Isindebele",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-IsiNdebele-HL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-IsiNdebele-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 411,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-IsiNdebele-Mathematics-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-IsiNdebele-Mathematics-Memo.pdf"
+  },
+  {
+    "id": 412,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Isixhosa",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-IsiXhosa-HL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-IsiXhosa-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 413,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-IsiXhosa-Mathematics-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-IsiXhosa-Mathematics-2013-Memo.pdf"
+  },
+  {
+    "id": 414,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Isizulu",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-IsiZulu-HL-2013-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 415,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-IsiZulu-Mathematics-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-IsiZulu-Mathematics-2013-Memo.pdf"
+  },
+  {
+    "id": 416,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Sepedi",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-Sepedi-HL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-Sepedi-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 417,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-Sepedi-Mathematics-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-Sepedi-Mathematics-2013-Memo.pdf"
+  },
+  {
+    "id": 418,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Sesotho",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-Sesotho-HL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-Sesotho-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 419,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-Sesotho-Mathematics-2013-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 420,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Setswana",
+    "language": "Setswana",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-Setswana-HL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-Setswana-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 421,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Setswana",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-Setswana-Mathematics-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-Setswana-Mathematics-2013-Memo.pdf"
+  },
+  {
+    "id": 422,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Siswati",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-SiSwati-HL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-Siswati-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 423,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-SiSwati-Mathematics-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-SiSwati-Mathematics-2013-Memo.pdf"
+  },
+  {
+    "id": 424,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Tshivenda",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-Tshivenda-HL-2013-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 425,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-Tshivenda-Mathematics-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-Tshivenda-Mathematics-2013-Memo.pdf"
+  },
+  {
+    "id": 426,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Xitsonga",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-Xitsonga-HL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-Xitsonga-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 427,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-Xitsonga-Mathematics-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-1-Xitsonga-Mathematics-2013-Memo.pdf"
+  },
+  {
+    "id": 428,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-Afrikaans-HL-2013-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 429,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-Afrikaans-Mathematics-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-2-Afrikaans-Mathematics-Exemplar-Memo.pdf"
+  },
+  {
+    "id": 430,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-English-HL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-English-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 431,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-English-Mathematics-2013-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 432,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Isindebele",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-IsiNdebele-HL-2013-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 433,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Isixhosa",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-IsiXhosa-HL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-IsiXhosa-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 434,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-IsiXhosa-Mathematics-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-2-IsiXhosa-Mathematics-Exampler-Memo.pdf"
+  },
+  {
+    "id": 435,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Isizulu",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-IsiZulu-HL-2013-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 436,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Sepedi",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-Sepedi-HL-2013-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 437,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-Sepedi-Mathematics-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-Sepedi-Mathematics-2013-Memo.pdf"
+  },
+  {
+    "id": 438,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Sesotho",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-Sesotho-HL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-Sesotho-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 439,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-Sesotho-Mathematics-2013Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 440,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Setswana",
+    "language": "Setswana",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-Setswana-HL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-2-Setswana-HL-Exemplar-Memo.pdf"
+  },
+  {
+    "id": 441,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Siswati",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-Siswati-HL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-2-Siswati-HL-Exemplar-Memo.pdf"
+  },
+  {
+    "id": 442,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-Siswati-Mathematics-2013-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 443,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Tshivenda",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-Tshivenda-HL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-Tshivenda-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 444,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-Tshivenda-Mathematics-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-2-Tshivenda-Mathematics-Exemplar-Memo.pdf"
+  },
+  {
+    "id": 445,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Xitsonga",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-Xitsonga-HL-2013-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 446,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-Xitsonga-Mathematics-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-Xitsonga-Mathematics-2013-Memo.pdf"
+  },
+  {
+    "id": 447,
+    "year": 2013,
+    "grade": "Grade-3",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-Afrikaans-HL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-Afrikaans-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 448,
+    "year": 2013,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-Afrikaans-Mathematics-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-3-Afrikaans-Mathematics-Exemplar-Memo.pdf"
+  },
+  {
+    "id": 449,
+    "year": 2013,
+    "grade": "Grade-3",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-English-HL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-English-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 450,
+    "year": 2013,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-English-Mathematics-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-English-Mathematics-2013-Memo.pdf"
+  },
+  {
+    "id": 451,
+    "year": 2013,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-IsiNdebele-Mathematics-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-IsiNdebele-Mathematics-2013-Memo.pdf"
+  },
+  {
+    "id": 452,
+    "year": 2013,
+    "grade": "Grade-3",
+    "subject": "Isixhosa",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-IsiXhosa-HL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-IsiXhosa-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 453,
+    "year": 2013,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-IsiXhosa-Mathematics-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-IsiXhosa-Mathematics-2013-Memo.pdf"
+  },
+  {
+    "id": 454,
+    "year": 2013,
+    "grade": "Grade-3",
+    "subject": "Isizulu",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-IsiZulu-HL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-IsiZulu-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 455,
+    "year": 2013,
+    "grade": "Grade-3",
+    "subject": "Sepedi",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-Sepedi-HL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-Sepedi-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 456,
+    "year": 2013,
+    "grade": "Grade-3",
+    "subject": "Sesotho",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-Sesotho-HL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-Sesotho-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 457,
+    "year": 2013,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-Sesotho-Mathematics-2013-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 458,
+    "year": 2013,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Setswana",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-Setswana-Mathematics-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-Setswana-Mathematics-2013-Memo.pdf"
+  },
+  {
+    "id": 459,
+    "year": 2013,
+    "grade": "Grade-3",
+    "subject": "Siswati",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-Siswati-HL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-Siswati-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 460,
+    "year": 2013,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-Siswati-Mathematics-2013-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 461,
+    "year": 2013,
+    "grade": "Grade-3",
+    "subject": "Tshivenda",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-Tshivenda-HL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-Tshivenda-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 462,
+    "year": 2013,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-Tshivenda-Mathematics-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-Tshivenda-Mathematics-2013-Memo.pdf"
+  },
+  {
+    "id": 463,
+    "year": 2013,
+    "grade": "Grade-3",
+    "subject": "Xitsonga",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-Xitsonga-HL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-Xitsonga-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 464,
+    "year": 2013,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-Xitsonga-Mathematics-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-Xitsonga-Mathematics-2013-Memo.pdf"
+  },
+  {
+    "id": 465,
+    "year": 2013,
+    "grade": "Grade-4",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-4-Afrikaans-FAL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-4-Afrikaans-FAL-2013-Memo.pdf"
+  },
+  {
+    "id": 466,
+    "year": 2013,
+    "grade": "Grade-4",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-4-Afrikaans-HL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-4-Afrikaans-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 467,
+    "year": 2013,
+    "grade": "Grade-4",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-4-English-FAL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-4-English-FAL-2013-Memo.pdf"
+  },
+  {
+    "id": 468,
+    "year": 2013,
+    "grade": "Grade-4",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-4-English-HL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-4-English-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 469,
+    "year": 2013,
+    "grade": "Grade-4",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-4-Mathematics-2013-Eng.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-4-Mathematics-2013-Eng-Memo.pdf"
+  },
+  {
+    "id": 470,
+    "year": 2013,
+    "grade": "Grade-4",
+    "subject": "Mathematics",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-4-Mathematics-2013-IsiXhosa.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-4-Mathematics-2013-IsiXhosa-Memo.pdf"
+  },
+  {
+    "id": 471,
+    "year": 2013,
+    "grade": "Grade-5",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-5-Afrikaans-FAL-2013-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 472,
+    "year": 2013,
+    "grade": "Grade-5",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-5-English-FAL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-5-English-FAL-2013-Memo.pdf"
+  },
+  {
+    "id": 473,
+    "year": 2013,
+    "grade": "Grade-5",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-5-English-HL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-5-English-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 474,
+    "year": 2013,
+    "grade": "Grade-5",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-5-Mathematics-2013-Test-Afrikaans.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-5-Mathematics-2013-Memo-Afrikaans.pdf"
+  },
+  {
+    "id": 475,
+    "year": 2013,
+    "grade": "Grade-5",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-5-Mathematics-2013-Test-Eng.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-5-Mathematics-2013-Memo-Eng.pdf"
+  },
+  {
+    "id": 476,
+    "year": 2013,
+    "grade": "Grade-5",
+    "subject": "Mathematics",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-5-Mathematics-2013-Test-IsiXhosa.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-5-Mathematics-2013-Memo-IsiXhosa.pdf"
+  },
+  {
+    "id": 477,
+    "year": 2013,
+    "grade": "Grade-6",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-6-Afrikaans-FAL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-6-Afrikaans-FAL-2013-Memo.pdf"
+  },
+  {
+    "id": 478,
+    "year": 2012,
+    "grade": "Grade-6",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-6-Afrikaans-HL-2012-Test.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 479,
+    "year": 2013,
+    "grade": "Grade-6",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-6-English-FAL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-6-English-FAL-2013-Memo.pdf"
+  },
+  {
+    "id": 480,
+    "year": 2013,
+    "grade": "Grade-6",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-6-English-HL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-6-English-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 481,
+    "year": 2013,
+    "grade": "Grade-6",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-6-Mathematics-2013-Test-Afrikaans.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-6-Mathematics-2013-Memo-Afrikaans.pdf"
+  },
+  {
+    "id": 482,
+    "year": 2013,
+    "grade": "Grade-6",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-6-Mathematics-2013-Test-Eng.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-6-Mathematics-2013-Memo-Eng.pdf"
+  },
+  {
+    "id": 483,
+    "year": 2013,
+    "grade": "Grade-9",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-9-Afrikaans-FAL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-9-Afrikaans-FAL-2013-Memo.pdf"
+  },
+  {
+    "id": 484,
+    "year": 2013,
+    "grade": "Grade-9",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-9-Afrikaans-HL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-9-Afrikaans-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 485,
+    "year": 2013,
+    "grade": "Grade-9",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-9-English-FAL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-9-English-FAL-2013-Memo.pdf"
+  },
+  {
+    "id": 486,
+    "year": 2013,
+    "grade": "Grade-9",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-9-English-HL-2013-Test.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-9-English-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 487,
+    "year": 2013,
+    "grade": "Grade-9",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-9-Mathematics-2013-Afrikaans.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-9-Mathematics-2013-Memo-Afrikaans.pdf"
+  },
+  {
+    "id": 488,
+    "year": 2013,
+    "grade": "Grade-9",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-9-Mathematics-2013-Eng.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-9-Mathematics-2013-Memo-Eng.pdf"
+  },
+  {
+    "id": 489,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-Afrikaans-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-Afrikaans-HL-Memo.pdf"
+  },
+  {
+    "id": 490,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-Afrikaans-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-Afrikaans-Maths-Memo.pdf"
+  },
+  {
+    "id": 491,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-English-HL.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 492,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-English-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-English-Maths-Memo.pdf"
+  },
+  {
+    "id": 493,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Isindebele",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-IsiNdebele-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-IsiNdebele-HL-Memo.pdf"
+  },
+  {
+    "id": 494,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-IsiNdebele-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-IsiNdebele-Maths-Memo.pdf"
+  },
+  {
+    "id": 495,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Isixhosa",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-Isixhosa-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-Isixhosa-HL-Memo.pdf"
+  },
+  {
+    "id": 496,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-IsiXhosa-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-IsiXhosa-Maths-Memo.pdf"
+  },
+  {
+    "id": 497,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Isizulu",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-IsiZulu-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-IsiZulu-HL-Memo.pdf"
+  },
+  {
+    "id": 498,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-IsiZulu-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-IsiZulu-Maths-Memo.pdf"
+  },
+  {
+    "id": 499,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Sepedi",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-Sepedi-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-Sepedi-HL-Memo.pdf"
+  },
+  {
+    "id": 500,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Sesotho",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-Sesotho-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-Sesotho-HL-Memo.pdf"
+  },
+  {
+    "id": 501,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-Sesotho-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-1-Sesotho-Maths-Memo.pdf"
+  },
+  {
+    "id": 502,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Siswati",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-Siswati-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-Siswati-HL-Memo.pdf"
+  },
+  {
+    "id": 503,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-Siswati-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-Siswati-Maths-Memo.pdf"
+  },
+  {
+    "id": 504,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Tshivenda",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-Tshivenda-HL.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 505,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-Tshivenda-Maths.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 506,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Xitsonga",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-Xitsonga-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-Xitsonga-HL-Memo.pdf"
+  },
+  {
+    "id": 507,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-Xitsonga-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-Xitsonga-Maths-Memo.pdf"
+  },
+  {
+    "id": 508,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-Afrikaans-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-Afrikaans-HL-Memo.pdf"
+  },
+  {
+    "id": 509,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-Afrikaans-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-Afrikaans-Maths-Memo.pdf"
+  },
+  {
+    "id": 510,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-English-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-English-HL-Memo.pdf"
+  },
+  {
+    "id": 511,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-English-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-English-Maths-Memo.pdf"
+  },
+  {
+    "id": 512,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-IsiNdebele-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-IsiNdebele-Maths-Memo.pdf"
+  },
+  {
+    "id": 513,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Isindebele",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-IsiNdebele.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-IsiNdebele-Memo.pdf"
+  },
+  {
+    "id": 514,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Isizulu",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-IsiZulu-HL.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 515,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-IsiZulu-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-IsiZulu-Maths-Memo.pdf"
+  },
+  {
+    "id": 516,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Sepedi",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-Sepedi-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-Sepedi-HL-Memo.pdf"
+  },
+  {
+    "id": 517,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-Sepedi-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-Sepedi-Maths-Memo.pdf"
+  },
+  {
+    "id": 518,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Sesotho",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-Sesotho-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-Sesotho-HL-Memo.pdf"
+  },
+  {
+    "id": 519,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Setswana",
+    "language": "Setswana",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-Setswana-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-Setswana-HL-Memo.pdf"
+  },
+  {
+    "id": 520,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Setswana",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-Setswana-Maths.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 521,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-Siswati-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-2-Siswati-Maths-Memo.pdf"
+  },
+  {
+    "id": 522,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Tshivenda",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-Tshivenda-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-Tshivenda-HL-Memo.pdf"
+  },
+  {
+    "id": 523,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-Tshivenda-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-Tshivenda-Maths-Memo.pdf"
+  },
+  {
+    "id": 524,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Xitsonga",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-Xitsonga-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-Xitsonga-HL-Memo.pdf"
+  },
+  {
+    "id": 525,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-Afrikaans-HL.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 526,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-Afrikaans-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-Afrikaans-Maths-Memo.pdf"
+  },
+  {
+    "id": 527,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-English-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-English-HL-Memo.pdf"
+  },
+  {
+    "id": 528,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-English-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-English-Maths-Memo.pdf"
+  },
+  {
+    "id": 529,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Isindebele",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-IsiNdebele-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-Isindebele-Maths-Memo.pdf"
+  },
+  {
+    "id": 530,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Isixhosa",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-Isixhosa-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-Isixhosa-HL-Memo.pdf"
+  },
+  {
+    "id": 531,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Isixhosa",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-Isixhosa-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-Isixhosa-Maths-Memo.pdf"
+  },
+  {
+    "id": 532,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Isizulu",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-IsiZulu-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-IsiZulu-HL-Memo.pdf"
+  },
+  {
+    "id": 533,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Isizulu",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-IsiZulu-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-IsiZulu-Maths-Memo.pdf"
+  },
+  {
+    "id": 534,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Sepedi",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-Sepedi-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-Sepedi-Maths-Memo.pdf"
+  },
+  {
+    "id": 535,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Sesotho",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-Sesotho-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-Sesotho-HL-Memo.pdf"
+  },
+  {
+    "id": 536,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Sesotho",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-Sesotho-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-Sesotho-Maths-Memo.pdf"
+  },
+  {
+    "id": 537,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Setswana",
+    "language": "Setswana",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-Setswana-HL.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 538,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Setswana",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-Setswana-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-3-Setswana-Maths-Memo.pdf"
+  },
+  {
+    "id": 539,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Siswati",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-Siswati-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-Siswati-HL-Memo.pdf"
+  },
+  {
+    "id": 540,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Siswati",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-Siswati-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-Siswati-Maths-Memo.pdf"
+  },
+  {
+    "id": 541,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Tshivenda",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-Tshivenda-HL.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 542,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Tshivenda",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-Tshivenda-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-Tshivenda-Maths-Memo.pdf"
+  },
+  {
+    "id": 543,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Xitsonga",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-Xitsonga-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-Xitsonga-HL-Memo.pdf"
+  },
+  {
+    "id": 544,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Xitsonga",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-Xitsonga-Maths.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-Xitsonga-Maths-Memo.pdf"
+  },
+  {
+    "id": 545,
+    "year": 2012,
+    "grade": "Grade-4",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-4-FAL-English.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-4-FAL-English-Memo.pdf"
+  },
+  {
+    "id": 546,
+    "year": 2012,
+    "grade": "Grade-4",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-4-HL-English.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-4-HL-English-Memo.pdf"
+  },
+  {
+    "id": 547,
+    "year": 2012,
+    "grade": "Grade-5",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-5-Afrikaans-FAL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-5-Afrikaans-HL-Memo.pdf"
+  },
+  {
+    "id": 548,
+    "year": 2012,
+    "grade": "Grade-5",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-5-Afrikaans-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-5-Afrikaans-FAL-Memo.pdf"
+  },
+  {
+    "id": 549,
+    "year": 2012,
+    "grade": "Grade-5",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-5-English-FAL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-5-English-FAL-Memo.pdf"
+  },
+  {
+    "id": 550,
+    "year": 2012,
+    "grade": "Grade-5",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-5-English-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2012-ANA-Grade-5-English-HL-Memo.pdf"
+  },
+  {
+    "id": 551,
+    "year": 2012,
+    "grade": "Grade-9",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-9-Afrikaans-FAL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-9-Afrikaans-HL-Memo.pdf"
+  },
+  {
+    "id": 552,
+    "year": 2012,
+    "grade": "Grade-9",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-9-Afrikaans-HL.pdf",
+    "memoURL": null
+  },
+  {
+    "id": 553,
+    "year": 2012,
+    "grade": "Grade-9",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-9-English-FAL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-9-English-FAL-Memo.pdf"
+  },
+  {
+    "id": 554,
+    "year": 2012,
+    "grade": "Grade-9",
+    "subject": "English",
+    "language": "English",
+    "paperURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-9-English-HL.pdf",
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-9-English-HL-Memo.pdf"
+  },
+  {
+    "id": 555,
+    "year": 2013,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "English",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2013-ANA-Grade-1-Sesetho-Mathematics-Exemplar-Memo.pdf"
+  },
+  {
+    "id": 556,
+    "year": 2014,
+    "grade": "Grade-1",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-Afrikaans-Matyhematics-Memo.pdf"
+  },
+  {
+    "id": 557,
+    "year": 2014,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Setswana",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-Setswana-Mathematics-Memo.pdf"
+  },
+  {
+    "id": 558,
+    "year": 2014,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Xitsonga",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-1-Xitsonga-Mathematics-Memo.pdf"
+  },
+  {
+    "id": 559,
+    "year": 2014,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Tshivenda",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-2-Tshivenda-Mathematics-Memo.pdf"
+  },
+  {
+    "id": 560,
+    "year": 2014,
+    "grade": "Grade-3",
+    "subject": "English",
+    "language": "English",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/2014-ANA-Grade-3-Eng-HL-Memo.pdf"
+  },
+  {
+    "id": 561,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-Afrikaans-Mathematics-2013-Memo.pdf"
+  },
+  {
+    "id": 562,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Isixhosa",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-IsiXhosa-Mathematics-2013-Memo.pdf"
+  },
+  {
+    "id": 563,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Setswana",
+    "language": "Setswana",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-Setswana-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 564,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Setswana",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-Setswana-Mathematics-2013-Memo.pdf"
+  },
+  {
+    "id": 565,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Siswati",
+    "language": "Siswati",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-Siswati-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 566,
+    "year": 2013,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Tshivenda",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-2-Tshivenda-Mathematics-2013-Memo.pdf"
+  },
+  {
+    "id": 567,
+    "year": 2013,
+    "grade": "Grade-3",
+    "subject": "Isindebele",
+    "language": "Isindebele",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-IsiNdebele-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 568,
+    "year": 2013,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Sepedi",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-Sepedi-Mathematics-2013-Memo-1.pdf"
+  },
+  {
+    "id": 569,
+    "year": 2013,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Sepedi",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-3-Sepedi-Mathematics-2013-Memo.pdf"
+  },
+  {
+    "id": 570,
+    "year": 2013,
+    "grade": "Grade-4",
+    "subject": "Mathematics",
+    "language": "Afrikaans",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-4-Mathematics-2013-Afrikaans-Memo.pdf"
+  },
+  {
+    "id": 571,
+    "year": 2013,
+    "grade": "Grade-6",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/New-2013-Grade-6-Afrikaans-HL-2013-Memo.pdf"
+  },
+  {
+    "id": 572,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Isindebele",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-IsiNdebele-Maths-Memo.pdf"
+  },
+  {
+    "id": 573,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Sepedi",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-Sepedi-Maths-Memo.pdf"
+  },
+  {
+    "id": 574,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Sesotho",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-Sesotho-Maths-Memo.pdf"
+  },
+  {
+    "id": 575,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Setswana",
+    "language": "Setswana",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-Setswana-HL-Memo.pdf"
+  },
+  {
+    "id": 576,
+    "year": 2012,
+    "grade": "Grade-1",
+    "subject": "Mathematics",
+    "language": "Setswana",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-1-Setswana-Maths-Memo.pdf"
+  },
+  {
+    "id": 577,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Isixhosa",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-IsiXhosa-Maths-Memo.pdf"
+  },
+  {
+    "id": 578,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Sesotho",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-Sesotho-Maths-Memo.pdf"
+  },
+  {
+    "id": 579,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Setswana",
+    "language": "Setswana",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-Setswana-HL-Memo.pdf"
+  },
+  {
+    "id": 580,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Siswati",
+    "language": "Siswati",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-Siswati-HL-Memo.pdf"
+  },
+  {
+    "id": 581,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Siswati",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-Siswati-Maths-Memo.pdf"
+  },
+  {
+    "id": 582,
+    "year": 2012,
+    "grade": "Grade-2",
+    "subject": "Mathematics",
+    "language": "Xitsonga",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-2-Xitsonga-Maths-Memo.pdf"
+  },
+  {
+    "id": 583,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Isindebele",
+    "language": "Isindebele",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-IsiNdebele-HL-Memo.pdf"
+  },
+  {
+    "id": 584,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Sepedi",
+    "language": "Sepedi",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-Sepedi-HL-Memo.pdf"
+  },
+  {
+    "id": 585,
+    "year": 2012,
+    "grade": "Grade-3",
+    "subject": "Mathematics",
+    "language": "Setswana",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-3-Setswana-Maths-Memo.pdf"
+  },
+  {
+    "id": 586,
+    "year": 2012,
+    "grade": "Grade-5",
+    "subject": "Afrikaans",
+    "language": "Afrikaans",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-5-Afrikaans-HL-Memo.pdf"
+  },
+  {
+    "id": 587,
+    "year": 2012,
+    "grade": "Grade-5",
+    "subject": "English",
+    "language": "English",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-5-English-FAL-Memo.pdf"
+  },
+  {
+    "id": 588,
+    "year": 2012,
+    "grade": "Grade-5",
+    "subject": "English",
+    "language": "English",
+    "paperURL": null,
+    "memoURL": "https://schoolmanagement.co.za/wp-content/uploads/Set3-2012-ANA-Grade-5-English-HL-Memo.pdf"
+  }
+]

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+  <g id="Group_1275" data-name="Group 1275" transform="translate(-30 -460)">
+    <rect id="Rectangle_1710" data-name="Rectangle 1710" width="11" height="11" rx="2" transform="translate(30 460)" fill="#83b9a8"/>
+    <rect id="Rectangle_1713" data-name="Rectangle 1713" width="11" height="11" rx="2" transform="translate(30 475)" fill="#83b9a8"/>
+    <rect id="Rectangle_1711" data-name="Rectangle 1711" width="11" height="11" rx="2" transform="translate(45 460)" fill="#83b9a8"/>
+    <rect id="Rectangle_1712" data-name="Rectangle 1712" width="11" height="11" rx="2" transform="translate(45 475)" fill="#649c8b"/>
+    <text id="_1" data-name="1" transform="translate(33 468)" fill="#fff" font-size="7" font-family="Archivo-Bold, Archivo" font-weight="700"><tspan x="0" y="0">1</tspan></text>
+    <text id="_2" data-name="2" transform="translate(48 468)" fill="#fff" font-size="7" font-family="Archivo-Bold, Archivo" font-weight="700"><tspan x="0" y="0">2</tspan></text>
+    <text id="_3" data-name="3" transform="translate(48 482)" fill="#fff" font-size="7" font-family="Archivo-Bold, Archivo" font-weight="700"><tspan x="0" y="0">3</tspan></text>
+    <text id="_4" data-name="4" transform="translate(33 482)" fill="#fff" font-size="7" font-family="Archivo-Bold, Archivo" font-weight="700"><tspan x="0" y="0">4</tspan></text>
+  </g>
+</svg>

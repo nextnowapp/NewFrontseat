@@ -1,0 +1,2106 @@
+[
+    {
+        "id": 1,
+        "language": "afrikaans",
+        "grade": 1,
+        "title": "Book 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g1-b1.pdf",
+        "size": 6460
+    },
+    {
+        "id": 2,
+        "language": "afrikaans",
+        "grade": 1,
+        "title": "Book 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g1-b2.pdf",
+        "size": 5936
+    },
+    {
+        "id": 3,
+        "language": "afrikaans",
+        "grade": 1,
+        "title": "Book 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g1-b3.pdf",
+        "size": 4649
+    },
+    {
+        "id": 4,
+        "language": "afrikaans",
+        "grade": 1,
+        "title": "Book 4",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g1-b4.pdf",
+        "size": 4390
+    },
+    {
+        "id": 5,
+        "language": "afrikaans",
+        "grade": 1,
+        "title": "Book 5",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g1-b5.pdf",
+        "size": 4210
+    },
+    {
+        "id": 6,
+        "language": "afrikaans",
+        "grade": 1,
+        "title": "Book 6",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g1-b6.pdf",
+        "size": 4550
+    },
+    {
+        "id": 7,
+        "language": "afrikaans",
+        "grade": 1,
+        "title": "Book 7",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g1-b7.pdf",
+        "size": 4352
+    },
+    {
+        "id": 8,
+        "language": "afrikaans",
+        "grade": 1,
+        "title": "Book 8",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g1-b8.pdf",
+        "size": 4803
+    },
+    {
+        "id": 9,
+        "language": "afrikaans",
+        "grade": 2,
+        "title": "Book 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g2-b1.pdf",
+        "size": 4322
+    },
+    {
+        "id": 10,
+        "language": "afrikaans",
+        "grade": 2,
+        "title": "Book 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g2-b2.pdf",
+        "size": 4629
+    },
+    {
+        "id": 11,
+        "language": "afrikaans",
+        "grade": 2,
+        "title": "Book 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g2-b3.pdf",
+        "size": 4084
+    },
+    {
+        "id": 12,
+        "language": "afrikaans",
+        "grade": 2,
+        "title": "Book 4",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g2-b4.pdf",
+        "size": 3751
+    },
+    {
+        "id": 13,
+        "language": "afrikaans",
+        "grade": 2,
+        "title": "Book 5",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g2-b5.pdf",
+        "size": 3605
+    },
+    {
+        "id": 14,
+        "language": "afrikaans",
+        "grade": 2,
+        "title": "Book 6",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g2-b6.pdf",
+        "size": 3512
+    },
+    {
+        "id": 15,
+        "language": "afrikaans",
+        "grade": 2,
+        "title": "Book 7",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g2-b7.pdf",
+        "size": 3671
+    },
+    {
+        "id": 16,
+        "language": "afrikaans",
+        "grade": 2,
+        "title": "Book 8",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g2-b8.pdf",
+        "size": 4017
+    },
+    {
+        "id": 17,
+        "language": "afrikaans",
+        "grade": 3,
+        "title": "Book 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g3-b1.pdf",
+        "size": 6202
+    },
+    {
+        "id": 18,
+        "language": "afrikaans",
+        "grade": 3,
+        "title": "Book 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g3-b2.pdf",
+        "size": 4242
+    },
+    {
+        "id": 19,
+        "language": "afrikaans",
+        "grade": 3,
+        "title": "Book 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g3-b3.pdf",
+        "size": 3695
+    },
+    {
+        "id": 20,
+        "language": "afrikaans",
+        "grade": 3,
+        "title": "Book 4",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g3-b4.pdf",
+        "size": 4439
+    },
+    {
+        "id": 21,
+        "language": "afrikaans",
+        "grade": 3,
+        "title": "Book 5",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g3-b5.pdf",
+        "size": 4033
+    },
+    {
+        "id": 22,
+        "language": "afrikaans",
+        "grade": 3,
+        "title": "Book 6",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g3-b6.pdf",
+        "size": 3803
+    },
+    {
+        "id": 23,
+        "language": "afrikaans",
+        "grade": 3,
+        "title": "Book 7",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g3-b7.pdf",
+        "size": 4737
+    },
+    {
+        "id": 24,
+        "language": "afrikaans",
+        "grade": 3,
+        "title": "Book 8",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g3-b8.pdf",
+        "size": 4287
+    },
+    {
+        "id": 25,
+        "language": "english",
+        "grade": 1,
+        "title": "Book 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-english-g1-b1.pdf",
+        "size": 6340
+    },
+    {
+        "id": 26,
+        "language": "english",
+        "grade": 1,
+        "title": "Book 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-english-g1-b2.pdf",
+        "size": 6022
+    },
+    {
+        "id": 27,
+        "language": "english",
+        "grade": 1,
+        "title": "Book 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-english-g1-b3.pdf",
+        "size": 4633
+    },
+    {
+        "id": 28,
+        "language": "english",
+        "grade": 1,
+        "title": "Book 4",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-english-g1-b4.pdf",
+        "size": 4350
+    },
+    {
+        "id": 29,
+        "language": "english",
+        "grade": 1,
+        "title": "Book 5",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-english-g1-b5.pdf",
+        "size": 4199
+    },
+    {
+        "id": 30,
+        "language": "english",
+        "grade": 1,
+        "title": "Book 6",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-english-g1-b6.pdf",
+        "size": 4629
+    },
+    {
+        "id": 31,
+        "language": "english",
+        "grade": 1,
+        "title": "Book 7",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-english-g1-b7.pdf",
+        "size": 4333
+    },
+    {
+        "id": 32,
+        "language": "english",
+        "grade": 1,
+        "title": "Book 8",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-english-g1-b8.pdf",
+        "size": 4745
+    },
+    {
+        "id": 33,
+        "language": "english",
+        "grade": 2,
+        "title": "Book 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-english-g2-b1.pdf",
+        "size": 4230
+    },
+    {
+        "id": 34,
+        "language": "english",
+        "grade": 2,
+        "title": "Book 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-english-g2-b2.pdf",
+        "size": 4443
+    },
+    {
+        "id": 35,
+        "language": "english",
+        "grade": 2,
+        "title": "Book 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-english-g2-b3.pdf",
+        "size": 4027
+    },
+    {
+        "id": 36,
+        "language": "english",
+        "grade": 2,
+        "title": "Book 4",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-english-g2-b4.pdf",
+        "size": 3545
+    },
+    {
+        "id": 37,
+        "language": "english",
+        "grade": 2,
+        "title": "Book 5",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-english-g2-b5.pdf",
+        "size": 3379
+    },
+    {
+        "id": 38,
+        "language": "english",
+        "grade": 2,
+        "title": "Book 6",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-english-g2-b6.pdf",
+        "size": 3319
+    },
+    {
+        "id": 39,
+        "language": "english",
+        "grade": 2,
+        "title": "Book 7",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-english-g2-b7.pdf",
+        "size": 3888
+    },
+    {
+        "id": 40,
+        "language": "english",
+        "grade": 2,
+        "title": "Book 8",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-english-g2-b8.pdf",
+        "size": 3773
+    },
+    {
+        "id": 41,
+        "language": "english",
+        "grade": 3,
+        "title": "Book 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-english-g3-b1.pdf",
+        "size": 4068
+    },
+    {
+        "id": 42,
+        "language": "english",
+        "grade": 3,
+        "title": "Book 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-english-g3-b2.pdf",
+        "size": 9414
+    },
+    {
+        "id": 43,
+        "language": "english",
+        "grade": 3,
+        "title": "Book 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-english-g3-b3.pdf",
+        "size": 3615
+    },
+    {
+        "id": 44,
+        "language": "english",
+        "grade": 3,
+        "title": "Book 4",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-english-g3-b4.pdf",
+        "size": 4603
+    },
+    {
+        "id": 45,
+        "language": "english",
+        "grade": 3,
+        "title": "Book 5",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-english-g3-b5.pdf",
+        "size": 4209
+    },
+    {
+        "id": 46,
+        "language": "english",
+        "grade": 3,
+        "title": "Book 6",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-english-g3-b6.pdf",
+        "size": 3978
+    },
+    {
+        "id": 47,
+        "language": "english",
+        "grade": 3,
+        "title": "Book 7",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-english-g3-b7.pdf",
+        "size": 4649
+    },
+    {
+        "id": 48,
+        "language": "english",
+        "grade": 3,
+        "title": "Book 8",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-english-g3-b8.pdf",
+        "size": 4239
+    },
+    {
+        "id": 49,
+        "language": "isindebele",
+        "grade": 1,
+        "title": "Book 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isindebele-g1-b1.pdf",
+        "size": 753
+    },
+    {
+        "id": 50,
+        "language": "isindebele",
+        "grade": 1,
+        "title": "Book 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isindebele-g1-b2.pdf",
+        "size": 5770
+    },
+    {
+        "id": 51,
+        "language": "isindebele",
+        "grade": 1,
+        "title": "Book 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isindebele-g1-b3.pdf",
+        "size": 4628
+    },
+    {
+        "id": 52,
+        "language": "isindebele",
+        "grade": 1,
+        "title": "Book 4",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isindebele-g1-b4.pdf",
+        "size": 4246
+    },
+    {
+        "id": 53,
+        "language": "isindebele",
+        "grade": 1,
+        "title": "Book 5",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isindebele-g1-b5.pdf",
+        "size": 4117
+    },
+    {
+        "id": 54,
+        "language": "isindebele",
+        "grade": 1,
+        "title": "Book 6",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isindebele-g1-b6.pdf",
+        "size": 4497
+    },
+    {
+        "id": 55,
+        "language": "isindebele",
+        "grade": 1,
+        "title": "Book 7",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isindebele-g1-b7.pdf",
+        "size": 4251
+    },
+    {
+        "id": 56,
+        "language": "isindebele",
+        "grade": 1,
+        "title": "Book 8",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isindebele-g1-b8.pdf",
+        "size": 4620
+    },
+    {
+        "id": 57,
+        "language": "isindebele",
+        "grade": 2,
+        "title": "Book 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isindebele-g2-b1.pdf",
+        "size": 4241
+    },
+    {
+        "id": 58,
+        "language": "isindebele",
+        "grade": 2,
+        "title": "Book 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isindebele-g2-b2.pdf",
+        "size": 4396
+    },
+    {
+        "id": 59,
+        "language": "isindebele",
+        "grade": 2,
+        "title": "Book 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isindebele-g2-b3.pdf",
+        "size": 3901
+    },
+    {
+        "id": 60,
+        "language": "isindebele",
+        "grade": 2,
+        "title": "Book 4",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isindebele-g2-b4.pdf",
+        "size": 3606
+    },
+    {
+        "id": 61,
+        "language": "isindebele",
+        "grade": 2,
+        "title": "Book 5",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isindebele-g2-b5.pdf",
+        "size": 3457
+    },
+    {
+        "id": 62,
+        "language": "isindebele",
+        "grade": 2,
+        "title": "Book 6",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isindebele-g2-b6.pdf",
+        "size": 3416
+    },
+    {
+        "id": 63,
+        "language": "isindebele",
+        "grade": 2,
+        "title": "Book 7",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isindebele-g2-b7.pdf",
+        "size": 3623
+    },
+    {
+        "id": 64,
+        "language": "isindebele",
+        "grade": 2,
+        "title": "Book 8",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isindebele-g2-b8.pdf",
+        "size": 3889
+    },
+    {
+        "id": 65,
+        "language": "isindebele",
+        "grade": 3,
+        "title": "Book 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isindebele-g3-b1.pdf",
+        "size": 3970
+    },
+    {
+        "id": 66,
+        "language": "isindebele",
+        "grade": 3,
+        "title": "Book 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isindebele-g3-b2.pdf",
+        "size": 3957
+    },
+    {
+        "id": 67,
+        "language": "isindebele",
+        "grade": 3,
+        "title": "Book 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isindebele-g3-b3.pdf",
+        "size": 3501
+    },
+    {
+        "id": 68,
+        "language": "isindebele",
+        "grade": 3,
+        "title": "Book 4",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isindebele-g3-b4.pdf",
+        "size": 4152
+    },
+    {
+        "id": 69,
+        "language": "isindebele",
+        "grade": 3,
+        "title": "Book 5",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isindebele-g3-b5.pdf",
+        "size": 4057
+    },
+    {
+        "id": 70,
+        "language": "isindebele",
+        "grade": 3,
+        "title": "Book 6",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isindebele-g3-b6.pdf",
+        "size": 3876
+    },
+    {
+        "id": 71,
+        "language": "isindebele",
+        "grade": 3,
+        "title": "Book 7",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isindebele-g3-b7.pdf",
+        "size": 4530
+    },
+    {
+        "id": 72,
+        "language": "isindebele",
+        "grade": 3,
+        "title": "Book 8",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isindebele-g3-b8.pdf",
+        "size": 3915
+    },
+    {
+        "id": 73,
+        "language": "isixhosa",
+        "grade": 1,
+        "title": "Book 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isixhosa-g1-b1.pdf",
+        "size": 6371
+    },
+    {
+        "id": 74,
+        "language": "isixhosa",
+        "grade": 1,
+        "title": "Book 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isixhosa-g1-b2.pdf",
+        "size": 5931
+    },
+    {
+        "id": 75,
+        "language": "isixhosa",
+        "grade": 1,
+        "title": "Book 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isixhosa-g1-b3.pdf",
+        "size": 4715
+    },
+    {
+        "id": 76,
+        "language": "isixhosa",
+        "grade": 1,
+        "title": "Book 4",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isixhosa-g1-b4.pdf",
+        "size": 439
+    },
+    {
+        "id": 77,
+        "language": "isixhosa",
+        "grade": 1,
+        "title": "Book 5",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isixhosa-g1-b5.pdf",
+        "size": 4234
+    },
+    {
+        "id": 78,
+        "language": "isixhosa",
+        "grade": 1,
+        "title": "Book 6",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isixhosa-g1-b6.pdf",
+        "size": 4597
+    },
+    {
+        "id": 79,
+        "language": "isixhosa",
+        "grade": 1,
+        "title": "Book 7",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isixhosa-g1-b7.pdf",
+        "size": 4347
+    },
+    {
+        "id": 80,
+        "language": "isixhosa",
+        "grade": 1,
+        "title": "Book 8",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isixhosa-g1-b8.pdf",
+        "size": 4777
+    },
+    {
+        "id": 81,
+        "language": "isixhosa",
+        "grade": 2,
+        "title": "Book 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isixhosa-g2-b1.pdf",
+        "size": 4457
+    },
+    {
+        "id": 82,
+        "language": "isixhosa",
+        "grade": 2,
+        "title": "Book 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isixhosa-g2-b2.pdf",
+        "size": 4477
+    },
+    {
+        "id": 83,
+        "language": "isixhosa",
+        "grade": 2,
+        "title": "Book 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isixhosa-g2-b3.pdf",
+        "size": 4108
+    },
+    {
+        "id": 84,
+        "language": "isixhosa",
+        "grade": 2,
+        "title": "Book 4",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isixhosa-g2-b4.pdf",
+        "size": 3848
+    },
+    {
+        "id": 85,
+        "language": "isixhosa",
+        "grade": 2,
+        "title": "Book 5",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isixhosa-g2-b5.pdf",
+        "size": 3674
+    },
+    {
+        "id": 86,
+        "language": "isixhosa",
+        "grade": 2,
+        "title": "Book 6",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isixhosa-g2-b6.pdf",
+        "size": 3592
+    },
+    {
+        "id": 87,
+        "language": "isixhosa",
+        "grade": 2,
+        "title": "Book 7",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isixhosa-g2-b7.pdf",
+        "size": 3863
+    },
+    {
+        "id": 88,
+        "language": "isixhosa",
+        "grade": 2,
+        "title": "Book 8",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isixhosa-g2-b8.pdf",
+        "size": 4017
+    },
+    {
+        "id": 89,
+        "language": "isixhosa",
+        "grade": 3,
+        "title": "Book 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isixhosa-g3-b1.pdf",
+        "size": 2867
+    },
+    {
+        "id": 90,
+        "language": "isixhosa",
+        "grade": 3,
+        "title": "Book 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isixhosa-g3-b2.pdf",
+        "size": 4359
+    },
+    {
+        "id": 91,
+        "language": "isixhosa",
+        "grade": 3,
+        "title": "Book 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isixhosa-g3-b3.pdf",
+        "size": 3609
+    },
+    {
+        "id": 92,
+        "language": "isixhosa",
+        "grade": 3,
+        "title": "Book 4",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isixhosa-g3-b4.pdf",
+        "size": 4378
+    },
+    {
+        "id": 93,
+        "language": "isixhosa",
+        "grade": 3,
+        "title": "Book 5",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isixhosa-g3-b5.pdf",
+        "size": 4193
+    },
+    {
+        "id": 94,
+        "language": "isixhosa",
+        "grade": 3,
+        "title": "Book 6",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isixhosa-g3-b6.pdf",
+        "size": 4006
+    },
+    {
+        "id": 95,
+        "language": "isixhosa",
+        "grade": 3,
+        "title": "Book 7",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isixhosa-g3-b7.pdf",
+        "size": 4696
+    },
+    {
+        "id": 96,
+        "language": "isixhosa",
+        "grade": 3,
+        "title": "Book 8",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isixhosa-g3-b8.pdf",
+        "size": 4177
+    },
+    {
+        "id": 97,
+        "language": "isizulu",
+        "grade": 1,
+        "title": "Book 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isizulu-g1-b1.pdf",
+        "size": 6331
+    },
+    {
+        "id": 98,
+        "language": "isizulu",
+        "grade": 1,
+        "title": "Book 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isizulu-g1-b2.pdf",
+        "size": 5928
+    },
+    {
+        "id": 99,
+        "language": "isizulu",
+        "grade": 1,
+        "title": "Book 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isizulu-g1-b3.pdf",
+        "size": 4737
+    },
+    {
+        "id": 100,
+        "language": "isizulu",
+        "grade": 1,
+        "title": "Book 4",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isizulu-g1-b4.pdf",
+        "size": 4299
+    },
+    {
+        "id": 101,
+        "language": "isizulu",
+        "grade": 1,
+        "title": "Book 5",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isizulu-g1-b5.pdf",
+        "size": 4209
+    },
+    {
+        "id": 102,
+        "language": "isizulu",
+        "grade": 1,
+        "title": "Book 6",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isizulu-g1-b6.pdf",
+        "size": 4165
+    },
+    {
+        "id": 103,
+        "language": "isizulu",
+        "grade": 1,
+        "title": "Book 7",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isizulu-g1-b7.pdf",
+        "size": 4301
+    },
+    {
+        "id": 104,
+        "language": "isizulu",
+        "grade": 1,
+        "title": "Book 8",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isizulu-g1-b8.pdf",
+        "size": 4685
+    },
+    {
+        "id": 105,
+        "language": "isizulu",
+        "grade": 2,
+        "title": "Book 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isizulu-g2-b1.pdf",
+        "size": 4382
+    },
+    {
+        "id": 106,
+        "language": "isizulu",
+        "grade": 2,
+        "title": "Book 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isizulu-g2-b2.pdf",
+        "size": 4439
+    },
+    {
+        "id": 107,
+        "language": "isizulu",
+        "grade": 2,
+        "title": "Book 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isizulu-g2-b3.pdf",
+        "size": 4038
+    },
+    {
+        "id": 108,
+        "language": "isizulu",
+        "grade": 2,
+        "title": "Book 4",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isizulu-g2-b4.pdf",
+        "size": 3742
+    },
+    {
+        "id": 109,
+        "language": "isizulu",
+        "grade": 2,
+        "title": "Book 5",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isizulu-g2-b5.pdf",
+        "size": 3593
+    },
+    {
+        "id": 110,
+        "language": "isizulu",
+        "grade": 2,
+        "title": "Book 6",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isizulu-g2-b6.pdf",
+        "size": 3528
+    },
+    {
+        "id": 111,
+        "language": "isizulu",
+        "grade": 2,
+        "title": "Book 7",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isizulu-g2-b7.pdf",
+        "size": 3816
+    },
+    {
+        "id": 112,
+        "language": "isizulu",
+        "grade": 2,
+        "title": "Book 8",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isizulu-g2-b8.pdf",
+        "size": 3931
+    },
+    {
+        "id": 113,
+        "language": "isizulu",
+        "grade": 3,
+        "title": "Book 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isizulu-g3-b1.pdf",
+        "size": 4007
+    },
+    {
+        "id": 114,
+        "language": "isizulu",
+        "grade": 3,
+        "title": "Book 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isizulu-g3-b2.pdf",
+        "size": 4134
+    },
+    {
+        "id": 115,
+        "language": "isizulu",
+        "grade": 3,
+        "title": "Book 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isizulu-g3-b3.pdf",
+        "size": 3524
+    },
+    {
+        "id": 116,
+        "language": "isizulu",
+        "grade": 3,
+        "title": "Book 4",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isizulu-g3-b4.pdf",
+        "size": 4217
+    },
+    {
+        "id": 117,
+        "language": "isizulu",
+        "grade": 3,
+        "title": "Book 5",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isizulu-g3-b5.pdf",
+        "size": 4177
+    },
+    {
+        "id": 118,
+        "language": "isizulu",
+        "grade": 3,
+        "title": "Book 6",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isizulu-g3-b6.pdf",
+        "size": 3981
+    },
+    {
+        "id": 119,
+        "language": "isizulu",
+        "grade": 3,
+        "title": "Book 7",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isizulu-g3-b7.pdf",
+        "size": 4689
+    },
+    {
+        "id": 120,
+        "language": "isizulu",
+        "grade": 3,
+        "title": "Book 8",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-isizulu-g3-b8.pdf",
+        "size": 4329
+    },
+    {
+        "id": 121,
+        "language": "sepedi",
+        "grade": 1,
+        "title": "Book 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sepedi-g1-b1.pdf",
+        "size": 6232
+    },
+    {
+        "id": 122,
+        "language": "sepedi",
+        "grade": 1,
+        "title": "Book 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sepedi-g1-b2.pdf",
+        "size": 1434
+    },
+    {
+        "id": 123,
+        "language": "sepedi",
+        "grade": 1,
+        "title": "Book 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sepedi-g1-b3.pdf",
+        "size": 995
+    },
+    {
+        "id": 124,
+        "language": "sepedi",
+        "grade": 1,
+        "title": "Book 4",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sepedi-g1-b4.pdf",
+        "size": 4425
+    },
+    {
+        "id": 125,
+        "language": "sepedi",
+        "grade": 1,
+        "title": "Book 5",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sepedi-g1-b5.pdf",
+        "size": 4280
+    },
+    {
+        "id": 126,
+        "language": "sepedi",
+        "grade": 1,
+        "title": "Book 6",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sepedi-g1-b6.pdf",
+        "size": 4622
+    },
+    {
+        "id": 127,
+        "language": "sepedi",
+        "grade": 1,
+        "title": "Book 7",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sepedi-g1-b7.pdf",
+        "size": 4431
+    },
+    {
+        "id": 128,
+        "language": "sepedi",
+        "grade": 1,
+        "title": "Book 8",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sepedi-g1-b8.pdf",
+        "size": 4850
+    },
+    {
+        "id": 129,
+        "language": "sepedi",
+        "grade": 2,
+        "title": "Book 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sepedi-g2-b1.pdf",
+        "size": 4362
+    },
+    {
+        "id": 130,
+        "language": "sepedi",
+        "grade": 2,
+        "title": "Book 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sepedi-g2-b2.pdf",
+        "size": 4172
+    },
+    {
+        "id": 131,
+        "language": "sepedi",
+        "grade": 2,
+        "title": "Book 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sepedi-g2-b3.pdf",
+        "size": 4172
+    },
+    {
+        "id": 132,
+        "language": "sepedi",
+        "grade": 2,
+        "title": "Book 4",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sepedi-g2-b4.pdf",
+        "size": 3887
+    },
+    {
+        "id": 133,
+        "language": "sepedi",
+        "grade": 2,
+        "title": "Book 5",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sepedi-g2-b5.pdf",
+        "size": 3680
+    },
+    {
+        "id": 134,
+        "language": "sepedi",
+        "grade": 2,
+        "title": "Book 6",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sepedi-g2-b6.pdf",
+        "size": 3608
+    },
+    {
+        "id": 135,
+        "language": "sepedi",
+        "grade": 2,
+        "title": "Book 7",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sepedi-g2-b7.pdf",
+        "size": 3772
+    },
+    {
+        "id": 136,
+        "language": "sepedi",
+        "grade": 2,
+        "title": "Book 8",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sepedi-g2-b8.pdf",
+        "size": 3840
+    },
+    {
+        "id": 137,
+        "language": "sepedi",
+        "grade": 3,
+        "title": "Book 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sepedi-g3-b1.pdf",
+        "size": 4203
+    },
+    {
+        "id": 138,
+        "language": "sepedi",
+        "grade": 3,
+        "title": "Book 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sepedi-g3-b2.pdf",
+        "size": 4254
+    },
+    {
+        "id": 139,
+        "language": "sepedi",
+        "grade": 3,
+        "title": "Book 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sepedi-g3-b3.pdf",
+        "size": 3733
+    },
+    {
+        "id": 140,
+        "language": "sepedi",
+        "grade": 3,
+        "title": "Book 4",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sepedi-g3-b4.pdf",
+        "size": 4507
+    },
+    {
+        "id": 141,
+        "language": "sepedi",
+        "grade": 3,
+        "title": "Book 5",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sepedi-g3-b5.pdf",
+        "size": 4315
+    },
+    {
+        "id": 142,
+        "language": "sepedi",
+        "grade": 3,
+        "title": "Book 6",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sepedi-g3-b6.pdf",
+        "size": 4200
+    },
+    {
+        "id": 143,
+        "language": "sepedi",
+        "grade": 3,
+        "title": "Book 7",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sepedi-g3-b7.pdf",
+        "size": 4881
+    },
+    {
+        "id": 144,
+        "language": "sepedi",
+        "grade": 3,
+        "title": "Book 8",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sepedi-g3-b8.pdf",
+        "size": 4356
+    },
+    {
+        "id": 145,
+        "language": "sesotho",
+        "grade": 1,
+        "title": "Book 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sesotho-g1-b1.pdf",
+        "size": 6346
+    },
+    {
+        "id": 146,
+        "language": "sesotho",
+        "grade": 1,
+        "title": "Book 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sesotho-g1-b2.pdf",
+        "size": 6061
+    },
+    {
+        "id": 147,
+        "language": "sesotho",
+        "grade": 1,
+        "title": "Book 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sesotho-g1-b3.pdf",
+        "size": 4711
+    },
+    {
+        "id": 148,
+        "language": "sesotho",
+        "grade": 1,
+        "title": "Book 4",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sesotho-g1-b4.pdf",
+        "size": 4415
+    },
+    {
+        "id": 149,
+        "language": "sesotho",
+        "grade": 1,
+        "title": "Book 5",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sesotho-g1-b5.pdf",
+        "size": 4270
+    },
+    {
+        "id": 150,
+        "language": "sesotho",
+        "grade": 1,
+        "title": "Book 6",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sesotho-g1-b6.pdf",
+        "size": 4587
+    },
+    {
+        "id": 151,
+        "language": "sesotho",
+        "grade": 1,
+        "title": "Book 7",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sesotho-g1-b7.pdf",
+        "size": 4377
+    },
+    {
+        "id": 152,
+        "language": "sesotho",
+        "grade": 1,
+        "title": "Book 8",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sesotho-g1-b8.pdf",
+        "size": 4811
+    },
+    {
+        "id": 153,
+        "language": "sesotho",
+        "grade": 2,
+        "title": "Book 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sesotho-g2-b1.pdf",
+        "size": 4376
+    },
+    {
+        "id": 154,
+        "language": "sesotho",
+        "grade": 2,
+        "title": "Book 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sesotho-g2-b2.pdf",
+        "size": 4565
+    },
+    {
+        "id": 155,
+        "language": "sesotho",
+        "grade": 2,
+        "title": "Book 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sesotho-g2-b3.pdf",
+        "size": 4118
+    },
+    {
+        "id": 156,
+        "language": "sesotho",
+        "grade": 2,
+        "title": "Book 4",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sesotho-g2-b4.pdf",
+        "size": 3807
+    },
+    {
+        "id": 157,
+        "language": "sesotho",
+        "grade": 2,
+        "title": "Book 5",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sesotho-g2-b5.pdf",
+        "size": 3622
+    },
+    {
+        "id": 158,
+        "language": "sesotho",
+        "grade": 2,
+        "title": "Book 6",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sesotho-g2-b6.pdf",
+        "size": 3603
+    },
+    {
+        "id": 159,
+        "language": "sesotho",
+        "grade": 2,
+        "title": "Book 7",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sesotho-g2-b7.pdf",
+        "size": 3967
+    },
+    {
+        "id": 160,
+        "language": "sesotho",
+        "grade": 2,
+        "title": "Book 8",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sesotho-g2-b8.pdf",
+        "size": 4076
+    },
+    {
+        "id": 161,
+        "language": "sesotho",
+        "grade": 3,
+        "title": "Book 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sesotho-g3-b1.pdf",
+        "size": 4076
+    },
+    {
+        "id": 162,
+        "language": "sesotho",
+        "grade": 3,
+        "title": "Book 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sesotho-g3-b2.pdf",
+        "size": 4363
+    },
+    {
+        "id": 163,
+        "language": "sesotho",
+        "grade": 3,
+        "title": "Book 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sesotho-g3-b3.pdf",
+        "size": 3618
+    },
+    {
+        "id": 164,
+        "language": "sesotho",
+        "grade": 3,
+        "title": "Book 4",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sesotho-g3-b4.pdf",
+        "size": 4450
+    },
+    {
+        "id": 165,
+        "language": "sesotho",
+        "grade": 3,
+        "title": "Book 5",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sesotho-g3-b5.pdf",
+        "size": 4238
+    },
+    {
+        "id": 166,
+        "language": "sesotho",
+        "grade": 3,
+        "title": "Book 6",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sesotho-g3-b6.pdf",
+        "size": 4062
+    },
+    {
+        "id": 167,
+        "language": "sesotho",
+        "grade": 3,
+        "title": "Book 7",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sesotho-g3-b7.pdf",
+        "size": 4709
+    },
+    {
+        "id": 168,
+        "language": "sesotho",
+        "grade": 3,
+        "title": "Book 8",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-sesotho-g3-b8.pdf",
+        "size": 4323
+    },
+    {
+        "id": 169,
+        "language": "setswana",
+        "grade": 1,
+        "title": "Book 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-setswana-g1-b1.pdf",
+        "size": 6419
+    },
+    {
+        "id": 170,
+        "language": "setswana",
+        "grade": 1,
+        "title": "Book 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-setswana-g1-b2.pdf",
+        "size": 6015
+    },
+    {
+        "id": 171,
+        "language": "setswana",
+        "grade": 1,
+        "title": "Book 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-setswana-g1-b3.pdf",
+        "size": 4865
+    },
+    {
+        "id": 172,
+        "language": "setswana",
+        "grade": 1,
+        "title": "Book 4",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-setswana-g1-b4.pdf",
+        "size": 4446
+    },
+    {
+        "id": 173,
+        "language": "setswana",
+        "grade": 1,
+        "title": "Book 5",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-setswana-g1-b5.pdf",
+        "size": 4298
+    },
+    {
+        "id": 174,
+        "language": "setswana",
+        "grade": 1,
+        "title": "Book 6",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-setswana-g1-b6.pdf",
+        "size": 4584
+    },
+    {
+        "id": 175,
+        "language": "setswana",
+        "grade": 1,
+        "title": "Book 7",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-setswana-g1-b7.pdf",
+        "size": 4421
+    },
+    {
+        "id": 176,
+        "language": "setswana",
+        "grade": 1,
+        "title": "Book 8",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-setswana-g1-b8.pdf",
+        "size": 4993
+    },
+    {
+        "id": 177,
+        "language": "setswana",
+        "grade": 2,
+        "title": "Book 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-setswana-g2-b1.pdf",
+        "size": 6172
+    },
+    {
+        "id": 178,
+        "language": "setswana",
+        "grade": 2,
+        "title": "Book 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-setswana-g2-b2.pdf",
+        "size": 5962
+    },
+    {
+        "id": 179,
+        "language": "setswana",
+        "grade": 2,
+        "title": "Book 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-setswana-g2-b3.pdf",
+        "size": 4665
+    },
+    {
+        "id": 180,
+        "language": "setswana",
+        "grade": 2,
+        "title": "Book 4",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-setswana-g2-b4.pdf",
+        "size": 4451
+    },
+    {
+        "id": 181,
+        "language": "setswana",
+        "grade": 2,
+        "title": "Book 5",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-setswana-g2-b5.pdf",
+        "size": 4215
+    },
+    {
+        "id": 182,
+        "language": "setswana",
+        "grade": 2,
+        "title": "Book 6",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-setswana-g2-b6.pdf",
+        "size": 4589
+    },
+    {
+        "id": 183,
+        "language": "setswana",
+        "grade": 2,
+        "title": "Book 7",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-setswana-g2-b7.pdf",
+        "size": 4336
+    },
+    {
+        "id": 184,
+        "language": "setswana",
+        "grade": 2,
+        "title": "Book 8",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-setswana-g2-b8.pdf",
+        "size": 4760
+    },
+    {
+        "id": 185,
+        "language": "setswana",
+        "grade": 3,
+        "title": "Book 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-setswana-g3-b1.pdf",
+        "size": 4052
+    },
+    {
+        "id": 186,
+        "language": "setswana",
+        "grade": 3,
+        "title": "Book 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-setswana-g3-b2.pdf",
+        "size": 4052
+    },
+    {
+        "id": 187,
+        "language": "setswana",
+        "grade": 3,
+        "title": "Book 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-setswana-g3-b3.pdf",
+        "size": 3688
+    },
+    {
+        "id": 188,
+        "language": "setswana",
+        "grade": 3,
+        "title": "Book 4",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-setswana-g3-b4.pdf",
+        "size": 4413
+    },
+    {
+        "id": 189,
+        "language": "setswana",
+        "grade": 3,
+        "title": "Book 5",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-setswana-g3-b5.pdf",
+        "size": 4243
+    },
+    {
+        "id": 190,
+        "language": "setswana",
+        "grade": 3,
+        "title": "Book 6",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-setswana-g3-b6.pdf",
+        "size": 4096
+    },
+    {
+        "id": 191,
+        "language": "setswana",
+        "grade": 3,
+        "title": "Book 7",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-setswana-g3-b7.pdf",
+        "size": 4739
+    },
+    {
+        "id": 192,
+        "language": "setswana",
+        "grade": 3,
+        "title": "Book 8",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-setswana-g3-b8.pdf",
+        "size": 4332
+    },
+    {
+        "id": 193,
+        "language": "siswati",
+        "grade": 1,
+        "title": "Book 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-siswati-g1-b1.pdf",
+        "size": 6172
+    },
+    {
+        "id": 194,
+        "language": "siswati",
+        "grade": 1,
+        "title": "Book 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-siswati-g1-b2.pdf",
+        "size": 5962
+    },
+    {
+        "id": 195,
+        "language": "siswati",
+        "grade": 1,
+        "title": "Book 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-siswati-g1-b3.pdf",
+        "size": 4665
+    },
+    {
+        "id": 196,
+        "language": "siswati",
+        "grade": 1,
+        "title": "Book 4",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-siswati-g1-b4.pdf",
+        "size": 4451
+    },
+    {
+        "id": 197,
+        "language": "siswati",
+        "grade": 1,
+        "title": "Book 5",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-siswati-g1-b5.pdf",
+        "size": 4215
+    },
+    {
+        "id": 198,
+        "language": "siswati",
+        "grade": 1,
+        "title": "Book 6",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-siswati-g1-b6.pdf",
+        "size": 4589
+    },
+    {
+        "id": 199,
+        "language": "siswati",
+        "grade": 1,
+        "title": "Book 7",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-siswati-g1-b7.pdf",
+        "size": 4336
+    },
+    {
+        "id": 200,
+        "language": "siswati",
+        "grade": 1,
+        "title": "Book 8",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-siswati-g1-b8.pdf",
+        "size": 4760
+    },
+    {
+        "id": 201,
+        "language": "siswati",
+        "grade": 2,
+        "title": "Book 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-siswati-g2-b1.pdf",
+        "size": 4396
+    },
+    {
+        "id": 202,
+        "language": "siswati",
+        "grade": 2,
+        "title": "Book 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-siswati-g2-b2.pdf",
+        "size": 4498
+    },
+    {
+        "id": 203,
+        "language": "siswati",
+        "grade": 2,
+        "title": "Book 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-siswati-g2-b3.pdf",
+        "size": 4098
+    },
+    {
+        "id": 204,
+        "language": "siswati",
+        "grade": 2,
+        "title": "Book 4",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-siswati-g2-b4.pdf",
+        "size": 3786
+    },
+    {
+        "id": 205,
+        "language": "siswati",
+        "grade": 2,
+        "title": "Book 5",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-siswati-g2-b5.pdf",
+        "size": 3643
+    },
+    {
+        "id": 206,
+        "language": "siswati",
+        "grade": 2,
+        "title": "Book 6",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-siswati-g2-b6.pdf",
+        "size": 3582
+    },
+    {
+        "id": 207,
+        "language": "siswati",
+        "grade": 2,
+        "title": "Book 7",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-siswati-g2-b7.pdf",
+        "size": 3841
+    },
+    {
+        "id": 208,
+        "language": "siswati",
+        "grade": 2,
+        "title": "Book 8",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-siswati-g2-b8.pdf",
+        "size": 4396
+    },
+    {
+        "id": 209,
+        "language": "siswati",
+        "grade": 3,
+        "title": "Book 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-siswati-g3-b1.pdf",
+        "size": 4092
+    },
+    {
+        "id": 210,
+        "language": "siswati",
+        "grade": 3,
+        "title": "Book 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-siswati-g3-b2.pdf",
+        "size": 4364
+    },
+    {
+        "id": 211,
+        "language": "siswati",
+        "grade": 3,
+        "title": "Book 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-siswati-g3-b3.pdf",
+        "size": 3595
+    },
+    {
+        "id": 212,
+        "language": "siswati",
+        "grade": 3,
+        "title": "Book 4",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-siswati-g3-b4.pdf",
+        "size": 4398
+    },
+    {
+        "id": 213,
+        "language": "siswati",
+        "grade": 3,
+        "title": "Book 5",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-siswati-g3-b5.pdf",
+        "size": 4231
+    },
+    {
+        "id": 214,
+        "language": "siswati",
+        "grade": 3,
+        "title": "Book 6",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-siswati-g3-b6.pdf",
+        "size": 4065
+    },
+    {
+        "id": 215,
+        "language": "siswati",
+        "grade": 3,
+        "title": "Book 7",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-siswati-g3-b7.pdf",
+        "size": 4732
+    },
+    {
+        "id": 216,
+        "language": "siswati",
+        "grade": 3,
+        "title": "Book 8",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-siswati-g3-b8.pdf",
+        "size": 4336
+    },
+    {
+        "id": 217,
+        "language": "tshivenda",
+        "grade": 1,
+        "title": "Book 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-tshivenda-g1-b1.pdf",
+        "size": 6641
+    },
+    {
+        "id": 218,
+        "language": "tshivenda",
+        "grade": 1,
+        "title": "Book 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-tshivenda-g1-b2.pdf",
+        "size": 6041
+    },
+    {
+        "id": 219,
+        "language": "tshivenda",
+        "grade": 1,
+        "title": "Book 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-tshivenda-g1-b3.pdf",
+        "size": 4851
+    },
+    {
+        "id": 220,
+        "language": "tshivenda",
+        "grade": 1,
+        "title": "Book 4",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-tshivenda-g1-b4.pdf",
+        "size": 4459
+    },
+    {
+        "id": 221,
+        "language": "tshivenda",
+        "grade": 1,
+        "title": "Book 5",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-tshivenda-g1-b5.pdf",
+        "size": 4307
+    },
+    {
+        "id": 222,
+        "language": "tshivenda",
+        "grade": 1,
+        "title": "Book 6",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-tshivenda-g1-b6.pdf",
+        "size": 4592
+    },
+    {
+        "id": 223,
+        "language": "tshivenda",
+        "grade": 1,
+        "title": "Book 7",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-tshivenda-g1-b7.pdf",
+        "size": 4420
+    },
+    {
+        "id": 224,
+        "language": "tshivenda",
+        "grade": 1,
+        "title": "Book 8",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-tshivenda-g1-b8.pdf",
+        "size": 4824
+    },
+    {
+        "id": 225,
+        "language": "tshivenda",
+        "grade": 2,
+        "title": "Book 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-tshivenda-g2-b1.pdf",
+        "size": 4277
+    },
+    {
+        "id": 226,
+        "language": "tshivenda",
+        "grade": 2,
+        "title": "Book 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-tshivenda-g2-b2.pdf",
+        "size": 4441
+    },
+    {
+        "id": 227,
+        "language": "tshivenda",
+        "grade": 2,
+        "title": "Book 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-tshivenda-g2-b3.pdf",
+        "size": 4004
+    },
+    {
+        "id": 228,
+        "language": "tshivenda",
+        "grade": 2,
+        "title": "Book 4",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-tshivenda-g2-b4.pdf",
+        "size": 3675
+    },
+    {
+        "id": 229,
+        "language": "tshivenda",
+        "grade": 2,
+        "title": "Book 5",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-tshivenda-g2-b5.pdf",
+        "size": 3556
+    },
+    {
+        "id": 230,
+        "language": "tshivenda",
+        "grade": 2,
+        "title": "Book 6",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-tshivenda-g2-b6.pdf",
+        "size": 3473
+    },
+    {
+        "id": 231,
+        "language": "tshivenda",
+        "grade": 2,
+        "title": "Book 7",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-tshivenda-g2-b7.pdf",
+        "size": 3631
+    },
+    {
+        "id": 232,
+        "language": "tshivenda",
+        "grade": 2,
+        "title": "Book 8",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-tshivenda-g2-b8.pdf",
+        "size": 3806
+    },
+    {
+        "id": 233,
+        "language": "tshivenda",
+        "grade": 3,
+        "title": "Book 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-tshivenda-g3-b1.pdf",
+        "size": 4064
+    },
+    {
+        "id": 234,
+        "language": "tshivenda",
+        "grade": 3,
+        "title": "Book 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-tshivenda-g3-b2.pdf",
+        "size": 4358
+    },
+    {
+        "id": 235,
+        "language": "tshivenda",
+        "grade": 3,
+        "title": "Book 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-tshivenda-g3-b3.pdf",
+        "size": 3566
+    },
+    {
+        "id": 236,
+        "language": "tshivenda",
+        "grade": 3,
+        "title": "Book 4",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-tshivenda-g3-b4.pdf",
+        "size": 4191
+    },
+    {
+        "id": 237,
+        "language": "tshivenda",
+        "grade": 3,
+        "title": "Book 5",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-tshivenda-g3-b5.pdf",
+        "size": 4211
+    },
+    {
+        "id": 238,
+        "language": "tshivenda",
+        "grade": 3,
+        "title": "Book 6",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-tshivenda-g3-b6.pdf",
+        "size": 4037
+    },
+    {
+        "id": 239,
+        "language": "tshivenda",
+        "grade": 3,
+        "title": "Book 7",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-tshivenda-g3-b7.pdf",
+        "size": 4673
+    },
+    {
+        "id": 240,
+        "language": "tshivenda",
+        "grade": 3,
+        "title": "Book 8",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-tshivenda-g3-b8.pdf",
+        "size": 4236
+    },
+    {
+        "id": 241,
+        "language": "xitsonga",
+        "grade": 1,
+        "title": "Book 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-xitsonga-g1-b1.pdf",
+        "size": 6282
+    },
+    {
+        "id": 242,
+        "language": "xitsonga",
+        "grade": 1,
+        "title": "Book 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-xitsonga-g1-b2.pdf",
+        "size": 5957
+    },
+    {
+        "id": 243,
+        "language": "xitsonga",
+        "grade": 1,
+        "title": "Book 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-xitsonga-g1-b3.pdf",
+        "size": 4653
+    },
+    {
+        "id": 244,
+        "language": "xitsonga",
+        "grade": 1,
+        "title": "Book 4",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-xitsonga-g1-b4.pdf",
+        "size": 4374
+    },
+    {
+        "id": 245,
+        "language": "xitsonga",
+        "grade": 1,
+        "title": "Book 5",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-xitsonga-g1-b5.pdf",
+        "size": 4221
+    },
+    {
+        "id": 246,
+        "language": "xitsonga",
+        "grade": 1,
+        "title": "Book 6",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-xitsonga-g1-b6.pdf",
+        "size": 4575
+    },
+    {
+        "id": 247,
+        "language": "xitsonga",
+        "grade": 1,
+        "title": "Book 7",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-xitsonga-g1-b7.pdf",
+        "size": 4329
+    },
+    {
+        "id": 248,
+        "language": "xitsonga",
+        "grade": 1,
+        "title": "Book 8",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-xitsonga-g1-b8.pdf",
+        "size": 4777
+    },
+    {
+        "id": 249,
+        "language": "xitsonga",
+        "grade": 2,
+        "title": "Book 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-xitsonga-g2-b1.pdf",
+        "size": 4421
+    },
+    {
+        "id": 250,
+        "language": "xitsonga",
+        "grade": 2,
+        "title": "Book 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-xitsonga-g2-b2.pdf",
+        "size": 4521
+    },
+    {
+        "id": 251,
+        "language": "xitsonga",
+        "grade": 2,
+        "title": "Book 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-xitsonga-g2-b3.pdf",
+        "size": 4090
+    },
+    {
+        "id": 252,
+        "language": "xitsonga",
+        "grade": 2,
+        "title": "Book 5",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-xitsonga-g2-b5.pdf",
+        "size": 3631
+    },
+    {
+        "id": 253,
+        "language": "xitsonga",
+        "grade": 2,
+        "title": "Book 6",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-xitsonga-g2-b6.pdf",
+        "size": 3576
+    },
+    {
+        "id": 254,
+        "language": "xitsonga",
+        "grade": 2,
+        "title": "Book 7",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-xitsonga-g2-b7.pdf",
+        "size": 3836
+    },
+    {
+        "id": 255,
+        "language": "xitsonga",
+        "grade": 2,
+        "title": "Book 8",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-xitsonga-g2-b8.pdf",
+        "size": 3953
+    },
+    {
+        "id": 256,
+        "language": "xitsonga",
+        "grade": 3,
+        "title": "Book 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-xitsonga-g3-b1.pdf",
+        "size": 3940
+    },
+    {
+        "id": 257,
+        "language": "xitsonga",
+        "grade": 3,
+        "title": "Book 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-xitsonga-g3-b2.pdf",
+        "size": 4072
+    },
+    {
+        "id": 258,
+        "language": "xitsonga",
+        "grade": 3,
+        "title": "Book 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-xitsonga-g3-b3.pdf",
+        "size": 3627
+    },
+    {
+        "id": 259,
+        "language": "xitsonga",
+        "grade": 3,
+        "title": "Book 4",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-xitsonga-g3-b4.pdf",
+        "size": 4283
+    },
+    {
+        "id": 260,
+        "language": "xitsonga",
+        "grade": 3,
+        "title": "Book 5",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-xitsonga-g3-b5.pdf",
+        "size": 4185
+    },
+    {
+        "id": 261,
+        "language": "xitsonga",
+        "grade": 3,
+        "title": "Book 6",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-xitsonga-g3-b6.pdf",
+        "size": 4003
+    },
+    {
+        "id": 262,
+        "language": "xitsonga",
+        "grade": 3,
+        "title": "Book 7",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-xitsonga-g3-b7.pdf",
+        "size": 4663
+    },
+    {
+        "id": 263,
+        "language": "xitsonga",
+        "grade": 3,
+        "title": "Book 8",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-xitsonga-g3-b8.pdf",
+        "size": 4196
+    }
+]

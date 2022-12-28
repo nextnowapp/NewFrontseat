@@ -1,0 +1,33 @@
+<svg id="Group_257" data-name="Group 257" xmlns="http://www.w3.org/2000/svg" width="129" height="63" viewBox="0 0 129 63">
+  <rect id="Rectangle_1674" data-name="Rectangle 1674" width="26" height="36" transform="translate(71 27)" fill="#f1ca8e"/>
+  <rect id="Rectangle_1675" data-name="Rectangle 1675" width="26" height="36" transform="translate(0 27)" fill="#f1ca8e"/>
+  <rect id="Rectangle_1676" data-name="Rectangle 1676" width="45" height="46" transform="translate(26 17)" fill="#ffdca6"/>
+  <path id="Path_2598" data-name="Path 2598" d="M59,32.5A3.5,3.5,0,0,1,62.5,29h0A3.5,3.5,0,0,1,66,32.5V39H59Z" fill="#d6b37e"/>
+  <path id="Path_2599" data-name="Path 2599" d="M30,32.5A3.5,3.5,0,0,1,33.5,29h0A3.5,3.5,0,0,1,37,32.5V39H30Z" fill="#d6b37e"/>
+  <path id="Path_2600" data-name="Path 2600" d="M59,52.5A3.5,3.5,0,0,1,62.5,49h0A3.5,3.5,0,0,1,66,52.5V59H59Z" fill="#d6b37e"/>
+  <path id="Path_2601" data-name="Path 2601" d="M30,52.5A3.5,3.5,0,0,1,33.5,49h0A3.5,3.5,0,0,1,37,52.5V59H30Z" fill="#d6b37e"/>
+  <path id="Path_2602" data-name="Path 2602" d="M43,29a5,5,0,0,1,5-5h0a5,5,0,0,1,5,5V39H43Z" fill="#d6b37e"/>
+  <path id="Path_2603" data-name="Path 2603" d="M43,49a5,5,0,0,1,5-5h0a5,5,0,0,1,5,5V59H43Z" fill="#ffeed5"/>
+  <rect id="Rectangle_1677" data-name="Rectangle 1677" width="3" height="4" transform="translate(74 31)" fill="#d6b37e"/>
+  <rect id="Rectangle_1678" data-name="Rectangle 1678" width="3" height="4" transform="translate(4 31)" fill="#d6b37e"/>
+  <rect id="Rectangle_1679" data-name="Rectangle 1679" width="3" height="4" transform="translate(74 43)" fill="#d6b37e"/>
+  <rect id="Rectangle_1680" data-name="Rectangle 1680" width="3" height="4" transform="translate(4 43)" fill="#d6b37e"/>
+  <rect id="Rectangle_1681" data-name="Rectangle 1681" width="3" height="4" transform="translate(74 55)" fill="#d6b37e"/>
+  <rect id="Rectangle_1682" data-name="Rectangle 1682" width="3" height="4" transform="translate(4 55)" fill="#d6b37e"/>
+  <rect id="Rectangle_1683" data-name="Rectangle 1683" width="3" height="4" transform="translate(82 31)" fill="#d6b37e"/>
+  <rect id="Rectangle_1684" data-name="Rectangle 1684" width="3" height="4" transform="translate(12 31)" fill="#d6b37e"/>
+  <rect id="Rectangle_1685" data-name="Rectangle 1685" width="3" height="4" transform="translate(82 43)" fill="#d6b37e"/>
+  <rect id="Rectangle_1686" data-name="Rectangle 1686" width="3" height="4" transform="translate(12 43)" fill="#d6b37e"/>
+  <rect id="Rectangle_1687" data-name="Rectangle 1687" width="3" height="4" transform="translate(82 55)" fill="#d6b37e"/>
+  <rect id="Rectangle_1688" data-name="Rectangle 1688" width="3" height="4" transform="translate(12 55)" fill="#d6b37e"/>
+  <rect id="Rectangle_1689" data-name="Rectangle 1689" width="3" height="4" transform="translate(90 31)" fill="#d6b37e"/>
+  <rect id="Rectangle_1690" data-name="Rectangle 1690" width="3" height="4" transform="translate(20 31)" fill="#d6b37e"/>
+  <rect id="Rectangle_1691" data-name="Rectangle 1691" width="3" height="4" transform="translate(90 43)" fill="#d6b37e"/>
+  <rect id="Rectangle_1692" data-name="Rectangle 1692" width="3" height="4" transform="translate(20 43)" fill="#d6b37e"/>
+  <rect id="Rectangle_1693" data-name="Rectangle 1693" width="3" height="4" transform="translate(90 55)" fill="#d6b37e"/>
+  <rect id="Rectangle_1694" data-name="Rectangle 1694" width="3" height="4" transform="translate(20 55)" fill="#d6b37e"/>
+  <path id="Path_2604" data-name="Path 2604" d="M112.054,7.135s5.087,2.293,8.473,2.293S129,7.135,129,7.135V20.9s-5.086,2.293-8.473,2.293-8.473-2.293-8.473-2.293Z" fill="#f57d49"/>
+  <path id="Path_2605" data-name="Path 2605" d="M112.054,19.622v1.338c3.925,0,5.8-2.081,6.244-3.122C115.622,18.284,112.946,18.73,112.054,19.622Z" fill="#d86230"/>
+  <path id="Path_2606" data-name="Path 2606" d="M97.784,4.459s6.158,2.23,10.257,2.23S118.3,4.459,118.3,4.459V17.838s-6.157,2.23-10.256,2.23-10.257-2.23-10.257-2.23Z" fill="#ff8b5a"/>
+  <path id="Path_2607" data-name="Path 2607" d="M97,0c.552,0,1,.984,1,2.2V60.8c0,1.214-.448,2.2-1,2.2s-1-.984-1-2.2V2.2C96,.984,96.448,0,97,0Z" fill="#bababa" fill-rule="evenodd"/>
+</svg>

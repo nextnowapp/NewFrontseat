@@ -1,0 +1,14 @@
+<svg id="Group_251" data-name="Group 251" xmlns="http://www.w3.org/2000/svg" width="52.067" height="47.297" viewBox="0 0 52.067 47.297">
+  <path id="Path_2569" data-name="Path 2569" d="M52.067,21.072c0,3.425-11.656,15.072-26.033,15.072S0,24.5,0,21.072,11.656,6,26.033,6,52.067,17.646,52.067,21.072Z" transform="translate(0 2.221)" fill="#e0eeff"/>
+  <circle id="Ellipse_322" data-name="Ellipse 322" cx="11.5" cy="11.5" r="11.5" transform="translate(14 11)" fill="#1a2e35"/>
+  <circle id="Ellipse_323" data-name="Ellipse 323" cx="10.5" cy="10.5" r="10.5" transform="translate(15 12)" fill="#fff"/>
+  <circle id="Ellipse_324" data-name="Ellipse 324" cx="4.5" cy="4.5" r="4.5" transform="translate(21 18)" fill="#1a2e35"/>
+  <ellipse id="Ellipse_325" data-name="Ellipse 325" cx="2.5" cy="2" rx="2.5" ry="2" transform="translate(27 18)" fill="#fff"/>
+  <ellipse id="Ellipse_326" data-name="Ellipse 326" cx="1" cy="0.5" rx="1" ry="0.5" transform="translate(23 25)" fill="#fff"/>
+  <path id="Path_2570" data-name="Path 2570" d="M18.685,0a.685.685,0,0,1,.685.685V6.166a.685.685,0,0,1-1.37,0V.685A.685.685,0,0,1,18.685,0Z" transform="translate(6.663 0)" fill="#f7cc7f" fill-rule="evenodd"/>
+  <path id="Path_2571" data-name="Path 2571" d="M3.406,3.7a.685.685,0,0,1,.969,0L8.268,7.552a.685.685,0,0,1-.964.973L3.41,4.668A.685.685,0,0,1,3.406,3.7Z" transform="translate(1.187 1.294)" fill="#f7cc7f" fill-rule="evenodd"/>
+  <path id="Path_2572" data-name="Path 2572" d="M35.569,3.7a.685.685,0,0,0-.969,0L30.706,7.552a.685.685,0,0,0,.964.973l3.894-3.857A.685.685,0,0,0,35.569,3.7Z" transform="translate(11.292 1.294)" fill="#f7cc7f" fill-rule="evenodd"/>
+  <path id="Path_2573" data-name="Path 2573" d="M18.685,36.37a.685.685,0,0,0,.685-.685V30.2a.685.685,0,1,0-1.37,0v5.481A.685.685,0,0,0,18.685,36.37Z" transform="translate(6.663 10.927)" fill="#f7cc7f" fill-rule="evenodd"/>
+  <path id="Path_2574" data-name="Path 2574" d="M3.406,32.231a.685.685,0,0,0,.969,0l3.894-3.857a.685.685,0,1,0-.964-.973L3.41,31.263A.685.685,0,0,0,3.406,32.231Z" transform="translate(1.187 10.071)" fill="#f7cc7f" fill-rule="evenodd"/>
+  <path id="Path_2575" data-name="Path 2575" d="M34.569,33.231a.685.685,0,0,1-.969,0l-3.894-3.857a.685.685,0,0,1,.964-.973l3.894,3.857A.685.685,0,0,1,34.569,33.231Z" transform="translate(10.921 10.442)" fill="#f7cc7f" fill-rule="evenodd"/>
+</svg>

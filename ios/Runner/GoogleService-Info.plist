@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>298609999547-c0u6b7k5jggsvgsidu2jmnmp6qgpvgaq.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.298609999547-c0u6b7k5jggsvgsidu2jmnmp6qgpvgaq</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>298609999547-kf957ijm40lgrcjpjtfguo9avqb1mugd.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAgriUtwb8iD2tn4Ex9nn-C2zovYT4IX_I</string>
+	<key>GCM_SENDER_ID</key>
+	<string>298609999547</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.nextnow.sms</string>
+	<key>PROJECT_ID</key>
+	<string>nextschool-1bc0d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>nextschool-1bc0d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:298609999547:ios:0924e214c6ebc7762c339e</string>
+	<key>DATABASE_URL</key>
+	<string>https://nextschool-1bc0d-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>

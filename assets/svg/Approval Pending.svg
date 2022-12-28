@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="230.775" height="238.332" viewBox="0 0 230.775 238.332">
+  <g id="Group_888" data-name="Group 888" transform="translate(-66.225 -213.492)">
+    <g id="Group_885" data-name="Group 885" transform="matrix(0.978, -0.208, 0.208, 0.978, -89.961, 47.452)">
+      <rect id="Rectangle_934" data-name="Rectangle 934" width="156" height="208" rx="8" transform="translate(111 229)" fill="#d7f0eb"/>
+      <rect id="Rectangle_936" data-name="Rectangle 936" width="131" height="183" rx="4" transform="translate(124 242)" fill="#fff"/>
+      <rect id="Rectangle_935" data-name="Rectangle 935" width="76" height="28" rx="4" transform="translate(151 218)" fill="#f25f5f"/>
+      <rect id="Rectangle_937" data-name="Rectangle 937" width="112" height="7" rx="3.5" transform="translate(133 306)" fill="#eff4ff"/>
+      <rect id="Rectangle_942" data-name="Rectangle 942" width="33" height="39" rx="8" transform="translate(133 258)" fill="#eff4ff"/>
+      <rect id="Rectangle_938" data-name="Rectangle 938" width="112" height="7" rx="3.5" transform="translate(133 332)" fill="#eff4ff"/>
+      <rect id="Rectangle_939" data-name="Rectangle 939" width="112" height="7" rx="3.5" transform="translate(133 359)" fill="#eff4ff"/>
+      <rect id="Rectangle_940" data-name="Rectangle 940" width="112" height="7" rx="3.5" transform="translate(133 385)" fill="#eff4ff"/>
+      <rect id="Rectangle_941" data-name="Rectangle 941" width="112" height="7" rx="3.5" transform="translate(133 411)" fill="#eff4ff"/>
+    </g>
+    <g id="Group_886" data-name="Group 886">
+      <circle id="Ellipse_221" data-name="Ellipse 221" cx="40.5" cy="40.5" r="40.5" transform="translate(210 366)" fill="#c5d7ff"/>
+      <line id="Line_244" data-name="Line 244" y2="6" transform="translate(250.5 370.5)" fill="none" stroke="#4e88ff" stroke-width="1"/>
+      <line id="Line_245" data-name="Line 245" y2="6" transform="translate(250.5 437.5)" fill="none" stroke="#4e88ff" stroke-width="1"/>
+      <line id="Line_246" data-name="Line 246" y2="6" transform="translate(214 407) rotate(-90)" fill="none" stroke="#4e88ff" stroke-width="1"/>
+      <line id="Line_247" data-name="Line 247" y2="6" transform="translate(281 407) rotate(-90)" fill="none" stroke="#4e88ff" stroke-width="1"/>
+      <line id="Line_248" data-name="Line 248" y2="24" transform="translate(250.5 383.5)" fill="none" stroke="#111b5b" stroke-width="1"/>
+      <line id="Line_249" data-name="Line 249" x2="12" transform="translate(250.5 405.5)" fill="none" stroke="#111b5b" stroke-width="1"/>
+      <circle id="Ellipse_222" data-name="Ellipse 222" cx="3.5" cy="3.5" r="3.5" transform="translate(247 402)" fill="#4e88ff"/>
+    </g>
+    <g id="Group_887" data-name="Group 887">
+      <path id="Polygon_11" data-name="Polygon 11" d="M14.045,5.923a4,4,0,0,1,6.91,0L31.491,23.985A4,4,0,0,1,28.036,30H6.964a4,4,0,0,1-3.455-6.015Z" transform="translate(262 356)" fill="#fec233"/>
+      <text id="_" data-name="!" transform="translate(280 380)" font-size="16" font-family="Lato-Bold, Lato" font-weight="700"><tspan x="-2.884" y="0">!</tspan></text>
+    </g>
+  </g>
+</svg>

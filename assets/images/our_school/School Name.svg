@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="29" height="26" viewBox="0 0 29 26">
+  <g id="Group_1270" data-name="Group 1270" transform="translate(-29 -395)">
+    <rect id="Rectangle_1698" data-name="Rectangle 1698" width="13" height="19" transform="translate(37 402)" fill="#ff7e7e"/>
+    <rect id="Rectangle_1699" data-name="Rectangle 1699" width="8" height="15" transform="translate(50 406)" fill="#ef6767"/>
+    <rect id="Rectangle_1700" data-name="Rectangle 1700" width="8" height="15" transform="translate(29 406)" fill="#ef6767"/>
+    <path id="Rectangle_1701" data-name="Rectangle 1701" d="M2.5,0h0A2.5,2.5,0,0,1,5,2.5V8A0,0,0,0,1,5,8H0A0,0,0,0,1,0,8V2.5A2.5,2.5,0,0,1,2.5,0Z" transform="translate(41 413)" fill="#ef6767"/>
+    <path id="Polygon_6" data-name="Polygon 6" d="M6.5,0,13,7H0Z" transform="translate(37 395)" fill="#ff7e7e"/>
+    <circle id="Ellipse_340" data-name="Ellipse 340" cx="2.5" cy="2.5" r="2.5" transform="translate(41 403)" fill="#ffc7c7"/>
+    <rect id="Rectangle_1702" data-name="Rectangle 1702" width="2" height="2" transform="translate(30 408)" fill="#d54040"/>
+    <rect id="Rectangle_1706" data-name="Rectangle 1706" width="2" height="2" transform="translate(55 408)" fill="#d54040"/>
+    <rect id="Rectangle_1703" data-name="Rectangle 1703" width="2" height="2" transform="translate(34 412)" fill="#d54040"/>
+    <rect id="Rectangle_1707" data-name="Rectangle 1707" width="2" height="2" transform="translate(51 412)" fill="#d54040"/>
+    <rect id="Rectangle_1704" data-name="Rectangle 1704" width="2" height="2" transform="translate(30 416)" fill="#d54040"/>
+    <rect id="Rectangle_1705" data-name="Rectangle 1705" width="2" height="2" transform="translate(55 416)" fill="#d54040"/>
+    <g id="Ellipse_341" data-name="Ellipse 341" transform="translate(41 403)" fill="none" stroke="#414f61" stroke-width="0.5">
+      <circle cx="2.5" cy="2.5" r="2.5" stroke="none"/>
+      <circle cx="2.5" cy="2.5" r="2.25" fill="none"/>
+    </g>
+  </g>
+</svg>

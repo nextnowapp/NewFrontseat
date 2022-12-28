@@ -1,0 +1,77 @@
+
+@baseUrl = https://dev.schoolmanagement.co.za/api
+
+### Nextschool Login Service
+# @name auth
+
+GET {{baseUrl}}/login?email=UAT12345_5_01012012@schoolmanagement.co.za&password=845186&role=management HTTP/1.1
+
+@accessToken = {{auth.response.body.data.accessToken}}
+
+### New signup FLow
+# @name signup
+POST {{baseUrl}}/search_schoool
+Content-Type: application/json
+
+{
+    "passcode" : "4B484F1466",
+    "app_config_token" : "1234567890"
+}
+
+@accessToken = {{signup.response.body.data.accessToken}}
+
+
+### Save learner detail
+POST {{baseUrl}}/save_learner_detail
+Content-Type: application/json
+Authorization: {{accessToken}}
+
+{
+    "user_id" : 185,
+    "session_l_dob": "2007-06-02",
+    "l_dob": "2007-06-02",
+    "l_first_name" : "Test",
+    "l_middle_name" : "User",
+    "l_last_name" : "maa",
+    "l_gender": 2,
+    "l_mobile" : "0983456709",
+    "l_email": "ro@gmail.com",
+    "l_nid": "1010101010102",
+    "l_class_id": 22,
+    "l_section_id": 13
+}
+
+
+### Get classes
+#
+GET {{baseUrl}}/class
+Content-Type: application/json
+Authorization: {{accessToken}}
+
+
+### Upload Content
+POST {{baseUrl}}/teacher-upload-content
+Content-Type: application/json
+Authorization: {{accessToken}}
+
+{
+    "content_title": "Test Content",
+    "content_type": "as",
+    "upload_date": "2020/06/02",
+    "description": "Test Content",
+}
+
+###
+GET {{baseUrl}}/api/student-class-routine/29/?class=32
+Content-Type: application/json
+Authorization: {{accessToken}}
+
+
+###
+POST https://aaprimarysecondary.co.za/api/search_schoool
+Content-Type: application/json
+
+{
+    "passcode" : "A7A91EAE81",
+    "app_config_token" : "1234567890"
+}

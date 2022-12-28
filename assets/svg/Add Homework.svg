@@ -1,0 +1,24 @@
+<svg width="55" height="42" viewBox="0 0 55 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M25 5.85833C18.6986 0.322021 7.53425 1.93678 2.73973 3.4362L0 35.2699C7.39726 31.1177 19.7489 32.6932 25 35V5.85833Z" fill="#B4CFF1"/>
+<path d="M25 5.85833C31.3014 0.322021 42.4658 1.93678 47.2603 3.4362L50 35.2699C42.6027 31.1177 30.2511 32.6932 25 35V5.85833Z" fill="#B4CFF1"/>
+<path d="M25 3.85833C18.6986 -1.67798 7.53425 -0.0632218 2.73973 1.4362L0 33.2699C7.39726 29.1177 19.7489 32.6932 25 35V3.85833Z" fill="#C8E1FF"/>
+<path d="M25 3.85833C31.3014 -1.67798 42.4658 -0.0632217 47.2603 1.4362L50 33.2699C42.6027 29.1177 30.2511 32.6932 25 35V3.85833Z" fill="#C8E1FF"/>
+<rect x="24" y="3" width="2" height="32" rx="1" fill="#AECEF5"/>
+<path d="M29 6.50006C32.1667 5.66672 39.7 4.50006 44.5 6.50006" stroke="#78ACEA" stroke-linecap="round"/>
+<path d="M5 6.50006C8.16667 5.66672 15.7 4.50006 20.5 6.50006" stroke="#78ACEA" stroke-linecap="round"/>
+<path d="M29 11.1043C32.1667 10.271 39.7 9.1043 44.5 11.1043" stroke="#78ACEA" stroke-linecap="round"/>
+<path d="M5 11.1043C8.16667 10.271 15.7 9.1043 20.5 11.1043" stroke="#78ACEA" stroke-linecap="round"/>
+<path d="M29 16.1043C32.1667 15.271 39.7 14.1043 44.5 16.1043" stroke="#78ACEA" stroke-linecap="round"/>
+<path d="M5 16.1043C8.16667 15.271 15.7 14.1043 20.5 16.1043" stroke="#78ACEA" stroke-linecap="round"/>
+<path d="M29 21.1043C32.1667 20.271 39.7 19.1043 44.5 21.1043" stroke="#78ACEA" stroke-linecap="round"/>
+<path d="M5 21.1043C8.16667 20.271 15.7 19.1043 20.5 21.1043" stroke="#78ACEA" stroke-linecap="round"/>
+<path d="M29 26.1043C32.1667 25.271 39.7 24.1043 44.5 26.1043" stroke="#78ACEA" stroke-linecap="round"/>
+<path d="M5 26.1043C8.16667 25.271 15.7 24.1043 20.5 26.1043" stroke="#78ACEA" stroke-linecap="round"/>
+<path d="M6 39C6 38.4477 6.44772 38 7 38H40V42H7C6.44772 42 6 41.5523 6 41V39Z" fill="#FF7575"/>
+<path d="M6 41C6 40.4477 6.44772 40 7 40H40V42H7C6.44772 42 6 41.5523 6 41V41Z" fill="#FF5A5A"/>
+<path d="M6 39C6 38.4477 6.44772 38 7 38H9V42H7C6.44772 42 6 41.5523 6 41V39Z" fill="#1E0000"/>
+<path d="M44 40L40 38V42L44 40Z" fill="#F7CC7F"/>
+<path d="M44 40L42 39V41L44 40Z" fill="black"/>
+<rect x="47" y="9" width="3" height="13" rx="1.5" fill="#222744"/>
+<rect x="42" y="17" width="3" height="13" rx="1.5" transform="rotate(-90 42 17)" fill="#222744"/>
+</svg>

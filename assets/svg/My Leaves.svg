@@ -1,0 +1,14 @@
+<svg width="46" height="37" viewBox="0 0 46 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect y="3.60962" width="45.1219" height="33.3902" rx="4" fill="#EAEAEA"/>
+<path d="M0 7.60962C0 5.40048 1.79086 3.60962 4 3.60962H41.1219C43.3311 3.60962 45.1219 5.40048 45.1219 7.60962V11.7316H0V7.60962Z" fill="#FF4E4E"/>
+<line x1="10.7317" y1="7.12207" x2="10.7317" y2="1.00012" stroke="black" stroke-width="2" stroke-linecap="round"/>
+<line x1="34.1951" y1="7.12207" x2="34.1951" y2="1.00012" stroke="black" stroke-width="2" stroke-linecap="round"/>
+<line x1="8.31702" y1="19.6584" x2="34.0975" y2="19.6584" stroke="#FFC0C0" stroke-width="4" stroke-linecap="round"/>
+<line x1="8.62195" y1="20.2559" x2="11.2317" y2="20.2559" stroke="#222744" stroke-linecap="round"/>
+<line x1="14.939" y1="20.2559" x2="17.5487" y2="20.2559" stroke="#222744" stroke-linecap="round"/>
+<line x1="22.1584" y1="20.2559" x2="24.7682" y2="20.2559" stroke="#222744" stroke-linecap="round"/>
+<line x1="29.3781" y1="20.2559" x2="31.9878" y2="20.2559" stroke="#222744" stroke-linecap="round"/>
+<line x1="8.31702" y1="26.8777" x2="19.6585" y2="26.8777" stroke="#FFC0C0" stroke-width="4" stroke-linecap="round"/>
+<line x1="8.62195" y1="27.4753" x2="11.2317" y2="27.4753" stroke="#222744" stroke-linecap="round"/>
+<line x1="14.939" y1="27.4753" x2="17.5487" y2="27.4753" stroke="#222744" stroke-linecap="round"/>
+</svg>

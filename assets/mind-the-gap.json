@@ -1,0 +1,226 @@
+[
+    {
+        "grade": 12,
+        "id": 1,
+        "language": "english",
+        "title": "Language and Context (EFAL PAPER I)",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/05/language-and-context.pdf",
+        "size": 4340
+    },
+    {
+        "grade": 12,
+        "id": 2,
+        "language": "english",
+        "title": "Romeo and Jullet (EFAL Paper II)",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/05/romeo-and-juliet.pdf",
+        "size": 3620
+    },
+    {
+        "grade": 12,
+        "id": 3,
+        "language": "english",
+        "title": "Nothing but the Truth (EFAL Paper II)",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/05/nothing-but-the-truth.pdf",
+        "size": 1730
+    },
+    {
+        "grade": 12,
+        "id": 4,
+        "language": "english",
+        "title": "Grain of Wheat (EFAL Paper II)",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/05/grain-of-wheat.pdf",
+        "size": 5680
+    },
+    {
+        "grade": 12,
+        "id": 5,
+        "language": "english",
+        "title": "Lord of the Flies (EFAL Paper II)",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/05/lord-of-the-files.pdf",
+        "size": 4040
+    },
+    {
+        "grade": 12,
+        "id": 6,
+        "language": "english",
+        "title": "To Kill a Mocking Bird (EFAL Paper II)",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/05/to-kill-a-mocking-bird.pdf",
+        "size": 2690
+    },
+    {
+        "grade": 12,
+        "id": 7,
+        "language": "english",
+        "title": "Poetry (EFAL Paper II)",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/05/poetry.pdf",
+        "size": 4410
+    },
+    {
+        "grade": 12,
+        "id": 8,
+        "language": "english",
+        "title": "Short Stories (EFAL Paper II)",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/05/short-stories.pdf",
+        "size": 3080
+    },
+    {
+        "grade": 12,
+        "id": 9,
+        "language": "english",
+        "title": "Writing (EFAL Paper III)",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/05/writing.pdf",
+        "size": 6260
+    },
+    {
+        "grade": 12,
+        "id": 10,
+        "language": "english",
+        "title": "Accounting",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/05/accounting.pdf",
+        "size": 12390
+    },
+    {
+        "grade": 12,
+        "id": 11,
+        "language": "english",
+        "title": "Economics",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/05/economics.pdf",
+        "size": 10980
+    },
+    {
+        "grade": 12,
+        "id": 12,
+        "language": "english",
+        "title": "Life Sciences",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/05/life-science.pdf",
+        "size": 9470
+    },
+    {
+        "grade": 12,
+        "id": 13,
+        "language": "english",
+        "title": "Geography",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/05/geography.pdf",
+        "size": 22960
+    },
+    {
+        "grade": 12,
+        "id": 14,
+        "language": "english",
+        "title": "Geography Map 1",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/05/geography-map-1.pdf",
+        "size": 90650
+    },
+    {
+        "grade": 12,
+        "id": 15,
+        "language": "english",
+        "title": "Geography Map 2",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/05/grography-map-2.pdf",
+        "size": 17250
+    },
+    {
+        "grade": 12,
+        "id": 16,
+        "language": "english",
+        "title": "Geography Map 3",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/05/geography-map-3.pdf",
+        "size": 24150
+    },
+    {
+        "grade": 12,
+        "id": 17,
+        "language": "english",
+        "title": "Mathematics",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/05/mathematics.pdf",
+        "size": 29680
+    },
+    {
+        "grade": 12,
+        "id": 18,
+        "language": "english",
+        "title": "Mathematics Literacy",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/05/mathematical-literacy.pdf",
+        "size": 6020
+    },
+    {
+        "grade": 12,
+        "id": 19,
+        "language": "english",
+        "title": "Physical Sciences: Physics",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/05/physics.pdf",
+        "size": 14860
+    },
+    {
+        "grade": 12,
+        "id": 20,
+        "language": "english",
+        "title": "Physical Sciences: Chemistry",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/05/chemistry.pdf",
+        "size": 24450
+    },
+    {
+        "grade": 12,
+        "id": 21,
+        "language": "afrikaans",
+        "title": "Rekeningkunde",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/05/rekeningkunde.pdf",
+        "size": 19480
+    },
+    {
+        "grade": 12,
+        "id": 22,
+        "language": "afrikaans",
+        "title": "Ekonomie",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/05/ekonomie.pdf",
+        "size": 11270
+    },
+    {
+        "grade": 12,
+        "id": 23,
+        "language": "afrikaans",
+        "title": "Lewenswetenskappe",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/05/lewenswetenskappe.pdf",
+        "size": 8130
+    },
+    {
+        "grade": 12,
+        "id": 24,
+        "language": "afrikaans",
+        "title": "Geografie",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/05/geografie.pdf",
+        "size": 41600
+    },
+    {
+        "grade": 12,
+        "id": 25,
+        "language": "afrikaans",
+        "title": "Fisiese Wetenskap Deel 1 Fieika",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/05/fisiese-wetenskap-deel-1-fieika.pdf",
+        "size": 10840
+    },
+    {
+        "grade": 12,
+        "id": 26,
+        "language": "afrikaans",
+        "title": "Fisiese Wetenskap Deel 2 Chemie",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/05/fisiese-wetenskap-deel-2-chemie.pdf",
+        "size": 19770
+    },
+    {
+        "grade": 12,
+        "id": 27,
+        "language": "afrikaans",
+        "title": "Wiskunde",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/05/wiskunde.pdf",
+        "size": 23820
+    },
+    {
+        "grade": 12,
+        "id": 28,
+        "language": "afrikaans",
+        "title": "Wiskundige Geletterdheid",
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/05/wiskundige-geletterdheid.pdf",
+        "size": 15660
+    }
+]

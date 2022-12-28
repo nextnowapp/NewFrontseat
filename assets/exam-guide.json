@@ -1,0 +1,538 @@
+[
+    {
+        "grade": 12,
+        "id": 1,
+        "subject": "Accounting",
+        "language": "afrikaans",
+        "size": 773,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Accounting-GR-12-Exam-Guidelines-2021-Afr.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 2,
+        "subject": "Accounting",
+        "language": "english",
+        "size": 751,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Accounting-GR-12-Exam-Guidelines-2021-Eng.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 3,
+        "subject": "Agricultural Management Practices",
+        "language": "afrikaans",
+        "size": 546,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Agricultural-Management-Practices-GR-12-Exam-Guidelines-2021-Afr.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 4,
+        "subject": "Agricultural Management Practices",
+        "language": "english",
+        "size": 533,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Agricultural-Management-Practices-GR-12-Exam-Guidelines-2021-Eng.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 5,
+        "subject": "Agricultural Sciences",
+        "language": "afrikaans",
+        "size": 582,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Agricultural-Sciences-GR-12-Exam-Guidelines-2021-Afr.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 6,
+        "subject": "Agricultural Sciences",
+        "language": "english",
+        "size": 615,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Agricultural-Sciences-GR-12-Exam-Guidelines-2021-Eng.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 7,
+        "subject": "Agricultural Technology",
+        "language": "afrikaans",
+        "size": 385,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Agricultural-Technology-GR-12-Exam-Guidelines-2021-Afr.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 8,
+        "subject": "Agricultural Technology",
+        "language": "english",
+        "size": 454,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Agricultural-Technology-GR-12-Exam-Guidelines-2021-Eng.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 9,
+        "subject": "Business Studies",
+        "language": "afrikaans",
+        "size": 709,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Business-Studies-GR-12-Exam-Guidelines-2021-Afr.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 10,
+        "subject": "Business Studies",
+        "language": "english",
+        "size": 692,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Business-Studies-GR-12-Exam-Guidelines-2021-Eng.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 11,
+        "subject": "Civil Technology",
+        "language": "afrikaans",
+        "size": 321,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Civil-Technology-GR-12-Exam-Guidelines-2021-Afr.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 12,
+        "subject": "Civil Technology",
+        "language": "english",
+        "size": 363,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Civil-Technology-GR-12-Exam-Guidelines-2021-Eng.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 13,
+        "subject": "Computer Application Technology",
+        "language": "afrikaans",
+        "size": 621,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Computer-Application-Technology-GR-12-Exam-Guidelines-2021-Afr.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 14,
+        "subject": "Computer Application Technology",
+        "language": "english",
+        "size": 533,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Computer-Application-Technology-GR-12-Exam-Guidelines-2021-Eng.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 15,
+        "subject": "Consumer Studies",
+        "language": "afrikaans",
+        "size": 545,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Consumer-Studies-GR-12-Exam-Guidelines-2021-Afr.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 16,
+        "subject": "Consumer Studies",
+        "language": "english",
+        "size": 609,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Consumer-Studies-GR-12-Exam-Guidelines-2021-Eng.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 17,
+        "subject": "Dance Studies",
+        "language": "afrikaans",
+        "size": 1175,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Dance-Studies-GR-12-Exam-Guidelines-2021-Afr.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 18,
+        "subject": "Dance Studies",
+        "language": "english",
+        "size": 1047,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Dance-Studies-GR-12-Exam-Guidelines-2021-Eng.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 19,
+        "subject": "Design",
+        "language": "afrikaans",
+        "size": 587,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Design-GR-12-Exam-Guidelines-2021-Afr.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 20,
+        "subject": "Design",
+        "language": "english",
+        "size": 579,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Design-GR-12-Exam-Guidelines-2021-Eng.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 21,
+        "subject": "Dramatic Arts",
+        "language": "afrikaans",
+        "size": 1191,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Dramatic-Arts-GR-12-Exam-Guidelines-2021-Afr.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 22,
+        "subject": "Dramatic Arts",
+        "language": "english",
+        "size": 1160,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Dramatic-Arts-GR-12-Exam-Guidelines-2021-Eng.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 23,
+        "subject": "Economics",
+        "language": "afrikaans",
+        "size": 832,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Economics-GR-12-Exam-Guidelines-2021-Afr.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 24,
+        "subject": "Economics",
+        "language": "english",
+        "size": 827,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Economics-GR-12-Exam-Guidelines-2021-Eng.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 25,
+        "subject": "Electrical Technology: Digital",
+        "language": "afrikaans",
+        "size": 799,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Electrical-Technology-GR-12-Exam-Guidelines-Digital-2021-Afr.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 26,
+        "subject": "Electrical Technology: Digital",
+        "language": "english",
+        "size": 677,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Electrical-Technology-GR-12-Exam-Guidelines-Digital-2021-Eng.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 27,
+        "subject": "Electrical Technology: Electronics",
+        "language": "afrikaans",
+        "size": 930,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Electrical-Technology-GR-12-Exam-Guidelines-Electronics-2021-Afr.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 28,
+        "subject": "Electrical Technology: Electronics",
+        "language": "english",
+        "size": 807,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Electrical-Technology-GR-12-Exam-Guidelines-Electronics-2021-Eng.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 29,
+        "subject": "Electrical Technology: Power Systems",
+        "language": "afrikaans",
+        "size": 862,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Electrical-Technology-GR-12-Exam-Guidelines-Power-Systems-2021-Afr.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 30,
+        "subject": "Electrical Technology: Power Systems",
+        "language": "english",
+        "size": 717,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Electrical-Technology-GR-12-Exam-Guidelines-Power-Systems-2021-Eng.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 31,
+        "subject": "Engineering Graphics & Design",
+        "language": "afrikaans",
+        "size": 313,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Engineering-Graphics-Design-GR-12-Exam-Guidelines-2021-Afr.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 32,
+        "subject": "Engineering Graphics & Design",
+        "language": "english",
+        "size": 307,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Engineering-Graphics-Design-GR-12-Exam-Guidelines-2021-Eng.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 33,
+        "subject": "First Additional Languages",
+        "language": "english",
+        "size": 697,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/First-Additional-Languages-GR-12-Exam-Guidelines-2021.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 34,
+        "subject": "Geography",
+        "language": "afrikaans",
+        "size": 593,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Geography-GR-12-Exam-Guidelines-2021-Afr.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 35,
+        "subject": "Geography",
+        "language": "english",
+        "size": 576,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Geography-GR-12-Exam-Guidelines-2021-Eng.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 36,
+        "subject": "History",
+        "language": "afrikaans",
+        "size": 298,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/History-GR-12-Exam-Guidelines-2021-Afr.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 37,
+        "subject": "History",
+        "language": "english",
+        "size": 337,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/History-GR-12-Exam-Guidelines-2021-Eng.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 38,
+        "subject": "Home Languages",
+        "language": "english",
+        "size": 658,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Home-Languages-GR-12-Exam-Guidelines-2021-1.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 39,
+        "subject": "Hospitality Studies",
+        "language": "afrikaans",
+        "size": 426,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Hospitality-Studies-GR-12-Exam-Guidelines-2021-Afr.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 40,
+        "subject": "Hospitality Studies",
+        "language": "english",
+        "size": 426,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Hospitality-Studies-GR-12-Exam-Guidelines-2021-Eng.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 41,
+        "subject": "Information Technology",
+        "language": "afrikaans",
+        "size": 335,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Information-Technology-GR-12-Exam-Guidelines-2021-Afr.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 42,
+        "subject": "Information Technology",
+        "language": "english",
+        "size": 400,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Information-Technology-GR-12-Exam-Guidelines-2021-Eng.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 43,
+        "subject": "Life Orientation",
+        "language": "afrikaans",
+        "size": 364,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Life-Orientation-GR-12-Examination-Guideline-2021-Afr.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 44,
+        "subject": "Life Orientation",
+        "language": "english",
+        "size": 364,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Life-Orientation-GR-12-Examination-Guideline-2021-Eng.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 45,
+        "subject": "Life Sciences",
+        "language": "afrikaans",
+        "size": 542,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Life-Sciences-GR-12-Exam-Guidelines-2021-Afr.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 46,
+        "subject": "Life Sciences",
+        "language": "english",
+        "size": 499,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Life-Sciences-GR-12-Exam-Guidelines-2021-Eng.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 47,
+        "subject": "Mathematical Literacy",
+        "language": "afrikaans",
+        "size": 451,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Mathematical-Literacy-GR-12-Exam-Guidelines-2021-Afr.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 48,
+        "subject": "Mathematical Literacy",
+        "language": "english",
+        "size": 490,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Mathematical-Literacy-GR-12-Exam-Guidelines-2021-Eng.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 49,
+        "subject": "Mathematics",
+        "language": "afrikaans",
+        "size": 452,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Mathematics-GR-12-Exam-Guidelines-2021-Afr.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 50,
+        "subject": "Mathematics",
+        "language": "english",
+        "size": 503,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Mathematics-GR-12-Exam-Guidelines-2021-Eng.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 51,
+        "subject": "Mechanical Technology",
+        "language": "afrikaans",
+        "size": 446,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Mechanical-Technology-GR-12-Exam-Guidelines-2021-Afr.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 52,
+        "subject": "Mechanical Technology",
+        "language": "english",
+        "size": 429,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Mechanical-Technology-GR-12-Exam-Guidelines-2021-Eng.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 53,
+        "subject": "Music",
+        "language": "afrikaans",
+        "size": 764,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Music-GR-12-Exam-Guidelines-2021-Afr.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 54,
+        "subject": "Music",
+        "language": "english",
+        "size": 749,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Music-GR-12-Exam-Guidelines-2021-Eng.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 55,
+        "subject": "Physical Sciences",
+        "language": "afrikaans",
+        "size": 1348,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Physical-Sciences-GR-12-Exam-Guidelines-2021-Afr.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 56,
+        "subject": "Physical Sciences",
+        "language": "english",
+        "size": 1298,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Physical-Sciences-GR-12-Exam-Guidelines-2021-Eng.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 57,
+        "subject": "Religion Studies",
+        "language": "afrikaans",
+        "size": 236,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Religion-Studies-GR-12-Exam-Guidelines-2021-Afr.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 58,
+        "subject": "Religion Studies",
+        "language": "english",
+        "size": 238,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Religion-Studies-GR-12-Exam-Guidelines-2021-Eng.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 59,
+        "subject": "Second Additional Languages",
+        "language": "english",
+        "size": 454,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Second-Additional-Languages-Grade-12-Exam-Guidelines-2021.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 60,
+        "subject": "Technical Mathematics",
+        "language": "afrikaans",
+        "size": 661,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Technical-Mathematics-GR-12-Exam-Guidelines-2021-Afr.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 61,
+        "subject": "Technical Mathematics",
+        "language": "english",
+        "size": 724,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Technical-Mathematics-GR-12-Exam-Guidelines-2021-Eng.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 62,
+        "subject": "Technical Sciences",
+        "language": "afrikaans",
+        "size": 1325,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Technical-Sciences-GR-12-Exam-Guidelines-2021-Afr.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 63,
+        "subject": "Technical Sciences",
+        "language": "english",
+        "size": 1292,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Technical-Sciences-GR-12-Exam-Guidelines-2021-Eng.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 64,
+        "subject": "Tourism",
+        "language": "afrikaans",
+        "size": 1818,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Tourism-GR-12-Exam-Guidelines-2021-Afr.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 65,
+        "subject": "Tourism",
+        "language": "english",
+        "size": 1896,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Tourism-GR-12-Exam-Guidelines-2021-Eng.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 66,
+        "subject": "Visual Arts",
+        "language": "afrikaans",
+        "size": 720,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Visual-Arts-GR-12-Exam-Guidelines-2021-Afr.pdf"
+    },
+    {
+        "grade": 12,
+        "id": 67,
+        "subject": "Visual Arts",
+        "language": "english",
+        "size": 553,
+        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/06/Visual-Arts-GR-12-Exam-Guidelines-2021-Eng.pdf"
+    }
+]
