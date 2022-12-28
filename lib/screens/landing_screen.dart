@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:hexcolor/hexcolor.dart';
 import 'package:nextschool/screens/new_login_screen.dart';
 
 class LandingScreen extends StatelessWidget {
@@ -21,7 +20,7 @@ class LandingScreen extends StatelessWidget {
                 height: MediaQuery.of(context).size.height * 0.7,
                 width: MediaQuery.of(context).size.width * 0.7,
                 child: SvgPicture.asset(
-                  'assets/images/Welcome Screen bg.svg',
+                  'assets/svg/frontseat_logo.svg',
                 ),
               ),
               Container(
@@ -63,27 +62,27 @@ class LandingScreen extends StatelessWidget {
                       child: TextButton(
                         style: TextButton.styleFrom(
                             foregroundColor: Colors.white,
-                            shape: RoundedRectangleBorder(
+                            shape: const RoundedRectangleBorder(
                                 borderRadius:
-                                    const BorderRadius.all(Radius.circular(5)),
+                                    BorderRadius.all(Radius.circular(5)),
                                 side: BorderSide(
-                                    color: HexColor('#3fb18f'),
+                                    color: Colors.red,
                                     width: 2,
                                     style: BorderStyle.solid))),
                         onPressed: () {
                           Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => LoginNextschool()));
+                                  builder: (context) => LoginFrontSeat()));
                         },
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(
+                        child: const Padding(
+                          padding: EdgeInsets.symmetric(
                               horizontal: 20, vertical: 10),
-                          child: Text('Login to Nextschool',
+                          child: Text('Login to Stockview',
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w500,
-                                color: HexColor('#3fb18f'),
+                                color: Colors.red,
                               )),
                         ),
                       ),

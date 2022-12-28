@@ -12,6 +12,7 @@ import 'package:nextschool/utils/model/ProfileModel.dart';
 UserDetailsController _userDetailsController = Get.put(UserDetailsController());
 
 class InfixApi {
+
   String root = _userDetailsController.schoolUrl;
   static String baseApi = _userDetailsController.schoolUrl + 'api/';
   static String baseUrl = _userDetailsController.schoolUrl;
@@ -939,4 +940,20 @@ class InfixApi {
     static String likeSocialFeed() {
     return baseUrl + 'api/' + 'like-dislike-feeds';
   }
+   static String newLogin() {
+    return baseUrl + 'api/' + 'agentLogin';
+  }
+}
+class FrontSeatApi {
+  static const String base = 'https://frontseat.nextnow.group';
+  static const String loginUser = '$base/api/agentLogin';
+  static const String registerUser = '$base/api/agentSignup';
+  static const String resetPass = '$base/api/Applogin/resetpassword';
+  static const String getOtp = '$base/api/Applogin/sendotp';
+  static const String onboardAgent = '$base/api/Applogin/agentUpdate';
+  static const String kycStatus = '$base/api/Applogin/agentUploadStatus';
+  static const String agentData = '$base/api/Applogin/agentData/';
+  static const String checkInOut = '$base/timesheets/api/check_in_out';
+  static const String acceptContract = '$base/api/Applogin/agentContractAccept';
+   static const String getpdf = '$base/api/Applogin/agentContractPdf';
 }

@@ -1,10 +1,13 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:hexcolor/hexcolor.dart';
+import 'package:http/http.dart' as http;
 import 'package:rounded_loading_button/rounded_loading_button.dart';
 import 'package:sizer/sizer.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../utils/apis/Apis.dart';
 import '../utils/widget/txtbox.dart';
 
 class NewRegisterScreen extends StatefulWidget {
@@ -37,7 +40,6 @@ class _NewRegisterScreenState extends State<NewRegisterScreen> {
     //   Utils.saveStringValue("deviceToken", deviceToken!);
     //   log(deviceToken.toString());
     // });
-
     super.initState();
   }
 
@@ -146,8 +148,6 @@ class _NewRegisterScreenState extends State<NewRegisterScreen> {
                             validator: (value) {
                               if (value!.isEmpty) {
                                 return 'password is required';
-                              } else if (value.length < 8) {
-                                return 'password must be at least 8 characters';
                               }
                               return null;
                             },
@@ -157,8 +157,8 @@ class _NewRegisterScreenState extends State<NewRegisterScreen> {
                             height: 10,
                           ),
                           TxtField(
-                            hint: 'Password',
-                            controller: passwordController,
+                            hint: 'Confirm Password',
+                            controller: confirmPasswordController,
                             pass: isObscure2,
                             icon: IconButton(
                                 icon: Icon(
@@ -174,8 +174,6 @@ class _NewRegisterScreenState extends State<NewRegisterScreen> {
                             validator: (value) {
                               if (value!.isEmpty) {
                                 return 'Confirm password is required';
-                              } else if (value.length < 8) {
-                                return 'password must be at least 8 characters';
                               }
                               return null;
                             },
@@ -244,9 +242,18 @@ class _NewRegisterScreenState extends State<NewRegisterScreen> {
                       child: RoundedLoadingButton(
                         width: 80.w,
                         borderRadius: 5,
-                        color: HexColor('#3fb18f'),
+                        color: Colors.red,
                         controller: _btnController,
-                        onPressed: () {},
+                        onPressed: () {
+                          if (formKey.currentState!.validate() &&
+                              passwordController.text ==
+                                  confirmPasswordController.text &&
+                              passwordController.text.isNotEmpty) {
+                            register();
+                          } else {
+                            _btnController.reset();
+                          }
+                        },
                         child: const Text('Register',
                             style: TextStyle(color: Colors.white)),
                       ),
@@ -265,12 +272,12 @@ class _NewRegisterScreenState extends State<NewRegisterScreen> {
                           onTap: () {
                             Navigator.pop(context);
                           },
-                          child: Text(
+                          child: const Text(
                             'Already have an account?',
                             style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w500,
-                              color: HexColor('#3fb18f'),
+                              color: Colors.red,
                             ),
                           ),
                         ),
@@ -286,5 +293,27 @@ class _NewRegisterScreenState extends State<NewRegisterScreen> {
         ),
       ),
     );
+  }
+
+  register() async {
+    var data = {
+      'full_name': nameController.text,
+      'phone_number': phoneController.text,
+      'email': emailController.text,
+      'password': passwordController.text,
+    };
+    final response = await http.post(
+      Uri.parse(FrontSeatApi.registerUser),
+      body: data,
+    );
+    log(response.statusCode.toString());
+    if (response.statusCode == 200) {
+      log(response.body.toString());
+      log('loggedin');
+      _btnController.reset();
+    } else {
+      _btnController.reset();
+      throw Exception('Failed to load');
+    }
   }
 }

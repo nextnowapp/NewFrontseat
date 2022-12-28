@@ -1,28 +1,36 @@
+import 'dart:convert';
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
+import 'package:get/get.dart';
+import 'package:http/http.dart' as http;
 import 'package:nextschool/screens/new_register_screen.dart';
 import 'package:nextschool/screens/reset_password_screen.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
 import 'package:sizer/sizer.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../controller/user_controller.dart';
+import '../utils/apis/Apis.dart';
 import '../utils/widget/textwidget.dart';
 import '../utils/widget/txtbox.dart';
 
-class LoginNextschool extends StatefulWidget {
-  LoginNextschool({Key? key}) : super(key: key);
+class LoginFrontSeat extends StatefulWidget {
+  LoginFrontSeat({Key? key}) : super(key: key);
 
   @override
-  State<LoginNextschool> createState() => _LoginNextschoolState();
+  State<LoginFrontSeat> createState() => _LoginFrontSeatState();
 }
 
-class _LoginNextschoolState extends State<LoginNextschool> {
+class _LoginFrontSeatState extends State<LoginFrontSeat> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
   final formKey = GlobalKey<FormState>();
   bool isObscure = true;
   final RoundedLoadingButtonController _btnController =
       RoundedLoadingButtonController();
+  UserDetailsController _userDetailsController =
+      Get.put(UserDetailsController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -87,8 +95,6 @@ class _LoginNextschoolState extends State<LoginNextschool> {
                           validator: (value) {
                             if (value!.isEmpty) {
                               return 'password is required';
-                            } else if (value.length < 8) {
-                              return 'password must be at least 8 characters';
                             }
                             return null;
                           },
@@ -168,11 +174,19 @@ class _LoginNextschoolState extends State<LoginNextschool> {
                   child: SizedBox(
                     width: MediaQuery.of(context).size.width * 0.8,
                     child: RoundedLoadingButton(
+                      resetAfterDuration: true,
+                      resetDuration: const Duration(seconds: 3),
                       width: 80.w,
                       borderRadius: 5,
-                      color: HexColor('#3fb18f'),
+                      color: Colors.red,
                       controller: _btnController,
-                      onPressed: () {},
+                      onPressed: () {
+                        if (formKey.currentState!.validate()) {
+                          login();
+                        } else {
+                          _btnController.reset();
+                        }
+                      },
                       child: const Text('Login',
                           style: TextStyle(color: Colors.white)),
                     ),
@@ -224,11 +238,11 @@ class _LoginNextschoolState extends State<LoginNextschool> {
                                   builder: (context) =>
                                       const NewRegisterScreen()));
                         },
-                        child: Text('Apply here',
+                        child: const Text('Apply here',
                             style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w500,
-                              color: HexColor('#3fb18f'),
+                              color: Colors.red,
                             )),
                       ),
                     ],
@@ -239,4 +253,25 @@ class _LoginNextschoolState extends State<LoginNextschool> {
           ],
         ));
   }
+
+  login() async {
+    var data = {
+      'email': emailController.text,
+      'password': passwordController.text,
+    };
+    final response = await http.post(
+      Uri.parse(FrontSeatApi.loginUser),
+      body: data,
+    );
+    log(response.statusCode.toString());
+    if (response.statusCode == 200) {
+      log(response.body.toString());
+      log('loggedin');
+      _btnController.reset();
+    } else {
+      _btnController.reset();
+      throw Exception('Failed to load');
+    }
+  }
+
 }
