@@ -12,16 +12,15 @@ class UploadGovtIdBloc extends Bloc<UploadGovtIdEvent, UploadGovtIdState> {
     on<UploadGovtIdDetailsEvent>((event, emit) async {
       int? id = await Utils.getIntValue('id');
       var data = {
+        'onboarding_steps':3,
         'drivingLicenseId': event.drivingLicense,
         'id_number': event.idDocument,
-        'staffid': id,
+        'user_id': id,
       };
       await KycApi.uploadPersonalInformation(data);
     });
     on<UploadGovtIdDocumentsEvent>((event, emit) async {
       int? id = await Utils.getIntValue('id');
-      ProgressDialog pd = ProgressDialog(context: event.context);
-      pd.show(max: 100, msg: 'Uploading Data');
 
       await KycApi.uploadGovtId(id!, event.dlFront, event.dlRear, event.idFront,
           event.idRear, event.context);

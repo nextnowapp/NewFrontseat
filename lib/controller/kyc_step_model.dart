@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-
 class KycStepModel extends GetxController {
   final Rx<bool> selfieUpdated = false.obs;
   final Rx<bool> personalInformationUpdated = false.obs;

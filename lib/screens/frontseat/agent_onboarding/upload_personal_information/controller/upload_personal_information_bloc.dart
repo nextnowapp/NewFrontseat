@@ -23,6 +23,7 @@ class UploadPersonalInformationBloc extends Bloc<UploadPersonalInformationEvent,
       var id = await Utils.getIntValue('id');
       try {
         var data = {
+          'onboarding_steps':2,
           'user_id': id,
           'title': event.title,
           'firstName': event.firstName,

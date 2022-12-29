@@ -216,11 +216,12 @@ class KycApi {
 
   static uploadPersonalInformation(Map<String, dynamic> data) async {
     log(data.toString());
+    var token = await Utils.getStringValue('token');
     FormData formData = FormData.fromMap(data);
     try {
       Response response;
       Dio dio = Dio(BaseOptions(
-        headers: {'authtoken': FrontSeatApi.apiKey},
+       headers: {'Authorization': token},
         // contentType: 'application/json',
       ));
       response = await dio.post(
@@ -248,7 +249,9 @@ class KycApi {
 
       // String bankStatement,
       ) async {
+         var token = await Utils.getStringValue('token');
     FormData formData = FormData.fromMap({
+      'onboarding_steps':4,
       'user_id': uid,
       'govtIdUploaded': true,
       'drivingLicenceFrontImage':
@@ -263,7 +266,7 @@ class KycApi {
 
     Response response;
     Dio dio = Dio(BaseOptions(
-      headers: {'authtoken': FrontSeatApi.apiKey},
+    headers: {'Authorization': token},
       contentType: 'application/json',
     ));
     try {
@@ -301,7 +304,9 @@ class KycApi {
       required context}
       // String bankStatement,
       ) async {
+         var token = await Utils.getStringValue('token');
     FormData formData = FormData.fromMap({
+      'onboarding_steps':5,
       'accountType': accountType,
       'accHolderRelationship': accountHolderRelation,
       'bankName': bankName,
@@ -316,7 +321,7 @@ class KycApi {
 
     Response response;
     Dio dio = Dio(BaseOptions(
-      headers: {'authtoken': FrontSeatApi.apiKey},
+       headers: {'Authorization': token},
       contentType: 'application/json',
     ));
     try {

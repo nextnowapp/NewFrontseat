@@ -15,7 +15,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nextschool/config/app_config.dart';
-import 'package:nextschool/controller/notification_controller.dart';
 import 'package:nextschool/controller/user_controller.dart';
 import 'package:nextschool/screens/frontseat/agent_onboarding/agent_contract/controller/contract_bloc.dart';
 import 'package:nextschool/screens/frontseat/agent_onboarding/upload_bank_details/controller/upload_bank_details_bloc.dart';
@@ -91,16 +90,10 @@ void main() async {
     var role = await Utils.getStringValue('rule');
     var fullname = await Utils.getStringValue('fullname');
     var mobile = await Utils.getStringValue('mobile');
-    var dob = await Utils.getStringValue('dob');
-    var age = await Utils.getIntValue('age');
     var genderId = await Utils.getIntValue('genderId');
-    var gender = await Utils.getStringValue('gender');
-    var designation = await Utils.getStringValue('designation');
     var zoom = await Utils.getIntValue('zoom');
     var isAdministrator = await Utils.getStringValue('isAdministrator');
-    var user_type = await Utils.getStringValue('user_type');
     var token = await Utils.getStringValue('token');
-    var schoolUrl = await Utils.getStringValue('schoolUrl');
 
     //set values to controller
     userDetailsController.id = id;
@@ -108,16 +101,10 @@ void main() async {
     userDetailsController.role = role;
     userDetailsController.fullName = fullname;
     userDetailsController.mobile = mobile;
-    userDetailsController.dob = dob;
-    userDetailsController.age = age;
     userDetailsController.genderId = genderId;
-    userDetailsController.gender = gender;
-    userDetailsController.designation = designation;
     userDetailsController.zoom = zoom;
     userDetailsController.is_administrator = isAdministrator;
-    userDetailsController.user_type = user_type;
     userDetailsController.token = token;
-    userDetailsController.schoolUrl = schoolUrl;
     userDetailsController.isLogged = isLogged;
 
     //apis calls using controllers
