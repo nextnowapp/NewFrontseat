@@ -85,8 +85,10 @@ dependencies:
   searchfield: ^0.7.2
   shared_preferences: ^2.0.15
   shimmer: ^2.0.0
+  signature: ^5.3.0
   sizer: ^2.0.15
   sms_receiver: ^0.4.1
+  sn_progress_dialog: ^1.0.9
   syncfusion_flutter_pdfviewer: ^20.2.39-beta
   table_calendar: ^3.0.8
   timeago: ^3.2.2
@@ -117,6 +119,7 @@ flutter:
     - assets/lottie/
     - assets/svg/
     - assets/
+
 # fonts:
 #   - family: popins
 #     fonts:

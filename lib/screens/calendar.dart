@@ -11,7 +11,7 @@ import 'package:modal_bottom_sheet/modal_bottom_sheet.dart'
 import 'package:nextschool/main.dart';
 import 'package:nextschool/screens/add_event_screen.dart';
 import 'package:nextschool/screens/choose_school.dart';
-import 'package:nextschool/screens/landing_screen.dart';
+import 'package:nextschool/screens/frontseat/landing_screen.dart';
 import 'package:nextschool/utils/Utils.dart';
 import 'package:nextschool/utils/apis/Apis.dart';
 import 'package:nextschool/utils/model/event_model.dart';

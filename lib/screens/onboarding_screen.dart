@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lottie/lottie.dart';
 import 'package:nextschool/screens/choose_school.dart';
-import 'package:nextschool/screens/landing_screen.dart';
+import 'package:nextschool/screens/frontseat/landing_screen.dart';
 import 'package:nextschool/utils/model/OnboardingScreenItems.dart';
 import 'package:nextschool/utils/widget/back_button.dart';
 import 'package:nextschool/utils/widget/next_button.dart';

@@ -20,7 +20,7 @@ import 'package:nextschool/controller/user_controller.dart';
 import 'package:nextschool/screens/NotificationList.dart';
 import 'package:nextschool/screens/admin/class_wise_count.dart';
 import 'package:nextschool/screens/choose_school.dart';
-import 'package:nextschool/screens/landing_screen.dart';
+import 'package:nextschool/screens/frontseat/landing_screen.dart';
 import 'package:nextschool/screens/teacher/students/StudentListScreen.dart';
 import 'package:nextschool/screens/teacher/upcoming_birthday.dart';
 // Project imports:

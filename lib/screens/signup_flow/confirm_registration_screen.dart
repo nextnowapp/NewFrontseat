@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:nextschool/screens/choose_school.dart';
-import 'package:nextschool/screens/landing_screen.dart';
+import 'package:nextschool/screens/frontseat/landing_screen.dart';
 import 'package:nextschool/screens/signup_flow/parent_form.dart';
 import 'package:nextschool/utils/Utils.dart';
 import 'package:shared_preferences/shared_preferences.dart';

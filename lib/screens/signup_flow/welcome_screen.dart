@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:nextschool/screens/choose_Login.dart';
 import 'package:nextschool/screens/choose_school.dart';
-import 'package:nextschool/screens/landing_screen.dart';
+import 'package:nextschool/screens/frontseat/landing_screen.dart';
 import 'package:nextschool/screens/signup_flow/singup_flow_screen.dart';
 import 'package:nextschool/utils/FunctionsData.dart';
 import 'package:nextschool/utils/Utils.dart';

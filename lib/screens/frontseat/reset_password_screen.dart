@@ -3,8 +3,8 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
 import 'package:sizer/sizer.dart';
 
-import '../utils/widget/textwidget.dart';
-import '../utils/widget/txtbox.dart';
+import '../../utils/widget/textwidget.dart';
+import '../../utils/widget/txtbox.dart';
 
 class ResetPasswordScreen extends StatelessWidget {
   ResetPasswordScreen({Key? key}) : super(key: key);
@@ -55,7 +55,7 @@ class ResetPasswordScreen extends StatelessWidget {
                   child: RoundedLoadingButton(
                     width: 100.w,
                     borderRadius: 5,
-                    color: HexColor('#3fb18f'),
+                    color: Colors.red,
                     controller: _btnController,
                     onPressed: () {},
                     child: const Text('Send link',

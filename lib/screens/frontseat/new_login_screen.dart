@@ -4,16 +4,18 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
-import 'package:nextschool/screens/new_register_screen.dart';
-import 'package:nextschool/screens/reset_password_screen.dart';
+import 'package:nextschool/screens/frontseat/new_register_screen.dart';
+import 'package:nextschool/screens/frontseat/reset_password_screen.dart';
+import 'package:nextschool/utils/Utils.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
 import 'package:sizer/sizer.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../controller/user_controller.dart';
-import '../utils/apis/Apis.dart';
-import '../utils/widget/textwidget.dart';
-import '../utils/widget/txtbox.dart';
+import '../../controller/user_controller.dart';
+import '../../utils/apis/api_list.dart';
+import '../../utils/widget/textwidget.dart';
+import '../../utils/widget/txtbox.dart';
+import 'nav_bar.dart';
 
 class LoginFrontSeat extends StatefulWidget {
   LoginFrontSeat({Key? key}) : super(key: key);
@@ -27,6 +29,7 @@ class _LoginFrontSeatState extends State<LoginFrontSeat> {
   final passwordController = TextEditingController();
   final formKey = GlobalKey<FormState>();
   bool isObscure = true;
+  UserDetailsController controller = Get.put(UserDetailsController());
   final RoundedLoadingButtonController _btnController =
       RoundedLoadingButtonController();
   UserDetailsController _userDetailsController =
@@ -174,8 +177,6 @@ class _LoginFrontSeatState extends State<LoginFrontSeat> {
                   child: SizedBox(
                     width: MediaQuery.of(context).size.width * 0.8,
                     child: RoundedLoadingButton(
-                      resetAfterDuration: true,
-                      resetDuration: const Duration(seconds: 3),
                       width: 80.w,
                       borderRadius: 5,
                       color: Colors.red,
@@ -255,6 +256,25 @@ class _LoginFrontSeatState extends State<LoginFrontSeat> {
   }
 
   login() async {
+    int id;
+    int roleId;
+    String role;
+    String fullName;
+    String email;
+    String mobile;
+    String dob;
+    String photo;
+    int age;
+    int genderId;
+    String gender;
+    String designation;
+    int zoom;
+    String is_administrator;
+    String user_type;
+    String token;
+    bool isLogged;
+    String schoolUrl;
+    var message;
     var data = {
       'email': emailController.text,
       'password': passwordController.text,
@@ -265,13 +285,77 @@ class _LoginFrontSeatState extends State<LoginFrontSeat> {
     );
     log(response.statusCode.toString());
     if (response.statusCode == 200) {
-      log(response.body.toString());
-      log('loggedin');
+      var data = jsonDecode(response.body);
+      var userData = data['data']['user'];
+      // getting the required data from the response
+      id = userData['id'];
+      roleId = userData['role_id'];
+      role = userData['role'];
+      fullName = userData['fullname'];
+      email = userData['email'] ?? '';
+      mobile = userData['mobile'] ?? '';
+      dob = userData['dob'];
+      photo = userData['image'] ?? (userData['photo'] ?? '');
+      age = userData['age'];
+      genderId = userData['genderId'] ?? 1;
+      gender = userData['gender'] ?? '';
+      designation = userData['designation'] ?? '';
+      zoom = userData['zoom'];
+      is_administrator = userData['is_administrator'];
+      user_type = userData['user_type'];
+      token = userData['accessToken'];
+      schoolUrl = FrontSeatApi.base;
+
+      //saving data in local
+      Utils.saveIntValue('id', id);
+      Utils.saveIntValue('roleId', roleId);
+      Utils.saveStringValue('rule', role);
+      Utils.saveStringValue('fullname', fullName);
+      Utils.saveStringValue('email', email);
+      Utils.saveStringValue('mobile', mobile);
+      Utils.saveStringValue('dob', dob);
+      Utils.saveStringValue('image', photo);
+      Utils.saveIntValue('age', age);
+      Utils.saveIntValue('genderId', genderId);
+      Utils.saveStringValue('gender', gender);
+      Utils.saveStringValue('designation', designation);
+      Utils.saveIntValue('zoom', zoom);
+      Utils.saveStringValue('isAdministrator', is_administrator);
+      Utils.saveStringValue('user_type', user_type);
+      Utils.saveStringValue('token', token);
+      Utils.saveBooleanValue('isLogged', true);
+      Utils.saveStringValue('schoolUrl', schoolUrl);
+
+      //intialize the user controller with the required data
+      controller.id = id;
+      controller.roleId = roleId;
+      controller.role = role;
+      controller.fullName = fullName;
+      controller.email = email;
+      controller.mobile = mobile;
+      controller.dob = dob;
+      controller.photo = photo;
+      controller.age = age;
+      controller.genderId = genderId;
+      controller.gender = gender;
+      controller.designation = designation;
+      controller.zoom = zoom;
+      controller.is_administrator = is_administrator;
+      controller.user_type = user_type;
+      controller.token = token;
+      controller.isLogged = true;
+      schoolUrl = FrontSeatApi.base;
+      Utils.showToast('Successfully logged in');
+      Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(
+              builder: (BuildContext context) => const BottomBar()),
+          (Route<dynamic> route) => route is BottomBar);
       _btnController.reset();
     } else {
+      Utils.showToast('Incorrect Email or Password');
       _btnController.reset();
       throw Exception('Failed to load');
     }
   }
-
 }

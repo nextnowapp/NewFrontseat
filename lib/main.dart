@@ -9,20 +9,21 @@ import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nextschool/config/app_config.dart';
-import 'package:nextschool/controller/attendance_stat_controller.dart';
-import 'package:nextschool/controller/grade_list_controller.dart';
 import 'package:nextschool/controller/notification_controller.dart';
-import 'package:nextschool/controller/subject_list_controller.dart';
 import 'package:nextschool/controller/user_controller.dart';
-import 'package:nextschool/screens/choose_school.dart';
-import 'package:nextschool/screens/landing_screen.dart';
-import 'package:nextschool/screens/onboarding_screen.dart';
-import 'package:nextschool/utils/FunctionsData.dart';
+import 'package:nextschool/screens/frontseat/agent_onboarding/agent_contract/controller/contract_bloc.dart';
+import 'package:nextschool/screens/frontseat/agent_onboarding/upload_bank_details/controller/upload_bank_details_bloc.dart';
+import 'package:nextschool/screens/frontseat/agent_onboarding/upload_govt_id/controller/upload_govt_id_bloc.dart';
+import 'package:nextschool/screens/frontseat/agent_onboarding/upload_personal_information/controller/upload_personal_information_bloc.dart';
+import 'package:nextschool/screens/frontseat/agent_onboarding/upload_selfie/controller/upload_selfie_bloc.dart';
+import 'package:nextschool/screens/frontseat/landing_screen.dart';
+import 'package:nextschool/screens/frontseat/nav_bar.dart';
 import 'package:nextschool/utils/Utils.dart';
 import 'package:nextschool/utils/theme.dart';
 import 'package:package_info_plus/package_info_plus.dart';
@@ -46,20 +47,20 @@ void main() async {
   UserDetailsController userDetailsController =
       Get.put(UserDetailsController());
 
-  //gradelist controller
-  GradeListController gradeListController = Get.put(GradeListController());
+  // //gradelist controller
+  // GradeListController gradeListController = Get.put(GradeListController());
 
-  //subject list controller
-  SubjectListController subjectListController =
-      Get.put(SubjectListController());
+  // //subject list controller
+  // SubjectListController subjectListController =
+  //     Get.put(SubjectListController());
 
-  //attendance stat controller
-  AttendanceStatController attendanceStatController =
-      Get.put(AttendanceStatController());
+  // //attendance stat controller
+  // AttendanceStatController attendanceStatController =
+  //     Get.put(AttendanceStatController());
 
   //Notification controller
-  NotificationController notificationController =
-      Get.put(NotificationController());
+  // NotificationController notificationController =
+  //     Get.put(NotificationController());
 
 //starting the app
   WidgetsFlutterBinding.ensureInitialized();
@@ -91,7 +92,6 @@ void main() async {
     var fullname = await Utils.getStringValue('fullname');
     var mobile = await Utils.getStringValue('mobile');
     var dob = await Utils.getStringValue('dob');
-    var image = await Utils.getStringValue('photo');
     var age = await Utils.getIntValue('age');
     var genderId = await Utils.getIntValue('genderId');
     var gender = await Utils.getStringValue('gender');
@@ -100,7 +100,6 @@ void main() async {
     var isAdministrator = await Utils.getStringValue('isAdministrator');
     var user_type = await Utils.getStringValue('user_type');
     var token = await Utils.getStringValue('token');
-    var schoolId = await Utils.getStringValue('schoolId');
     var schoolUrl = await Utils.getStringValue('schoolUrl');
 
     //set values to controller
@@ -110,7 +109,6 @@ void main() async {
     userDetailsController.fullName = fullname;
     userDetailsController.mobile = mobile;
     userDetailsController.dob = dob;
-    userDetailsController.photo = image;
     userDetailsController.age = age;
     userDetailsController.genderId = genderId;
     userDetailsController.gender = gender;
@@ -120,26 +118,18 @@ void main() async {
     userDetailsController.user_type = user_type;
     userDetailsController.token = token;
     userDetailsController.schoolUrl = schoolUrl;
-    userDetailsController.schoolId = schoolId;
     userDetailsController.isLogged = isLogged;
 
     //apis calls using controllers
-    notificationController.fetchUnreadNotificationCount();
-    if (userDetailsController.roleId != 3) {
-      gradeListController.fetchGradeList();
-      subjectListController.fetchSubjectList();
-      subjectListController.fetchSubjectList();
-      attendanceStatController.fetchAttendanceStat();
-    }
-    userDetailsController.printValues();
+    // notificationController.fetchUnreadNotificationCount();
+    // if (userDetailsController.roleId != 3) {
+    //   gradeListController.fetchGradeList();
+    //   subjectListController.fetchSubjectList();
+    //   subjectListController.fetchSubjectList();
+    //   attendanceStatController.fetchAttendanceStat();
+    // }
   } else {
-    hideOnboarding = await Utils.getBooleanValue('hideOnboardingScreen');
-    if (hideOnboarding) {
-      // widget = const ChooseSchool();
-      widget = LandingScreen();
-    } else {
-      widget = const OnboardingScreen();
-    }
+    widget = const LandingScreen();
   }
 
   //make errorbox transparent
@@ -287,23 +277,30 @@ class _MyAppState extends State<MyApp> {
             ),
             debugShowCheckedModeBanner: false,
             home: Sizer(builder: (context, orientation, deviceType) {
-              return MaterialApp(
-                themeMode: ThemeMode.light,
-                builder: (context, child) {
-                  return MediaQuery(
-                    child: child!,
-                    data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
-                  );
-                },
-                title: 'NextSchool',
-                navigatorKey: _navigatorKey,
-                debugShowCheckedModeBanner: false,
-                theme: basicTheme(),
-                home: widget.isLogged
-                    ? AppFunction.getFunctions(
-                        context, widget.rule, widget.zoom)
-                    : widget.homeWidget,
-                // home: const ConnectionLostScreen(),
+              return MultiBlocProvider(
+                providers: [
+                  BlocProvider(create: (context) => UploadSelfieBloc()),
+                  BlocProvider(
+                      create: (context) => UploadPersonalInformationBloc()),
+                  BlocProvider(create: (context) => UploadGovtIdBloc()),
+                  BlocProvider(create: (context) => UploadBankDetailsBloc()),
+                  BlocProvider(create: (context) => ContractBloc())
+                ],
+                child: MaterialApp(
+                  themeMode: ThemeMode.light,
+                  builder: (context, child) {
+                    return MediaQuery(
+                      child: child!,
+                      data:
+                          MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+                    );
+                  },
+                  title: 'Frontseat',
+                  navigatorKey: _navigatorKey,
+                  debugShowCheckedModeBanner: false,
+                  theme: basicTheme(),
+                  home: widget.isLogged ? const BottomBar() : widget.homeWidget,
+                ),
               );
             }),
           ),

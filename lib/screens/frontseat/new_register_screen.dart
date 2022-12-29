@@ -1,14 +1,20 @@
+import 'dart:convert';
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
+import 'package:nextschool/controller/user_controller.dart';
+import 'package:nextschool/screens/frontseat/nav_bar.dart';
+import 'package:nextschool/utils/Utils.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
 import 'package:sizer/sizer.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../utils/apis/Apis.dart';
-import '../utils/widget/txtbox.dart';
+import '../../utils/apis/Apis.dart';
+import '../../utils/apis/api_list.dart';
+import '../../utils/widget/txtbox.dart';
 
 class NewRegisterScreen extends StatefulWidget {
   const NewRegisterScreen({Key? key}) : super(key: key);
@@ -18,6 +24,7 @@ class NewRegisterScreen extends StatefulWidget {
 }
 
 class _NewRegisterScreenState extends State<NewRegisterScreen> {
+  UserDetailsController controller = Get.put(UserDetailsController());
   final formKey = GlobalKey<FormState>();
   final emailController = TextEditingController();
   final nameController = TextEditingController();
@@ -296,6 +303,25 @@ class _NewRegisterScreenState extends State<NewRegisterScreen> {
   }
 
   register() async {
+    int id;
+    int roleId;
+    String role;
+    String fullName;
+    String email;
+    String mobile;
+    String dob;
+    String photo;
+    int age;
+    int genderId;
+    String gender;
+    String designation;
+    int zoom;
+    String is_administrator;
+    String user_type;
+    String token;
+    bool isLogged;
+    String schoolUrl;
+    var message;
     var data = {
       'full_name': nameController.text,
       'phone_number': phoneController.text,
@@ -306,10 +332,56 @@ class _NewRegisterScreenState extends State<NewRegisterScreen> {
       Uri.parse(FrontSeatApi.registerUser),
       body: data,
     );
-    log(response.statusCode.toString());
     if (response.statusCode == 200) {
-      log(response.body.toString());
-      log('loggedin');
+      log(response.body);
+      var data = jsonDecode(response.body);
+      var userData = data['data']['user'];
+      // getting the required data from the response
+      id = userData['id'];
+      roleId = userData['role_id'];
+      role = userData['role'];
+      fullName = userData['fullname'];
+      email = userData['email'] ?? '';
+      mobile = userData['mobile'] ?? '';
+      genderId = userData['genderId'] ?? 1;
+      zoom = userData['zoom'];
+      is_administrator = userData['is_administrator'];
+      token = userData['accessToken'];
+      schoolUrl = FrontSeatApi.base;
+
+      //saving data in local
+      Utils.saveIntValue('id', id);
+      Utils.saveIntValue('roleId', roleId);
+      Utils.saveStringValue('rule', role);
+      Utils.saveStringValue('fullname', fullName);
+      Utils.saveStringValue('email', email);
+      Utils.saveStringValue('mobile', mobile);
+      Utils.saveIntValue('genderId', genderId);
+      Utils.saveIntValue('zoom', zoom);
+      Utils.saveStringValue('isAdministrator', is_administrator);
+      Utils.saveStringValue('token', token);
+      Utils.saveBooleanValue('isLogged', true);
+      Utils.saveStringValue('schoolUrl', schoolUrl);
+
+      //intialize the user controller with the required data
+      controller.id = id;
+      controller.roleId = roleId;
+      controller.role = role;
+      controller.fullName = fullName;
+      controller.email = email;
+      controller.mobile = mobile;
+      controller.genderId = genderId;
+      controller.zoom = zoom;
+      controller.is_administrator = is_administrator;
+      controller.token = token;
+      controller.isLogged = true;
+      controller.schoolUrl = schoolUrl;
+      Utils.showToast('Agent has been created successfully');
+      Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(
+              builder: (BuildContext context) => const BottomBar()),
+          (Route<dynamic> route) => route is BottomBar);
       _btnController.reset();
     } else {
       _btnController.reset();

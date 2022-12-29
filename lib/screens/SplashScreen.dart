@@ -3,10 +3,7 @@ import 'dart:async';
 
 // Flutter imports:
 import 'package:flutter/material.dart';
-// Project imports:
-import 'package:nextschool/screens/choose_school.dart';
-import 'package:nextschool/screens/landing_screen.dart';
-import 'package:nextschool/screens/onboarding_screen.dart';
+import 'package:nextschool/screens/frontseat/landing_screen.dart';
 import 'package:nextschool/utils/FunctionsData.dart';
 import 'package:nextschool/utils/Utils.dart';
 import 'package:nextschool/utils/widget/customLoader.dart';
@@ -36,23 +33,14 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
         // FirebaseCrashlytics.instance.log("Test Crash");
         // FirebaseCrashlytics.instance.crash();
         Utils.getStringValue('rule').then((rule) {
-          Utils.getStringValue('zoom').then((zoom) {
+          Utils.getIntValue('zoom').then((zoom) {
             print('Getting rule and zoom value : $rule $zoom');
-            AppFunction.getFunctions(context, rule, zoom);
+            AppFunction.getFunctions(context, rule, zoom.toString());
           });
         });
       } else {
-        getBooleanValue('hideOnboardingScreen').then((value) {
-          if (value) {
-            // route = MaterialPageRoute(builder: (context) => ChooseLoginType());
-            route = MaterialPageRoute(builder: (context) => LandingScreen());
-            Navigator.pushReplacement(context, route);
-          } else {
-            route = MaterialPageRoute(
-                builder: (context) => const OnboardingScreen());
-            Navigator.pushReplacement(context, route);
-          }
-        });
+        route = MaterialPageRoute(builder: (context) => const LandingScreen());
+        Navigator.pushReplacement(context, route);
       }
     });
   }
