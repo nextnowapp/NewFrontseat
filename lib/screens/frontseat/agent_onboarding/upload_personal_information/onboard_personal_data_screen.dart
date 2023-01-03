@@ -3,8 +3,12 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_cupertino_date_picker_fork/flutter_cupertino_date_picker_fork.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:intl/intl.dart';
+import 'package:rounded_loading_button/rounded_loading_button.dart';
 import 'package:searchfield/searchfield.dart';
+import 'package:sizer/sizer.dart';
 
 import '../../../../controller/kyc_step_model.dart';
 import '../../../../utils/Utils.dart';
@@ -32,6 +36,7 @@ class _OnboardPersonalInformationState
   final String _format = 'dd-MM-yyyy';
   String? selectedTitle;
   String? selectedGender;
+  int? genderId;
   String? selectedMaritalStatus;
   String? selectedEquity;
   String? selectedDisability;
@@ -43,13 +48,15 @@ class _OnboardPersonalInformationState
   String? selectedPoBox;
   String? selectedEContactRelationship;
   String? selectedWorkLocation;
-
+  final RoundedLoadingButtonController _btnController =
+      RoundedLoadingButtonController();
   final TextEditingController firstNameController = TextEditingController();
   final TextEditingController middleNameController = TextEditingController();
   final TextEditingController lastNameController = TextEditingController();
   final TextEditingController taxNumberController = TextEditingController();
   final TextEditingController phoneNumberController = TextEditingController();
-  final TextEditingController passportNumberController = TextEditingController();
+  final TextEditingController passportNumberController =
+      TextEditingController();
   final TextEditingController alternativeNoController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController dobController = TextEditingController();
@@ -75,7 +82,7 @@ class _OnboardPersonalInformationState
     super.initState();
     if (kycStepModelController.isEditableValue) {
       // selectedTitle = widget.data!.userData!.title;
-      firstNameController.text = widget.data!.userData!.firstname ?? "";
+      firstNameController.text = widget.data!.userData!.firstname ?? '';
       // middleNameController.text = widget.data!.userData!.middleName ?? '';
       lastNameController.text = widget.data!.userData!.lastname ?? '';
       phoneNumberController.text = widget.data!.userData!.phonenumber ?? '';
@@ -174,39 +181,98 @@ class _OnboardPersonalInformationState
                             children: [
                               Flexible(
                                 flex: 1,
-                                child: FormField<String>(
-                                  builder: (FormFieldState<String> state) {
-                                    return InputDecorator(
-                                      decoration: InputDecoration(
-                                          errorStyle: const TextStyle(
-                                              color: Colors.redAccent,
-                                              fontSize: 16.0),
-                                          hintText: 'Please select Title',
-                                          label: const Text('Title*'),
-                                          border: OutlineInputBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(5.0))),
-                                      isEmpty: selectedTitle == '',
-                                      child: DropdownButtonHideUnderline(
-                                        child: DropdownButton<String>(
-                                          value: selectedTitle,
-                                          isDense: true,
-                                          onChanged: (String? newValue) {
-                                            setState(() {
-                                              selectedTitle = newValue;
-                                              state.didChange(newValue);
-                                            });
-                                          },
-                                          items: titles.map((String value) {
-                                            return DropdownMenuItem<String>(
-                                              value: value,
-                                              child: Text(value),
-                                            );
-                                          }).toList(),
-                                        ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'Title*',
+                                      style: TextStyle(
+                                        color: Colors.black87,
+                                        fontSize: 10.sp,
+                                        fontFamily: GoogleFonts.inter(
+                                          fontWeight: FontWeight.w700,
+                                        ).fontFamily,
                                       ),
-                                    );
-                                  },
+                                    ),
+                                    SizedBox(
+                                      height: 0.5.h,
+                                    ),
+                                    FormField<String>(
+                                      builder: (FormFieldState<String> state) {
+                                        return InputDecorator(
+                                          decoration: InputDecoration(
+                                            fillColor: HexColor('#5374ff'),
+                                            errorStyle: TextStyle(
+                                              fontSize: 8.sp,
+                                              color: HexColor('#de5151'),
+                                              fontFamily: GoogleFonts.inter(
+                                                fontWeight: FontWeight.w500,
+                                              ).fontFamily,
+                                            ),
+                                            hintStyle: TextStyle(
+                                              color: HexColor('#8e9aa6'),
+                                              fontSize: 12.sp,
+                                              fontFamily: GoogleFonts.inter(
+                                                fontWeight: FontWeight.w500,
+                                              ).fontFamily,
+                                            ),
+                                            enabledBorder: OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#d5dce0'),
+                                              ),
+                                            ),
+                                            focusedBorder: OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#5374ff'),
+                                              ),
+                                            ),
+                                            errorBorder: OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#de5151'),
+                                              ),
+                                            ),
+                                            focusedErrorBorder:
+                                                OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#de5151'),
+                                              ),
+                                            ),
+                                          ),
+                                          isEmpty: selectedTitle == '',
+                                          child: DropdownButtonHideUnderline(
+                                            child: DropdownButton<String>(
+                                              value: selectedTitle,
+                                              isDense: true,
+                                              onChanged: (String? newValue) {
+                                                setState(() {
+                                                  selectedTitle = newValue;
+                                                  state.didChange(newValue);
+                                                });
+                                              },
+                                              items: titles.map((String value) {
+                                                return DropdownMenuItem<String>(
+                                                  value: value,
+                                                  child: Text(value),
+                                                );
+                                              }).toList(),
+                                            ),
+                                          ),
+                                        );
+                                      },
+                                    ),
+                                  ],
                                 ),
                               ),
                               const SizedBox(
@@ -294,39 +360,106 @@ class _OnboardPersonalInformationState
                             children: [
                               Flexible(
                                 flex: 1,
-                                child: FormField<String>(
-                                  builder: (FormFieldState<String> state) {
-                                    return InputDecorator(
-                                      decoration: InputDecoration(
-                                          errorStyle: const TextStyle(
-                                              color: Colors.redAccent,
-                                              fontSize: 16.0),
-                                          hintText: 'Please select Gender',
-                                          label: const Text('Gender*'),
-                                          border: OutlineInputBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(5.0))),
-                                      isEmpty: selectedGender == '',
-                                      child: DropdownButtonHideUnderline(
-                                        child: DropdownButton<String>(
-                                          value: selectedGender,
-                                          isDense: true,
-                                          onChanged: (String? newValue) {
-                                            setState(() {
-                                              selectedGender = newValue;
-                                              state.didChange(newValue);
-                                            });
-                                          },
-                                          items: gender.map((String value) {
-                                            return DropdownMenuItem<String>(
-                                              value: value,
-                                              child: Text(value),
-                                            );
-                                          }).toList(),
-                                        ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'Gender*',
+                                      style: TextStyle(
+                                        color: Colors.black87,
+                                        fontSize: 10.sp,
+                                        fontFamily: GoogleFonts.inter(
+                                          fontWeight: FontWeight.w700,
+                                        ).fontFamily,
                                       ),
-                                    );
-                                  },
+                                    ),
+                                    SizedBox(
+                                      height: 0.5.h,
+                                    ),
+                                    FormField<String>(
+                                      builder: (FormFieldState<String> state) {
+                                        return InputDecorator(
+                                          decoration: InputDecoration(
+                                            fillColor: HexColor('#5374ff'),
+                                            errorStyle: TextStyle(
+                                              fontSize: 8.sp,
+                                              color: HexColor('#de5151'),
+                                              fontFamily: GoogleFonts.inter(
+                                                fontWeight: FontWeight.w500,
+                                              ).fontFamily,
+                                            ),
+                                            hintStyle: TextStyle(
+                                              color: HexColor('#8e9aa6'),
+                                              fontSize: 12.sp,
+                                              fontFamily: GoogleFonts.inter(
+                                                fontWeight: FontWeight.w500,
+                                              ).fontFamily,
+                                            ),
+                                            enabledBorder: OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#d5dce0'),
+                                              ),
+                                            ),
+                                            focusedBorder: OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#5374ff'),
+                                              ),
+                                            ),
+                                            errorBorder: OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#de5151'),
+                                              ),
+                                            ),
+                                            focusedErrorBorder:
+                                                OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#de5151'),
+                                              ),
+                                            ),
+                                          ),
+                                          isEmpty: selectedGender == '',
+                                          child: DropdownButtonHideUnderline(
+                                            child: DropdownButton<String>(
+                                              value: selectedGender,
+                                              isDense: true,
+                                              onChanged: (String? newValue) {
+                                                setState(() {
+                                                  selectedGender = newValue;
+                                                  if (newValue == 'Male') {
+                                                    genderId = 1;
+                                                  } else if (newValue ==
+                                                      'Female') {
+                                                    genderId = 2;
+                                                  } else {
+                                                    genderId = 3;
+                                                  }
+                                                  state.didChange(newValue);
+                                                });
+                                              },
+                                              items: gender.map((String value) {
+                                                return DropdownMenuItem<String>(
+                                                  value: value,
+                                                  child: Text(value),
+                                                );
+                                              }).toList(),
+                                            ),
+                                          ),
+                                        );
+                                      },
+                                    ),
+                                  ],
                                 ),
                               ),
                               const SizedBox(
@@ -334,276 +467,608 @@ class _OnboardPersonalInformationState
                               ),
                               Flexible(
                                 flex: 2,
-                                child: FormField<String>(
-                                  builder: (FormFieldState<String> state) {
-                                    return InputDecorator(
-                                      decoration: InputDecoration(
-                                          errorStyle: const TextStyle(
-                                              color: Colors.redAccent,
-                                              fontSize: 16.0),
-                                          hintText:
-                                              'Please select Marital Status',
-                                          label: const Text('Marital Status*'),
-                                          border: OutlineInputBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(5.0))),
-                                      isEmpty: selectedMaritalStatus == '',
-                                      child: DropdownButtonHideUnderline(
-                                        child: DropdownButton<String>(
-                                          value: selectedMaritalStatus,
-                                          isDense: true,
-                                          onChanged: (String? newValue) {
-                                            setState(() {
-                                              selectedMaritalStatus = newValue;
-                                              state.didChange(newValue);
-                                            });
-                                          },
-                                          items:
-                                              maritalStatus.map((String value) {
-                                            return DropdownMenuItem<String>(
-                                              value: value,
-                                              child: Text(value),
-                                            );
-                                          }).toList(),
-                                        ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'Marital Status*',
+                                      style: TextStyle(
+                                        color: Colors.black87,
+                                        fontSize: 10.sp,
+                                        fontFamily: GoogleFonts.inter(
+                                          fontWeight: FontWeight.w700,
+                                        ).fontFamily,
                                       ),
-                                    );
-                                  },
+                                    ),
+                                    SizedBox(
+                                      height: 0.5.h,
+                                    ),
+                                    FormField<String>(
+                                      builder: (FormFieldState<String> state) {
+                                        return InputDecorator(
+                                          decoration: InputDecoration(
+                                            fillColor: HexColor('#5374ff'),
+                                            errorStyle: TextStyle(
+                                              fontSize: 8.sp,
+                                              color: HexColor('#de5151'),
+                                              fontFamily: GoogleFonts.inter(
+                                                fontWeight: FontWeight.w500,
+                                              ).fontFamily,
+                                            ),
+                                            hintStyle: TextStyle(
+                                              color: HexColor('#8e9aa6'),
+                                              fontSize: 12.sp,
+                                              fontFamily: GoogleFonts.inter(
+                                                fontWeight: FontWeight.w500,
+                                              ).fontFamily,
+                                            ),
+                                            enabledBorder: OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#d5dce0'),
+                                              ),
+                                            ),
+                                            focusedBorder: OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#5374ff'),
+                                              ),
+                                            ),
+                                            errorBorder: OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#de5151'),
+                                              ),
+                                            ),
+                                            focusedErrorBorder:
+                                                OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#de5151'),
+                                              ),
+                                            ),
+                                          ),
+                                          isEmpty: selectedMaritalStatus == '',
+                                          child: DropdownButtonHideUnderline(
+                                            child: DropdownButton<String>(
+                                              value: selectedMaritalStatus,
+                                              isDense: true,
+                                              onChanged: (String? newValue) {
+                                                setState(() {
+                                                  selectedMaritalStatus =
+                                                      newValue;
+                                                  state.didChange(newValue);
+                                                });
+                                              },
+                                              items: maritalStatus
+                                                  .map((String value) {
+                                                return DropdownMenuItem<String>(
+                                                  value: value,
+                                                  child: Text(value),
+                                                );
+                                              }).toList(),
+                                            ),
+                                          ),
+                                        );
+                                      },
+                                    ),
+                                  ],
                                 ),
                               ),
                             ],
                           ),
                           Utils.sizedBoxHeight(20),
 
-                          FormField<String>(
-                            builder: (FormFieldState<String> state) {
-                              return InputDecorator(
-                                decoration: InputDecoration(
-                                    errorStyle: const TextStyle(
-                                        color: Colors.redAccent,
-                                        fontSize: 16.0),
-                                    hintText: 'Nationality',
-                                    label: const Text('Nationality*'),
-                                    border: OutlineInputBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(5.0))),
-                                isEmpty: selectedNationality == '',
-                                child: DropdownButtonHideUnderline(
-                                  child: DropdownButton<String>(
-                                    value: selectedNationality,
-                                    isDense: true,
-                                    onChanged: (String? newValue) {
-                                      setState(() {
-                                        selectedNationality = newValue;
-                                        state.didChange(newValue);
-                                      });
-                                    },
-                                    items: countries.map((String value) {
-                                      return DropdownMenuItem<String>(
-                                        value: value,
-                                        child: Text(value),
-                                      );
-                                    }).toList(),
-                                  ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Nationality*',
+                                style: TextStyle(
+                                  color: Colors.black87,
+                                  fontSize: 10.sp,
+                                  fontFamily: GoogleFonts.inter(
+                                    fontWeight: FontWeight.w700,
+                                  ).fontFamily,
                                 ),
-                              );
-                            },
+                              ),
+                              SizedBox(
+                                height: 0.5.h,
+                              ),
+                              FormField<String>(
+                                builder: (FormFieldState<String> state) {
+                                  return InputDecorator(
+                                    decoration: InputDecoration(
+                                      fillColor: HexColor('#5374ff'),
+                                      errorStyle: TextStyle(
+                                        fontSize: 8.sp,
+                                        color: HexColor('#de5151'),
+                                        fontFamily: GoogleFonts.inter(
+                                          fontWeight: FontWeight.w500,
+                                        ).fontFamily,
+                                      ),
+                                      hintStyle: TextStyle(
+                                        color: HexColor('#8e9aa6'),
+                                        fontSize: 12.sp,
+                                        fontFamily: GoogleFonts.inter(
+                                          fontWeight: FontWeight.w500,
+                                        ).fontFamily,
+                                      ),
+                                      enabledBorder: OutlineInputBorder(
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(10)),
+                                        borderSide: BorderSide(
+                                          color: HexColor('#d5dce0'),
+                                        ),
+                                      ),
+                                      focusedBorder: OutlineInputBorder(
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(10)),
+                                        borderSide: BorderSide(
+                                          color: HexColor('#5374ff'),
+                                        ),
+                                      ),
+                                      errorBorder: OutlineInputBorder(
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(10)),
+                                        borderSide: BorderSide(
+                                          color: HexColor('#de5151'),
+                                        ),
+                                      ),
+                                      focusedErrorBorder: OutlineInputBorder(
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(10)),
+                                        borderSide: BorderSide(
+                                          color: HexColor('#de5151'),
+                                        ),
+                                      ),
+                                    ),
+                                    isEmpty: selectedNationality == '',
+                                    child: DropdownButtonHideUnderline(
+                                      child: DropdownButton<String>(
+                                        value: selectedNationality,
+                                        isDense: true,
+                                        onChanged: (String? newValue) {
+                                          setState(() {
+                                            selectedNationality = newValue;
+                                            state.didChange(newValue);
+                                          });
+                                        },
+                                        items: countries.map((String value) {
+                                          return DropdownMenuItem<String>(
+                                            value: value,
+                                            child: Text(value),
+                                          );
+                                        }).toList(),
+                                      ),
+                                    ),
+                                  );
+                                },
+                              ),
+                            ],
                           ),
                           Utils.sizedBoxHeight(20),
-                          FormField<String>(
-                            builder: (FormFieldState<String> state) {
-                              return InputDecorator(
-                                decoration: InputDecoration(
-                                    errorStyle: const TextStyle(
-                                        color: Colors.redAccent,
-                                        fontSize: 16.0),
-                                    hintText: '',
-                                    label: const Text('Country of Birth*'),
-                                    border: OutlineInputBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(5.0))),
-                                isEmpty: selectedCountryofBirth == '',
-                                child: DropdownButtonHideUnderline(
-                                  child: DropdownButton<String>(
-                                    value: selectedCountryofBirth,
-                                    isDense: true,
-                                    onChanged: (String? newValue) {
-                                      setState(() {
-                                        selectedCountryofBirth = newValue;
-                                        state.didChange(newValue);
-                                      });
-                                    },
-                                    items: countries.map((String value) {
-                                      return DropdownMenuItem<String>(
-                                        value: value,
-                                        child: Text(value),
-                                      );
-                                    }).toList(),
-                                  ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Country of Birth*',
+                                style: TextStyle(
+                                  color: Colors.black87,
+                                  fontSize: 10.sp,
+                                  fontFamily: GoogleFonts.inter(
+                                    fontWeight: FontWeight.w700,
+                                  ).fontFamily,
                                 ),
-                              );
-                            },
+                              ),
+                              SizedBox(
+                                height: 0.5.h,
+                              ),
+                              FormField<String>(
+                                builder: (FormFieldState<String> state) {
+                                  return InputDecorator(
+                                    decoration: InputDecoration(
+                                      fillColor: HexColor('#5374ff'),
+                                      errorStyle: TextStyle(
+                                        fontSize: 8.sp,
+                                        color: HexColor('#de5151'),
+                                        fontFamily: GoogleFonts.inter(
+                                          fontWeight: FontWeight.w500,
+                                        ).fontFamily,
+                                      ),
+                                      hintStyle: TextStyle(
+                                        color: HexColor('#8e9aa6'),
+                                        fontSize: 12.sp,
+                                        fontFamily: GoogleFonts.inter(
+                                          fontWeight: FontWeight.w500,
+                                        ).fontFamily,
+                                      ),
+                                      enabledBorder: OutlineInputBorder(
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(10)),
+                                        borderSide: BorderSide(
+                                          color: HexColor('#d5dce0'),
+                                        ),
+                                      ),
+                                      focusedBorder: OutlineInputBorder(
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(10)),
+                                        borderSide: BorderSide(
+                                          color: HexColor('#5374ff'),
+                                        ),
+                                      ),
+                                      errorBorder: OutlineInputBorder(
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(10)),
+                                        borderSide: BorderSide(
+                                          color: HexColor('#de5151'),
+                                        ),
+                                      ),
+                                      focusedErrorBorder: OutlineInputBorder(
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(10)),
+                                        borderSide: BorderSide(
+                                          color: HexColor('#de5151'),
+                                        ),
+                                      ),
+                                    ),
+                                    isEmpty: selectedCountryofBirth == '',
+                                    child: DropdownButtonHideUnderline(
+                                      child: DropdownButton<String>(
+                                        value: selectedCountryofBirth,
+                                        isDense: true,
+                                        onChanged: (String? newValue) {
+                                          setState(() {
+                                            selectedCountryofBirth = newValue;
+                                            state.didChange(newValue);
+                                          });
+                                        },
+                                        items: countries.map((String value) {
+                                          return DropdownMenuItem<String>(
+                                            value: value,
+                                            child: Text(value),
+                                          );
+                                        }).toList(),
+                                      ),
+                                    ),
+                                  );
+                                },
+                              ),
+                            ],
                           ),
                           Utils.sizedBoxHeight(20),
                           Row(
                             children: [
                               Flexible(
                                 flex: 1,
-                                child: FormField<String>(
-                                  builder: (FormFieldState<String> state) {
-                                    return InputDecorator(
-                                      decoration: InputDecoration(
-                                          errorStyle: const TextStyle(
-                                              color: Colors.redAccent,
-                                              fontSize: 16.0),
-                                          hintText:
-                                              'Please select Equity Group',
-                                          label: const Text('Equity Group*'),
-                                          border: OutlineInputBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(5.0))),
-                                      isEmpty: selectedEquity == '',
-                                      child: DropdownButtonHideUnderline(
-                                        child: DropdownButton<String>(
-                                          value: selectedEquity,
-                                          isDense: true,
-                                          onChanged: (String? newValue) {
-                                            setState(() {
-                                              selectedEquity = newValue;
-                                              state.didChange(newValue);
-                                            });
-                                          },
-                                          items: equity.map((String value) {
-                                            return DropdownMenuItem<String>(
-                                              value: value,
-                                              child: Text(value),
-                                            );
-                                          }).toList(),
-                                        ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'Equity Group*',
+                                      style: TextStyle(
+                                        color: Colors.black87,
+                                        fontSize: 10.sp,
+                                        fontFamily: GoogleFonts.inter(
+                                          fontWeight: FontWeight.w700,
+                                        ).fontFamily,
                                       ),
-                                    );
-                                  },
+                                    ),
+                                    SizedBox(
+                                      height: 0.5.h,
+                                    ),
+                                    FormField<String>(
+                                      builder: (FormFieldState<String> state) {
+                                        return InputDecorator(
+                                          decoration: InputDecoration(
+                                            fillColor: HexColor('#5374ff'),
+                                            errorStyle: TextStyle(
+                                              fontSize: 8.sp,
+                                              color: HexColor('#de5151'),
+                                              fontFamily: GoogleFonts.inter(
+                                                fontWeight: FontWeight.w500,
+                                              ).fontFamily,
+                                            ),
+                                            hintStyle: TextStyle(
+                                              color: HexColor('#8e9aa6'),
+                                              fontSize: 12.sp,
+                                              fontFamily: GoogleFonts.inter(
+                                                fontWeight: FontWeight.w500,
+                                              ).fontFamily,
+                                            ),
+                                            enabledBorder: OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#d5dce0'),
+                                              ),
+                                            ),
+                                            focusedBorder: OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#5374ff'),
+                                              ),
+                                            ),
+                                            errorBorder: OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#de5151'),
+                                              ),
+                                            ),
+                                            focusedErrorBorder:
+                                                OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#de5151'),
+                                              ),
+                                            ),
+                                          ),
+                                          isEmpty: selectedEquity == '',
+                                          child: DropdownButtonHideUnderline(
+                                            child: DropdownButton<String>(
+                                              value: selectedEquity,
+                                              isDense: true,
+                                              onChanged: (String? newValue) {
+                                                setState(() {
+                                                  selectedEquity = newValue;
+                                                  state.didChange(newValue);
+                                                });
+                                              },
+                                              items: equity.map((String value) {
+                                                return DropdownMenuItem<String>(
+                                                  value: value,
+                                                  child: Text(value),
+                                                );
+                                              }).toList(),
+                                            ),
+                                          ),
+                                        );
+                                      },
+                                    ),
+                                  ],
                                 ),
                               ),
                               Utils.sizedBoxWidth(10),
                               Flexible(
                                 flex: 1,
-                                child: FormField<String>(
-                                  builder: (FormFieldState<String> state) {
-                                    return InputDecorator(
-                                      decoration: InputDecoration(
-                                          errorStyle: const TextStyle(
-                                              color: Colors.redAccent,
-                                              fontSize: 16.0),
-                                          hintText: '',
-                                          label: const Text('Disability*'),
-                                          border: OutlineInputBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(5.0))),
-                                      isEmpty: selectedDisability == '',
-                                      child: DropdownButtonHideUnderline(
-                                        child: DropdownButton<String>(
-                                          value: selectedDisability,
-                                          isDense: true,
-                                          onChanged: (String? newValue) {
-                                            setState(() {
-                                              selectedDisability = newValue;
-                                              state.didChange(newValue);
-                                            });
-                                          },
-                                          items: disability.map((String value) {
-                                            return DropdownMenuItem<String>(
-                                              value: value,
-                                              child: Text(value),
-                                            );
-                                          }).toList(),
-                                        ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'Disability*',
+                                      style: TextStyle(
+                                        color: Colors.black87,
+                                        fontSize: 10.sp,
+                                        fontFamily: GoogleFonts.inter(
+                                          fontWeight: FontWeight.w700,
+                                        ).fontFamily,
                                       ),
-                                    );
-                                  },
+                                    ),
+                                    SizedBox(
+                                      height: 0.5.h,
+                                    ),
+                                    FormField<String>(
+                                      builder: (FormFieldState<String> state) {
+                                        return InputDecorator(
+                                          decoration: InputDecoration(
+                                            fillColor: HexColor('#5374ff'),
+                                            errorStyle: TextStyle(
+                                              fontSize: 8.sp,
+                                              color: HexColor('#de5151'),
+                                              fontFamily: GoogleFonts.inter(
+                                                fontWeight: FontWeight.w500,
+                                              ).fontFamily,
+                                            ),
+                                            hintStyle: TextStyle(
+                                              color: HexColor('#8e9aa6'),
+                                              fontSize: 12.sp,
+                                              fontFamily: GoogleFonts.inter(
+                                                fontWeight: FontWeight.w500,
+                                              ).fontFamily,
+                                            ),
+                                            enabledBorder: OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#d5dce0'),
+                                              ),
+                                            ),
+                                            focusedBorder: OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#5374ff'),
+                                              ),
+                                            ),
+                                            errorBorder: OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#de5151'),
+                                              ),
+                                            ),
+                                            focusedErrorBorder:
+                                                OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#de5151'),
+                                              ),
+                                            ),
+                                          ),
+                                          isEmpty: selectedDisability == '',
+                                          child: DropdownButtonHideUnderline(
+                                            child: DropdownButton<String>(
+                                              value: selectedDisability,
+                                              isDense: true,
+                                              onChanged: (String? newValue) {
+                                                setState(() {
+                                                  selectedDisability = newValue;
+                                                  state.didChange(newValue);
+                                                });
+                                              },
+                                              items: disability
+                                                  .map((String value) {
+                                                return DropdownMenuItem<String>(
+                                                  value: value,
+                                                  child: Text(value),
+                                                );
+                                              }).toList(),
+                                            ),
+                                          ),
+                                        );
+                                      },
+                                    ),
+                                  ],
                                 ),
                               ),
                             ],
                           ),
                           Utils.sizedBoxHeight(20),
-                          TextFormField(
-                            textInputAction: TextInputAction.next,
-                            controller: dobController,
-                            keyboardType: TextInputType.none,
-                            decoration: InputDecoration(
-                              labelText: 'Date of Birth*',
-                              hintText: 'DD/MM/YYYY',
-                              labelStyle: const TextStyle(
-                                fontSize: 16,
-                                color: Colors.grey,
-                                fontWeight: FontWeight.w500,
-                              ),
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(5),
-                                borderSide: const BorderSide(
-                                  color: Colors.red,
-                                  width: 2,
-                                  style: BorderStyle.solid,
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Date of Birth*',
+                                style: TextStyle(
+                                  color: Colors.black87,
+                                  fontSize: 10.sp,
+                                  fontFamily: GoogleFonts.inter(
+                                    fontWeight: FontWeight.w700,
+                                  ).fontFamily,
                                 ),
                               ),
-                            ),
-                            onTap: () {
-                              DatePicker.showDatePicker(
-                                context,
-                                pickerTheme: const DateTimePickerTheme(
-                                  itemTextStyle:
-                                      TextStyle(fontWeight: FontWeight.w600),
-                                  confirm: Text('Done',
-                                      style: TextStyle(color: Colors.red)),
-                                  cancel: Text('cancel',
-                                      style: TextStyle(color: Colors.cyan)),
-                                  itemHeight: 40,
+                              SizedBox(
+                                height: 0.5.h,
+                              ),
+                              TextFormField(
+                                textInputAction: TextInputAction.next,
+                                controller: dobController,
+                                keyboardType: TextInputType.none,
+                                decoration: InputDecoration(
+                                  fillColor: HexColor('#5374ff'),
+                                  errorStyle: TextStyle(
+                                    fontSize: 8.sp,
+                                    color: HexColor('#de5151'),
+                                    fontFamily: GoogleFonts.inter(
+                                      fontWeight: FontWeight.w500,
+                                    ).fontFamily,
+                                  ),
+                                  hintStyle: TextStyle(
+                                    color: HexColor('#8e9aa6'),
+                                    fontSize: 12.sp,
+                                    fontFamily: GoogleFonts.inter(
+                                      fontWeight: FontWeight.w500,
+                                    ).fontFamily,
+                                  ),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(10)),
+                                    borderSide: BorderSide(
+                                      color: HexColor('#d5dce0'),
+                                    ),
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(10)),
+                                    borderSide: BorderSide(
+                                      color: HexColor('#5374ff'),
+                                    ),
+                                  ),
+                                  errorBorder: OutlineInputBorder(
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(10)),
+                                    borderSide: BorderSide(
+                                      color: HexColor('#de5151'),
+                                    ),
+                                  ),
+                                  focusedErrorBorder: OutlineInputBorder(
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(10)),
+                                    borderSide: BorderSide(
+                                      color: HexColor('#de5151'),
+                                    ),
+                                  ),
                                 ),
-                                pickerMode: DateTimePickerMode.date,
-                                minDateTime: minDate,
-                                maxDateTime: maxDate,
-                                initialDateTime: DateTime.now(),
-                                dateFormat: _format,
-                                locale: _locale,
-                                onClose: () => print("----- onClose -----"),
-                                onCancel: () => print('onCancel'),
-                                onChange: (dateTime, List<int> index) {
-                                  setState(() {
-                                    _dateOfBirth = dateTime;
-                                    //assign date in DD/MM/YYYY format
-                                    dobController.text =
-                                        DateFormat('dd-MM-yyyy')
-                                            .format(dateTime);
-                                  });
+                                onTap: () {
+                                  DatePicker.showDatePicker(
+                                    context,
+                                    pickerTheme: const DateTimePickerTheme(
+                                      itemTextStyle: TextStyle(
+                                          fontWeight: FontWeight.w600),
+                                      confirm: Text('Done',
+                                          style: TextStyle(color: Colors.red)),
+                                      cancel: Text('cancel',
+                                          style: TextStyle(color: Colors.cyan)),
+                                      itemHeight: 40,
+                                    ),
+                                    pickerMode: DateTimePickerMode.date,
+                                    minDateTime: minDate,
+                                    maxDateTime: maxDate,
+                                    initialDateTime: DateTime.now(),
+                                    dateFormat: _format,
+                                    locale: _locale,
+                                    onClose: () => print('----- onClose -----'),
+                                    onCancel: () => print('onCancel'),
+                                    onChange: (dateTime, List<int> index) {
+                                      setState(() {
+                                        _dateOfBirth = dateTime;
+                                        //assign date in DD/MM/YYYY format
+                                        dobController.text =
+                                            DateFormat('dd-MM-yyyy')
+                                                .format(dateTime);
+                                      });
+                                    },
+                                    onConfirm: (dateTime, List<int> index) {
+                                      setState(() {
+                                        setState(() {
+                                          _dateOfBirth = dateTime;
+                                          dobController.text =
+                                              DateFormat('dd-MM-yyyy')
+                                                  .format(dateTime);
+                                        });
+                                      });
+                                    },
+                                  );
+                                  setState(() {});
                                 },
-                                onConfirm: (dateTime, List<int> index) {
-                                  setState(() {
-                                    setState(() {
-                                      _dateOfBirth = dateTime;
-                                      dobController.text =
-                                          DateFormat('dd-MM-yyyy')
-                                              .format(dateTime);
-                                    });
-                                  });
+                                validator: (value) {
+                                  if (value == null) {
+                                    return 'Date of Birth is required';
+                                  }
+                                  return null;
                                 },
-                              );
-                              setState(() {});
-                            },
-                            validator: (value) {
-                              if (value == null) {
-                                return 'Date of Birth is required';
-                              }
-                              return null;
-                            },
+                              ),
+                            ],
                           ),
                           Utils.sizedBoxHeight(20),
                           TxtField(
-                            hint: "Income Tax Number",
+                            type: TextInputType.number,
+                            hint: 'Income Tax Number',
                             controller: taxNumberController,
                           ),
-                            Utils.sizedBoxHeight(20),
+                          Utils.sizedBoxHeight(20),
                           TxtField(
-                            hint: "Passport Number",
+                            hint: 'Passport Number',
                             controller: passportNumberController,
                           ),
                           Utils.sizedBoxHeight(20),
@@ -666,41 +1131,102 @@ class _OnboardPersonalInformationState
                               ),
                               Flexible(
                                 flex: 1,
-                                child: FormField<String>(
-                                  builder: (FormFieldState<String> state) {
-                                    return InputDecorator(
-                                      decoration: InputDecoration(
-                                          errorStyle: const TextStyle(
-                                              color: Colors.redAccent,
-                                              fontSize: 16.0),
-                                          hintText: 'Please select Province',
-                                          label: const Text('Province*'),
-                                          border: OutlineInputBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(5.0))),
-                                      isEmpty:
-                                          selectedResidentialProvince == '',
-                                      child: DropdownButtonHideUnderline(
-                                        child: DropdownButton<String>(
-                                          value: selectedResidentialProvince,
-                                          isDense: true,
-                                          onChanged: (String? newValue) {
-                                            setState(() {
-                                              selectedResidentialProvince =
-                                                  newValue;
-                                              state.didChange(newValue);
-                                            });
-                                          },
-                                          items: province.map((String value) {
-                                            return DropdownMenuItem<String>(
-                                              value: value,
-                                              child: Text(value),
-                                            );
-                                          }).toList(),
-                                        ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'Province*',
+                                      style: TextStyle(
+                                        color: Colors.black87,
+                                        fontSize: 10.sp,
+                                        fontFamily: GoogleFonts.inter(
+                                          fontWeight: FontWeight.w700,
+                                        ).fontFamily,
                                       ),
-                                    );
-                                  },
+                                    ),
+                                    SizedBox(
+                                      height: 0.5.h,
+                                    ),
+                                    FormField<String>(
+                                      builder: (FormFieldState<String> state) {
+                                        return InputDecorator(
+                                          decoration: InputDecoration(
+                                            fillColor: HexColor('#5374ff'),
+                                            errorStyle: TextStyle(
+                                              fontSize: 8.sp,
+                                              color: HexColor('#de5151'),
+                                              fontFamily: GoogleFonts.inter(
+                                                fontWeight: FontWeight.w500,
+                                              ).fontFamily,
+                                            ),
+                                            hintStyle: TextStyle(
+                                              color: HexColor('#8e9aa6'),
+                                              fontSize: 12.sp,
+                                              fontFamily: GoogleFonts.inter(
+                                                fontWeight: FontWeight.w500,
+                                              ).fontFamily,
+                                            ),
+                                            enabledBorder: OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#d5dce0'),
+                                              ),
+                                            ),
+                                            focusedBorder: OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#5374ff'),
+                                              ),
+                                            ),
+                                            errorBorder: OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#de5151'),
+                                              ),
+                                            ),
+                                            focusedErrorBorder:
+                                                OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#de5151'),
+                                              ),
+                                            ),
+                                          ),
+                                          isEmpty:
+                                              selectedResidentialProvince == '',
+                                          child: DropdownButtonHideUnderline(
+                                            child: DropdownButton<String>(
+                                              value:
+                                                  selectedResidentialProvince,
+                                              isDense: true,
+                                              onChanged: (String? newValue) {
+                                                setState(() {
+                                                  selectedResidentialProvince =
+                                                      newValue;
+                                                  state.didChange(newValue);
+                                                });
+                                              },
+                                              items:
+                                                  province.map((String value) {
+                                                return DropdownMenuItem<String>(
+                                                  value: value,
+                                                  child: Text(value),
+                                                );
+                                              }).toList(),
+                                            ),
+                                          ),
+                                        );
+                                      },
+                                    ),
+                                  ],
                                 ),
                               ),
                             ],
@@ -752,10 +1278,10 @@ class _OnboardPersonalInformationState
                                             selectedPostalProvince =
                                                 selectedResidentialProvince;
                                           } else {
-                                            postalAddressController.text = "";
-                                            postalCityController.text = "";
+                                            postalAddressController.text = '';
+                                            postalCityController.text = '';
                                             postalPostalCodeController.text =
-                                                "";
+                                                '';
                                             selectedPostalProvince = null;
                                           }
                                         }
@@ -825,77 +1351,192 @@ class _OnboardPersonalInformationState
                               ),
                               Flexible(
                                 flex: 2,
-                                child: FormField<String>(
-                                  builder: (FormFieldState<String> state) {
-                                    return InputDecorator(
-                                      decoration: InputDecoration(
-                                          errorStyle: const TextStyle(
-                                              color: Colors.redAccent,
-                                              fontSize: 16.0),
-                                          hintText: 'Please select Province',
-                                          label: const Text('Province*'),
-                                          border: OutlineInputBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(5.0))),
-                                      isEmpty: selectedPostalProvince == '',
-                                      child: DropdownButtonHideUnderline(
-                                        child: DropdownButton<String>(
-                                          value: selectedPostalProvince,
-                                          isDense: true,
-                                          onChanged: (String? newValue) {
-                                            setState(() {
-                                              selectedPostalProvince = newValue;
-                                              state.didChange(newValue);
-                                            });
-                                          },
-                                          items: province.map((String value) {
-                                            return DropdownMenuItem<String>(
-                                              value: value,
-                                              child: Text(value),
-                                            );
-                                          }).toList(),
-                                        ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'Province*',
+                                      style: TextStyle(
+                                        color: Colors.black87,
+                                        fontSize: 10.sp,
+                                        fontFamily: GoogleFonts.inter(
+                                          fontWeight: FontWeight.w700,
+                                        ).fontFamily,
                                       ),
-                                    );
-                                  },
+                                    ),
+                                    SizedBox(
+                                      height: 0.5.h,
+                                    ),
+                                    FormField<String>(
+                                      builder: (FormFieldState<String> state) {
+                                        return InputDecorator(
+                                          decoration: InputDecoration(
+                                            fillColor: HexColor('#5374ff'),
+                                            errorStyle: TextStyle(
+                                              fontSize: 8.sp,
+                                              color: HexColor('#de5151'),
+                                              fontFamily: GoogleFonts.inter(
+                                                fontWeight: FontWeight.w500,
+                                              ).fontFamily,
+                                            ),
+                                            hintStyle: TextStyle(
+                                              color: HexColor('#8e9aa6'),
+                                              fontSize: 12.sp,
+                                              fontFamily: GoogleFonts.inter(
+                                                fontWeight: FontWeight.w500,
+                                              ).fontFamily,
+                                            ),
+                                            enabledBorder: OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#d5dce0'),
+                                              ),
+                                            ),
+                                            focusedBorder: OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#5374ff'),
+                                              ),
+                                            ),
+                                            errorBorder: OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#de5151'),
+                                              ),
+                                            ),
+                                            focusedErrorBorder:
+                                                OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#de5151'),
+                                              ),
+                                            ),
+                                          ),
+                                          isEmpty: selectedPostalProvince == '',
+                                          child: DropdownButtonHideUnderline(
+                                            child: DropdownButton<String>(
+                                              value: selectedPostalProvince,
+                                              isDense: true,
+                                              onChanged: (String? newValue) {
+                                                setState(() {
+                                                  selectedPostalProvince =
+                                                      newValue;
+                                                  state.didChange(newValue);
+                                                });
+                                              },
+                                              items:
+                                                  province.map((String value) {
+                                                return DropdownMenuItem<String>(
+                                                  value: value,
+                                                  child: Text(value),
+                                                );
+                                              }).toList(),
+                                            ),
+                                          ),
+                                        );
+                                      },
+                                    ),
+                                  ],
                                 ),
                               ),
                             ],
                           ),
                           Utils.sizedBoxHeight(20),
-                          FormField<String>(
-                            builder: (FormFieldState<String> state) {
-                              return InputDecorator(
-                                decoration: InputDecoration(
-                                    errorStyle: const TextStyle(
-                                        color: Colors.redAccent,
-                                        fontSize: 16.0),
-                                    hintText: 'Please selected PO Box',
-                                    label: const Text('PO Box'),
-                                    border: OutlineInputBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(5.0))),
-                                isEmpty: selectedPoBox == '',
-                                child: DropdownButtonHideUnderline(
-                                  child: DropdownButton<String>(
-                                    value: selectedPoBox,
-                                    isDense: true,
-                                    onChanged: (String? newValue) {
-                                      setState(() {
-                                        selectedPoBox = newValue;
-                                        state.didChange(newValue);
-                                      });
-                                    },
-                                    items: pobox.map((String value) {
-                                      return DropdownMenuItem<String>(
-                                        value: value,
-                                        child: Text(value),
-                                      );
-                                    }).toList(),
-                                  ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'PO Box',
+                                style: TextStyle(
+                                  color: Colors.black87,
+                                  fontSize: 10.sp,
+                                  fontFamily: GoogleFonts.inter(
+                                    fontWeight: FontWeight.w700,
+                                  ).fontFamily,
                                 ),
-                              );
-                            },
+                              ),
+                              SizedBox(
+                                height: 0.5.h,
+                              ),
+                              FormField<String>(
+                                builder: (FormFieldState<String> state) {
+                                  return InputDecorator(
+                                    decoration: InputDecoration(
+                                      fillColor: HexColor('#5374ff'),
+                                      errorStyle: TextStyle(
+                                        fontSize: 8.sp,
+                                        color: HexColor('#de5151'),
+                                        fontFamily: GoogleFonts.inter(
+                                          fontWeight: FontWeight.w500,
+                                        ).fontFamily,
+                                      ),
+                                      hintStyle: TextStyle(
+                                        color: HexColor('#8e9aa6'),
+                                        fontSize: 12.sp,
+                                        fontFamily: GoogleFonts.inter(
+                                          fontWeight: FontWeight.w500,
+                                        ).fontFamily,
+                                      ),
+                                      enabledBorder: OutlineInputBorder(
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(10)),
+                                        borderSide: BorderSide(
+                                          color: HexColor('#d5dce0'),
+                                        ),
+                                      ),
+                                      focusedBorder: OutlineInputBorder(
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(10)),
+                                        borderSide: BorderSide(
+                                          color: HexColor('#5374ff'),
+                                        ),
+                                      ),
+                                      errorBorder: OutlineInputBorder(
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(10)),
+                                        borderSide: BorderSide(
+                                          color: HexColor('#de5151'),
+                                        ),
+                                      ),
+                                      focusedErrorBorder: OutlineInputBorder(
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(10)),
+                                        borderSide: BorderSide(
+                                          color: HexColor('#de5151'),
+                                        ),
+                                      ),
+                                    ),
+                                    isEmpty: selectedPoBox == '',
+                                    child: DropdownButtonHideUnderline(
+                                      child: DropdownButton<String>(
+                                        value: selectedPoBox,
+                                        isDense: true,
+                                        onChanged: (String? newValue) {
+                                          setState(() {
+                                            selectedPoBox = newValue;
+                                            state.didChange(newValue);
+                                          });
+                                        },
+                                        items: pobox.map((String value) {
+                                          return DropdownMenuItem<String>(
+                                            value: value,
+                                            child: Text(value),
+                                          );
+                                        }).toList(),
+                                      ),
+                                    ),
+                                  );
+                                },
+                              ),
+                            ],
                           ),
                           Utils.sizedBoxHeight(20),
                           Container(
@@ -912,44 +1553,98 @@ class _OnboardPersonalInformationState
                               ),
                             ),
                           ),
-                          FormField<String>(
-                            builder: (FormFieldState<String> state) {
-                              return InputDecorator(
-                                decoration: InputDecoration(
-                                    errorStyle: const TextStyle(
-                                        color: Colors.redAccent,
-                                        fontSize: 16.0),
-                                    hintText: 'Emergency Contact Relationship',
-                                    label: const Text(
-                                        'Emergency Contact Relationship'),
-                                    border: OutlineInputBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(5.0))),
-                                isEmpty: selectedEContactRelationship == '',
-                                child: DropdownButtonHideUnderline(
-                                  child: DropdownButton<String>(
-                                    dropdownColor: const Color.fromARGB(
-                                        255, 233, 231, 224),
-                                    value: selectedEContactRelationship,
-                                    isDense: true,
-                                    onChanged: (String? newValue) {
-                                      setState(() {
-                                        selectedEContactRelationship = newValue;
-                                        state.didChange(newValue);
-                                      });
-                                    },
-                                    items: emergencyContactRelation
-                                        .map((String value) {
-                                      return DropdownMenuItem<String>(
-                                        alignment: Alignment.center,
-                                        value: value,
-                                        child: Text(value),
-                                      );
-                                    }).toList(),
-                                  ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Emergency Contact Relationship*',
+                                style: TextStyle(
+                                  color: Colors.black87,
+                                  fontSize: 10.sp,
+                                  fontFamily: GoogleFonts.inter(
+                                    fontWeight: FontWeight.w700,
+                                  ).fontFamily,
                                 ),
-                              );
-                            },
+                              ),
+                              SizedBox(
+                                height: 0.5.h,
+                              ),
+                              FormField<String>(
+                                builder: (FormFieldState<String> state) {
+                                  return InputDecorator(
+                                    decoration: InputDecoration(
+                                      fillColor: HexColor('#5374ff'),
+                                      errorStyle: TextStyle(
+                                        fontSize: 8.sp,
+                                        color: HexColor('#de5151'),
+                                        fontFamily: GoogleFonts.inter(
+                                          fontWeight: FontWeight.w500,
+                                        ).fontFamily,
+                                      ),
+                                      hintStyle: TextStyle(
+                                        color: HexColor('#8e9aa6'),
+                                        fontSize: 12.sp,
+                                        fontFamily: GoogleFonts.inter(
+                                          fontWeight: FontWeight.w500,
+                                        ).fontFamily,
+                                      ),
+                                      enabledBorder: OutlineInputBorder(
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(10)),
+                                        borderSide: BorderSide(
+                                          color: HexColor('#d5dce0'),
+                                        ),
+                                      ),
+                                      focusedBorder: OutlineInputBorder(
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(10)),
+                                        borderSide: BorderSide(
+                                          color: HexColor('#5374ff'),
+                                        ),
+                                      ),
+                                      errorBorder: OutlineInputBorder(
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(10)),
+                                        borderSide: BorderSide(
+                                          color: HexColor('#de5151'),
+                                        ),
+                                      ),
+                                      focusedErrorBorder: OutlineInputBorder(
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(10)),
+                                        borderSide: BorderSide(
+                                          color: HexColor('#de5151'),
+                                        ),
+                                      ),
+                                    ),
+                                    isEmpty: selectedEContactRelationship == '',
+                                    child: DropdownButtonHideUnderline(
+                                      child: DropdownButton<String>(
+                                        dropdownColor: const Color.fromARGB(
+                                            255, 233, 231, 224),
+                                        value: selectedEContactRelationship,
+                                        isDense: true,
+                                        onChanged: (String? newValue) {
+                                          setState(() {
+                                            selectedEContactRelationship =
+                                                newValue;
+                                            state.didChange(newValue);
+                                          });
+                                        },
+                                        items: emergencyContactRelation
+                                            .map((String value) {
+                                          return DropdownMenuItem<String>(
+                                            alignment: Alignment.center,
+                                            value: value,
+                                            child: Text(value),
+                                          );
+                                        }).toList(),
+                                      ),
+                                    ),
+                                  );
+                                },
+                              ),
+                            ],
                           ),
                           Utils.sizedBoxHeight(20),
                           TxtField(
@@ -965,6 +1660,7 @@ class _OnboardPersonalInformationState
 
                           Utils.sizedBoxHeight(20),
                           TxtField(
+                            type: TextInputType.number,
                             hint: 'Emergency Mobile Number*',
                             controller: emergencyContactNumberController,
                             length: 10,
@@ -986,7 +1682,8 @@ class _OnboardPersonalInformationState
 
                           Utils.sizedBoxHeight(20),
                           TxtField(
-                            hint: 'Alternate Number*',
+                            type: TextInputType.number,
+                            hint: 'Alternate Number',
                             controller: alternativeNoController,
                             length: 10,
                             formatter: [
@@ -994,12 +1691,10 @@ class _OnboardPersonalInformationState
                               LengthLimitingTextInputFormatter(10),
                             ],
                             validator: (value) {
-                              if (value == null) {
-                                return 'Alternate mobile is required';
-                              } else if (value.length != 10) {
-                                return 'Alternate mobile number should be of 10 digits';
-                              } else if (value[0] != '0') {
-                                return 'Phone Number must start with 0';
+                              if (value.isNotEmpty && value.length != 10) {
+                                return 'Please enter phone number';
+                              } else if (value.isNotEmpty && value[0] != '0') {
+                                return 'Phone number should start with 0';
                               }
                               return null;
                             },
@@ -1031,91 +1726,186 @@ class _OnboardPersonalInformationState
                           ),
 
                           Utils.sizedBoxHeight(20),
-                          SearchField<String>(
-                            autoCorrect: true,
-                            suggestions: cities
-                                .map((e) => SearchFieldListItem(e, item: e))
-                                .toList(),
-                            suggestionState: Suggestion.expand,
-                            hasOverlay: false,
-                            searchStyle:
-                                const TextStyle(fontSize: 16, color: Colors.black),
-                            validator: (x) {
-                              if (x == null ||
-                                  x.isEmpty ||
-                                  !cities.map((e) => e).contains(x)) {
-                                return 'Please select a city';
-                              }
-                              return null;
-                            },
-                            searchInputDecoration: InputDecoration(
-                                // hintText: "Preffered Work Location",
-                                label: const Text(
-                                  "City*",
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    color: Colors.grey,
-                                    fontWeight: FontWeight.w500,
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'City*',
+                                style: TextStyle(
+                                  color: Colors.black87,
+                                  fontSize: 10.sp,
+                                  fontFamily: GoogleFonts.inter(
+                                    fontWeight: FontWeight.w700,
+                                  ).fontFamily,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 0.5.h,
+                              ),
+                              SearchField<String>(
+                                autoCorrect: true,
+                                suggestions: cities
+                                    .map((e) => SearchFieldListItem(e, item: e))
+                                    .toList(),
+                                suggestionState: Suggestion.expand,
+                                hasOverlay: false,
+                                searchStyle: const TextStyle(
+                                    fontSize: 16, color: Colors.black),
+                                validator: (x) {
+                                  if (x == null ||
+                                      x.isEmpty ||
+                                      !cities.map((e) => e).contains(x)) {
+                                    return 'Please select a city';
+                                  }
+                                  return null;
+                                },
+                                searchInputDecoration: InputDecoration(
+                                  contentPadding: const EdgeInsets.all(20),
+                                  suffixIcon: const Icon(Icons.search),
+                                  fillColor: HexColor('#5374ff'),
+                                  errorStyle: TextStyle(
+                                    fontSize: 8.sp,
+                                    color: HexColor('#de5151'),
+                                    fontFamily: GoogleFonts.inter(
+                                      fontWeight: FontWeight.w500,
+                                    ).fontFamily,
+                                  ),
+                                  hintStyle: TextStyle(
+                                    color: HexColor('#8e9aa6'),
+                                    fontSize: 12.sp,
+                                    fontFamily: GoogleFonts.inter(
+                                      fontWeight: FontWeight.w500,
+                                    ).fontFamily,
+                                  ),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(10)),
+                                    borderSide: BorderSide(
+                                      color: HexColor('#d5dce0'),
+                                    ),
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(10)),
+                                    borderSide: BorderSide(
+                                      color: HexColor('#5374ff'),
+                                    ),
+                                  ),
+                                  errorBorder: OutlineInputBorder(
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(10)),
+                                    borderSide: BorderSide(
+                                      color: HexColor('#de5151'),
+                                    ),
+                                  ),
+                                  focusedErrorBorder: OutlineInputBorder(
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(10)),
+                                    borderSide: BorderSide(
+                                      color: HexColor('#de5151'),
+                                    ),
                                   ),
                                 ),
-                                focusedBorder: const OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.red, width: 2),
-                                ),
-                                border: const OutlineInputBorder(
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(5.0),
-                                  ),
-                                ),
-                                enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(5),
-                                  borderSide:
-                                      const BorderSide(color: Colors.grey, width: 1.2),
-                                ),
-                                contentPadding: const EdgeInsets.all(20),
-                                suffixIcon: const Icon(Icons.search)),
-                            onSuggestionTap: (x) {
-                              setState(() {
-                                selectedWorkLocation = x.item!;
-                              });
-                              FocusScope.of(context).requestFocus(FocusNode());
-                            },
-                            maxSuggestionsInViewPort: 6,
-                            itemHeight: 50,
+                                onSuggestionTap: (x) {
+                                  setState(() {
+                                    selectedWorkLocation = x.item!;
+                                  });
+                                  FocusScope.of(context)
+                                      .requestFocus(FocusNode());
+                                },
+                                maxSuggestionsInViewPort: 6,
+                                itemHeight: 50,
+                              ),
+                            ],
                           ),
                           Utils.sizedBoxHeight(20),
-                          FormField<String>(
-                            builder: (FormFieldState<String> state) {
-                              return InputDecorator(
-                                decoration: InputDecoration(
-                                    errorStyle: const TextStyle(
-                                        color: Colors.redAccent,
-                                        fontSize: 16.0),
-                                    hintText: 'Please select work Province',
-                                    label: const Text('Province*'),
-                                    border: OutlineInputBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(5.0))),
-                                isEmpty: selectedWorkProvince == '',
-                                child: DropdownButtonHideUnderline(
-                                  child: DropdownButton<String>(
-                                    value: selectedWorkProvince,
-                                    isDense: true,
-                                    onChanged: (String? newValue) {
-                                      setState(() {
-                                        selectedWorkProvince = newValue;
-                                        state.didChange(newValue);
-                                      });
-                                    },
-                                    items: province.map((String value) {
-                                      return DropdownMenuItem<String>(
-                                        value: value,
-                                        child: Text(value),
-                                      );
-                                    }).toList(),
-                                  ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Province*',
+                                style: TextStyle(
+                                  color: Colors.black87,
+                                  fontSize: 10.sp,
+                                  fontFamily: GoogleFonts.inter(
+                                    fontWeight: FontWeight.w700,
+                                  ).fontFamily,
                                 ),
-                              );
-                            },
+                              ),
+                              SizedBox(
+                                height: 0.5.h,
+                              ),
+                              FormField<String>(
+                                builder: (FormFieldState<String> state) {
+                                  return InputDecorator(
+                                    decoration: InputDecoration(
+                                      fillColor: HexColor('#5374ff'),
+                                      errorStyle: TextStyle(
+                                        fontSize: 8.sp,
+                                        color: HexColor('#de5151'),
+                                        fontFamily: GoogleFonts.inter(
+                                          fontWeight: FontWeight.w500,
+                                        ).fontFamily,
+                                      ),
+                                      hintStyle: TextStyle(
+                                        color: HexColor('#8e9aa6'),
+                                        fontSize: 12.sp,
+                                        fontFamily: GoogleFonts.inter(
+                                          fontWeight: FontWeight.w500,
+                                        ).fontFamily,
+                                      ),
+                                      enabledBorder: OutlineInputBorder(
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(10)),
+                                        borderSide: BorderSide(
+                                          color: HexColor('#d5dce0'),
+                                        ),
+                                      ),
+                                      focusedBorder: OutlineInputBorder(
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(10)),
+                                        borderSide: BorderSide(
+                                          color: HexColor('#5374ff'),
+                                        ),
+                                      ),
+                                      errorBorder: OutlineInputBorder(
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(10)),
+                                        borderSide: BorderSide(
+                                          color: HexColor('#de5151'),
+                                        ),
+                                      ),
+                                      focusedErrorBorder: OutlineInputBorder(
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(10)),
+                                        borderSide: BorderSide(
+                                          color: HexColor('#de5151'),
+                                        ),
+                                      ),
+                                    ),
+                                    isEmpty: selectedWorkProvince == '',
+                                    child: DropdownButtonHideUnderline(
+                                      child: DropdownButton<String>(
+                                        value: selectedWorkProvince,
+                                        isDense: true,
+                                        onChanged: (String? newValue) {
+                                          setState(() {
+                                            selectedWorkProvince = newValue;
+                                            state.didChange(newValue);
+                                          });
+                                        },
+                                        items: province.map((String value) {
+                                          return DropdownMenuItem<String>(
+                                            value: value,
+                                            child: Text(value),
+                                          );
+                                        }).toList(),
+                                      ),
+                                    ),
+                                  );
+                                },
+                              ),
+                            ],
                           ),
                           Utils.sizedBoxHeight(20),
                           SizedBox(
@@ -1127,11 +1917,14 @@ class _OnboardPersonalInformationState
                                 SizedBox(
                                   width:
                                       MediaQuery.of(context).size.width * 0.8,
-                                  child: TextButton(
-                                    style: TextButton.styleFrom(
-                                        foregroundColor: Colors.white,
-                                        backgroundColor: Colors.red),
-                                    onPressed: () async {
+                                  child: RoundedLoadingButton(
+                                    resetAfterDuration: true,
+                                    resetDuration: const Duration(seconds: 10),
+                                    width: 100.w,
+                                    borderRadius: 10,
+                                    color: Colors.red,
+                                    controller: _btnController,
+                                    onPressed: () {
                                       if (_formKey.currentState!.validate()) {
                                         if (selectedTitle != null &&
                                             selectedGender != null &&
@@ -1147,13 +1940,12 @@ class _OnboardPersonalInformationState
                                             selectedEContactRelationship !=
                                                 null) {
                                           _formKey.currentState!.save();
-
-                                          Utils.showProcessingToast();
                                           context.read<UploadPersonalInformationBloc>().add(UploadPersonalDataEvent(
                                               context: context,
                                               title: selectedTitle!,
                                               tax: taxNumberController.text,
-                                              passportNumber: passportNumberController.text,
+                                              passportNumber:
+                                                  passportNumberController.text,
                                               firstName:
                                                   firstNameController.text,
                                               middleName:
@@ -1163,15 +1955,14 @@ class _OnboardPersonalInformationState
                                                   phoneNumberController.text,
                                               email: emailController.text
                                                   .toLowerCase(),
-                                              gender: selectedGender!,
+                                              gender: genderId!,
                                               maritalStatus:
                                                   selectedMaritalStatus!,
                                               equityGroup: selectedEquity!,
-                                              workCity:
-                                                  selectedWorkLocation!,
-                                                  workLocation:
+                                              workCity: selectedWorkLocation!,
+                                              workLocation:
                                                   workLocationController.text,
-                                                  workProvince:
+                                              workProvince:
                                                   selectedWorkProvince!,
                                               disability: selectedDisability!,
                                               nationality: selectedNationality!,
@@ -1210,37 +2001,36 @@ class _OnboardPersonalInformationState
                                                   alternativeNoController
                                                       .text));
                                         } else {
+                                          _btnController.reset();
                                           ScaffoldMessenger.of(context)
                                               .showSnackBar(const SnackBar(
                                             backgroundColor: Colors.red,
                                             content: Text(
-                                                "Please add all required fields to continue"),
+                                                'Please add all required fields to continue'),
                                           ));
                                         }
+                                      } else {
+                                        _btnController.reset();
                                       }
                                     },
-                                    child: Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 20, vertical: 10),
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: const [
-                                          Text(
-                                            'NEXT',
-                                            style: TextStyle(
-                                                fontSize: 16,
-                                                fontWeight: FontWeight.w500),
-                                          ),
-                                          SizedBox(
-                                            width: 10,
-                                          ),
-                                          Icon(
-                                            Icons.arrow_forward,
-                                            color: Colors.white,
-                                          ),
-                                        ],
-                                      ),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: const [
+                                        Text(
+                                          'NEXT',
+                                          style: TextStyle(
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.w500),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Icon(
+                                          Icons.arrow_forward,
+                                          color: Colors.white,
+                                        ),
+                                      ],
                                     ),
                                   ),
                                 ),

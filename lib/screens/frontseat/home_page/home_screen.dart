@@ -284,9 +284,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   kycStepModelController.inContractingValue = false;
                   kycStepModelController.contractedValue = false;
                   kycStepModelController.commentValue = "";
-
                   await Utils.clearAllValue();
-                  Navigator.push(
+                  Navigator.pushReplacement(
                       context,
                       CupertinoPageRoute(
                           builder: (context) => const LandingScreen()));

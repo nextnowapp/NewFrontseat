@@ -264,7 +264,6 @@ class _LoginFrontSeatState extends State<LoginFrontSeat> {
     String mobile;
     String dob;
     String photo;
-    int age;
     int genderId;
     String gender;
     String designation;
@@ -296,7 +295,6 @@ class _LoginFrontSeatState extends State<LoginFrontSeat> {
       mobile = userData['mobile'] ?? '';
       dob = userData['dob'];
       photo = userData['image'] ?? (userData['photo'] ?? '');
-      age = userData['age'];
       genderId = userData['genderId'] ?? 1;
       gender = userData['gender'] ?? '';
       designation = userData['designation'] ?? '';
@@ -315,7 +313,6 @@ class _LoginFrontSeatState extends State<LoginFrontSeat> {
       Utils.saveStringValue('mobile', mobile);
       Utils.saveStringValue('dob', dob);
       Utils.saveStringValue('image', photo);
-      Utils.saveIntValue('age', age);
       Utils.saveIntValue('genderId', genderId);
       Utils.saveStringValue('gender', gender);
       Utils.saveStringValue('designation', designation);
@@ -335,7 +332,6 @@ class _LoginFrontSeatState extends State<LoginFrontSeat> {
       controller.mobile = mobile;
       controller.dob = dob;
       controller.photo = photo;
-      controller.age = age;
       controller.genderId = genderId;
       controller.gender = gender;
       controller.designation = designation;

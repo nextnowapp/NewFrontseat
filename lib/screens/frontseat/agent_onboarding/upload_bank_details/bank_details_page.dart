@@ -5,8 +5,12 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:rounded_loading_button/rounded_loading_button.dart';
 import 'package:searchfield/searchfield.dart';
+import 'package:sizer/sizer.dart';
 
 import '../../../../controller/kyc_step_model.dart';
 import '../../../../utils/Utils.dart';
@@ -14,7 +18,6 @@ import '../../../../utils/frontseat_constants.dart';
 import '../../../../utils/widget/textwidget.dart';
 import '../../../../utils/widget/txtbox.dart';
 import 'controller/upload_bank_details_bloc.dart';
-
 
 class BankDetails extends StatefulWidget {
   const BankDetails({Key? key}) : super(key: key);
@@ -33,6 +36,8 @@ class _BankDetailsState extends State<BankDetails> {
       TextEditingController();
   final TextEditingController bankAccountHolderNameController =
       TextEditingController();
+  final RoundedLoadingButtonController _btnController =
+      RoundedLoadingButtonController();
   String? _selectedBank;
   String? _selectedAccountType;
   String? _selectedAccHolderRelationship;
@@ -247,94 +252,215 @@ class _BankDetailsState extends State<BankDetails> {
                               children: [
                                 Flexible(
                                   flex: 1,
-                                  child: FormField<String>(
-                                      builder: (FormFieldState<String> state) {
-                                    return InputDecorator(
-                                      decoration: InputDecoration(
-                                          errorStyle: const TextStyle(
-                                              color: Colors.redAccent,
-                                              fontSize: 16.0),
-                                          hintText: 'Type of Account',
-                                          label: const Text('Account Type'),
-                                          border: OutlineInputBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(5.0))),
-                                      isEmpty: _selectedAccountType == '',
-                                      child: DropdownButtonHideUnderline(
-                                        child: DropdownButton<String>(
-                                          value: _selectedAccountType,
-                                          isDense: true,
-                                          onChanged: (String? newValue) {
-                                            setState(() {
-                                              _selectedAccountType = newValue;
-                                              state.didChange(newValue);
-                                            });
-                                          },
-                                          items:
-                                              accountType.map((String value) {
-                                            return DropdownMenuItem<String>(
-                                              value: value,
-                                              child: Text(value),
-                                            );
-                                          }).toList(),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Account Type*',
+                                        style: TextStyle(
+                                          color: Colors.black87,
+                                          fontSize: 10.sp,
+                                          fontFamily: GoogleFonts.inter(
+                                            fontWeight: FontWeight.w700,
+                                          ).fontFamily,
                                         ),
                                       ),
-                                    );
-                                  }, validator: (value) {
-                                    if (value == null) {
-                                      return "This Field is required";
-                                    }
-                                    return null;
-                                  }),
+                                      SizedBox(
+                                        height: 0.5.h,
+                                      ),
+                                      FormField<String>(builder:
+                                          (FormFieldState<String> state) {
+                                        return InputDecorator(
+                                          decoration: InputDecoration(
+                                            fillColor: HexColor('#5374ff'),
+                                            errorStyle: TextStyle(
+                                              fontSize: 8.sp,
+                                              color: HexColor('#de5151'),
+                                              fontFamily: GoogleFonts.inter(
+                                                fontWeight: FontWeight.w500,
+                                              ).fontFamily,
+                                            ),
+                                            hintStyle: TextStyle(
+                                              color: HexColor('#8e9aa6'),
+                                              fontSize: 12.sp,
+                                              fontFamily: GoogleFonts.inter(
+                                                fontWeight: FontWeight.w500,
+                                              ).fontFamily,
+                                            ),
+                                            enabledBorder: OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#d5dce0'),
+                                              ),
+                                            ),
+                                            focusedBorder: OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#5374ff'),
+                                              ),
+                                            ),
+                                            errorBorder: OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#de5151'),
+                                              ),
+                                            ),
+                                            focusedErrorBorder:
+                                                OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#de5151'),
+                                              ),
+                                            ),
+                                          ),
+                                          isEmpty: _selectedAccountType == '',
+                                          child: DropdownButtonHideUnderline(
+                                            child: DropdownButton<String>(
+                                              value: _selectedAccountType,
+                                              isDense: true,
+                                              onChanged: (String? newValue) {
+                                                setState(() {
+                                                  _selectedAccountType =
+                                                      newValue;
+                                                  state.didChange(newValue);
+                                                });
+                                              },
+                                              items: accountType
+                                                  .map((String value) {
+                                                return DropdownMenuItem<String>(
+                                                  value: value,
+                                                  child: Text(value),
+                                                );
+                                              }).toList(),
+                                            ),
+                                          ),
+                                        );
+                                      }, validator: (value) {
+                                        if (value == null) {
+                                          return 'This Field is required';
+                                        }
+                                        return null;
+                                      }),
+                                    ],
+                                  ),
                                 ),
                                 const SizedBox(
                                   width: 10,
                                 ),
                                 Flexible(
                                   flex: 1,
-                                  child: FormField<String>(
-                                      builder: (FormFieldState<String> state) {
-                                    return InputDecorator(
-                                      decoration: InputDecoration(
-                                          errorStyle: const TextStyle(
-                                              color: Colors.redAccent,
-                                              fontSize: 16.0),
-                                          hintText:
-                                              'Account holder Relationship',
-                                          label: const Text(
-                                              'Acc Holder Relationship'),
-                                          border: OutlineInputBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(5.0))),
-                                      isEmpty:
-                                          _selectedAccHolderRelationship == '',
-                                      child: DropdownButtonHideUnderline(
-                                        child: DropdownButton<String>(
-                                          value: _selectedAccHolderRelationship,
-                                          isDense: true,
-                                          onChanged: (String? newValue) {
-                                            setState(() {
-                                              _selectedAccHolderRelationship =
-                                                  newValue;
-                                              state.didChange(newValue);
-                                            });
-                                          },
-                                          items: accHolderRelationship
-                                              .map((String value) {
-                                            return DropdownMenuItem<String>(
-                                              value: value,
-                                              child: Text(value),
-                                            );
-                                          }).toList(),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Acc Holder Relationship*',
+                                        style: TextStyle(
+                                          color: Colors.black87,
+                                          fontSize: 10.sp,
+                                          fontFamily: GoogleFonts.inter(
+                                            fontWeight: FontWeight.w700,
+                                          ).fontFamily,
                                         ),
                                       ),
-                                    );
-                                  }, validator: (value) {
-                                    if (value == null) {
-                                      return "This Field is required";
-                                    }
-                                    return null;
-                                  }),
+                                      SizedBox(
+                                        height: 0.5.h,
+                                      ),
+                                      FormField<String>(builder:
+                                          (FormFieldState<String> state) {
+                                        return InputDecorator(
+                                          decoration: InputDecoration(
+                                            fillColor: HexColor('#5374ff'),
+                                            errorStyle: TextStyle(
+                                              fontSize: 8.sp,
+                                              color: HexColor('#de5151'),
+                                              fontFamily: GoogleFonts.inter(
+                                                fontWeight: FontWeight.w500,
+                                              ).fontFamily,
+                                            ),
+                                            hintStyle: TextStyle(
+                                              color: HexColor('#8e9aa6'),
+                                              fontSize: 12.sp,
+                                              fontFamily: GoogleFonts.inter(
+                                                fontWeight: FontWeight.w500,
+                                              ).fontFamily,
+                                            ),
+                                            enabledBorder: OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#d5dce0'),
+                                              ),
+                                            ),
+                                            focusedBorder: OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#5374ff'),
+                                              ),
+                                            ),
+                                            errorBorder: OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#de5151'),
+                                              ),
+                                            ),
+                                            focusedErrorBorder:
+                                                OutlineInputBorder(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10)),
+                                              borderSide: BorderSide(
+                                                color: HexColor('#de5151'),
+                                              ),
+                                            ),
+                                          ),
+                                          isEmpty:
+                                              _selectedAccHolderRelationship ==
+                                                  '',
+                                          child: DropdownButtonHideUnderline(
+                                            child: DropdownButton<String>(
+                                              value:
+                                                  _selectedAccHolderRelationship,
+                                              isDense: true,
+                                              onChanged: (String? newValue) {
+                                                setState(() {
+                                                  _selectedAccHolderRelationship =
+                                                      newValue;
+                                                  state.didChange(newValue);
+                                                });
+                                              },
+                                              items: accHolderRelationship
+                                                  .map((String value) {
+                                                return DropdownMenuItem<String>(
+                                                  value: value,
+                                                  child: Text(value),
+                                                );
+                                              }).toList(),
+                                            ),
+                                          ),
+                                        );
+                                      }, validator: (value) {
+                                        if (value == null) {
+                                          return 'This Field is required';
+                                        }
+                                        return null;
+                                      }),
+                                    ],
+                                  ),
                                 ),
                               ],
                             ),
@@ -346,7 +472,7 @@ class _BankDetailsState extends State<BankDetails> {
                               height: 20,
                             ),
                             TxtField(
-                              hint: 'Account Number',
+                              hint: 'Account Number*',
                               controller: bankAccountNumberController,
                               formatter: [
                                 FilteringTextInputFormatter.digitsOnly,
@@ -363,7 +489,7 @@ class _BankDetailsState extends State<BankDetails> {
                               height: 20,
                             ),
                             TxtField(
-                              hint: 'Account Holder Name',
+                              hint: 'Account Holder Name*',
                               controller: bankAccountHolderNameController,
                               validator: (value) {
                                 if (value!.isEmpty) {
@@ -376,14 +502,14 @@ class _BankDetailsState extends State<BankDetails> {
                               height: 20,
                             ),
                             TxtField(
-                              hint: 'Branch Name (optional)',
+                              hint: 'Branch Name',
                               controller: bankBranchNameController,
                             ),
                             const SizedBox(
                               height: 20,
                             ),
                             TxtField(
-                              hint: 'Branch Code (optional)',
+                              hint: 'Branch Code',
                               controller: bankBranchCode,
                             ),
                             const SizedBox(
@@ -394,7 +520,7 @@ class _BankDetailsState extends State<BankDetails> {
                               child: Align(
                                 alignment: Alignment.centerLeft,
                                 child: TextWidget(
-                                  txt: "Proof of Bank account",
+                                  txt: 'Proof of Bank account*',
                                   size: 18,
                                   clr: Colors.red,
                                   weight: FontWeight.bold,
@@ -435,11 +561,14 @@ class _BankDetailsState extends State<BankDetails> {
                             const SizedBox(height: 20),
                             SizedBox(
                               width: MediaQuery.of(context).size.width * 0.8,
-                              child: TextButton(
-                                style: TextButton.styleFrom(
-                                    foregroundColor: Colors.white,
-                                    backgroundColor: Colors.red),
-                                onPressed: () async {
+                              child: RoundedLoadingButton(
+                                resetAfterDuration: true,
+                                resetDuration: const Duration(seconds: 10),
+                                width: 100.w,
+                                borderRadius: 10,
+                                color: Colors.red,
+                                controller: _btnController,
+                                onPressed: () {
                                   if (_formKey.currentState!.validate()) {
                                     _formKey.currentState!.save();
                                     if (bankStatementUrl != null &&
@@ -463,19 +592,16 @@ class _BankDetailsState extends State<BankDetails> {
                                               bankStatement: bankStatementUrl!,
                                               context: context));
                                     } else {
+                                      _btnController.reset();
                                       Utils.showToast(
                                           'Please add all required data');
                                     }
+                                  } else {
+                                    _btnController.reset();
                                   }
                                 },
-                                child: const Padding(
-                                  padding: EdgeInsets.symmetric(
-                                      horizontal: 20, vertical: 10),
-                                  child: Text('Upload',
-                                      style: TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w500)),
-                                ),
+                                child: const Text('Upload',
+                                    style: TextStyle(color: Colors.white)),
                               ),
                             ),
                           ],
@@ -493,44 +619,88 @@ class _BankDetailsState extends State<BankDetails> {
   }
 
   Widget getBankDropDown(List<String> bankList) {
-    return SearchField<String>(
-      autoCorrect: true,
-      suggestions:
-          bankList.map((e) => SearchFieldListItem(e, item: e)).toList(),
-      suggestionState: Suggestion.expand,
-      hint: 'Bank name',
-      hasOverlay: false,
-      searchStyle: const TextStyle(fontSize: 16, color: Colors.black),
-      validator: (x) {
-        if (x == null || x.isEmpty || !bankList.map((e) => e).contains(x)) {
-          return 'Please select a bank';
-        }
-        return null;
-      },
-      searchInputDecoration: InputDecoration(
-          labelText: "Bank Name",
-          focusedBorder: const OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.red, width: 2),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Bank Name*',
+          style: TextStyle(
+            color: Colors.black87,
+            fontSize: 10.sp,
+            fontFamily: GoogleFonts.inter(
+              fontWeight: FontWeight.w700,
+            ).fontFamily,
           ),
-          border: const OutlineInputBorder(
-            borderRadius: BorderRadius.all(
-              Radius.circular(5.0),
+        ),
+        SizedBox(
+          height: 0.5.h,
+        ),
+        SearchField<String>(
+          autoCorrect: true,
+          suggestions:
+              bankList.map((e) => SearchFieldListItem(e, item: e)).toList(),
+          suggestionState: Suggestion.expand,
+          hasOverlay: false,
+          searchStyle: const TextStyle(fontSize: 16, color: Colors.black),
+          validator: (x) {
+            if (x == null || x.isEmpty || !bankList.map((e) => e).contains(x)) {
+              return 'Please select a bank';
+            }
+            return null;
+          },
+          searchInputDecoration: InputDecoration(
+            contentPadding: const EdgeInsets.all(20),
+            suffixIcon: const Icon(Icons.search),
+            fillColor: HexColor('#5374ff'),
+            errorStyle: TextStyle(
+              fontSize: 8.sp,
+              color: HexColor('#de5151'),
+              fontFamily: GoogleFonts.inter(
+                fontWeight: FontWeight.w500,
+              ).fontFamily,
+            ),
+            hintStyle: TextStyle(
+              color: HexColor('#8e9aa6'),
+              fontSize: 12.sp,
+              fontFamily: GoogleFonts.inter(
+                fontWeight: FontWeight.w500,
+              ).fontFamily,
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: const BorderRadius.all(Radius.circular(10)),
+              borderSide: BorderSide(
+                color: HexColor('#d5dce0'),
+              ),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderRadius: const BorderRadius.all(Radius.circular(10)),
+              borderSide: BorderSide(
+                color: HexColor('#5374ff'),
+              ),
+            ),
+            errorBorder: OutlineInputBorder(
+              borderRadius: const BorderRadius.all(Radius.circular(10)),
+              borderSide: BorderSide(
+                color: HexColor('#de5151'),
+              ),
+            ),
+            focusedErrorBorder: OutlineInputBorder(
+              borderRadius: const BorderRadius.all(Radius.circular(10)),
+              borderSide: BorderSide(
+                color: HexColor('#de5151'),
+              ),
             ),
           ),
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(5),
-            borderSide: const BorderSide(color: Colors.grey, width: 1.2),
-          ),
-          contentPadding: const EdgeInsets.all(20),
-          suffixIcon: const Icon(Icons.search)),
-      onSuggestionTap: (x) {
-        setState(() {
-          _selectedBank = x.item!;
-        });
-        FocusScope.of(context).requestFocus(FocusNode());
-      },
-      maxSuggestionsInViewPort: 6,
-      itemHeight: 50,
+          onSuggestionTap: (x) {
+            setState(() {
+              _selectedBank = x.item!;
+            });
+            FocusScope.of(context).requestFocus(FocusNode());
+          },
+          maxSuggestionsInViewPort: 6,
+          itemHeight: 50,
+        ),
+      ],
     );
   }
 }

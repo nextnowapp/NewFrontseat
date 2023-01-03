@@ -12,7 +12,7 @@ class UploadPersonalDataEvent extends UploadPersonalInformationEvent {
   String phoneNumber;
   String email;
   String? passportNumber;
-  String gender;
+  int gender;
   String maritalStatus;
   String workCity;
   String workProvince;
@@ -78,7 +78,7 @@ class ResubmitPersonalDataEvent extends UploadPersonalInformationEvent {
   String lastName;
   String phoneNumber;
   String email;
-  String gender;
+  int gender;
   String maritalStatus;
   String equityGroup;
   String disability;

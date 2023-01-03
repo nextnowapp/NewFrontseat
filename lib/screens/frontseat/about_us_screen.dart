@@ -50,7 +50,7 @@ class _AboutUsState extends State<AboutUs> {
               SizedBox(
                   width: MediaQuery.of(context).size.width * 0.3,
                   height: MediaQuery.of(context).size.width * 0.3,
-                  child: SvgPicture.asset('assets/frontseat_logo.svg')),
+                  child: SvgPicture.asset('assets/svg/frontseat_logo.svg')),
               const SizedBox(
                 height: 30,
               ),

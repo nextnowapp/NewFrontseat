@@ -23,7 +23,6 @@ import 'package:nextschool/screens/ManagementProfileScreen.dart';
 import 'package:nextschool/screens/NotificationList.dart';
 import 'package:nextschool/screens/SettingsScreen.dart';
 import 'package:nextschool/screens/calendar.dart';
-import 'package:nextschool/screens/choose_school.dart';
 import 'package:nextschool/screens/components/sidebarItem.dart';
 import 'package:nextschool/screens/frontseat/landing_screen.dart';
 import 'package:nextschool/screens/parent/parentProfile.dart';
@@ -459,7 +458,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar>
                                                 context,
                                                 CupertinoPageRoute(
                                                     builder: (context) =>
-                                                        LandingScreen()));
+                                                        const LandingScreen()));
                                           },
                                           child: const Text(
                                             'Login',

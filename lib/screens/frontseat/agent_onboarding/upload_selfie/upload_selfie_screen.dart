@@ -4,16 +4,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:rounded_loading_button/rounded_loading_button.dart';
+import 'package:sizer/sizer.dart';
 
 import '../../../../controller/kyc_step_model.dart';
 import 'controller/upload_selfie_bloc.dart';
 
 class UploadSelfieScreen extends StatelessWidget {
-   UploadSelfieScreen({
+  UploadSelfieScreen({
     Key? key,
   }) : super(key: key);
 
   final kycStepModelController = Get.put(KycStepModel());
+  final RoundedLoadingButtonController _btnController =
+      RoundedLoadingButtonController();
   String? profileDownloadUrl;
   @override
   Widget build(BuildContext context) {
@@ -114,21 +118,19 @@ class UploadSelfieScreen extends StatelessWidget {
                 ),
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 0.8,
-                  child: TextButton(
-                    style: TextButton.styleFrom(
-                        foregroundColor: Colors.white,
-                        backgroundColor: Colors.red),
-                    onPressed: () async {
+                  child: RoundedLoadingButton(
+                    resetAfterDuration: true,
+                    resetDuration: const Duration(seconds: 10),
+                    width: 100.w,
+                    borderRadius: 10,
+                    color: Colors.red,
+                    controller: _btnController,
+                    onPressed: () {
                       context.read<UploadSelfieBloc>().add(UpdateSelfieEvent(
                           image: state.imagePath, context: context));
                     },
-                    child: const Padding(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                      child: Text('Upload Selfie',
-                          style: TextStyle(
-                              fontSize: 16, fontWeight: FontWeight.w500)),
-                    ),
+                    child: const Text('Upload Selfie',
+                        style: TextStyle(color: Colors.white)),
                   ),
                 ),
               ],

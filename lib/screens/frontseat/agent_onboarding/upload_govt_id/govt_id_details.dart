@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:nextschool/screens/frontseat/agent_onboarding/upload_govt_id/govt_id_upload_screen.dart';
+import 'package:rounded_loading_button/rounded_loading_button.dart';
+import 'package:sizer/sizer.dart';
 
 import '../../../../utils/Utils.dart';
 import '../../../../utils/frontseat_constants.dart';
 import '../../../../utils/widget/textwidget.dart';
 import '../../../../utils/widget/txtbox.dart';
 import 'controller/upload_govt_id_bloc.dart';
-
 
 class GovtIdDetails extends StatefulWidget {
   const GovtIdDetails({Key? key}) : super(key: key);
@@ -21,6 +22,8 @@ class _GovtIdDetailsState extends State<GovtIdDetails> {
   final TextEditingController drivingLicensce = TextEditingController();
   final TextEditingController nid = TextEditingController();
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final RoundedLoadingButtonController _btnController =
+      RoundedLoadingButtonController();
 
   String? _selectedIdentityDocument;
 
@@ -175,24 +178,27 @@ class _GovtIdDetailsState extends State<GovtIdDetails> {
                                 SizedBox(
                                   width:
                                       MediaQuery.of(context).size.width * 0.8,
-                                  child: TextButton(
-                                    style: TextButton.styleFrom(
-                                        foregroundColor: Colors.white,
-                                        backgroundColor: Colors.red),
-                                    onPressed: () async {
+                                  child: RoundedLoadingButton(
+                                    resetAfterDuration: true,
+                                    resetDuration: const Duration(seconds: 10),
+                                    width: 100.w,
+                                    borderRadius: 10,
+                                    color: Colors.red,
+                                    controller: _btnController,
+                                    onPressed: () {
                                       if (_formKey.currentState!.validate()) {
                                         _formKey.currentState!.save();
                                         if (_selectedIdentityDocument != null) {
-                                          Utils.showProcessingToast();
                                           context.read<UploadGovtIdBloc>().add(
                                               UploadGovtIdDetailsEvent(
                                                   idDocument: nid.text,
                                                   drivingLicense:
                                                       drivingLicensce.text));
-                                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const GovtIdUploadScreen()));
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      const GovtIdUploadScreen()));
                                         } else {
                                           ScaffoldMessenger.of(context)
                                               .showSnackBar(const SnackBar(
@@ -200,31 +206,30 @@ class _GovtIdDetailsState extends State<GovtIdDetails> {
                                             content: Text(
                                                 'Identity Document is Required'),
                                           ));
+                                          _btnController.reset();
                                         }
+                                      } else {
+                                        _btnController.reset();
                                       }
                                     },
-                                    child: Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 20, vertical: 10),
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: const [
-                                          Text(
-                                            'NEXT',
-                                            style: TextStyle(
-                                                fontSize: 16,
-                                                fontWeight: FontWeight.w500),
-                                          ),
-                                          SizedBox(
-                                            width: 10,
-                                          ),
-                                          Icon(
-                                            Icons.arrow_forward,
-                                            color: Colors.white,
-                                          ),
-                                        ],
-                                      ),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: const [
+                                        Text(
+                                          'NEXT',
+                                          style: TextStyle(
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.w500),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Icon(
+                                          Icons.arrow_forward,
+                                          color: Colors.white,
+                                        ),
+                                      ],
                                     ),
                                   ),
                                 ),

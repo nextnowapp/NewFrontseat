@@ -14,8 +14,6 @@ class UploadBankDetailsBloc
   UploadBankDetailsBloc() : super(UploadBankDetailsInitial()) {
     on<UploadBankDocumentsEvent>((event, emit) async {
       int? id = await Utils.getIntValue('id');
-      ProgressDialog pd = ProgressDialog(context: event.context);
-      pd.show(max: 100, msg: 'Uploading Data');
       await KycApi.uploadBankdetails(
           accountType: event.accountType,
           accountHolderRelation: event.accountHolderRelation,

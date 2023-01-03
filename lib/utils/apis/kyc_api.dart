@@ -332,8 +332,6 @@ class KycApi {
       if (response.statusCode == 200) {
         kycStepModelController.bankDetailsValue = true;
         Utils.showToast('Bank details updated successfully');
-        Navigator.pop(context);
-        Navigator.pop(context);
         Navigator.pushReplacement(
             context,
             MaterialPageRoute(

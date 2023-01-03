@@ -5,12 +5,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:rounded_loading_button/rounded_loading_button.dart';
+import 'package:sizer/sizer.dart';
 
 import '../../../../controller/kyc_step_model.dart';
 import '../../../../utils/Utils.dart';
 import '../../../../utils/widget/textwidget.dart';
 import 'controller/upload_govt_id_bloc.dart';
-
 
 class GovtIdUploadScreen extends StatefulWidget {
   const GovtIdUploadScreen({Key? key}) : super(key: key);
@@ -21,7 +22,8 @@ class GovtIdUploadScreen extends StatefulWidget {
 
 class _GovtIdUploadScreenState extends State<GovtIdUploadScreen> {
   final kycStepModelController = Get.put(KycStepModel());
-
+  final RoundedLoadingButtonController _btnController =
+      RoundedLoadingButtonController();
   String? drivingLicenseFrontImageUrl;
   String? drivingLicenseRearImageUrl;
   String? nidFrontImageUrl;
@@ -400,11 +402,14 @@ class _GovtIdUploadScreenState extends State<GovtIdUploadScreen> {
                       children: [
                         SizedBox(
                           width: MediaQuery.of(context).size.width * 0.8,
-                          child: TextButton(
-                            style: TextButton.styleFrom(
-                                foregroundColor: Colors.white,
-                                backgroundColor: Colors.red),
-                            onPressed: () async {
+                          child: RoundedLoadingButton(
+                            resetAfterDuration: true,
+                            resetDuration: const Duration(seconds: 10),
+                            width: 100.w,
+                            borderRadius: 10,
+                            color: Colors.red,
+                            controller: _btnController,
+                            onPressed: () {
                               if (nidFrontImageUrl != null &&
                                   nidRearImageUrl != null) {
                                 context.read<UploadGovtIdBloc>().add(
@@ -415,18 +420,13 @@ class _GovtIdUploadScreenState extends State<GovtIdUploadScreen> {
                                         dlRear: drivingLicenseRearImageUrl,
                                         context: context));
                               } else {
+                                _btnController.reset();
                                 Utils.showToast(
                                     'Please add all required documents');
                               }
                             },
-                            child: const Padding(
-                              padding: EdgeInsets.symmetric(
-                                  horizontal: 20, vertical: 10),
-                              child: Text('Upload',
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w500)),
-                            ),
+                            child: const Text('Upload',
+                                style: TextStyle(color: Colors.white)),
                           ),
                         ),
                       ],

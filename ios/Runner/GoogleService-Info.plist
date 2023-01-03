@@ -3,23 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>298609999547-c0u6b7k5jggsvgsidu2jmnmp6qgpvgaq.apps.googleusercontent.com</string>
+	<string>1046183969926-aaoudl04hfvpm0bvrheia5mi1t5s3g1s.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.298609999547-c0u6b7k5jggsvgsidu2jmnmp6qgpvgaq</string>
+	<string>com.googleusercontent.apps.1046183969926-aaoudl04hfvpm0bvrheia5mi1t5s3g1s</string>
 	<key>ANDROID_CLIENT_ID</key>
-	<string>298609999547-kf957ijm40lgrcjpjtfguo9avqb1mugd.apps.googleusercontent.com</string>
+	<string>1046183969926-6ct730jt73f62k1ilkdokjgm3gmocoud.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAgriUtwb8iD2tn4Ex9nn-C2zovYT4IX_I</string>
+	<string>AIzaSyDw-V0pZBhOUAQauwL59sql-THuiIzY6co</string>
 	<key>GCM_SENDER_ID</key>
-	<string>298609999547</string>
+	<string>1046183969926</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.nextnow.sms</string>
+	<string>com.frontseat.stockview</string>
 	<key>PROJECT_ID</key>
-	<string>nextschool-1bc0d</string>
+	<string>onboardingapp-4853b</string>
 	<key>STORAGE_BUCKET</key>
-	<string>nextschool-1bc0d.appspot.com</string>
+	<string>onboardingapp-4853b.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -31,8 +31,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:298609999547:ios:0924e214c6ebc7762c339e</string>
-	<key>DATABASE_URL</key>
-	<string>https://nextschool-1bc0d-default-rtdb.firebaseio.com</string>
+	<string>1:1046183969926:ios:a7d8cd4c6da1f636b0bd07</string>
 </dict>
 </plist>
