@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'package:nextschool/screens/frontseat/new_register_screen.dart';
@@ -43,8 +44,15 @@ class _LoginFrontSeatState extends State<LoginFrontSeat> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
+                SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.6,
+                    height: MediaQuery.of(context).size.width * 0.3,
+                    child: SvgPicture.asset('assets/svg/frontseat_logo.svg')),
+                const SizedBox(
+                  height: 20,
+                ),
                 const Text(
                   'Welcome',
                   style: TextStyle(

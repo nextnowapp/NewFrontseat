@@ -291,7 +291,6 @@ final emergencyContactRelation = [
 ];
 
 final identityDocuments = [
-  'National ID',
   'RSA ID',
   'Asylum Document',
   "Passport Document"

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:nextschool/screens/frontseat/agent_onboarding/upload_govt_id/govt_id_upload_screen.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
 import 'package:sizer/sizer.dart';
@@ -26,6 +28,7 @@ class _GovtIdDetailsState extends State<GovtIdDetails> {
       RoundedLoadingButtonController();
 
   String? _selectedIdentityDocument;
+  String? selectedCountryofBirth;
 
   @override
   Widget build(BuildContext context) {
@@ -76,7 +79,7 @@ class _GovtIdDetailsState extends State<GovtIdDetails> {
                     ),
                   ),
                   SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.7,
+                    height: MediaQuery.of(context).size.height * 0.8,
                     width: MediaQuery.of(context).size.width * 0.8,
                     child: Form(
                       key: _formKey,
@@ -88,7 +91,7 @@ class _GovtIdDetailsState extends State<GovtIdDetails> {
                             height: 20,
                           ),
                           const TextWidget(
-                            txt: "Identity Document",
+                            txt: 'Identity Document',
                             size: 18,
                             clr: Colors.red,
                             weight: FontWeight.bold,
@@ -96,42 +99,190 @@ class _GovtIdDetailsState extends State<GovtIdDetails> {
                           const SizedBox(
                             height: 20,
                           ),
-                          FormField<String>(
-                            builder: (FormFieldState<String> stat) {
-                              return InputDecorator(
-                                decoration: InputDecoration(
-                                    errorStyle: const TextStyle(
-                                        color: Colors.redAccent,
-                                        fontSize: 16.0),
-                                    hintText:
-                                        'Please select identity Document type',
-                                    label:
-                                        const Text('Identity Document type*'),
-                                    border: OutlineInputBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(5.0))),
-                                isEmpty: _selectedIdentityDocument == '',
-                                child: DropdownButtonHideUnderline(
-                                  child: DropdownButton<String>(
-                                    value: _selectedIdentityDocument,
-                                    isDense: true,
-                                    onChanged: (String? newValue) {
-                                      setState(() {
-                                        _selectedIdentityDocument = newValue;
-                                        stat.didChange(newValue);
-                                      });
-                                    },
-                                    items:
-                                        identityDocuments.map((String value) {
-                                      return DropdownMenuItem<String>(
-                                        value: value,
-                                        child: Text(value),
-                                      );
-                                    }).toList(),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Identity Document type*',
+                                style: TextStyle(
+                                  color: Colors.black87,
+                                  fontSize: 10.sp,
+                                  fontFamily: GoogleFonts.inter(
+                                    fontWeight: FontWeight.w700,
+                                  ).fontFamily,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 0.5.h,
+                              ),
+                              FormField<String>(
+                                builder: (FormFieldState<String> stat) {
+                                  return InputDecorator(
+                                    decoration: InputDecoration(
+                                      fillColor: HexColor('#5374ff'),
+                                      errorStyle: TextStyle(
+                                        fontSize: 8.sp,
+                                        color: HexColor('#de5151'),
+                                        fontFamily: GoogleFonts.inter(
+                                          fontWeight: FontWeight.w500,
+                                        ).fontFamily,
+                                      ),
+                                      hintStyle: TextStyle(
+                                        color: HexColor('#8e9aa6'),
+                                        fontSize: 12.sp,
+                                        fontFamily: GoogleFonts.inter(
+                                          fontWeight: FontWeight.w500,
+                                        ).fontFamily,
+                                      ),
+                                      enabledBorder: OutlineInputBorder(
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(10)),
+                                        borderSide: BorderSide(
+                                          color: HexColor('#d5dce0'),
+                                        ),
+                                      ),
+                                      focusedBorder: OutlineInputBorder(
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(10)),
+                                        borderSide: BorderSide(
+                                          color: HexColor('#5374ff'),
+                                        ),
+                                      ),
+                                      errorBorder: OutlineInputBorder(
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(10)),
+                                        borderSide: BorderSide(
+                                          color: HexColor('#de5151'),
+                                        ),
+                                      ),
+                                      focusedErrorBorder: OutlineInputBorder(
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(10)),
+                                        borderSide: BorderSide(
+                                          color: HexColor('#de5151'),
+                                        ),
+                                      ),
+                                    ),
+                                    isEmpty: _selectedIdentityDocument == '',
+                                    child: DropdownButtonHideUnderline(
+                                      child: DropdownButton<String>(
+                                        value: _selectedIdentityDocument,
+                                        isDense: true,
+                                        onChanged: (String? newValue) {
+                                          setState(() {
+                                            _selectedIdentityDocument =
+                                                newValue;
+                                            stat.didChange(newValue);
+                                          });
+                                        },
+                                        items: identityDocuments
+                                            .map((String value) {
+                                          return DropdownMenuItem<String>(
+                                            value: value,
+                                            child: Text(value),
+                                          );
+                                        }).toList(),
+                                      ),
+                                    ),
+                                  );
+                                },
+                              ),
+                            ],
+                          ),
+                          Visibility(
+                            visible: _selectedIdentityDocument ==
+                                    'Asylum Document' ||
+                                _selectedIdentityDocument ==
+                                    'Passport Document',
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Utils.sizedBoxHeight(20),
+                                Text(
+                                  'Country*',
+                                  style: TextStyle(
+                                    color: Colors.black87,
+                                    fontSize: 10.sp,
+                                    fontFamily: GoogleFonts.inter(
+                                      fontWeight: FontWeight.w700,
+                                    ).fontFamily,
                                   ),
                                 ),
-                              );
-                            },
+                                SizedBox(
+                                  height: 0.5.h,
+                                ),
+                                FormField<String>(
+                                  builder: (FormFieldState<String> state) {
+                                    return InputDecorator(
+                                      decoration: InputDecoration(
+                                        fillColor: HexColor('#5374ff'),
+                                        errorStyle: TextStyle(
+                                          fontSize: 8.sp,
+                                          color: HexColor('#de5151'),
+                                          fontFamily: GoogleFonts.inter(
+                                            fontWeight: FontWeight.w500,
+                                          ).fontFamily,
+                                        ),
+                                        hintStyle: TextStyle(
+                                          color: HexColor('#8e9aa6'),
+                                          fontSize: 12.sp,
+                                          fontFamily: GoogleFonts.inter(
+                                            fontWeight: FontWeight.w500,
+                                          ).fontFamily,
+                                        ),
+                                        enabledBorder: OutlineInputBorder(
+                                          borderRadius: const BorderRadius.all(
+                                              Radius.circular(10)),
+                                          borderSide: BorderSide(
+                                            color: HexColor('#d5dce0'),
+                                          ),
+                                        ),
+                                        focusedBorder: OutlineInputBorder(
+                                          borderRadius: const BorderRadius.all(
+                                              Radius.circular(10)),
+                                          borderSide: BorderSide(
+                                            color: HexColor('#5374ff'),
+                                          ),
+                                        ),
+                                        errorBorder: OutlineInputBorder(
+                                          borderRadius: const BorderRadius.all(
+                                              Radius.circular(10)),
+                                          borderSide: BorderSide(
+                                            color: HexColor('#de5151'),
+                                          ),
+                                        ),
+                                        focusedErrorBorder: OutlineInputBorder(
+                                          borderRadius: const BorderRadius.all(
+                                              Radius.circular(10)),
+                                          borderSide: BorderSide(
+                                            color: HexColor('#de5151'),
+                                          ),
+                                        ),
+                                      ),
+                                      isEmpty: selectedCountryofBirth == '',
+                                      child: DropdownButtonHideUnderline(
+                                        child: DropdownButton<String>(
+                                          value: selectedCountryofBirth,
+                                          isDense: true,
+                                          onChanged: (String? newValue) {
+                                            setState(() {
+                                              selectedCountryofBirth = newValue;
+                                              state.didChange(newValue);
+                                            });
+                                          },
+                                          items: countries.map((String value) {
+                                            return DropdownMenuItem<String>(
+                                              value: value,
+                                              child: Text(value),
+                                            );
+                                          }).toList(),
+                                        ),
+                                      ),
+                                    );
+                                  },
+                                ),
+                              ],
+                            ),
                           ),
                           const SizedBox(
                             height: 20,
@@ -139,7 +290,7 @@ class _GovtIdDetailsState extends State<GovtIdDetails> {
                           Visibility(
                               visible: _selectedIdentityDocument != null,
                               child: TxtField(
-                                hint: 'Identity Document ID*',
+                                hint: 'Identity Document No.*',
                                 controller: nid,
                                 validator: (value) {
                                   if (value!.isEmpty) {
@@ -152,7 +303,7 @@ class _GovtIdDetailsState extends State<GovtIdDetails> {
                             height: 10,
                           ),
                           const TextWidget(
-                            txt: "Driving Licence (Optional)",
+                            txt: 'Driving Licence (Optional)',
                             size: 18,
                             clr: Colors.red,
                             weight: FontWeight.bold,
