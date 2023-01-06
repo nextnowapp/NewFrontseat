@@ -39,227 +39,233 @@ class _LoginFrontSeatState extends State<LoginFrontSeat> {
   Widget build(BuildContext context) {
     return Scaffold(
         resizeToAvoidBottomInset: true,
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+        body: Center(
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.6,
-                    height: MediaQuery.of(context).size.width * 0.3,
-                    child: SvgPicture.asset('assets/svg/frontseat_logo.svg')),
-                const SizedBox(
-                  height: 20,
-                ),
-                const Text(
-                  'Welcome',
-                  style: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-                const SizedBox(
-                  height: 30,
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                      vertical: 30.0, horizontal: 30),
-                  child: Form(
-                    key: formKey,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        //controllers initialized in bloc state
-                        TxtField(
-                          hint: 'Email',
-                          controller: emailController,
-                          validator: (value) {
-                            if (value!.isEmpty) {
-                              return 'email is required';
-                            } else if (!(value.contains('@'))) {
-                              return 'Please enter valid email';
-                            }
-                            return null;
-                          },
-                        ),
-
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        TxtField(
-                          hint: 'Password',
-                          controller: passwordController,
-                          pass: isObscure,
-                          icon: IconButton(
-                              icon: Icon(
-                                isObscure
-                                    ? Icons.visibility
-                                    : Icons.visibility_off,
-                              ),
-                              onPressed: () {
-                                setState(() {
-                                  isObscure = !isObscure;
-                                });
-                              }),
-                          validator: (value) {
-                            if (value!.isEmpty) {
-                              return 'password is required';
-                            }
-                            return null;
-                          },
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            TextButton(
-                                onPressed: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              ResetPasswordScreen()));
-                                },
-                                child:
-                                    const TextWidget(txt: 'Forgot password?'))
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Row(
+                Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text(
-                      'By signing up, you agree to our Terms ,',
-                      style: TextStyle(
-                        fontSize: 10,
-                        fontWeight: FontWeight.w300,
-                      ),
-                    ),
-                    InkWell(
-                      onTap: () async {
-                        await launchUrl(
-                            Uri.parse('https://schoolmanagement.co.za/terms'));
-                      },
-                      child: const Text(
-                        'Data Policy ',
-                        style: TextStyle(
-                            fontSize: 10,
-                            fontWeight: FontWeight.w300,
-                            color: Colors.blue),
-                      ),
+                    SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.6,
+                        height: MediaQuery.of(context).size.width * 0.3,
+                        child:
+                            SvgPicture.asset('assets/svg/frontseat_logo.svg')),
+                    const SizedBox(
+                      height: 20,
                     ),
                     const Text(
-                      'and',
+                      'Welcome',
                       style: TextStyle(
-                        fontSize: 10,
-                        fontWeight: FontWeight.w300,
+                        fontSize: 30,
+                        fontWeight: FontWeight.w700,
                       ),
                     ),
-                    InkWell(
-                      onTap: () async {
-                        await launchUrl(Uri.parse(
-                            'https://schoolmanagement.co.za/privacy'));
-                      },
-                      child: const Text(
-                        ' Cookies Policy.',
-                        style: TextStyle(
-                            fontSize: 10,
-                            fontWeight: FontWeight.w300,
-                            color: Colors.blue),
+                    const SizedBox(
+                      height: 30,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 30.0, horizontal: 30),
+                      child: Form(
+                        key: formKey,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            //controllers initialized in bloc state
+                            TxtField(
+                              hint: 'Email',
+                              controller: emailController,
+                              validator: (value) {
+                                if (value!.isEmpty) {
+                                  return 'email is required';
+                                } else if (!(value.contains('@'))) {
+                                  return 'Please enter valid email';
+                                }
+                                return null;
+                              },
+                            ),
+
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            TxtField(
+                              hint: 'Password',
+                              controller: passwordController,
+                              pass: isObscure,
+                              icon: IconButton(
+                                  icon: Icon(
+                                    isObscure
+                                        ? Icons.visibility
+                                        : Icons.visibility_off,
+                                  ),
+                                  onPressed: () {
+                                    setState(() {
+                                      isObscure = !isObscure;
+                                    });
+                                  }),
+                              validator: (value) {
+                                if (value!.isEmpty) {
+                                  return 'password is required';
+                                }
+                                return null;
+                              },
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  ResetPasswordScreen()));
+                                    },
+                                    child: const TextWidget(
+                                        txt: 'Forgot password?'))
+                              ],
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   ],
                 ),
-                const SizedBox(height: 10),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.8,
-                    child: RoundedLoadingButton(
-                      width: 80.w,
-                      borderRadius: 5,
-                      color: Colors.red,
-                      controller: _btnController,
-                      onPressed: () {
-                        if (formKey.currentState!.validate()) {
-                          login();
-                        } else {
-                          _btnController.reset();
-                        }
-                      },
-                      child: const Text('Login',
-                          style: TextStyle(color: Colors.white)),
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 18.0, right: 18),
-                  child: Row(
-                    children: const [
-                      Flexible(child: Divider()),
-                      SizedBox(width: 10),
-                      Text(
-                        'New Agent?',
-                        style: TextStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w500,
-                          color: Colors.grey,
-                        ),
-                      ),
-                      SizedBox(width: 10),
-                      Flexible(child: Divider()),
-                    ],
-                  ),
-                ),
-                const SizedBox(
-                  height: 15,
-                ),
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.8,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const TextWidget(txt: 'Please register and'),
-                      TextButton(
-                        style: TextButton.styleFrom(
-                          foregroundColor: Colors.red,
-                          backgroundColor: Colors.transparent,
-                          shape: const RoundedRectangleBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(5)),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text(
+                          'By signing up, you agree to our Terms ,',
+                          style: TextStyle(
+                            fontSize: 10,
+                            fontWeight: FontWeight.w300,
                           ),
                         ),
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      const NewRegisterScreen()));
-                        },
-                        child: const Text('Apply here',
+                        InkWell(
+                          onTap: () async {
+                            await launchUrl(Uri.parse(
+                                'https://schoolmanagement.co.za/terms'));
+                          },
+                          child: const Text(
+                            'Data Policy ',
                             style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.red,
-                            )),
+                                fontSize: 10,
+                                fontWeight: FontWeight.w300,
+                                color: Colors.blue),
+                          ),
+                        ),
+                        const Text(
+                          'and',
+                          style: TextStyle(
+                            fontSize: 10,
+                            fontWeight: FontWeight.w300,
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () async {
+                            await launchUrl(Uri.parse(
+                                'https://schoolmanagement.co.za/privacy'));
+                          },
+                          child: const Text(
+                            ' Cookies Policy.',
+                            style: TextStyle(
+                                fontSize: 10,
+                                fontWeight: FontWeight.w300,
+                                color: Colors.blue),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.8,
+                        child: RoundedLoadingButton(
+                          width: 80.w,
+                          borderRadius: 5,
+                          color: Colors.red,
+                          controller: _btnController,
+                          onPressed: () {
+                            if (formKey.currentState!.validate()) {
+                              login();
+                            } else {
+                              _btnController.reset();
+                            }
+                          },
+                          child: const Text('Login',
+                              style: TextStyle(color: Colors.white)),
+                        ),
                       ),
-                    ],
-                  ),
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 18.0, right: 18),
+                      child: Row(
+                        children: const [
+                          Flexible(child: Divider()),
+                          SizedBox(width: 10),
+                          Text(
+                            'New Agent?',
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.grey,
+                            ),
+                          ),
+                          SizedBox(width: 10),
+                          Flexible(child: Divider()),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.8,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const TextWidget(txt: 'Please register and'),
+                          TextButton(
+                            style: TextButton.styleFrom(
+                              foregroundColor: Colors.red,
+                              backgroundColor: Colors.transparent,
+                              shape: const RoundedRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(5)),
+                              ),
+                            ),
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const NewRegisterScreen()));
+                            },
+                            child: const Text('Apply here',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.red,
+                                )),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
-          ],
+          ),
         ));
   }
 

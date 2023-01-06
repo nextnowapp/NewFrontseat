@@ -1,7 +1,5 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:sn_progress_dialog/progress_dialog.dart';
-
 import '../../../../../utils/Utils.dart';
 import '../../../../../utils/apis/kyc_api.dart';
 part 'upload_govt_id_event.dart';
@@ -15,6 +13,10 @@ class UploadGovtIdBloc extends Bloc<UploadGovtIdEvent, UploadGovtIdState> {
         'onboarding_steps':3,
         'drivingLicenseId': event.drivingLicense,
         'id_number': event.idDocument,
+        'documentType':event.documentType,
+        'countryName':event.country,
+        'asylumDoc':event.asylum,
+        'passportNo':event.passport,
         'user_id': id,
       };
       await KycApi.uploadPersonalInformation(data);

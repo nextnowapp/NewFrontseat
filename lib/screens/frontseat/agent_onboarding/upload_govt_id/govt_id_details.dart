@@ -22,13 +22,17 @@ class GovtIdDetails extends StatefulWidget {
 
 class _GovtIdDetailsState extends State<GovtIdDetails> {
   final TextEditingController drivingLicensce = TextEditingController();
-  final TextEditingController nid = TextEditingController();
+  final TextEditingController rsaID = TextEditingController();
+  final TextEditingController passport = TextEditingController();
+  final TextEditingController asylum = TextEditingController();
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final RoundedLoadingButtonController _btnController =
       RoundedLoadingButtonController();
 
   String? _selectedIdentityDocument;
-  String? selectedCountryofBirth;
+  String? selectedCountry;
+  String? documenttype;
+  String? documentno;
 
   @override
   Widget build(BuildContext context) {
@@ -259,14 +263,14 @@ class _GovtIdDetailsState extends State<GovtIdDetails> {
                                           ),
                                         ),
                                       ),
-                                      isEmpty: selectedCountryofBirth == '',
+                                      isEmpty: selectedCountry == '',
                                       child: DropdownButtonHideUnderline(
                                         child: DropdownButton<String>(
-                                          value: selectedCountryofBirth,
+                                          value: selectedCountry,
                                           isDense: true,
                                           onChanged: (String? newValue) {
                                             setState(() {
-                                              selectedCountryofBirth = newValue;
+                                              selectedCountry = newValue;
                                               state.didChange(newValue);
                                             });
                                           },
@@ -288,10 +292,38 @@ class _GovtIdDetailsState extends State<GovtIdDetails> {
                             height: 20,
                           ),
                           Visibility(
-                              visible: _selectedIdentityDocument != null,
+                              visible: _selectedIdentityDocument ==
+                                  'Asylum Document',
                               child: TxtField(
+                                hint: 'Asylum Document No.*',
+                                controller: asylum,
+                                validator: (value) {
+                                  if (value!.isEmpty) {
+                                    return 'Asylum Document No. is required';
+                                  }
+                                  return null;
+                                },
+                              )),
+                          Visibility(
+                              visible: _selectedIdentityDocument ==
+                                  'Passport Document',
+                              child: TxtField(
+                                hint: 'Passport Document No.*',
+                                controller: passport,
+                                validator: (value) {
+                                  if (value!.isEmpty) {
+                                    return 'Passport Document No. is required';
+                                  }
+                                  return null;
+                                },
+                              )),
+                          Visibility(
+                              visible: _selectedIdentityDocument == 'RSA ID',
+                              child: TxtField(
+                                length: 13,
+                                type: TextInputType.number,
                                 hint: 'Identity Document No.*',
-                                controller: nid,
+                                controller: rsaID,
                                 validator: (value) {
                                   if (value!.isEmpty) {
                                     return 'Identity Document ID is required';
@@ -337,12 +369,34 @@ class _GovtIdDetailsState extends State<GovtIdDetails> {
                                     color: Colors.red,
                                     controller: _btnController,
                                     onPressed: () {
+                                      if (_selectedIdentityDocument ==
+                                          'RSA ID') {
+                                        documenttype = 'RasId';
+                                        passport.clear();
+                                        asylum.clear();
+                                        selectedCountry = '';
+                                      } else if (_selectedIdentityDocument ==
+                                          'Asylum Document') {
+                                        documenttype = 'asylumDocument';
+                                        rsaID.clear();
+                                        passport.clear();
+                                      } else if (_selectedIdentityDocument ==
+                                          'Passport Document') {
+                                        documenttype = 'PassportDocument';
+                                        rsaID.clear();
+                                        asylum.clear();
+                                      }
+                                      // log(rsaID.text+docum)
                                       if (_formKey.currentState!.validate()) {
                                         _formKey.currentState!.save();
                                         if (_selectedIdentityDocument != null) {
                                           context.read<UploadGovtIdBloc>().add(
                                               UploadGovtIdDetailsEvent(
-                                                  idDocument: nid.text,
+                                                  idDocument: rsaID.text,
+                                                  documentType: documenttype!,
+                                                  passport: passport.text,
+                                                  country: selectedCountry,
+                                                  asylum: asylum.text,
                                                   drivingLicense:
                                                       drivingLicensce.text));
                                           Navigator.push(

@@ -69,7 +69,7 @@ class _ProfileScreenState extends State<ProfileScreen>
       appBar: AppBar(
         backgroundColor: Colors.red,
         title: const TextWidget(
-          txt: 'Profile',
+          txt: 'Application Information',
           clr: Colors.white,
           size: 20,
           weight: FontWeight.w500,

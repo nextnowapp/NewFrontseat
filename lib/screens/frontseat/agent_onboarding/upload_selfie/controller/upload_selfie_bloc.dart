@@ -1,7 +1,5 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:sn_progress_dialog/progress_dialog.dart';
-
 import '../../../../../utils/Utils.dart';
 import '../../../../../utils/apis/kyc_api.dart';
 part 'upload_selfie_event.dart';

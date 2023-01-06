@@ -4,9 +4,13 @@ part of 'upload_govt_id_bloc.dart';
 abstract class UploadGovtIdEvent {}
 
 class UploadGovtIdDetailsEvent extends UploadGovtIdEvent {
-  String idDocument;
+  String? idDocument;
+  String documentType;
   String? drivingLicense;
-  UploadGovtIdDetailsEvent({required this.idDocument, this.drivingLicense});
+  String? country;
+  String? asylum;
+  String? passport;
+  UploadGovtIdDetailsEvent({ this.idDocument,required this.documentType ,this.drivingLicense,this.country,this.asylum,this.passport});
 }
 
 class UploadGovtIdDocumentsEvent extends UploadGovtIdEvent {
@@ -16,5 +20,9 @@ class UploadGovtIdDocumentsEvent extends UploadGovtIdEvent {
   String? dlRear;
   BuildContext context;
   UploadGovtIdDocumentsEvent(
-      {required this.idFront, required this.idRear,required this.context, this.dlFront, this.dlRear});
+      {required this.idFront,
+      required this.idRear,
+      required this.context,
+      this.dlFront,
+      this.dlRear});
 }

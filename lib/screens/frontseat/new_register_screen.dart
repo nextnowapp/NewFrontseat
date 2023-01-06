@@ -126,10 +126,8 @@ class _NewRegisterScreenState extends State<NewRegisterScreen> {
                             validator: (value) {
                               if (value!.isEmpty) {
                                 return 'Phone Number is required';
-                              } else if (value.length != 10) {
-                                return 'Phone number should be 10 digits';
-                              } else if (value[0] != '0') {
-                                return 'Phone Number must start with 0';
+                              } else if (value.length != 10||value[0] != '0') {
+                                return 'Phone number should be 10 digits starting with 0';
                               }
                               return null;
                             },
