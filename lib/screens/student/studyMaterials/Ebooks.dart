@@ -112,28 +112,6 @@ class _EbookScreenState extends State<EbookScreen> {
                                           text: TextSpan(
                                             children: [
                                               const TextSpan(
-                                                text: 'Grade: ',
-                                                style: TextStyle(
-                                                  fontSize: 14,
-                                                  color: Colors.grey,
-                                                  fontWeight: FontWeight.w600,
-                                                ),
-                                              ),
-                                              TextSpan(
-                                                text: (book.grade).toString(),
-                                                style: const TextStyle(
-                                                  fontSize: 14,
-                                                  color: Colors.grey,
-                                                  fontWeight: FontWeight.w600,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        RichText(
-                                          text: TextSpan(
-                                            children: [
-                                              const TextSpan(
                                                 text: 'Language: ',
                                                 style: TextStyle(
                                                   fontSize: 12,
@@ -253,7 +231,7 @@ class _EbookScreenState extends State<EbookScreen> {
             ),
           ),
           title: Text(
-            'Ebooks',
+            'Training Documents',
             style: Theme.of(context).textTheme.subtitle1!.copyWith(
                 fontSize: ScreenUtil().setSp(20),
                 color: Colors.black,

@@ -81,39 +81,39 @@ class _OnboardPersonalInformationState
   void initState() {
     super.initState();
     if (kycStepModelController.isEditableValue) {
-      // selectedTitle = widget.data!.userData!.title;
-      firstNameController.text = widget.data!.userData!.firstname ?? '';
-      // middleNameController.text = widget.data!.userData!.middleName ?? '';
-      lastNameController.text = widget.data!.userData!.lastname ?? '';
-      phoneNumberController.text = widget.data!.userData!.phonenumber ?? '';
-      emailController.text = widget.data!.userData!.email ?? '';
-      selectedGender = widget.data!.userData!.gender;
-      selectedMaritalStatus = widget.data!.userData!.maritalStatus;
-      selectedNationality = widget.data!.userData!.nationality;
-      selectedCountryofBirth = widget.data!.userData!.countryOfBirth;
-      selectedDisability = widget.data!.userData!.disability;
-      selectedEquity = widget.data!.userData!.race;
-      dobController.text = widget.data!.userData!.dateOfBirth ?? '';
+      // selectedTitle = widget.data!.data!.agentDetails!.first.title;
+      firstNameController.text = widget.data!.data!.agentDetails!.firstName ?? '';
+      // middleNameController.text = widget.data!.data!.agentDetails!.first.middleName ?? '';
+      lastNameController.text = widget.data!.data!.agentDetails!.lastName ?? '';
+      phoneNumberController.text = widget.data!.data!.agentDetails!.applicationPhone ?? '';
+      emailController.text = widget.data!.data!.agentDetails!.email ?? '';
+      // selectedGender = widget.data!.data!.agentDetails!.genderId;
+      selectedMaritalStatus = widget.data!.data!.agentDetails!.maritalStatus;
+      selectedNationality = widget.data!.data!.agentDetails!.nationality;
+      selectedCountryofBirth = widget.data!.data!.agentDetails!.countryOfBirth;
+      selectedDisability = widget.data!.data!.agentDetails!.disability;
+      selectedEquity = widget.data!.data!.agentDetails!.equityGroup;
+      dobController.text = widget.data!.data!.agentDetails!.dateOfBirth ?? '';
       residentialAddressController.text =
-          widget.data!.userData!.residentialAddress ?? '';
+          widget.data!.data!.agentDetails!.residentialAddress ?? '';
       residentialCityController.text =
-          widget.data!.userData!.residentialTownCity ?? '';
+          widget.data!.data!.agentDetails!.residentialCity ?? '';
       residentialPostalCodeController.text =
-          widget.data!.userData!.residentialPostalCode ?? '';
+          widget.data!.data!.agentDetails!.residentialPostalCode ?? '';
       selectedResidentialProvince =
-          widget.data!.userData!.residentialProvince ?? '';
-      postalAddressController.text = widget.data!.userData!.postalAddress ?? '';
-      postalCityController.text = widget.data!.userData!.postalTownCity ?? '';
-      postalPostalCodeController.text = widget.data!.userData!.postalCode ?? '';
-      selectedPostalProvince = widget.data!.userData!.postalProvince;
+          widget.data!.data!.agentDetails!.residentialprovince ?? '';
+      postalAddressController.text = widget.data!.data!.agentDetails!.postalAddress ?? '';
+      postalCityController.text = widget.data!.data!.agentDetails!.postalCity ?? '';
+      postalPostalCodeController.text = widget.data!.data!.agentDetails!.postalPostalCode ?? '';
+      selectedPostalProvince = widget.data!.data!.agentDetails!.postalprovince;
       selectedEContactRelationship =
-          widget.data!.userData!.relationWithContactPerson;
+          widget.data!.data!.agentDetails!.accHolderRelationship;
       emergencyContactFullNameController.text =
-          widget.data!.userData!.emergencyContactsFullName ?? '';
+          widget.data!.data!.agentDetails!.emergencyContactFullName ?? '';
       emergencyContactNumberController.text =
-          widget.data!.userData!.emergencyMobileNo ?? '';
+          widget.data!.data!.agentDetails!.emergencyContactNumber ?? '';
       alternativeNoController.text =
-          widget.data!.userData!.emergencyAlternativeNo ?? '';
+          widget.data!.data!.agentDetails!.emergencyAlternativeNumber ?? '';
     } else {
       null;
     }

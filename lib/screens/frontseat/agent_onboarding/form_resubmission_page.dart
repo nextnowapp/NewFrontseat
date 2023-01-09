@@ -77,8 +77,7 @@ class _FormReSubmissionScreenState extends State<FormReSubmissionScreen> {
                     foregroundColor: Colors.white, backgroundColor: Colors.red),
                 onPressed: () async {
                   Utils.showProcessingToast();
-                  id = await Utils.getStringValue('uid');
-                  final data = await KycApi.getUserDetails(id);
+                  final data = await KycApi.getUserDetails();
                   Navigator.push(
                       context,
                       CupertinoPageRoute(

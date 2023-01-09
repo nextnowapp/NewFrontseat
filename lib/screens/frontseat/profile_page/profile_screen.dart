@@ -4,6 +4,7 @@ import 'package:nextschool/screens/frontseat/profile_page/widgets/detail_field.d
 
 import '../../../controller/kyc_step_model.dart';
 import '../../../utils/Utils.dart';
+import '../../../utils/apis/kyc_api.dart';
 import '../../../utils/model/frontseat_user_detail_model.dart';
 import '../../../utils/widget/textwidget.dart';
 
@@ -54,12 +55,9 @@ class _ProfileScreenState extends State<ProfileScreen>
   @override
   void initState() {
     controller = TabController(length: 4, vsync: this);
-    Utils.getIntValue('id').then((value) {
       setState(() {
-        id = value;
-        // userdata = KycApi.getUserDetails(id);
+        userdata = KycApi.getUserDetails();
       });
-    });
     super.initState();
   }
 
@@ -98,10 +96,10 @@ class _ProfileScreenState extends State<ProfileScreen>
                       future: userdata,
                       builder: (context, snapshot) {
                         if (snapshot.hasData) {
-                          var data = snapshot.data!.userData!;
-                          image = data.profileImage;
+                          var data = snapshot.data!.data!.agentDetails!;
+                          image = data.agentPhoto;
                           name =
-                              "${data.firstname ?? ''} ${data.lastname ?? ''}";
+                              "${data.firstName ?? ''} ${data.lastName ?? ''}";
                           email = data.email;
                         }
                         return Padding(
@@ -180,42 +178,42 @@ class _ProfileScreenState extends State<ProfileScreen>
                         child: Center(child: CircularProgressIndicator()));
                   } else {
                     if (snapshot.hasData) {
-                      firstName = snapshot.data!.userData!.firstname;
-                      // middleName = snapshot.data!.userData!.middleName;
-                      lastName = snapshot.data!.userData!.lastname;
-                      passportNumber = snapshot.data!.userData!.passportNumber;
-                      phoneNumber = snapshot.data!.userData!.phonenumber;
-                      email = snapshot.data!.userData!.email;
-                      gender = snapshot.data!.userData!.gender;
-                      maritalStatus = snapshot.data!.userData!.maritalStatus;
-                      equityGroup = snapshot.data!.userData!.race;
-                      dob = snapshot.data!.userData!.dateOfBirth;
+                      firstName = snapshot.data!.data!.agentDetails!.firstName;
+                      // middleName = snapshot.data!.data!.agentDetails!.middleName;
+                      lastName = snapshot.data!.data!.agentDetails!.lastName;
+                      passportNumber = snapshot.data!.data!.agentDetails!.passportNumber;
+                      phoneNumber = snapshot.data!.data!.agentDetails!.applicationPhone;
+                      email = snapshot.data!.data!.agentDetails!.email;
+                      gender = snapshot.data!.data!.agentDetails!.gender.toString();
+                      maritalStatus = snapshot.data!.data!.agentDetails!.maritalStatus;
+                      equityGroup = snapshot.data!.data!.agentDetails!.equityGroup;
+                      dob = snapshot.data!.data!.agentDetails!.dateOfBirth;
                       residentialAddress =
-                          snapshot.data!.userData!.residentialAddress;
+                          snapshot.data!.data!.agentDetails!.residentialAddress;
                       residentialCity =
-                          snapshot.data!.userData!.residentialTownCity;
+                          snapshot.data!.data!.agentDetails!.residentialCity;
                       residentialPostalCode =
-                          snapshot.data!.userData!.residentialPostalCode;
+                          snapshot.data!.data!.agentDetails!.residentialPostalCode;
                       residentialProvince =
-                          snapshot.data!.userData!.residentialProvince;
-                      postalAddress = snapshot.data!.userData!.postalAddress;
-                      postalCity = snapshot.data!.userData!.postalTownCity;
-                      postalPostalCode = snapshot.data!.userData!.postalCode;
-                      postalProvince = snapshot.data!.userData!.postalProvince;
+                          snapshot.data!.data!.agentDetails!.residentialprovince;
+                      postalAddress = snapshot.data!.data!.agentDetails!.postalAddress;
+                      postalCity = snapshot.data!.data!.agentDetails!.postalCity;
+                      postalPostalCode = snapshot.data!.data!.agentDetails!.postalPostalCode;
+                      postalProvince = snapshot.data!.data!.agentDetails!.postalprovince;
 
                       emergencyContactFullName =
-                          snapshot.data!.userData!.emergencyContactsFullName;
+                          snapshot.data!.data!.agentDetails!.emergencyContactFullName;
                       emergencyContactNumber =
-                          snapshot.data!.userData!.emergencyMobileNo;
+                          snapshot.data!.data!.agentDetails!.emergencyContactNumber;
                       emergencyAlternativeContactNumber =
-                          snapshot.data!.userData!.emergencyAlternativeNo;
-                      accountType = snapshot.data!.userData!.accountType;
+                          snapshot.data!.data!.agentDetails!.emergencyAlternativeNumber;
+                      accountType = snapshot.data!.data!.agentDetails!.accountType;
                       accountHolderRelation =
-                          snapshot.data!.userData!.accountHolderRelationship;
-                      bankName = snapshot.data!.userData!.bankName;
-                      accHolderName = snapshot.data!.userData!.accountHolder;
-                      accNo = snapshot.data!.userData!.accountNumber;
-                      branchName = snapshot.data!.userData!.branchName;
+                          snapshot.data!.data!.agentDetails!.emergencyContactRelation;
+                      bankName = snapshot.data!.data!.agentDetails!.bankName;
+                      accHolderName = snapshot.data!.data!.agentDetails!.bankAccountHolderName;
+                      accNo = snapshot.data!.data!.agentDetails!.bankAccountNumber;
+                      branchName = snapshot.data!.data!.agentDetails!.bankBranchName;
                       return Expanded(
                         child: Padding(
                           padding: const EdgeInsets.all(20),

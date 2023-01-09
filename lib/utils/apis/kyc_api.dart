@@ -1,5 +1,4 @@
 import 'dart:developer';
-
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart' as getx;
@@ -221,7 +220,7 @@ class KycApi {
     try {
       Response response;
       Dio dio = Dio(BaseOptions(
-       headers: {'Authorization': token},
+        headers: {'Authorization': token},
         // contentType: 'application/json',
       ));
       response = await dio.post(
@@ -244,14 +243,14 @@ class KycApi {
     //combine data and extraData into one map
   }
 
-  static uploadGovtId(int uid, String? dlFront, String? dlRear,
-      String nidFront, String nidRear, BuildContext context
+  static uploadGovtId(int uid, String? dlFront, String? dlRear, String nidFront,
+      String nidRear, BuildContext context
 
       // String bankStatement,
       ) async {
-         var token = await Utils.getStringValue('token');
+    var token = await Utils.getStringValue('token');
     FormData formData = FormData.fromMap({
-      'onboarding_steps':4,
+      'onboarding_steps': 4,
       'user_id': uid,
       'govtIdUploaded': true,
       'drivingLicenceFrontImage':
@@ -266,7 +265,7 @@ class KycApi {
 
     Response response;
     Dio dio = Dio(BaseOptions(
-    headers: {'Authorization': token},
+      headers: {'Authorization': token},
       contentType: 'application/json',
     ));
     try {
@@ -304,9 +303,9 @@ class KycApi {
       required context}
       // String bankStatement,
       ) async {
-         var token = await Utils.getStringValue('token');
+    var token = await Utils.getStringValue('token');
     FormData formData = FormData.fromMap({
-      'onboarding_steps':5,
+      'onboarding_steps': 5,
       'accountType': accountType,
       'accHolderRelationship': accountHolderRelation,
       'bankName': bankName,
@@ -321,7 +320,7 @@ class KycApi {
 
     Response response;
     Dio dio = Dio(BaseOptions(
-       headers: {'Authorization': token},
+      headers: {'Authorization': token},
       contentType: 'application/json',
     ));
     try {
@@ -388,15 +387,15 @@ class KycApi {
     return null;
   }
 
-  static Future<UserDetailModel?> getUserDetails(String id) async {
-    FormData formData = FormData.fromMap({'agent_id': id});
+  static Future<UserDetailModel?> getUserDetails() async {
+    var token = await Utils.getStringValue('token');
     Response response;
-    Dio dio = Dio(BaseOptions(
-      headers: {'authtoken': FrontSeatApi.apiKey},
+    var dio = Dio(BaseOptions(
+      headers: {'Authorization': token},
       contentType: 'application/json',
     ));
     try {
-      response = await dio.post(FrontSeatApi.agentData, data: formData);
+      response = await dio.get(FrontSeatApi.agentData);
       if (response.statusCode == 200) {
         var userData = UserDetailModel.fromJson(response.data);
         return userData;

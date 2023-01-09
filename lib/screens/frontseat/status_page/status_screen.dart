@@ -4,6 +4,7 @@ import 'package:nextschool/screens/frontseat/status_page/widgets/detail_card.dar
 
 import '../../../controller/kyc_step_model.dart';
 import '../../../utils/Utils.dart';
+import '../../../utils/apis/kyc_api.dart';
 import '../../../utils/model/frontseat_user_detail_model.dart';
 import '../../../utils/widget/DetailFields.dart';
 import '../../../utils/widget/textwidget.dart';
@@ -33,7 +34,7 @@ class _CustomSidebarState extends State<CustomSidebar> {
     Utils.getStringValue('uid').then((value) {
       setState(() {
         id = value;
-        // userdata = KycApi.getUserDetails(id);
+        userdata = KycApi.getUserDetails();
         // KycApi.AgentStatus(id);
       });
     });
@@ -62,14 +63,14 @@ class _CustomSidebarState extends State<CustomSidebar> {
                       builder:
                           (context, AsyncSnapshot<UserDetailModel?> snapshot) {
                         if (snapshot.data != null) {
-                          var data = snapshot.data!.userData!;
-                          mobile = data.phonenumber;
-                          firstName = data.firstname!.capitalize;
-                          lastName = data.lastname!.capitalize;
+                          var data = snapshot.data!.data!.agentDetails!;
+                          mobile = data.mobile;
+                          firstName = data.firstName!;
+                          lastName = data.lastName!;
                           email = data.email;
-                          mobileVerified = data.mobileVerified;
-                          uploadDocuments = data.bankingDocument;
-                          status = data.agentStatus;
+                          mobileVerified = data.mobileVerified.toString();
+                          uploadDocuments = data.bankingDocument.toString();
+                          // status = data.activeStatus.toString();
                         }
                         return Column(
                           children: [
@@ -102,15 +103,15 @@ class _CustomSidebarState extends State<CustomSidebar> {
                                     child: Column(
                                       children: [
                                         DetailFields(
-                                            title: 'First Name : ',
+                                            title: 'Full Name : ',
                                             value: firstName ?? ''),
-                                        Visibility(
-                                          visible: lastName != null &&
-                                              lastName != '',
-                                          child: DetailFields(
-                                              title: 'Last Name : ',
-                                              value: lastName ?? ''),
-                                        ),
+                                        // Visibility(
+                                        //   visible: lastName != null &&
+                                        //       lastName != '',
+                                        //   child: DetailFields(
+                                        //       title: 'Last Name : ',
+                                        //       value: lastName ?? ''),
+                                        // ),
                                         DetailFields(
                                             title: 'Phone Number : ',
                                             value: mobile ?? ''),
