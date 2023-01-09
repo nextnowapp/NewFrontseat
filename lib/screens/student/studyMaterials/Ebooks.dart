@@ -4,8 +4,6 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:nextschool/screens/parent/ChildDashboardScreen.dart';
 import 'package:nextschool/utils/model/ebook.dart';
 import 'package:nextschool/utils/widget/download_button.dart';
 import 'package:path_provider/path_provider.dart';
@@ -24,22 +22,10 @@ class _EbookScreenState extends State<EbookScreen> {
   late EbookList _ebooks;
   String? directory;
 
-  final List<String> languages = [
-    'Afrikaans',
-    'English',
-    'Isindebele',
-    'Isixhosa',
-    'Isizulu',
-    'Sepedi',
-    'Sesotho',
-    'Setswana',
-    'Siswati',
-    'Tshivenda',
-    'Xitsonga',
-  ];
+  final List<String> titles = ['General', 'Induction', 'Code of Conduct'];
 
   List<Widget> _buildViewList() {
-    return languages.map((language) {
+    return titles.map((language) {
       return FutureBuilder(
         future: _loadBooksFromJsonAssets(language.toLowerCase()),
         builder: (context, AsyncSnapshot<List<Ebooks>> snapshot) {
@@ -112,7 +98,7 @@ class _EbookScreenState extends State<EbookScreen> {
                                           text: TextSpan(
                                             children: [
                                               const TextSpan(
-                                                text: 'Language: ',
+                                                text: 'Topic: ',
                                                 style: TextStyle(
                                                   fontSize: 12,
                                                   color: Colors.grey,
@@ -209,10 +195,11 @@ class _EbookScreenState extends State<EbookScreen> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: languages.length,
+      length: titles.length,
       child: Scaffold(
         backgroundColor: Colors.grey[200],
         appBar: AppBar(
+          backgroundColor: Colors.red,
           centerTitle: true,
           automaticallyImplyLeading: false,
           elevation: 0,
@@ -220,33 +207,25 @@ class _EbookScreenState extends State<EbookScreen> {
               statusBarBrightness: Brightness.dark,
               statusBarIconBrightness: Brightness.dark,
               statusBarColor: Colors.transparent),
-          leading: IconButton(
-            onPressed: (() {
-              navigateToPreviousPage(context);
-            }),
-            icon: SvgPicture.asset(
-              'assets/svg/angle.svg',
-              color: Colors.black,
-              height: ScreenUtil().setSp(18),
-            ),
-          ),
           title: Text(
             'Training Documents',
             style: Theme.of(context).textTheme.subtitle1!.copyWith(
                 fontSize: ScreenUtil().setSp(20),
-                color: Colors.black,
+                color: Colors.white,
                 fontWeight: FontWeight.bold),
           ),
           bottom: TabBar(
             isScrollable: true,
-            labelColor: const Color(0xFF222744),
+            unselectedLabelColor: Colors.grey.shade300,
+            labelColor: Colors.white,
             labelStyle:
                 const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-            unselectedLabelStyle: const TextStyle(fontSize: 16),
+            unselectedLabelStyle:
+                const TextStyle(fontSize: 16, color: Colors.white),
             tabs: List.generate(
-              languages.length,
+              titles.length,
               (index) => Tab(
-                text: languages[index],
+                text: titles[index],
               ),
             ),
           ),
