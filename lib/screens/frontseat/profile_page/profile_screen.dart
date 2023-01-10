@@ -55,9 +55,9 @@ class _ProfileScreenState extends State<ProfileScreen>
   @override
   void initState() {
     controller = TabController(length: 4, vsync: this);
-      setState(() {
-        userdata = KycApi.getUserDetails();
-      });
+    setState(() {
+      userdata = KycApi.getUserDetails();
+    });
     super.initState();
   }
 
@@ -66,11 +66,12 @@ class _ProfileScreenState extends State<ProfileScreen>
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.red,
+        centerTitle: true,
         title: const TextWidget(
           txt: 'Application Information',
           clr: Colors.white,
           size: 20,
-          weight: FontWeight.w500,
+          weight: FontWeight.w600,
         ),
         automaticallyImplyLeading: false,
       ),
@@ -109,10 +110,13 @@ class _ProfileScreenState extends State<ProfileScreen>
                               Row(
                                 children: [
                                   CircleAvatar(
-                                    backgroundColor: Colors.blue,
+                                    backgroundColor: Colors.black,
                                     radius: 40,
-                                    backgroundImage: NetworkImage(image ??
-                                        'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQmcqzN9KSMx-hxPJfiB3yt59uQhN9R4IqjisfUEitJv9lbQVN14QYLsUfmgiH-AoH2VgTFMdRBaTWa9XXpU9aMV1fveYnRgRsf4peaqt_rCR_qyQ483NgjHHdhfYpOr8axyGWhk3DHw5lAUQkXl6NGMugPS7k6Apw7CUjqRMgwAv01i2_AXyRumuBfw/w680/blank-profile-picture-hd-images-photo.JPG'),
+                                    backgroundImage: NetworkImage(image ==
+                                                null ||
+                                            image == ''
+                                        ? 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQmcqzN9KSMx-hxPJfiB3yt59uQhN9R4IqjisfUEitJv9lbQVN14QYLsUfmgiH-AoH2VgTFMdRBaTWa9XXpU9aMV1fveYnRgRsf4peaqt_rCR_qyQ483NgjHHdhfYpOr8axyGWhk3DHw5lAUQkXl6NGMugPS7k6Apw7CUjqRMgwAv01i2_AXyRumuBfw/w680/blank-profile-picture-hd-images-photo.JPG'
+                                        : image!),
                                   ),
                                   const SizedBox(width: 20),
                                   Column(
@@ -181,39 +185,52 @@ class _ProfileScreenState extends State<ProfileScreen>
                       firstName = snapshot.data!.data!.agentDetails!.firstName;
                       // middleName = snapshot.data!.data!.agentDetails!.middleName;
                       lastName = snapshot.data!.data!.agentDetails!.lastName;
-                      passportNumber = snapshot.data!.data!.agentDetails!.passportNumber;
-                      phoneNumber = snapshot.data!.data!.agentDetails!.applicationPhone;
+                      passportNumber =
+                          snapshot.data!.data!.agentDetails!.passportNumber;
+                      phoneNumber =
+                          snapshot.data!.data!.agentDetails!.applicationPhone;
                       email = snapshot.data!.data!.agentDetails!.email;
-                      gender = snapshot.data!.data!.agentDetails!.gender.toString();
-                      maritalStatus = snapshot.data!.data!.agentDetails!.maritalStatus;
-                      equityGroup = snapshot.data!.data!.agentDetails!.equityGroup;
+                      gender =
+                          snapshot.data!.data!.agentDetails!.gender.toString();
+                      maritalStatus =
+                          snapshot.data!.data!.agentDetails!.maritalStatus;
+                      equityGroup =
+                          snapshot.data!.data!.agentDetails!.equityGroup;
                       dob = snapshot.data!.data!.agentDetails!.dateOfBirth;
                       residentialAddress =
                           snapshot.data!.data!.agentDetails!.residentialAddress;
                       residentialCity =
                           snapshot.data!.data!.agentDetails!.residentialCity;
-                      residentialPostalCode =
-                          snapshot.data!.data!.agentDetails!.residentialPostalCode;
-                      residentialProvince =
-                          snapshot.data!.data!.agentDetails!.residentialprovince;
-                      postalAddress = snapshot.data!.data!.agentDetails!.postalAddress;
-                      postalCity = snapshot.data!.data!.agentDetails!.postalCity;
-                      postalPostalCode = snapshot.data!.data!.agentDetails!.postalPostalCode;
-                      postalProvince = snapshot.data!.data!.agentDetails!.postalprovince;
+                      residentialPostalCode = snapshot
+                          .data!.data!.agentDetails!.residentialPostalCode;
+                      residentialProvince = snapshot
+                          .data!.data!.agentDetails!.residentialprovince;
+                      postalAddress =
+                          snapshot.data!.data!.agentDetails!.postalAddress;
+                      postalCity =
+                          snapshot.data!.data!.agentDetails!.postalCity;
+                      postalPostalCode =
+                          snapshot.data!.data!.agentDetails!.postalPostalCode;
+                      postalProvince =
+                          snapshot.data!.data!.agentDetails!.postalprovince;
 
-                      emergencyContactFullName =
-                          snapshot.data!.data!.agentDetails!.emergencyContactFullName;
-                      emergencyContactNumber =
-                          snapshot.data!.data!.agentDetails!.emergencyContactNumber;
-                      emergencyAlternativeContactNumber =
-                          snapshot.data!.data!.agentDetails!.emergencyAlternativeNumber;
-                      accountType = snapshot.data!.data!.agentDetails!.accountType;
-                      accountHolderRelation =
-                          snapshot.data!.data!.agentDetails!.emergencyContactRelation;
+                      emergencyContactFullName = snapshot
+                          .data!.data!.agentDetails!.emergencyContactFullName;
+                      emergencyContactNumber = snapshot
+                          .data!.data!.agentDetails!.emergencyContactNumber;
+                      emergencyAlternativeContactNumber = snapshot
+                          .data!.data!.agentDetails!.emergencyAlternativeNumber;
+                      accountType =
+                          snapshot.data!.data!.agentDetails!.accountType;
+                      accountHolderRelation = snapshot
+                          .data!.data!.agentDetails!.emergencyContactRelation;
                       bankName = snapshot.data!.data!.agentDetails!.bankName;
-                      accHolderName = snapshot.data!.data!.agentDetails!.bankAccountHolderName;
-                      accNo = snapshot.data!.data!.agentDetails!.bankAccountNumber;
-                      branchName = snapshot.data!.data!.agentDetails!.bankBranchName;
+                      accHolderName = snapshot
+                          .data!.data!.agentDetails!.bankAccountHolderName;
+                      accNo =
+                          snapshot.data!.data!.agentDetails!.bankAccountNumber;
+                      branchName =
+                          snapshot.data!.data!.agentDetails!.bankBranchName;
                       return Expanded(
                         child: Padding(
                           padding: const EdgeInsets.all(20),

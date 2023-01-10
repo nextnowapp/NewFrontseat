@@ -433,6 +433,8 @@ class _NewRegisterScreenState extends State<NewRegisterScreen> {
       _btnController.reset();
     } else {
       _btnController.reset();
+      Utils.showErrorToast('The email has already been taken.');
+      Navigator.of(context, rootNavigator: true).pop('dialog');
       throw Exception('Failed to load');
     }
   }

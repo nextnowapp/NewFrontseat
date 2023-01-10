@@ -101,9 +101,8 @@ class KycApi {
               builder: (context) => const VerifyEmailScreen(),
             ));
       } else if (response.statusCode == 404) {
-        Utils.showToast('Failed to load');
         Utils.showToast(
-            'Phone number verification failed, please try again later');
+            response.statusMessage.toString());
         Navigator.pushReplacement(
             context,
             MaterialPageRoute(
@@ -113,7 +112,7 @@ class KycApi {
     } on DioError catch (e) {
       log(e.toString());
       Utils.showToast(
-          'Phone number verification failed, please try again later');
+          e.message.toString());
       Navigator.pushReplacement(
           context,
           MaterialPageRoute(

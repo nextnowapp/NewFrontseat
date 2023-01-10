@@ -65,8 +65,7 @@ class _CustomSidebarState extends State<CustomSidebar> {
                         if (snapshot.data != null) {
                           var data = snapshot.data!.data!.agentDetails!;
                           mobile = data.mobile;
-                          firstName = data.firstName!;
-                          lastName = data.lastName!;
+                          firstName = data.fullName ?? '';
                           email = data.email;
                           mobileVerified = data.mobileVerified.toString();
                           uploadDocuments = data.bankingDocument.toString();
@@ -215,7 +214,6 @@ class _CustomSidebarState extends State<CustomSidebar> {
                           ],
                         );
                       }),
-
                 ],
               ),
             ),

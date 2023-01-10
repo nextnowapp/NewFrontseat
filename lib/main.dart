@@ -254,7 +254,6 @@ class _MyAppState extends State<MyApp> {
           splitScreenMode: true,
           builder: (context, child) => GetMaterialApp(
             theme: ThemeData(
-              fontFamily: GoogleFonts.inter().fontFamily,
               appBarTheme: const AppBarTheme(
                 color: Colors.transparent,
                 elevation: 0,

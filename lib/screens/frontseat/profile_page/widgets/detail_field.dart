@@ -1,8 +1,6 @@
-
 import 'package:flutter/material.dart';
 
 import '../../../../utils/widget/textwidget.dart';
-
 
 class DetailField extends StatelessWidget {
   DetailField(
@@ -31,10 +29,12 @@ class DetailField extends StatelessWidget {
                     const SizedBox(
                       width: 5,
                     ),
-                    TextWidget(
-                      txt: title,
-                      weight: FontWeight.bold,
-                      size: 16,
+                    Text(
+                      title,
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
                     ),
                   ],
                 ),
