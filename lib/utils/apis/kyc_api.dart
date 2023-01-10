@@ -1,4 +1,5 @@
 import 'dart:developer';
+
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart' as getx;
@@ -9,6 +10,7 @@ import 'package:nextschool/screens/frontseat/agent_onboarding/verify_account.dar
 import 'package:nextschool/utils/apis/api_list.dart';
 
 import '../../controller/kyc_step_model.dart';
+import '../../screens/frontseat/agent_onboarding/verify_email_screen.dart';
 import '../../screens/frontseat/nav_bar.dart';
 import '../../utils/utils.dart';
 import '../model/frontseat_user_detail_model.dart';
@@ -46,8 +48,8 @@ class KycApi {
       if (response.statusCode == 200) {
         Utils.showToast('Account created successfully');
         Utils.saveBooleanValue('isLogged', true);
-        var id = response.data['user_data']['staffid'];
-        Utils.saveStringValue('uid', id);
+        var id = response.data['user_data']['id'];
+        Utils.saveStringValue('id', id);
         return id;
       }
     } on DioError catch (e) {
@@ -60,49 +62,63 @@ class KycApi {
     return null;
   }
 
-  static Future<int> getOtp(String mobile) async {
-    log('Api invoked');
-    final body = {'mobile_no': mobile};
-    FormData formData = FormData.fromMap(body);
+  static getOtp() async {
+    var token = await Utils.getStringValue('token');
     Dio dio = Dio(BaseOptions(
-      headers: {'authtoken': FrontSeatApi.apiKey},
+      headers: {'Authorization': token},
       contentType: 'application/json',
     ));
-    final response = await dio.post(
+    final response = await dio.get(
       FrontSeatApi.getOtp,
-      data: formData,
     );
-    log(response.data.toString());
     if (response.statusCode == 200) {
-      return response.data['otp'];
+      log('success');
+      log(response.data.toString());
     } else {
-      return 0;
+      log('heyda');
     }
-
     //combine data and extraData into one map
   }
 
-  static mobileVerified(Map<String, dynamic> data) async {
-    log(data.toString());
+  static mobileVerified(Map<String, dynamic> data, BuildContext context) async {
     FormData formData = FormData.fromMap(data);
+    var token = await Utils.getStringValue('token');
     try {
       Response response;
-      Dio dio = Dio(BaseOptions(
-        headers: {'authtoken': FrontSeatApi.apiKey},
-        // contentType: 'application/json',
-      ));
+      Dio dio = Dio(BaseOptions(headers: Utils.setHeader(token!)
+          // contentType: 'application/json',
+          ));
       response = await dio.post(
-        FrontSeatApi.onboardAgent,
+        FrontSeatApi.mpobileverified,
         data: formData,
       );
       log(response.statusCode.toString());
       if (response.statusCode == 200) {
         Utils.showToast('Phone Number verified successfully');
-      } else {
+        Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const VerifyEmailScreen(),
+            ));
+      } else if (response.statusCode == 404) {
         Utils.showToast('Failed to load');
+        Utils.showToast(
+            'Phone number verification failed, please try again later');
+        Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const VerifyEmailScreen(),
+            ));
       }
     } on DioError catch (e) {
       log(e.toString());
+      Utils.showToast(
+          'Phone number verification failed, please try again later');
+      Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const VerifyEmailScreen(),
+          ));
       return e.toString();
     }
 

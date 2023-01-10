@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:nextschool/screens/frontseat/document_page/training_documents_screen.dart';
 import 'package:nextschool/screens/frontseat/profile_page/profile_screen.dart';
 import 'package:nextschool/screens/frontseat/status_page/status_screen.dart';
 import 'package:sizer/sizer.dart';

@@ -31,7 +31,7 @@ class _CustomSidebarState extends State<CustomSidebar> {
 
   @override
   void initState() {
-    Utils.getStringValue('uid').then((value) {
+    Utils.getIntValue('id').then((value) {
       setState(() {
         id = value;
         userdata = KycApi.getUserDetails();

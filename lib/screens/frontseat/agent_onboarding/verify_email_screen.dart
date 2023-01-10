@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:nextschool/screens/frontseat/new_login_screen.dart';
-import 'package:nextschool/screens/login_new.dart';
 
 import '../../../utils/Utils.dart';
 import '../nav_bar.dart';
@@ -48,7 +47,7 @@ class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-                SvgPicture.asset("assets/verify-email.svg"),
+                SvgPicture.asset('assets/svg/verify-email.svg'),
                 Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Column(
@@ -74,7 +73,7 @@ class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
                               ScaffoldMessenger.of(context)
                                   .showSnackBar(const SnackBar(
                                 backgroundColor: Colors.red,
-                                content: Text("Login with you email to verify"),
+                                content: Text('Login with you email to verify'),
                               ));
                               Navigator.pushAndRemoveUntil(
                                   context,
@@ -85,7 +84,7 @@ class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
                                       route is LoginFrontSeat);
                             },
                             child: const Text(
-                              "Done",
+                              'Done',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontWeight: FontWeight.w700,
@@ -105,7 +104,7 @@ class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
                                   (Route<dynamic> route) => route is BottomBar);
                             },
                             child: const Text(
-                              "Skip for now.",
+                              'Skip for now.',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontWeight: FontWeight.w700,

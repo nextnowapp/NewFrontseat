@@ -48,6 +48,7 @@ dependencies:
   flutter_local_notifications: ^12.0.3
   flutter_localizations:
     sdk: flutter
+  flutter_otp_text_field: ^1.1.1
   flutter_overlay_loader: ^2.0.0
   flutter_screenutil: ^5.5.4
   flutter_share: ^2.0.0

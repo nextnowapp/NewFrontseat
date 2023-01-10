@@ -1,20 +1,23 @@
 import 'dart:convert';
 import 'dart:developer';
 
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'package:nextschool/controller/user_controller.dart';
-import 'package:nextschool/screens/frontseat/nav_bar.dart';
 import 'package:nextschool/utils/Utils.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
 import 'package:sizer/sizer.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../../utils/apis/Apis.dart';
 import '../../utils/apis/api_list.dart';
+import '../../utils/apis/kyc_api.dart';
+import '../../utils/widget/textwidget.dart';
 import '../../utils/widget/txtbox.dart';
+import 'agent_onboarding/verify_email_screen.dart';
 
 class NewRegisterScreen extends StatefulWidget {
   const NewRegisterScreen({Key? key}) : super(key: key);
@@ -36,17 +39,17 @@ class _NewRegisterScreenState extends State<NewRegisterScreen> {
       RoundedLoadingButtonController();
   String verifyId = '';
   String? deviceToken;
-  // FirebaseMessaging messaging = FirebaseMessaging.instance;
+  FirebaseMessaging messaging = FirebaseMessaging.instance;
 
   final RegExp regExp =
       RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$');
   @override
   void initState() {
-    // messaging.getToken().then((value) {
-    //   deviceToken = value;
-    //   Utils.saveStringValue("deviceToken", deviceToken!);
-    //   log(deviceToken.toString());
-    // });
+    messaging.getToken().then((value) {
+      deviceToken = value;
+      Utils.saveStringValue('deviceToken', deviceToken!);
+      log(deviceToken.toString());
+    });
     super.initState();
   }
 
@@ -126,7 +129,8 @@ class _NewRegisterScreenState extends State<NewRegisterScreen> {
                             validator: (value) {
                               if (value!.isEmpty) {
                                 return 'Phone Number is required';
-                              } else if (value.length != 10||value[0] != '0') {
+                              } else if (value.length != 10 ||
+                                  value[0] != '0') {
                                 return 'Phone number should be 10 digits starting with 0';
                               }
                               return null;
@@ -179,6 +183,9 @@ class _NewRegisterScreenState extends State<NewRegisterScreen> {
                             validator: (value) {
                               if (value!.isEmpty) {
                                 return 'Confirm password is required';
+                              } else if (value!.isNotEmpty &&
+                                  value != passwordController.text) {
+                                return 'Password does not match';
                               }
                               return null;
                             },
@@ -255,6 +262,48 @@ class _NewRegisterScreenState extends State<NewRegisterScreen> {
                                   confirmPasswordController.text &&
                               passwordController.text.isNotEmpty) {
                             register();
+                            showDialog(
+                                barrierDismissible: false,
+                                context: context,
+                                builder: (BuildContext context) {
+                                  return AlertDialog(
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(10)),
+                                    backgroundColor: Colors.white,
+                                    insetPadding: const EdgeInsets.all(15),
+                                    title: TextWidget(
+                                      txt:
+                                          'We have sent an OTP to ${phoneController.text} , please check and verify',
+                                      size: 17,
+                                    ),
+                                    content: OtpTextField(
+                                        focusedBorderColor: Colors.red,
+                                        showFieldAsBox: true,
+                                        onSubmit: (value) async {
+                                          var body = {
+                                            'verification_code': value,
+                                          };
+                                          await KycApi.mobileVerified(
+                                              body, context);
+                                        },
+                                        borderWidth: 4.0,
+                                        numberOfFields: 6,
+                                        borderColor: Colors.red),
+                                    actions: [
+                                      TextButton(
+                                          child: const TextWidget(txt: 'Skip'),
+                                          onPressed: () async {
+                                            Navigator.pushReplacement(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      const VerifyEmailScreen(),
+                                                ));
+                                          })
+                                    ],
+                                  );
+                                });
                           } else {
                             _btnController.reset();
                           }
@@ -374,12 +423,13 @@ class _NewRegisterScreenState extends State<NewRegisterScreen> {
       controller.token = token;
       controller.isLogged = true;
       controller.schoolUrl = schoolUrl;
-      Utils.showToast('Agent has been created successfully');
-      Navigator.pushAndRemoveUntil(
-          context,
-          MaterialPageRoute(
-              builder: (BuildContext context) => const BottomBar()),
-          (Route<dynamic> route) => route is BottomBar);
+      await KycApi.getOtp();
+      // Utils.showToast('Agent has been created successfully');
+      // Navigator.pushAndRemoveUntil(
+      //     context,
+      //     MaterialPageRoute(
+      //         builder: (BuildContext context) => const BottomBar()),
+      //     (Route<dynamic> route) => route is BottomBar);
       _btnController.reset();
     } else {
       _btnController.reset();

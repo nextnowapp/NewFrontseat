@@ -5,7 +5,8 @@ class FrontSeatApi {
   static const String loginUser = '$base/api/agentLogin';
   static const String registerUser = '$base/api/agentSignup';
   static const String resetPass = '$baseUrl/api/Applogin/resetpassword';
-  static const String getOtp = '$baseUrl/api/Applogin/sendotp';
+  static const String getOtp = '$base/api/phoneVerificationRequest';
+  static const String mpobileverified = '$base/api/api/phoneVerificationSave';
   static const String onboardAgent = '$base/api/agentUpdate';
   static const String kycStatus = '$baseUrl/api/Applogin/agentUploadStatus';
   static const String agentData = '$base/api/agentDetails';
