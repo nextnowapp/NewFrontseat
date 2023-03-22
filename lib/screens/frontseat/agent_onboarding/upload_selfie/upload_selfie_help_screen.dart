@@ -28,115 +28,119 @@ class UploadSelfieHelpScreen extends StatelessWidget {
               },
             ),
           ),
-          body: Container(
-            width: MediaQuery.of(context).size.width,
-            alignment: Alignment.center,
-            child: SizedBox(
-              width: MediaQuery.of(context).size.width * 0.8,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Center(
-                    child: SvgPicture.asset(
-                      'assets/icons/face-id.svg',
-                      height: 180,
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 50,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text(
-                          'Please take a portrait selfie',
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black,
-                          ),
+          body: Column(
+            children: [
+              Container(
+                width: MediaQuery.of(context).size.width,
+                alignment: Alignment.center,
+                child: SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.8,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Center(
+                        child: SvgPicture.asset(
+                          'assets/icons/face-id.svg',
+                          height: 180,
                         ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        Row(
+                      ),
+                      const SizedBox(
+                        height: 50,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Icon(
-                              Icons.circle_rounded,
-                              color: Colors.grey,
-                              size: 10,
+                            const Text(
+                              'Please take a portrait selfie',
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                              ),
                             ),
                             const SizedBox(
-                              width: 10,
+                              height: 10,
                             ),
-                            Expanded(
-                              child: Text(
-                                'Make sure your face is clearly visible.',
-                                style: TextStyle(
-                                  color: Colors.grey[600],
-                                  fontSize: 14,
+                            Row(
+                              children: [
+                                const Icon(
+                                  Icons.circle_rounded,
+                                  color: Colors.grey,
+                                  size: 10,
                                 ),
-                              ),
+                                const SizedBox(
+                                  width: 10,
+                                ),
+                                Expanded(
+                                  child: Text(
+                                    'Make sure your face is clearly visible.',
+                                    style: TextStyle(
+                                      color: Colors.grey[600],
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: [
+                                const Icon(
+                                  Icons.circle_rounded,
+                                  color: Colors.grey,
+                                  size: 10,
+                                ),
+                                const SizedBox(
+                                  width: 10,
+                                ),
+                                Expanded(
+                                  child: Text(
+                                    'Keep your phone vertical.',
+                                    style: TextStyle(
+                                      color: Colors.grey[600],
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: [
+                                const Icon(
+                                  Icons.circle_rounded,
+                                  color: Colors.grey,
+                                  size: 10,
+                                ),
+                                const SizedBox(
+                                  width: 10,
+                                ),
+                                Expanded(
+                                  child: Text(
+                                    'Remove specs from face.',
+                                    style: TextStyle(
+                                      color: Colors.grey[600],
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
                           ],
                         ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        Row(
-                          children: [
-                            const Icon(
-                              Icons.circle_rounded,
-                              color: Colors.grey,
-                              size: 10,
-                            ),
-                            const SizedBox(
-                              width: 10,
-                            ),
-                            Expanded(
-                              child: Text(
-                                'Keep your phone vertical.',
-                                style: TextStyle(
-                                  color: Colors.grey[600],
-                                  fontSize: 14,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        Row(
-                          children: [
-                            const Icon(
-                              Icons.circle_rounded,
-                              color: Colors.grey,
-                              size: 10,
-                            ),
-                            const SizedBox(
-                              width: 10,
-                            ),
-                            Expanded(
-                              child: Text(
-                                'Remove specs from face.',
-                                style: TextStyle(
-                                  color: Colors.grey[600],
-                                  fontSize: 14,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                ],
+                ),
               ),
-            ),
+            ],
           ),
           bottomNavigationBar: SizedBox(
             height: 100,
@@ -158,10 +162,10 @@ class UploadSelfieHelpScreen extends StatelessWidget {
                         context
                             .read<UploadSelfieBloc>()
                             .add(PickImageEvent(image: file.path));
-                         Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>  UploadSelfieScreen()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => UploadSelfieScreen()));
                       }
                     },
                     child: const Padding(

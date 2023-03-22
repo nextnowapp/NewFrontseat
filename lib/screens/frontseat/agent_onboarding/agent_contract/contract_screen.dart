@@ -4,19 +4,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
-import 'package:nextschool/screens/frontseat/agent_onboarding/agent_contract/signature_screen.dart';
+import 'package:open_file_safe/open_file_safe.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:pdf_viewer_plugin/pdf_viewer_plugin.dart';
+import 'package:permission_handler/permission_handler.dart';
+import 'package:sizer/sizer.dart';
 
 import '../../../../controller/kyc_step_model.dart';
 import '../../../../utils/Utils.dart';
-import '../../../../utils/apis/kyc_api.dart';
+import '../../services/kyc_api.dart';
 import '../../../../utils/widget/textwidget.dart';
 import 'controller/contract_bloc.dart';
 
 class ContractScreen extends StatefulWidget {
-  ContractScreen({this.signed, Key? key}) : super(key: key);
-  bool? signed;
+  const ContractScreen({Key? key}) : super(key: key);
 
   @override
   State<ContractScreen> createState() => _ContractScreenState();
@@ -25,6 +26,7 @@ class ContractScreen extends StatefulWidget {
 class _ContractScreenState extends State<ContractScreen> {
   String? pdfFlePath;
   String? directory;
+  var bytes;
   @override
   void initState() {
     // TODO: implement initState
@@ -40,8 +42,7 @@ class _ContractScreenState extends State<ContractScreen> {
   final kycStepModelController = Get.put(KycStepModel());
 
   Future<String> getPath() async {
-    var id = await Utils.getIntValue('id');
-    var url = await KycApi.getPDF(id!);
+    var url = await KycApi.getPDF();
     var fileName = url.split('/').last;
     var filePath = File('$directory/$fileName');
     // return filePath;
@@ -49,6 +50,7 @@ class _ContractScreenState extends State<ContractScreen> {
       return filePath.path;
     }
     final response = await http.get(Uri.parse(url));
+    bytes = response.bodyBytes;
     await filePath.writeAsBytes(response.bodyBytes);
     return filePath.path;
   }
@@ -65,7 +67,7 @@ class _ContractScreenState extends State<ContractScreen> {
         return Scaffold(
           appBar: AppBar(
             centerTitle: true,
-            title: const TextWidget(txt: "Contract Agreement"),
+            title: const TextWidget(txt: 'Contract Agreement'),
             backgroundColor: Colors.red,
           ),
           body: Column(
@@ -90,10 +92,12 @@ class _ContractScreenState extends State<ContractScreen> {
                     height: MediaQuery.of(context).size.height * 0.06,
                     child: ElevatedButton(
                         style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStateProperty.all(Colors.red),
                             shape: MaterialStateProperty.all<
                                 RoundedRectangleBorder>(RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15),
-                        ))),
+                              borderRadius: BorderRadius.circular(15),
+                            ))),
                         onPressed: () {
                           Navigator.push(
                             context,
@@ -102,9 +106,9 @@ class _ContractScreenState extends State<ContractScreen> {
                             ),
                           );
                         },
-                        child: const TextWidget(
-                          txt: "View PDF",
-                          size: 16,
+                        child: TextWidget(
+                          txt: 'View PDF',
+                          size: 10.sp,
                           weight: FontWeight.w500,
                         )),
                   ),
@@ -113,19 +117,38 @@ class _ContractScreenState extends State<ContractScreen> {
                     height: MediaQuery.of(context).size.height * 0.06,
                     child: ElevatedButton(
                         style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStateProperty.all(Colors.red),
                             shape: MaterialStateProperty.all<
                                 RoundedRectangleBorder>(RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15),
-                        ))),
-                        onPressed: () {
-                          Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => SignatureScreen()));
+                              borderRadius: BorderRadius.circular(15),
+                            ))),
+                        onPressed: () async {
+                          var fileName = 'Agent Contract';
+                          var status = await Permission.storage.status;
+                          if (!status.isGranted) {
+                            await Permission.storage.request();
+                          }
+                          // the downloads folder path
+                          String tempPath = '/storage/emulated/0/Download';
+                          var filePath = tempPath + '/${fileName}.pdf';
+                          final buffer = bytes.buffer;
+                          //save file
+                          var exists = await File(filePath).exists();
+                          if (exists == true) {
+                            File(filePath).delete();
+                          }
+
+                          await File(filePath).writeAsBytes(buffer.asUint8List(
+                              bytes.offsetInBytes, bytes.lengthInBytes));
+
+                          // view file using system default viewer
+                          OpenFile.open(filePath);
+                          Utils.showToast('File Saved at $filePath');
                         },
-                        child: const TextWidget(
-                          txt: "Sign Contract",
-                          size: 16,
+                        child: TextWidget(
+                          txt: 'Download Contract',
+                          size: 10.sp,
                           weight: FontWeight.w500,
                         )),
                   ),
@@ -243,7 +266,8 @@ class _ContractScreenState extends State<ContractScreen> {
                     height: MediaQuery.of(context).size.height * 0.06,
                     child: ElevatedButton(
                         style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all(Colors.white),
+                          backgroundColor:
+                              MaterialStateProperty.all(Colors.white),
                           side: MaterialStateProperty.all<BorderSide>(
                               const BorderSide(color: Colors.red)),
                           shape:
@@ -254,10 +278,11 @@ class _ContractScreenState extends State<ContractScreen> {
                           ),
                         ),
                         onPressed: () {
-                          Navigator.pop(context);
+                          context.read<ContractBloc>().add(AcceptAgreementEvent(
+                              value: 'reject', context: context));
                         },
                         child: const TextWidget(
-                          txt: "Cancel",
+                          txt: 'Reject',
                           weight: FontWeight.w500,
                           clr: Colors.red,
                         )),
@@ -267,25 +292,25 @@ class _ContractScreenState extends State<ContractScreen> {
                     height: MediaQuery.of(context).size.height * 0.06,
                     child: ElevatedButton(
                         style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStateProperty.all(Colors.red),
                             shape: MaterialStateProperty.all<
                                 RoundedRectangleBorder>(RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15),
-                        ))),
+                              borderRadius: BorderRadius.circular(15),
+                            ))),
                         onPressed: () {
                           if (state.aceeptFirstAgreement &&
                               state.aceeptSecondAgreement &&
-                              state.aceeptThirdAgreement &&
-                              widget.signed == true) {
-                            context
-                                .read<ContractBloc>()
-                                .add(AcceptAgreementEvent(context: context));
+                              state.aceeptThirdAgreement) {
+                            context.read<ContractBloc>().add(
+                                AcceptAgreementEvent(
+                                    value: 'accept', context: context));
                           } else {
-                            Utils.showToast(
-                                "Sign the contract and accept agreement to continue");
+                            Utils.showToast('accept agreement to continue');
                           }
                         },
                         child: const TextWidget(
-                          txt: "Submit",
+                          txt: 'Accept',
                           weight: FontWeight.w500,
                         )),
                   ),

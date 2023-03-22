@@ -9,6 +9,7 @@ class TextWidget extends StatelessWidget {
       this.clr,
       this.align,
       this.maxlines,
+      this.overflow,
       this.fam})
       : super(key: key);
   final String txt;
@@ -18,11 +19,13 @@ class TextWidget extends StatelessWidget {
   final TextAlign? align;
   final String? fam;
   final int? maxlines;
+  final TextOverflow? overflow;
 
   @override
   Widget build(BuildContext context) {
     return Text(
       txt,
+      overflow: overflow ,
       style: TextStyle(
           fontSize: size, fontWeight: weight, color: clr, fontFamily: fam),
       textAlign: align,

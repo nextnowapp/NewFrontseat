@@ -13,11 +13,11 @@ import 'package:rounded_loading_button/rounded_loading_button.dart';
 import 'package:sizer/sizer.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../../utils/apis/api_list.dart';
-import '../../utils/apis/kyc_api.dart';
-import '../../utils/widget/textwidget.dart';
-import '../../utils/widget/txtbox.dart';
-import 'agent_onboarding/verify_email_screen.dart';
+import '../services/api_list.dart';
+import '../services/kyc_api.dart';
+import '../../../utils/widget/textwidget.dart';
+import '../../../utils/widget/txtbox.dart';
+import '../agent_onboarding/verify_email_screen.dart';
 
 class NewRegisterScreen extends StatefulWidget {
   const NewRegisterScreen({Key? key}) : super(key: key);
@@ -157,6 +157,10 @@ class _NewRegisterScreenState extends State<NewRegisterScreen> {
                             validator: (value) {
                               if (value!.isEmpty) {
                                 return 'password is required';
+                              } else if (value.length < 8) {
+                                return 'password must be at least 8 characters';
+                              } else if (!regExp.hasMatch(value)) {
+                                return 'Atleast one uppercase,lowercase,numeric and\nspecial character is required ';
                               }
                               return null;
                             },
@@ -182,9 +186,12 @@ class _NewRegisterScreenState extends State<NewRegisterScreen> {
                                 }),
                             validator: (value) {
                               if (value!.isEmpty) {
-                                return 'Confirm password is required';
-                              } else if (value!.isNotEmpty &&
-                                  value != passwordController.text) {
+                                return 'password is required';
+                              } else if (value.length < 8) {
+                                return 'password must be at least 8 characters';
+                              } else if (!regExp.hasMatch(value)) {
+                                return 'Atleast one uppercase,lowercase,numeric and\nspecial character is required ';
+                              } else if (value != passwordController.text) {
                                 return 'Password does not match';
                               }
                               return null;

@@ -1,11 +1,14 @@
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart' hide Response;
 import 'package:nextschool/screens/frontseat/profile_page/widgets/detail_field.dart';
+import 'package:sizer/sizer.dart';
 
 import '../../../controller/kyc_step_model.dart';
 import '../../../utils/Utils.dart';
-import '../../../utils/apis/kyc_api.dart';
-import '../../../utils/model/frontseat_user_detail_model.dart';
+import '../services/kyc_api.dart';
+import '../model/frontseat_user_detail_model.dart';
 import '../../../utils/widget/textwidget.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -49,12 +52,17 @@ class _ProfileScreenState extends State<ProfileScreen>
   String? accHolderName;
   String? accNo;
   String? branchName;
+  String? nationality;
+  String? country;
+  String? idType;
+  String? idNo;
+  String? licenceNo;
   String? image;
   var id;
 
   @override
   void initState() {
-    controller = TabController(length: 4, vsync: this);
+    controller = TabController(length: 7, vsync: this);
     setState(() {
       userdata = KycApi.getUserDetails();
     });
@@ -101,7 +109,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                           image = data.agentPhoto;
                           name =
                               "${data.firstName ?? ''} ${data.lastName ?? ''}";
-                          email = data.email;
+                          email = data.applicationEmail;
                         }
                         return Padding(
                           padding: const EdgeInsets.all(8.0),
@@ -165,6 +173,9 @@ class _ProfileScreenState extends State<ProfileScreen>
                                   Tab(text: 'Address'),
                                   Tab(text: 'Emergency Contact'),
                                   Tab(text: 'Bank Account Details'),
+                                  Tab(text: 'Work Details'),
+                                  Tab(text: 'Identity Verification Details'),
+                                  Tab(text: 'Supporting Documents'),
                                 ],
                               ),
                             ],
@@ -182,37 +193,27 @@ class _ProfileScreenState extends State<ProfileScreen>
                         child: Center(child: CircularProgressIndicator()));
                   } else {
                     if (snapshot.hasData) {
-                      firstName = snapshot.data!.data!.agentDetails!.firstName;
-                      // middleName = snapshot.data!.data!.agentDetails!.middleName;
-                      lastName = snapshot.data!.data!.agentDetails!.lastName;
-                      passportNumber =
-                          snapshot.data!.data!.agentDetails!.passportNumber;
-                      phoneNumber =
-                          snapshot.data!.data!.agentDetails!.applicationPhone;
-                      email = snapshot.data!.data!.agentDetails!.email;
-                      gender =
-                          snapshot.data!.data!.agentDetails!.gender.toString();
-                      maritalStatus =
-                          snapshot.data!.data!.agentDetails!.maritalStatus;
-                      equityGroup =
-                          snapshot.data!.data!.agentDetails!.equityGroup;
-                      dob = snapshot.data!.data!.agentDetails!.dateOfBirth;
-                      residentialAddress =
-                          snapshot.data!.data!.agentDetails!.residentialAddress;
-                      residentialCity =
-                          snapshot.data!.data!.agentDetails!.residentialCity;
+                      var data = snapshot.data!.data!.agentDetails!;
+                      firstName = data.firstName;
+                      middleName = data.middleName;
+                      lastName = data.lastName;
+                      passportNumber = data.passportNumber;
+                      phoneNumber = data.applicationPhone;
+                      email = data.applicationEmail;
+                      gender = data.gender.toString();
+                      maritalStatus = data.maritalStatus;
+                      equityGroup = data.equityGroup;
+                      dob = data.dateOfBirth;
+                      residentialAddress = data.residentialAddress;
+                      residentialCity = data.residentialCity;
                       residentialPostalCode = snapshot
                           .data!.data!.agentDetails!.residentialPostalCode;
                       residentialProvince = snapshot
                           .data!.data!.agentDetails!.residentialprovince;
-                      postalAddress =
-                          snapshot.data!.data!.agentDetails!.postalAddress;
-                      postalCity =
-                          snapshot.data!.data!.agentDetails!.postalCity;
-                      postalPostalCode =
-                          snapshot.data!.data!.agentDetails!.postalPostalCode;
-                      postalProvince =
-                          snapshot.data!.data!.agentDetails!.postalprovince;
+                      postalAddress = data.postalAddress;
+                      postalCity = data.postalCity;
+                      postalPostalCode = data.postalPostalCode;
+                      postalProvince = data.postalprovince;
 
                       emergencyContactFullName = snapshot
                           .data!.data!.agentDetails!.emergencyContactFullName;
@@ -220,17 +221,29 @@ class _ProfileScreenState extends State<ProfileScreen>
                           .data!.data!.agentDetails!.emergencyContactNumber;
                       emergencyAlternativeContactNumber = snapshot
                           .data!.data!.agentDetails!.emergencyAlternativeNumber;
-                      accountType =
-                          snapshot.data!.data!.agentDetails!.accountType;
+                      accountType = data.accountType;
                       accountHolderRelation = snapshot
                           .data!.data!.agentDetails!.emergencyContactRelation;
-                      bankName = snapshot.data!.data!.agentDetails!.bankName;
+                      bankName = data.bankName;
                       accHolderName = snapshot
                           .data!.data!.agentDetails!.bankAccountHolderName;
-                      accNo =
-                          snapshot.data!.data!.agentDetails!.bankAccountNumber;
-                      branchName =
-                          snapshot.data!.data!.agentDetails!.bankBranchName;
+                      accNo = data.bankAccountNumber;
+                      nationality = data.nationality;
+                      country = data.countryOfBirth;
+                      if (data.idNumber == '' && data.passportNo == '') {
+                        idType = 'Asylum Document';
+                        idNo = data.asylumDocNo;
+                      } else if (data.asylumDocNo == '' &&
+                          data.passportNo == '') {
+                        idType = 'Rsa Id';
+                        idNo = data.idNumber;
+                      } else if (data.asylumDocNo == '' &&
+                          data.idNumber == '') {
+                        idType = 'Passport Document';
+                        idNo = data.passportNo;
+                      }
+
+                      licenceNo = data.drivingLicenseId;
                       return Expanded(
                         child: Padding(
                           padding: const EdgeInsets.all(20),
@@ -264,12 +277,21 @@ class _ProfileScreenState extends State<ProfileScreen>
                                         child: Column(
                                           children: [
                                             DetailField(
+                                                icon: Icons.accessibility_new,
+                                                title: 'Title',
+                                                value: data.title ?? ''),
+                                            DetailField(
                                                 icon: Icons.person,
-                                                title: 'Full Name',
-                                                value: firstName == null
-                                                    ? ' '
-                                                    : '$firstName ${middleName ?? ""} ${lastName ?? ''}'
-                                                        .capitalize!),
+                                                title: 'First Name',
+                                                value: firstName ?? ''),
+                                            DetailField(
+                                                icon: Icons.person,
+                                                title: 'Middle Name',
+                                                value: middleName ?? ''),
+                                            DetailField(
+                                                icon: Icons.person,
+                                                title: 'Last Name',
+                                                value: lastName ?? ''),
                                             DetailField(
                                                 icon: Icons.calendar_month,
                                                 title: 'Date of Birth',
@@ -288,17 +310,25 @@ class _ProfileScreenState extends State<ProfileScreen>
                                                 title: 'Gender',
                                                 value: gender ?? ''),
                                             DetailField(
+                                                icon: Icons.place_outlined,
+                                                title: 'Nationality',
+                                                value: nationality ?? ''),
+                                            DetailField(
                                                 icon: Icons.person_pin,
                                                 title: 'Martial Status',
                                                 value: maritalStatus ?? ''),
+                                            DetailField(
+                                                icon: Icons.place,
+                                                title: 'Country of Birth',
+                                                value: country ?? ''),
                                             Padding(
                                               padding: const EdgeInsets.only(
                                                   bottom: 10),
                                               child: DetailField(
-                                                  icon:
-                                                      Icons.person_pin_outlined,
-                                                  title: 'Equity Group',
-                                                  value: equityGroup ?? ''),
+                                                  icon: Icons
+                                                      .card_membership_sharp,
+                                                  title: 'Disability',
+                                                  value: data.disability ?? ''),
                                             ),
                                           ],
                                         ),
@@ -450,6 +480,12 @@ class _ProfileScreenState extends State<ProfileScreen>
                                         child: Column(
                                           children: [
                                             DetailField(
+                                                icon: Icons.group,
+                                                title: 'Relation',
+                                                value:
+                                                    data.emergencyContactRelation ??
+                                                        ''),
+                                            DetailField(
                                                 icon: Icons.person,
                                                 title: 'Name',
                                                 value:
@@ -527,7 +563,13 @@ class _ProfileScreenState extends State<ProfileScreen>
                                             DetailField(
                                                 icon: Icons.phonelink,
                                                 title: 'Branch Name',
-                                                value: branchName ?? ''),
+                                                value:
+                                                    data.bankBranchName ?? ''),
+                                            DetailField(
+                                                icon: Icons.phonelink,
+                                                title: 'Branch Code',
+                                                value:
+                                                    data.bankBranchCode ?? ''),
                                           ],
                                         ),
                                       )
@@ -535,7 +577,228 @@ class _ProfileScreenState extends State<ProfileScreen>
                                   ),
                                 ),
                               ],
-                            )
+                            ),
+                            ListView(
+                              children: [
+                                Card(
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(10)),
+                                  elevation: 1,
+                                  shadowColor: Colors.grey,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        width: double.infinity,
+                                        color: const Color(0xffe3e3e3),
+                                        child: const Padding(
+                                          padding: EdgeInsets.all(8.0),
+                                          child: TextWidget(
+                                            txt: 'Work Details',
+                                            clr: Colors.black,
+                                            size: 18,
+                                            weight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.all(8),
+                                        child: Column(
+                                          children: [
+                                            DetailField(
+                                                icon: Icons.person_pin_outlined,
+                                                title: 'Equity Group',
+                                                value: equityGroup ?? ''),
+                                            DetailField(
+                                                icon: Icons.person_pin_outlined,
+                                                title: 'Income Tax',
+                                                value: data.incomeTax ?? ''),
+                                            DetailField(
+                                                icon: Icons.person_pin_outlined,
+                                                title: 'Preferred Work Address',
+                                                value: data.workLocation ?? ''),
+                                            DetailField(
+                                                icon: Icons.person_pin_outlined,
+                                                title: 'Work City',
+                                                value: data.workCity ?? ''),
+                                            DetailField(
+                                                icon: Icons.person_pin_outlined,
+                                                title: 'Work Province',
+                                                value: data.workProvince ?? ''),
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                            ListView(
+                              children: [
+                                Card(
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(10)),
+                                  elevation: 1,
+                                  shadowColor: Colors.grey,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        width: double.infinity,
+                                        color: const Color(0xffe3e3e3),
+                                        child: const Padding(
+                                          padding: EdgeInsets.all(8.0),
+                                          child: TextWidget(
+                                            txt:
+                                                'Identity Verification Details',
+                                            clr: Colors.black,
+                                            size: 18,
+                                            weight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.all(8),
+                                        child: Column(
+                                          children: [
+                                            DetailField(
+                                                icon: Icons.person_pin_outlined,
+                                                title: 'Identity Document Type',
+                                                value: idType ?? ''),
+                                            DetailField(
+                                                icon: Icons.person_pin_outlined,
+                                                title: 'Identity Document No.',
+                                                value: idNo ?? ''),
+                                            DetailField(
+                                                icon: Icons.person_pin_outlined,
+                                                title: 'Country Of Document',
+                                                value: data.countryName ?? ''),
+                                            DetailField(
+                                                icon: Icons.person_pin_outlined,
+                                                title: 'Driving License ID',
+                                                value: data.drivingLicenseId ??
+                                                    ''),
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                            ListView.builder(
+                              itemCount: data.agentDocArray == null
+                                  ? 0
+                                  : data.agentDocArray!.length,
+                              itemBuilder: (context, index) {
+                                return Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          data.agentDocArray![index].fileName ??
+                                              '',
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.w600,
+                                              fontSize: 12.sp),
+                                        ),
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(15)),
+                                        height: 22.h,
+                                        width: 200.w,
+                                        child: CachedNetworkImage(
+                                          imageUrl: data.agentDocArray![index]
+                                                  .filePath ??
+                                              '',
+                                          imageBuilder:
+                                              (context, imageProvider) =>
+                                                  GestureDetector(
+                                            onTap: (() {
+                                              Navigator.push(context,
+                                                  MaterialPageRoute(
+                                                      builder: (context) {
+                                                return Utils.documentViewer(
+                                                    data.agentDocArray![index]
+                                                            .filePath ??
+                                                        '',
+                                                    context);
+                                              }));
+                                            }),
+                                            child: Container(
+                                              decoration: BoxDecoration(
+                                                borderRadius:
+                                                    BorderRadius.circular(15),
+                                                image: DecorationImage(
+                                                  image: imageProvider,
+                                                  fit: BoxFit.fill,
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                          fit: BoxFit.contain,
+                                          placeholder: (context, url) =>
+                                              const CupertinoActivityIndicator(),
+                                          errorWidget: (context, url, error) =>
+                                              GestureDetector(
+                                            onTap: () {
+                                              Navigator.push(context,
+                                                  MaterialPageRoute(
+                                                      builder: (context) {
+                                                return Utils.documentViewer(
+                                                    data.agentDocArray![index]
+                                                            .filePath ??
+                                                        '',
+                                                    context);
+                                              }));
+                                            },
+                                            child: CachedNetworkImage(
+                                              imageUrl: data
+                                                      .agentDocArray![index]
+                                                      .filePath ??
+                                                  '',
+                                              imageBuilder:
+                                                  (context, imageProvider) =>
+                                                      Container(
+                                                decoration: BoxDecoration(
+                                                  borderRadius:
+                                                      BorderRadius.circular(15),
+                                                  image: DecorationImage(
+                                                    image: imageProvider,
+                                                    fit: BoxFit.cover,
+                                                  ),
+                                                  // borderRadius:
+                                                  //     const BorderRadius.all(Radius.circular(50)),
+                                                ),
+                                              ),
+                                              placeholder: (context, url) =>
+                                                  const CupertinoActivityIndicator(),
+                                              errorWidget:
+                                                  (context, url, error) =>
+                                                      const Icon(Icons.error),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 30,
+                                      ),
+                                      const Divider(
+                                        thickness: 3,
+                                      )
+                                    ],
+                                  ),
+                                );
+                              },
+                            ),
                           ]),
                         ),
                       );

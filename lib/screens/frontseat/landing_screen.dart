@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:nextschool/screens/frontseat/new_login_screen.dart';
+import 'package:nextschool/screens/frontseat/agent_login/new_login_screen.dart';
 
 class LandingScreen extends StatelessWidget {
   const LandingScreen({Key? key}) : super(key: key);

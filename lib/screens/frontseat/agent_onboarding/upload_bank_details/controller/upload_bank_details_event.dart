@@ -11,7 +11,7 @@ class UploadBankDocumentsEvent extends UploadBankDetailsEvent {
   String? branchcode;
   String accNumber;
   String accountHolderName;
-  String bankStatement;
+  String? bankStatement;
    BuildContext context;
   UploadBankDocumentsEvent({
     required this.accountType,
@@ -19,7 +19,7 @@ class UploadBankDocumentsEvent extends UploadBankDetailsEvent {
     required this.bankName,
     required this.accNumber,
     required this.accountHolderName,
-    required this.bankStatement,
+     this.bankStatement,
     required this.context,
      this.branchName,
      this.branchcode,

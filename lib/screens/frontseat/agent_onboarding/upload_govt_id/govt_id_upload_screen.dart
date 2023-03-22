@@ -10,11 +10,13 @@ import 'package:sizer/sizer.dart';
 
 import '../../../../controller/kyc_step_model.dart';
 import '../../../../utils/Utils.dart';
+import '../../model/frontseat_user_detail_model.dart';
 import '../../../../utils/widget/textwidget.dart';
 import 'controller/upload_govt_id_bloc.dart';
 
 class GovtIdUploadScreen extends StatefulWidget {
-  const GovtIdUploadScreen({Key? key}) : super(key: key);
+  const GovtIdUploadScreen({Key? key, this.data}) : super(key: key);
+  final UserDetailModel? data;
 
   @override
   State<GovtIdUploadScreen> createState() => _GovtIdUploadScreenState();
@@ -28,6 +30,10 @@ class _GovtIdUploadScreenState extends State<GovtIdUploadScreen> {
   String? drivingLicenseRearImageUrl;
   String? nidFrontImageUrl;
   String? nidRearImageUrl;
+  String? drivingLicenseFrontImage;
+  String? drivingLicenseRearImage;
+  String? nidFrontImage;
+  String? nidRearImage;
 
 //function to upload image to firebase storage
 
@@ -188,6 +194,20 @@ class _GovtIdUploadScreenState extends State<GovtIdUploadScreen> {
   }
 
   //upload image to firebase storage and user data to firebase firestore
+  @override
+  void initState() {
+    super.initState();
+    if (widget.data != null) {
+      nidFrontImage =
+          widget.data!.data!.agentDetails!.nationalIdFrontImage ?? null;
+      nidRearImage =
+          widget.data!.data!.agentDetails!.nationalIdRearImage ?? null;
+      drivingLicenseFrontImage =
+          widget.data!.data!.agentDetails!.drivingLicenceFrontImage ?? null;
+      drivingLicenseRearImage =
+          widget.data!.data!.agentDetails!.drivingLicenceRearImage ?? null;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -244,7 +264,7 @@ class _GovtIdUploadScreenState extends State<GovtIdUploadScreen> {
                     child: Align(
                       alignment: Alignment.centerLeft,
                       child: TextWidget(
-                        txt: "Identity Document",
+                        txt: 'Identity Document',
                         size: 18,
                         clr: Colors.red,
                         weight: FontWeight.bold,
@@ -272,8 +292,10 @@ class _GovtIdUploadScreenState extends State<GovtIdUploadScreen> {
                         width: MediaQuery.of(context).size.width,
                         child: nidFrontImageUrl != null
                             ? Image.file(File(nidFrontImageUrl!))
-                            : const Icon(Icons.add,
-                                size: 100, color: Colors.grey),
+                            : widget.data != null && nidFrontImage != ''
+                                ? Image.network(nidFrontImage!)
+                                : const Icon(Icons.add,
+                                    size: 100, color: Colors.grey),
                       ),
                     ),
                   ),
@@ -304,8 +326,10 @@ class _GovtIdUploadScreenState extends State<GovtIdUploadScreen> {
                         width: MediaQuery.of(context).size.width,
                         child: nidRearImageUrl != null
                             ? Image.file(File(nidRearImageUrl!))
-                            : const Icon(Icons.add,
-                                size: 100, color: Colors.grey),
+                            : widget.data != null && nidRearImage != ''
+                                ? Image.network(nidRearImage!)
+                                : const Icon(Icons.add,
+                                    size: 100, color: Colors.grey),
                       ),
                     ),
                   ),
@@ -323,7 +347,7 @@ class _GovtIdUploadScreenState extends State<GovtIdUploadScreen> {
                     child: Align(
                       alignment: Alignment.centerLeft,
                       child: TextWidget(
-                        txt: "Driving Licence(Optional)",
+                        txt: 'Driving Licence(Optional)',
                         size: 18,
                         clr: Colors.red,
                         weight: FontWeight.bold,
@@ -351,8 +375,11 @@ class _GovtIdUploadScreenState extends State<GovtIdUploadScreen> {
                         width: MediaQuery.of(context).size.width,
                         child: drivingLicenseFrontImageUrl != null
                             ? Image.file(File(drivingLicenseFrontImageUrl!))
-                            : const Icon(Icons.add,
-                                size: 100, color: Colors.grey),
+                            : widget.data != null &&
+                                    drivingLicenseFrontImage != ''
+                                ? Image.network(drivingLicenseFrontImage!)
+                                : const Icon(Icons.add,
+                                    size: 100, color: Colors.grey),
                       ),
                     ),
                   ),
@@ -383,8 +410,11 @@ class _GovtIdUploadScreenState extends State<GovtIdUploadScreen> {
                         width: MediaQuery.of(context).size.width,
                         child: drivingLicenseRearImageUrl != null
                             ? Image.file(File(drivingLicenseRearImageUrl!))
-                            : const Icon(Icons.add,
-                                size: 100, color: Colors.grey),
+                            : widget.data != null &&
+                                    drivingLicenseRearImage != ''
+                                ? Image.network(drivingLicenseRearImage!)
+                                : const Icon(Icons.add,
+                                    size: 100, color: Colors.grey),
                       ),
                     ),
                   ),
@@ -410,19 +440,30 @@ class _GovtIdUploadScreenState extends State<GovtIdUploadScreen> {
                             color: Colors.red,
                             controller: _btnController,
                             onPressed: () {
-                              if (nidFrontImageUrl != null &&
-                                  nidRearImageUrl != null) {
+                              if (widget.data != null) {
                                 context.read<UploadGovtIdBloc>().add(
                                     UploadGovtIdDocumentsEvent(
-                                        idFront: nidFrontImageUrl!,
-                                        idRear: nidRearImageUrl!,
+                                        data: widget.data,
+                                        idFront: nidFrontImageUrl,
+                                        idRear: nidRearImageUrl,
                                         dlFront: drivingLicenseFrontImageUrl,
                                         dlRear: drivingLicenseRearImageUrl,
                                         context: context));
                               } else {
-                                _btnController.reset();
-                                Utils.showToast(
-                                    'Please add all required documents');
+                                if (nidFrontImageUrl != null &&
+                                    nidRearImageUrl != null) {
+                                  context.read<UploadGovtIdBloc>().add(
+                                      UploadGovtIdDocumentsEvent(
+                                          idFront: nidFrontImageUrl!,
+                                          idRear: nidRearImageUrl!,
+                                          dlFront: drivingLicenseFrontImageUrl,
+                                          dlRear: drivingLicenseRearImageUrl,
+                                          context: context));
+                                } else {
+                                  _btnController.reset();
+                                  Utils.showToast(
+                                      'Please add all required documents');
+                                }
                               }
                             },
                             child: const Text('Upload',

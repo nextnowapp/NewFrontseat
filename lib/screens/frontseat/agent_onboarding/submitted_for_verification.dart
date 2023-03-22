@@ -22,7 +22,7 @@ class SubmittedForVerificationScreen extends StatelessWidget {
             kycStepModelController.inContractingValue ||
                     kycStepModelController.contractedValue
                 ? const Text(
-                    'Contract Submitted',
+                    'Signature Submitted',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30,
@@ -42,7 +42,7 @@ class SubmittedForVerificationScreen extends StatelessWidget {
                 ? const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
                     child: Text(
-                      'Your contract has been submitted for signature. We will notify you once it has been approved.',
+                      'Your signature has been submitted for contract. We will notify you once the contract is ready.',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 14,

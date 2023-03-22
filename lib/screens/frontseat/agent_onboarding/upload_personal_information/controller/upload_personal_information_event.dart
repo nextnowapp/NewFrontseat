@@ -2,7 +2,9 @@ part of 'upload_personal_information_bloc.dart';
 
 @immutable
 abstract class UploadPersonalInformationEvent {}
-class CopyAddressEvent extends UploadPersonalInformationEvent{}
+
+class CopyAddressEvent extends UploadPersonalInformationEvent {}
+
 class UploadPersonalDataEvent extends UploadPersonalInformationEvent {
   BuildContext context;
   String title;
@@ -36,6 +38,9 @@ class UploadPersonalDataEvent extends UploadPersonalInformationEvent {
   String emergencyContactRelation;
   String emergencyContactFullName;
   String emergencyContactNumber;
+  bool? isEdit;
+  UserDetailModel? data;
+
   String emergencyAlternativeContactNumber;
   UploadPersonalDataEvent(
       {required this.context,
@@ -68,8 +73,11 @@ class UploadPersonalDataEvent extends UploadPersonalInformationEvent {
       required this.emergencyAlternativeContactNumber,
       this.middleName,
       this.tax,
+      this.isEdit,
+      this.data,
       this.passportNumber});
 }
+
 class ResubmitPersonalDataEvent extends UploadPersonalInformationEvent {
   BuildContext context;
   String title;

@@ -84,7 +84,7 @@ import 'package:nextschool/screens/student/onlineExam/ActiveOnlineExamScreen.dar
 import 'package:nextschool/screens/student/onlineExam/OnlineExamResultScreen.dart';
 import 'package:nextschool/screens/student/onlineExam/OnlineExamScreen.dart';
 import 'package:nextschool/screens/student/profile/profile.dart';
-import 'package:nextschool/screens/student/studyMaterials/Ebooks.dart';
+import 'package:nextschool/screens/frontseat/document_page/training_documents.dart';
 import 'package:nextschool/screens/student/studyMaterials/StudentAssignment.dart';
 import 'package:nextschool/screens/student/studyMaterials/StudentOtherDownloads.dart';
 import 'package:nextschool/screens/student/studyMaterials/StudyMaterialList.dart';
