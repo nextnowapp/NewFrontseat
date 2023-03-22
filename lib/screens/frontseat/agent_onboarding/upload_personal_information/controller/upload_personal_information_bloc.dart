@@ -1,13 +1,12 @@
 import 'package:bloc/bloc.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:nextschool/screens/frontseat/agent_onboarding/submitted_for_verification.dart';
 import 'package:nextschool/screens/frontseat/agent_onboarding/upload_govt_id/govt_id_details.dart';
 
 import '../../../../../controller/kyc_step_model.dart';
 import '../../../../../utils/Utils.dart';
-import '../../../../../utils/apis/kyc_api.dart';
+import '../../../services/kyc_api.dart';
+import '../../../model/frontseat_user_detail_model.dart';
 
 part 'upload_personal_information_event.dart';
 part 'upload_personal_information_state.dart';
@@ -23,7 +22,7 @@ class UploadPersonalInformationBloc extends Bloc<UploadPersonalInformationEvent,
       var id = await Utils.getIntValue('id');
       try {
         var data = {
-          'onboarding_steps':2,
+          'onboarding_steps': 2,
           'user_id': id,
           'title': event.title,
           'firstName': event.firstName,
@@ -58,18 +57,12 @@ class UploadPersonalInformationBloc extends Bloc<UploadPersonalInformationEvent,
           'workProvince': event.workProvince
         };
         await KycApi.uploadPersonalInformation(data);
-        if (kycStepModelController.isEditableValue) {
-          kycStepModelController.isEditableValue = false;
-          kycStepModelController.allStepsCompletedValue = true;
-          Navigator.pushReplacement(
-              event.context,
-              MaterialPageRoute(
-                  builder: (context) =>
-                      const SubmittedForVerificationScreen()));
-        } else {
-          Navigator.pushReplacement(event.context,
-              MaterialPageRoute(builder: (context) => const GovtIdDetails()));
-        }
+       if(event.isEdit == true){
+        Navigator.pushReplacement(event.context,
+            MaterialPageRoute(builder: (context) =>  GovtIdDetails(data: event.data,)));
+       }else{
+        Navigator.pushReplacement(event.context,
+            MaterialPageRoute(builder: (context) => const GovtIdDetails()));}
       } catch (e) {
         print(e);
       }

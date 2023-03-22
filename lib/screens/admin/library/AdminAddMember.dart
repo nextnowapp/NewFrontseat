@@ -411,7 +411,7 @@ class _AddMemberState extends State<AddMember> {
             child: Padding(
               padding: const EdgeInsets.only(left: 8.0, bottom: 10.0),
               child: Text(
-                item.name!,
+                item.name,
                 style: Theme.of(context).textTheme.headline6,
               ),
             ),

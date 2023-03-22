@@ -10,19 +10,22 @@ class UploadGovtIdDetailsEvent extends UploadGovtIdEvent {
   String? country;
   String? asylum;
   String? passport;
-  UploadGovtIdDetailsEvent({ this.idDocument,required this.documentType ,this.drivingLicense,this.country,this.asylum,this.passport});
+  UserDetailModel? data;
+  UploadGovtIdDetailsEvent({ this.idDocument,required this.documentType ,this.drivingLicense,this.country,this.asylum,this.passport,this.data});
 }
 
 class UploadGovtIdDocumentsEvent extends UploadGovtIdEvent {
-  String idFront;
-  String idRear;
+  String? idFront;
+  String? idRear;
   String? dlFront;
   String? dlRear;
+  UserDetailModel? data;
   BuildContext context;
   UploadGovtIdDocumentsEvent(
-      {required this.idFront,
-      required this.idRear,
+      { this.idFront,
+       this.idRear,
       required this.context,
       this.dlFront,
+      this.data,
       this.dlRear});
 }

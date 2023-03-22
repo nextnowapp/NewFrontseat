@@ -14,13 +14,15 @@ import 'package:sizer/sizer.dart';
 
 import '../../../../controller/kyc_step_model.dart';
 import '../../../../utils/Utils.dart';
-import '../../../../utils/frontseat_constants.dart';
+import '../../frontseat_constants.dart';
+import '../../model/frontseat_user_detail_model.dart';
 import '../../../../utils/widget/textwidget.dart';
 import '../../../../utils/widget/txtbox.dart';
 import 'controller/upload_bank_details_bloc.dart';
 
 class BankDetails extends StatefulWidget {
-  const BankDetails({Key? key}) : super(key: key);
+  const BankDetails({Key? key, this.data}) : super(key: key);
+  final UserDetailModel? data;
 
   @override
   State<BankDetails> createState() => _BankDetailsState();
@@ -36,6 +38,7 @@ class _BankDetailsState extends State<BankDetails> {
       TextEditingController();
   final TextEditingController bankAccountHolderNameController =
       TextEditingController();
+  final TextEditingController bankNameController = TextEditingController();
   final RoundedLoadingButtonController _btnController =
       RoundedLoadingButtonController();
   String? _selectedBank;
@@ -43,6 +46,7 @@ class _BankDetailsState extends State<BankDetails> {
   String? _selectedAccHolderRelationship;
 
   String? bankStatementUrl;
+  String? bankStatement;
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   Future<void> _uploadImagefromCamera(String? type) async {
     PickedFile? file = await ImagePicker.platform.pickImage(
@@ -73,6 +77,23 @@ class _BankDetailsState extends State<BankDetails> {
   @override
   void initState() {
     super.initState();
+    if (widget.data != null) {
+      _selectedAccountType = widget.data!.data!.agentDetails!.accountType ?? '';
+      _selectedAccHolderRelationship =
+          widget.data!.data!.agentDetails!.accHolderRelationship ?? '';
+      _selectedBank = widget.data!.data!.agentDetails!.bankName ?? '';
+      bankAccountHolderNameController.text =
+          widget.data!.data!.agentDetails!.bankAccountHolderName ?? '';
+      bankAccountNumberController.text =
+          widget.data!.data!.agentDetails!.bankAccountNumber ?? '';
+      bankBranchNameController.text =
+          widget.data!.data!.agentDetails!.bankBranchName ?? '';
+      bankBranchCode.text =
+          widget.data!.data!.agentDetails!.bankBranchCode ?? '';
+      bankStatement = widget.data!.data!.agentDetails!.bankStatement ?? null;
+      bankNameController.text = widget.data!.data!.agentDetails!.bankName ?? '';
+      _selectedBank = widget.data!.data!.agentDetails!.bankName ?? '';
+    }
     Utils.getIntValue('id').then((value) {
       setState(() {
         id = value;
@@ -474,6 +495,7 @@ class _BankDetailsState extends State<BankDetails> {
                             TxtField(
                               hint: 'Account Number*',
                               controller: bankAccountNumberController,
+                              type: TextInputType.number,
                               formatter: [
                                 FilteringTextInputFormatter.digitsOnly,
                                 FilteringTextInputFormatter.singleLineFormatter
@@ -547,8 +569,10 @@ class _BankDetailsState extends State<BankDetails> {
                                 width: MediaQuery.of(context).size.width,
                                 child: bankStatementUrl != null
                                     ? Image.file(File(bankStatementUrl!))
-                                    : const Icon(Icons.add,
-                                        size: 100, color: Colors.grey),
+                                    : widget.data != null && bankStatement != ''
+                                        ? Image.network(bankStatement!)
+                                        : const Icon(Icons.add,
+                                            size: 100, color: Colors.grey),
                               ),
                             ),
                             const SizedBox(height: 5),
@@ -569,35 +593,63 @@ class _BankDetailsState extends State<BankDetails> {
                                 color: Colors.red,
                                 controller: _btnController,
                                 onPressed: () {
-                                  if (_formKey.currentState!.validate()) {
-                                    _formKey.currentState!.save();
-                                    if (bankStatementUrl != null &&
-                                        _selectedAccountType != null) {
-                                      context.read<UploadBankDetailsBloc>().add(
-                                          UploadBankDocumentsEvent(
-                                              accountType:
-                                                  _selectedAccountType!,
-                                              accountHolderRelation:
-                                                  _selectedAccHolderRelationship!,
-                                              bankName: _selectedBank!,
-                                              branchName:
-                                                  bankBranchNameController.text,
-                                              branchcode: bankBranchCode.text,
-                                              accNumber:
-                                                  bankAccountNumberController
-                                                      .text,
-                                              accountHolderName:
-                                                  bankAccountHolderNameController
-                                                      .text,
-                                              bankStatement: bankStatementUrl!,
-                                              context: context));
+                                  if (widget.data != null) {
+                                    context.read<UploadBankDetailsBloc>().add(
+                                        UploadBankDocumentsEvent(
+                                            accountType: _selectedAccountType!,
+                                            accountHolderRelation:
+                                                _selectedAccHolderRelationship!,
+                                            bankName: _selectedBank!,
+                                            branchName:
+                                                bankBranchNameController.text,
+                                            branchcode: bankBranchCode.text,
+                                            accNumber:
+                                                bankAccountNumberController
+                                                    .text,
+                                            accountHolderName:
+                                                bankAccountHolderNameController
+                                                    .text,
+                                            bankStatement: bankStatementUrl,
+                                            context: context));
+                                    kycStepModelController.isEditableValue =
+                                        false;
+                                    kycStepModelController
+                                        .allStepsCompletedValue = true;
+                                  } else {
+                                    if (_formKey.currentState!.validate()) {
+                                      _formKey.currentState!.save();
+
+                                      if (bankStatementUrl != null &&
+                                          _selectedAccountType != null) {
+                                        context
+                                            .read<UploadBankDetailsBloc>()
+                                            .add(UploadBankDocumentsEvent(
+                                                accountType:
+                                                    _selectedAccountType!,
+                                                accountHolderRelation:
+                                                    _selectedAccHolderRelationship!,
+                                                bankName: _selectedBank!,
+                                                branchName:
+                                                    bankBranchNameController
+                                                        .text,
+                                                branchcode: bankBranchCode.text,
+                                                accNumber:
+                                                    bankAccountNumberController
+                                                        .text,
+                                                accountHolderName:
+                                                    bankAccountHolderNameController
+                                                        .text,
+                                                bankStatement:
+                                                    bankStatementUrl!,
+                                                context: context));
+                                      } else {
+                                        _btnController.reset();
+                                        Utils.showToast(
+                                            'Please add all required data');
+                                      }
                                     } else {
                                       _btnController.reset();
-                                      Utils.showToast(
-                                          'Please add all required data');
                                     }
-                                  } else {
-                                    _btnController.reset();
                                   }
                                 },
                                 child: const Text('Upload',
@@ -607,6 +659,9 @@ class _BankDetailsState extends State<BankDetails> {
                           ],
                         ),
                       ),
+                      const SizedBox(
+                        height: 300,
+                      )
                     ],
                   ),
                 ),
@@ -636,6 +691,7 @@ class _BankDetailsState extends State<BankDetails> {
           height: 0.5.h,
         ),
         SearchField<String>(
+          controller: bankNameController,
           autoCorrect: true,
           suggestions:
               bankList.map((e) => SearchFieldListItem(e, item: e)).toList(),

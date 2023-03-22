@@ -5,8 +5,9 @@ import 'package:nextschool/screens/frontseat/agent_onboarding/upload_personal_in
 
 import '../../../controller/kyc_step_model.dart';
 import '../../../utils/Utils.dart';
-import '../../../utils/apis/kyc_api.dart';
+import '../services/kyc_api.dart';
 import '../../../utils/widget/textwidget.dart';
+
 class FormReSubmissionScreen extends StatefulWidget {
   const FormReSubmissionScreen({Key? key}) : super(key: key);
 
@@ -59,12 +60,15 @@ class _FormReSubmissionScreenState extends State<FormReSubmissionScreen> {
                   fontWeight: FontWeight.w800,
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
                 child: Text(
-                  'Your application has been rejected , Please resubmit the application',
+                  KycStepModelController.rejectedValue
+                      ? "Your application is rejected permanently, so you can't resubmit again"
+                      : 'Your application has been rejected , Please resubmit the application',
                   textAlign: TextAlign.center,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 14,
                     color: Colors.grey,
                     fontWeight: FontWeight.w500,
@@ -72,23 +76,26 @@ class _FormReSubmissionScreenState extends State<FormReSubmissionScreen> {
                 ),
               ),
               const SizedBox(height: 10),
-              TextButton(
-                style: TextButton.styleFrom(
-                    foregroundColor: Colors.white, backgroundColor: Colors.red),
-                onPressed: () async {
-                  Utils.showProcessingToast();
-                  final data = await KycApi.getUserDetails();
-                  Navigator.push(
-                      context,
-                      CupertinoPageRoute(
-                          builder: (context) =>
-                              OnboardPersonalInformation(data: data)));
-                },
-                child: const Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: TextWidget(txt: 'Re-Submit'),
-                ),
-              ),
+              KycStepModelController.rejectedValue
+                  ? const SizedBox()
+                  : TextButton(
+                      style: TextButton.styleFrom(
+                          foregroundColor: Colors.white,
+                          backgroundColor: Colors.red),
+                      onPressed: () async {
+                        Utils.showProcessingToast();
+                        final data = await KycApi.getUserDetails();
+                        Navigator.push(
+                            context,
+                            CupertinoPageRoute(
+                                builder: (context) =>
+                                    OnboardPersonalInformation(data: data)));
+                      },
+                      child: const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: TextWidget(txt: 'Re-Submit'),
+                      ),
+                    ),
               const SizedBox(
                 height: 50,
               ),
@@ -101,7 +108,7 @@ class _FormReSubmissionScreenState extends State<FormReSubmissionScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const TextWidget(
-                          txt: "Note :-",
+                          txt: 'Comment :-',
                           weight: FontWeight.bold,
                           size: 16,
                           clr: Colors.black54,
@@ -111,6 +118,19 @@ class _FormReSubmissionScreenState extends State<FormReSubmissionScreen> {
                         ),
                         TextWidget(
                           txt: KycStepModelController.commentValue,
+                          clr: Colors.black54,
+                        ),
+                        const TextWidget(
+                          txt: 'Reviewed by :-',
+                          weight: FontWeight.bold,
+                          size: 16,
+                          clr: Colors.black54,
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        TextWidget(
+                          txt: KycStepModelController.reviewerValue,
                           clr: Colors.black54,
                         )
                       ],

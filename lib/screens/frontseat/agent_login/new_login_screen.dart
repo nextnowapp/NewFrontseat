@@ -1,22 +1,15 @@
-import 'dart:convert';
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:get/get.dart';
-import 'package:http/http.dart' as http;
-import 'package:nextschool/screens/frontseat/new_register_screen.dart';
-import 'package:nextschool/screens/frontseat/reset_password_screen.dart';
-import 'package:nextschool/utils/Utils.dart';
+import 'package:nextschool/screens/frontseat/agent_login/controller/login_bloc.dart';
+import 'package:nextschool/screens/frontseat/agent_login/reset_password_screen.dart';
+import 'package:nextschool/screens/frontseat/agent_register/new_register_screen.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
 import 'package:sizer/sizer.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../../controller/user_controller.dart';
-import '../../utils/apis/api_list.dart';
-import '../../utils/widget/textwidget.dart';
-import '../../utils/widget/txtbox.dart';
-import 'nav_bar.dart';
+import '../../../utils/widget/textwidget.dart';
+import '../../../utils/widget/txtbox.dart';
 
 class LoginFrontSeat extends StatefulWidget {
   LoginFrontSeat({Key? key}) : super(key: key);
@@ -30,23 +23,22 @@ class _LoginFrontSeatState extends State<LoginFrontSeat> {
   final passwordController = TextEditingController();
   final formKey = GlobalKey<FormState>();
   bool isObscure = true;
-  UserDetailsController controller = Get.put(UserDetailsController());
-  final RoundedLoadingButtonController _btnController =
+
+  final RoundedLoadingButtonController btnController =
       RoundedLoadingButtonController();
-  UserDetailsController _userDetailsController =
-      Get.put(UserDetailsController());
+  final RegExp regExp =
+      RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$');
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        resizeToAvoidBottomInset: true,
-        body: Center(
-          child: SingleChildScrollView(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Column(
+    return BlocBuilder<LoginBloc, LoginState>(
+      builder: (context, state) {
+        return Scaffold(
+            resizeToAvoidBottomInset: true,
+            body: Center(
+              child: SingleChildScrollView(
+                child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     SizedBox(
                         width: MediaQuery.of(context).size.width * 0.6,
@@ -92,27 +84,30 @@ class _LoginFrontSeatState extends State<LoginFrontSeat> {
                               height: 10,
                             ),
                             TxtField(
-                              hint: 'Password',
-                              controller: passwordController,
-                              pass: isObscure,
-                              icon: IconButton(
-                                  icon: Icon(
-                                    isObscure
-                                        ? Icons.visibility
-                                        : Icons.visibility_off,
-                                  ),
-                                  onPressed: () {
-                                    setState(() {
-                                      isObscure = !isObscure;
-                                    });
-                                  }),
-                              validator: (value) {
-                                if (value!.isEmpty) {
-                                  return 'password is required';
-                                }
-                                return null;
-                              },
-                            ),
+                                hint: 'Password',
+                                controller: passwordController,
+                                pass: isObscure,
+                                icon: IconButton(
+                                    icon: Icon(
+                                      isObscure
+                                          ? Icons.visibility
+                                          : Icons.visibility_off,
+                                    ),
+                                    onPressed: () {
+                                      setState(() {
+                                        isObscure = !isObscure;
+                                      });
+                                    }),
+                                validator: (value) {
+                                  if (value!.isEmpty) {
+                                    return 'password is required';
+                                  } else if (value.length < 8) {
+                                    return 'password must be at least 8 characters';
+                                  } else if (!regExp.hasMatch(value)) {
+                                    return 'Atleast one uppercase,lowercase,numeric and\nspecial character is required ';
+                                  }
+                                  return null;
+                                }),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
@@ -122,7 +117,7 @@ class _LoginFrontSeatState extends State<LoginFrontSeat> {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  ResetPasswordScreen()));
+                                                  ForgotPassword()));
                                     },
                                     child: const TextWidget(
                                         txt: 'Forgot password?'))
@@ -132,11 +127,6 @@ class _LoginFrontSeatState extends State<LoginFrontSeat> {
                         ),
                       ),
                     ),
-                  ],
-                ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -191,12 +181,16 @@ class _LoginFrontSeatState extends State<LoginFrontSeat> {
                           width: 80.w,
                           borderRadius: 5,
                           color: Colors.red,
-                          controller: _btnController,
+                          controller: btnController,
                           onPressed: () {
                             if (formKey.currentState!.validate()) {
-                              login();
+                              context.read<LoginBloc>().add(LoginUserEvent(
+                                  context: context,
+                                  email: emailController.text,
+                                  password: passwordController.text,
+                                  buttonController: btnController));
                             } else {
-                              _btnController.reset();
+                              btnController.reset();
                             }
                           },
                           child: const Text('Login',
@@ -229,143 +223,40 @@ class _LoginFrontSeatState extends State<LoginFrontSeat> {
                     const SizedBox(
                       height: 15,
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.8,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const TextWidget(txt: 'Please register and'),
-                          TextButton(
-                            style: TextButton.styleFrom(
-                              foregroundColor: Colors.red,
-                              backgroundColor: Colors.transparent,
-                              shape: const RoundedRectangleBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(5)),
-                              ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const TextWidget(txt: 'Please register and'),
+                        TextButton(
+                          style: TextButton.styleFrom(
+                            foregroundColor: Colors.red,
+                            backgroundColor: Colors.transparent,
+                            shape: const RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(5)),
                             ),
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const NewRegisterScreen()));
-                            },
-                            child: const Text('Apply here',
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.red,
-                                )),
                           ),
-                        ],
-                      ),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const NewRegisterScreen()));
+                          },
+                          child: const Text('Apply here',
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.red,
+                              )),
+                        ),
+                      ],
                     ),
                   ],
                 ),
-              ],
-            ),
-          ),
-        ));
-  }
-
-  login() async {
-    int id;
-    int roleId;
-    String role;
-    String fullName;
-    String email;
-    String mobile;
-    String dob;
-    String photo;
-    int genderId;
-    String gender;
-    String designation;
-    int zoom;
-    String is_administrator;
-    String user_type;
-    String token;
-    bool isLogged;
-    String schoolUrl;
-    var message;
-    var data = {
-      'email': emailController.text,
-      'password': passwordController.text,
-    };
-    final response = await http.post(
-      Uri.parse(FrontSeatApi.loginUser),
-      body: data,
+              ),
+            ));
+      },
     );
-    log(response.statusCode.toString());
-    if (response.statusCode == 200) {
-      var data = jsonDecode(response.body);
-      var userData = data['data']['user'];
-      // getting the required data from the response
-      id = userData['id'];
-      roleId = userData['role_id'];
-      role = userData['role'];
-      fullName = userData['fullname'];
-      email = userData['email'] ?? '';
-      mobile = userData['mobile'] ?? '';
-      dob = userData['dob'];
-      photo = userData['image'] ?? (userData['photo'] ?? '');
-      genderId = userData['genderId'] ?? 1;
-      gender = userData['gender'] ?? '';
-      designation = userData['designation'] ?? '';
-      zoom = userData['zoom'];
-      is_administrator = userData['is_administrator'];
-      user_type = userData['user_type'];
-      token = userData['accessToken'];
-      schoolUrl = FrontSeatApi.base;
-
-      //saving data in local
-      Utils.saveIntValue('id', id);
-      Utils.saveIntValue('roleId', roleId);
-      Utils.saveStringValue('rule', role);
-      Utils.saveStringValue('fullname', fullName);
-      Utils.saveStringValue('email', email);
-      Utils.saveStringValue('mobile', mobile);
-      Utils.saveStringValue('dob', dob);
-      Utils.saveStringValue('image', photo);
-      Utils.saveIntValue('genderId', genderId);
-      Utils.saveStringValue('gender', gender);
-      Utils.saveStringValue('designation', designation);
-      Utils.saveIntValue('zoom', zoom);
-      Utils.saveStringValue('isAdministrator', is_administrator);
-      Utils.saveStringValue('user_type', user_type);
-      Utils.saveStringValue('token', token);
-      Utils.saveBooleanValue('isLogged', true);
-      Utils.saveStringValue('schoolUrl', schoolUrl);
-
-      //intialize the user controller with the required data
-      controller.id = id;
-      controller.roleId = roleId;
-      controller.role = role;
-      controller.fullName = fullName;
-      controller.email = email;
-      controller.mobile = mobile;
-      controller.dob = dob;
-      controller.photo = photo;
-      controller.genderId = genderId;
-      controller.gender = gender;
-      controller.designation = designation;
-      controller.zoom = zoom;
-      controller.is_administrator = is_administrator;
-      controller.user_type = user_type;
-      controller.token = token;
-      controller.isLogged = true;
-      schoolUrl = FrontSeatApi.base;
-      Utils.showToast('Successfully logged in');
-      Navigator.pushAndRemoveUntil(
-          context,
-          MaterialPageRoute(
-              builder: (BuildContext context) => const BottomBar()),
-          (Route<dynamic> route) => route is BottomBar);
-      _btnController.reset();
-    } else {
-      Utils.showToast('Incorrect Email or Password');
-      _btnController.reset();
-      throw Exception('Failed to load');
-    }
   }
 }

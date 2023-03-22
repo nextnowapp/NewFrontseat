@@ -8,14 +8,15 @@ import 'package:rounded_loading_button/rounded_loading_button.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../../../utils/Utils.dart';
-import '../../../../utils/frontseat_constants.dart';
+import '../../frontseat_constants.dart';
+import '../../model/frontseat_user_detail_model.dart';
 import '../../../../utils/widget/textwidget.dart';
 import '../../../../utils/widget/txtbox.dart';
 import 'controller/upload_govt_id_bloc.dart';
 
 class GovtIdDetails extends StatefulWidget {
-  const GovtIdDetails({Key? key}) : super(key: key);
-
+  const GovtIdDetails({Key? key, this.data}) : super(key: key);
+  final UserDetailModel? data;
   @override
   State<GovtIdDetails> createState() => _GovtIdDetailsState();
 }
@@ -33,6 +34,20 @@ class _GovtIdDetailsState extends State<GovtIdDetails> {
   String? selectedCountry;
   String? documenttype;
   String? documentno;
+  @override
+  void initState() {
+    super.initState();
+    if (widget.data != null) {
+      _selectedIdentityDocument =
+          widget.data!.data!.agentDetails!.documentType ?? '';
+      selectedCountry = widget.data!.data!.agentDetails!.countryName ?? '';
+      drivingLicensce.text =
+          widget.data!.data!.agentDetails!.drivingLicenseId ?? '';
+      rsaID.text = widget.data!.data!.agentDetails!.idNumber ?? '';
+      asylum.text = widget.data!.data!.agentDetails!.asylumDocNo ?? '';
+      passport.text = widget.data!.data!.agentDetails!.passportNo ?? '';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +59,7 @@ class _GovtIdDetailsState extends State<GovtIdDetails> {
       child: BlocBuilder<UploadGovtIdBloc, UploadGovtIdState>(
         builder: (context, state) {
           return Scaffold(
-            resizeToAvoidBottomInset: false,
+            resizeToAvoidBottomInset: true,
             appBar: AppBar(
               centerTitle: true,
               title: const Text(
@@ -68,10 +83,7 @@ class _GovtIdDetailsState extends State<GovtIdDetails> {
                 },
               ),
             ),
-            body: Container(
-              padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
-              height: MediaQuery.of(context).size.height,
-              width: MediaQuery.of(context).size.width,
+            body: SingleChildScrollView(
               child: Column(
                 children: [
                   const Text(
@@ -82,11 +94,10 @@ class _GovtIdDetailsState extends State<GovtIdDetails> {
                       fontWeight: FontWeight.w500,
                     ),
                   ),
-                  SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.8,
-                    width: MediaQuery.of(context).size.width * 0.8,
-                    child: Form(
-                      key: _formKey,
+                  Form(
+                    key: _formKey,
+                    child: Padding(
+                      padding: EdgeInsets.all(12.sp),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -392,18 +403,30 @@ class _GovtIdDetailsState extends State<GovtIdDetails> {
                                         if (_selectedIdentityDocument != null) {
                                           context.read<UploadGovtIdBloc>().add(
                                               UploadGovtIdDetailsEvent(
+                                                  data: widget.data,
                                                   idDocument: rsaID.text,
-                                                  documentType: documenttype!,
+                                                  documentType:
+                                                      _selectedIdentityDocument!,
                                                   passport: passport.text,
                                                   country: selectedCountry,
                                                   asylum: asylum.text,
                                                   drivingLicense:
                                                       drivingLicensce.text));
-                                          Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      const GovtIdUploadScreen()));
+                                          if (widget.data == null) {
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        const GovtIdUploadScreen()));
+                                          } else {
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        GovtIdUploadScreen(
+                                                          data: widget.data,
+                                                        )));
+                                          }
                                         } else {
                                           ScaffoldMessenger.of(context)
                                               .showSnackBar(const SnackBar(
@@ -445,6 +468,9 @@ class _GovtIdDetailsState extends State<GovtIdDetails> {
                       ),
                     ),
                   ),
+                  const SizedBox(
+                    height: 200,
+                  )
                 ],
               ),
             ),

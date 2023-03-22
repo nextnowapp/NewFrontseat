@@ -1,79 +1,79 @@
 [
     {
         "id": 1,
-        "language": "general",
+        "language": "momo training material",
         "grade": 1,
-        "title": "Book 1",
-        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g1-b1.pdf",
+        "title": "AML Chapter 1 - Definition",
+        "url": "https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/project-assets/frontseat/aml-chapter-1.pdf",
         "size": 6460
     },
     {
         "id": 2,
-        "language": "general",
+        "language": "momo training material",
         "grade": 1,
-        "title": "Book 2",
-        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g1-b2.pdf",
+        "title": "AML Chapter 2 - Legislation",
+        "url": "https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/project-assets/frontseat/aml-chapter-2.pdf",
         "size": 5936
     },
     {
         "id": 3,
-        "language": "general",
+        "language": "momo training material",
         "grade": 1,
-        "title": "Book 3",
-        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g1-b3.pdf",
+        "title": "MoMo Agent Terminal Training",
+        "url": "https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/project-assets/frontseat/momo-agent-terminal.pdf",
         "size": 4649
     },
     {
         "id": 4,
-        "language": "general",
+        "language": "code of conduct",
         "grade": 1,
-        "title": "Book 4",
-        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g1-b4.pdf",
+        "title": "AML Chapter 1 - Definition",
+        "url": "https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/project-assets/frontseat/aml-chapter-1.pdf",
         "size": 4390
     },
     {
         "id": 5,
-        "language": "general",
+        "language": "code of conduct",
         "grade": 1,
-        "title": "Book 5",
-        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g1-b5.pdf",
+        "title": "AML Chapter 2 - Legislation",
+        "url": "https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/project-assets/frontseat/aml-chapter-2.pdf",
         "size": 4210
     },
     {
         "id": 6,
-        "language": "general",
+        "language": "code of conduct",
         "grade": 1,
-        "title": "Book 6",
-        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g1-b6.pdf",
+        "title": "MoMo Agent Terminal Training",
+        "url": "https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/project-assets/frontseat/momo-agent-terminal.pdf",
         "size": 4550
     },
     {
         "id": 7,
         "language": "induction",
         "grade": 1,
-        "title": "Book 7",
-        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g1-b7.pdf",
+        "title": "AML Chapter 1 - Definition",
+        "url": "https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/project-assets/frontseat/aml-chapter-1.pdf",
         "size": 4352
     },
     {
         "id": 8,
         "language": "induction",
         "grade": 1,
-        "title": "Book 8",
-        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g1-b8.pdf",
+        "title": "AML Chapter 2 - Legislation",
+        "url": "https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/project-assets/frontseat/aml-chapter-2.pdf",
         "size": 4803
     },
     {
         "id": 9,
         "language": "induction",
         "grade": 2,
-        "title": "Book 1",
-        "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g2-b1.pdf",
+        "title": "MoMo Agent Terminal Training",
+        "url": "https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/project-assets/frontseat/momo-agent-terminal.pdf",
         "size": 4322
     },
     {
         "id": 10,
-        "language": "induction",
+        "language": "english",
         "grade": 2,
         "title": "Book 2",
         "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g2-b2.pdf",
@@ -81,7 +81,7 @@
     },
     {
         "id": 11,
-        "language": "induction",
+        "language": "english",
         "grade": 2,
         "title": "Book 3",
         "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g2-b3.pdf",
@@ -89,7 +89,7 @@
     },
     {
         "id": 12,
-        "language": "induction",
+        "language": "english",
         "grade": 2,
         "title": "Book 4",
         "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g2-b4.pdf",
@@ -97,7 +97,7 @@
     },
     {
         "id": 13,
-        "language": "code of conduct",
+        "language": "afrikaans",
         "grade": 2,
         "title": "Book 5",
         "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g2-b5.pdf",
@@ -105,7 +105,7 @@
     },
     {
         "id": 14,
-        "language": "code of conduct",
+        "language": "afrikaans",
         "grade": 2,
         "title": "Book 6",
         "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g2-b6.pdf",
@@ -113,7 +113,7 @@
     },
     {
         "id": 15,
-        "language": "code of conduct",
+        "language": "afrikaans",
         "grade": 2,
         "title": "Book 7",
         "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g2-b7.pdf",
@@ -121,7 +121,7 @@
     },
     {
         "id": 16,
-        "language": "code of conduct",
+        "language": "afrikaans",
         "grade": 2,
         "title": "Book 8",
         "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g2-b8.pdf",
@@ -129,7 +129,7 @@
     },
     {
         "id": 17,
-        "language": "code of conduct",
+        "language": "afrikaans",
         "grade": 3,
         "title": "Book 1",
         "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g3-b1.pdf",
@@ -137,7 +137,7 @@
     },
     {
         "id": 18,
-        "language": "code of conduct",
+        "language": "afrikaans",
         "grade": 3,
         "title": "Book 2",
         "url": "https://schoolmanagement.co.za/wp-content/uploads/2022/02/s1-afrikaans-g3-b2.pdf",

@@ -1,7 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/cupertino.dart';
 import '../../../../../utils/Utils.dart';
-import '../../../../../utils/apis/kyc_api.dart';
+import '../../../services/kyc_api.dart';
+import '../../../model/frontseat_user_detail_model.dart';
 part 'upload_govt_id_event.dart';
 part 'upload_govt_id_state.dart';
 
@@ -25,7 +26,7 @@ class UploadGovtIdBloc extends Bloc<UploadGovtIdEvent, UploadGovtIdState> {
       int? id = await Utils.getIntValue('id');
 
       await KycApi.uploadGovtId(id!, event.dlFront, event.dlRear, event.idFront,
-          event.idRear, event.context);
+          event.idRear, event.context,event.data);
     });
   }
 }

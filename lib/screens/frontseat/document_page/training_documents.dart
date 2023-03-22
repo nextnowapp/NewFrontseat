@@ -22,7 +22,11 @@ class _EbookScreenState extends State<EbookScreen> {
   late EbookList _ebooks;
   String? directory;
 
-  final List<String> titles = ['General', 'Induction', 'Code of Conduct'];
+  final List<String> titles = [
+    'MoMo Training Material',
+    'Induction',
+    'Code of Conduct'
+  ];
 
   List<Widget> _buildViewList() {
     return titles.map((language) {
@@ -80,7 +84,7 @@ class _EbookScreenState extends State<EbookScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                book.title.titleCase,
+                                book.title,
                                 style: const TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,
@@ -231,7 +235,6 @@ class _EbookScreenState extends State<EbookScreen> {
           ),
         ),
         body: TabBarView(
-          physics: const NeverScrollableScrollPhysics(),
           children: [
             ..._buildViewList(),
           ],

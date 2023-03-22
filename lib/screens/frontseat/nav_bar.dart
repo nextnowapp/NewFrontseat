@@ -5,7 +5,7 @@ import 'package:nextschool/screens/frontseat/status_page/status_screen.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../utils/Utils.dart';
-import '../student/studyMaterials/Ebooks.dart';
+import 'document_page/training_documents.dart';
 import 'about_us_screen.dart';
 import 'home_page/home_screen.dart';
 

@@ -16,18 +16,20 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nextschool/config/app_config.dart';
 import 'package:nextschool/controller/user_controller.dart';
+import 'package:nextschool/screens/frontseat/agent_login/controller/login_bloc.dart';
 import 'package:nextschool/screens/frontseat/agent_onboarding/agent_contract/controller/contract_bloc.dart';
 import 'package:nextschool/screens/frontseat/agent_onboarding/upload_bank_details/controller/upload_bank_details_bloc.dart';
 import 'package:nextschool/screens/frontseat/agent_onboarding/upload_govt_id/controller/upload_govt_id_bloc.dart';
 import 'package:nextschool/screens/frontseat/agent_onboarding/upload_personal_information/controller/upload_personal_information_bloc.dart';
 import 'package:nextschool/screens/frontseat/agent_onboarding/upload_selfie/controller/upload_selfie_bloc.dart';
+import 'package:nextschool/screens/frontseat/agent_onboarding/upload_signature/controller/signature_bloc.dart';
 import 'package:nextschool/screens/frontseat/landing_screen.dart';
 import 'package:nextschool/screens/frontseat/nav_bar.dart';
 import 'package:nextschool/utils/Utils.dart';
+import 'package:nextschool/screens/frontseat/services/kyc_api.dart';
 import 'package:nextschool/utils/theme.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:sizer/sizer.dart';
-import 'package:wiredash/wiredash.dart';
 
 class MyHttpoverrides extends HttpOverrides {
   @override
@@ -60,7 +62,6 @@ void main() async {
   //Notification controller
   // NotificationController notificationController =
   //     Get.put(NotificationController());
-
 //starting the app
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -94,6 +95,8 @@ void main() async {
     var zoom = await Utils.getIntValue('zoom');
     var isAdministrator = await Utils.getStringValue('isAdministrator');
     var token = await Utils.getStringValue('token');
+   await KycApi.AgentStatus();
+   await KycApi.kycStatus();
 
     //set values to controller
     userDetailsController.id = id;
@@ -244,52 +247,48 @@ class _MyAppState extends State<MyApp> {
       DeviceOrientation.portraitDown,
     ]);
 
-    return Wiredash(
-      projectId: 'nextschool-ectr51x',
-      secret: 'g1lL7lvelOPKRpT--6F0rbuc3VUHrocW',
-      navigatorKey: _navigatorKey,
-      child: WillPopScope(
-        onWillPop: onWillPop,
-        child: ScreenUtilInit(
-          splitScreenMode: true,
-          builder: (context, child) => GetMaterialApp(
-            theme: ThemeData(
-              appBarTheme: const AppBarTheme(
-                color: Colors.transparent,
-                elevation: 0,
-                iconTheme: IconThemeData(color: Colors.black),
-                systemOverlayStyle: SystemUiOverlayStyle.dark,
-              ),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (context) => LoginBloc()),
+        BlocProvider(create: (context) => UploadSelfieBloc()),
+        BlocProvider(create: (context) => UploadPersonalInformationBloc()),
+        BlocProvider(create: (context) => UploadGovtIdBloc()),
+        BlocProvider(create: (context) => UploadBankDetailsBloc()),
+        BlocProvider(
+          create: (context) => ContractBloc(),
+        ),
+        BlocProvider(
+          create: (context) => SignatureBloc(),
+        )
+      ],
+      child: ScreenUtilInit(
+        splitScreenMode: true,
+        builder: (context, child) => GetMaterialApp(
+          theme: ThemeData(
+            appBarTheme: const AppBarTheme(
+              color: Colors.transparent,
+              elevation: 0,
+              iconTheme: IconThemeData(color: Colors.black),
+              systemOverlayStyle: SystemUiOverlayStyle.dark,
             ),
-            debugShowCheckedModeBanner: false,
-            home: Sizer(builder: (context, orientation, deviceType) {
-              return MultiBlocProvider(
-                providers: [
-                  BlocProvider(create: (context) => UploadSelfieBloc()),
-                  BlocProvider(
-                      create: (context) => UploadPersonalInformationBloc()),
-                  BlocProvider(create: (context) => UploadGovtIdBloc()),
-                  BlocProvider(create: (context) => UploadBankDetailsBloc()),
-                  BlocProvider(create: (context) => ContractBloc())
-                ],
-                child: MaterialApp(
-                  themeMode: ThemeMode.light,
-                  builder: (context, child) {
-                    return MediaQuery(
-                      child: child!,
-                      data:
-                          MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
-                    );
-                  },
-                  title: 'Frontseat',
-                  navigatorKey: _navigatorKey,
-                  debugShowCheckedModeBanner: false,
-                  theme: basicTheme(),
-                  home: widget.isLogged ? const BottomBar() : widget.homeWidget,
-                ),
-              );
-            }),
           ),
+          debugShowCheckedModeBanner: false,
+          home: Sizer(builder: (context, orientation, deviceType) {
+            return MaterialApp(
+              themeMode: ThemeMode.light,
+              builder: (context, child) {
+                return MediaQuery(
+                  child: child!,
+                  data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+                );
+              },
+              title: 'Frontseat',
+              navigatorKey: _navigatorKey,
+              debugShowCheckedModeBanner: false,
+              theme: basicTheme(),
+              home: widget.isLogged ? const BottomBar() : widget.homeWidget,
+            );
+          }),
         ),
       ),
     );

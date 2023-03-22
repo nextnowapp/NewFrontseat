@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:nextschool/screens/frontseat/new_login_screen.dart';
+import 'package:nextschool/screens/frontseat/services/kyc_api.dart';
 
-import '../../../utils/Utils.dart';
 import '../nav_bar.dart';
 
 class VerifyEmailScreen extends StatefulWidget {
@@ -15,7 +15,7 @@ class VerifyEmailScreen extends StatefulWidget {
 class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
   @override
   void initState() {
-    // FirebaseAuth.instance.currentUser!.sendEmailVerification();
+    KycApi.getEmail();
     super.initState();
   }
 
@@ -54,7 +54,7 @@ class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const Text(
-                        "We've sent you an email to verify your email address. Please check your email and click the link to verify your email address.",
+                        "We've sent you an OTP to verify your email address. Please check your email and enter the OTP below",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontWeight: FontWeight.w500,
@@ -64,36 +64,24 @@ class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
                       const SizedBox(
                         height: 20,
                       ),
+                      OtpTextField(
+                          focusedBorderColor: Colors.red,
+                          showFieldAsBox: true,
+                          onSubmit: (value) async {
+                            var body = {
+                              'verification_code': value,
+                            };
+                            await KycApi.emailVerified(body, context);
+                          },
+                          borderWidth: 4.0,
+                          numberOfFields: 6,
+                          borderColor: Colors.red),
+                      const SizedBox(
+                        height: 20,
+                      ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          TextButton(
-                            onPressed: () async {
-                              Utils.clearAllValue();
-                              ScaffoldMessenger.of(context)
-                                  .showSnackBar(const SnackBar(
-                                backgroundColor: Colors.red,
-                                content: Text('Login with you email to verify'),
-                              ));
-                              Navigator.pushAndRemoveUntil(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (BuildContext context) =>
-                                          LoginFrontSeat()),
-                                  (Route<dynamic> route) =>
-                                      route is LoginFrontSeat);
-                            },
-                            child: const Text(
-                              'Done',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontWeight: FontWeight.w700,
-                                color: Colors.black54,
-                                decorationStyle: TextDecorationStyle.solid,
-                                decoration: TextDecoration.underline,
-                              ),
-                            ),
-                          ),
                           TextButton(
                             onPressed: () {
                               Navigator.pushAndRemoveUntil(
