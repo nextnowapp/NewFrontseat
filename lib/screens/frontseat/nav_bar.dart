@@ -1,12 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:nextschool/controller/kyc_step_model.dart';
 import 'package:nextschool/screens/frontseat/profile_page/profile_screen.dart';
 import 'package:nextschool/screens/frontseat/status_page/status_screen.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../utils/Utils.dart';
-import 'document_page/training_documents.dart';
 import 'about_us_screen.dart';
+import 'document_page/training_documents.dart';
 import 'home_page/home_screen.dart';
 
 class BottomBar extends StatefulWidget {
@@ -18,6 +20,8 @@ class BottomBar extends StatefulWidget {
 }
 
 class _BottomBarState extends State<BottomBar> {
+  final kycStepModelController = Get.put(KycStepModel());
+
   var id;
   @override
   void initState() {
@@ -33,13 +37,59 @@ class _BottomBarState extends State<BottomBar> {
     }
   }
 
+  List<BottomNavigationBarItem> activeItems = [
+    const BottomNavigationBarItem(
+        icon: Icon(
+          CupertinoIcons.home,
+        ),
+        label: 'Home'),
+    const BottomNavigationBarItem(
+        icon: Icon(
+          CupertinoIcons.clock,
+        ),
+        label: 'Status'),
+    const BottomNavigationBarItem(
+        icon: Icon(
+          CupertinoIcons.person,
+        ),
+        label: 'Profile'),
+    const BottomNavigationBarItem(
+        icon: Icon(CupertinoIcons.exclamationmark_bubble), label: 'About us'),
+    const BottomNavigationBarItem(
+        icon: Icon(CupertinoIcons.exclamationmark_bubble), label: 'Documents'),
+  ];
+  List<BottomNavigationBarItem> inActiveItems = [
+    const BottomNavigationBarItem(
+        icon: Icon(
+          CupertinoIcons.home,
+        ),
+        label: 'Home'),
+    const BottomNavigationBarItem(
+        icon: Icon(
+          CupertinoIcons.clock,
+        ),
+        label: 'Status'),
+    const BottomNavigationBarItem(
+        icon: Icon(
+          CupertinoIcons.person,
+        ),
+        label: 'Profile'),
+    const BottomNavigationBarItem(
+        icon: Icon(CupertinoIcons.exclamationmark_bubble), label: 'About us'),
+  ];
   int _selectedIndex = 0;
-  final _pages = [
+  final _activePages = [
     const HomeScreen(),
     const CustomSidebar(),
     const ProfileScreen(),
     const AboutUs(),
-     EbookScreen()
+    EbookScreen()
+  ];
+  final _inActivePages = [
+    const HomeScreen(),
+    const CustomSidebar(),
+    const ProfileScreen(),
+    const AboutUs(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -57,38 +107,20 @@ class _BottomBarState extends State<BottomBar> {
             selectedLabelStyle:
                 TextStyle(fontSize: 10.sp, fontWeight: FontWeight.w600),
             currentIndex: _selectedIndex,
-            items: const [
-              BottomNavigationBarItem(
-                  icon: Icon(
-                    CupertinoIcons.home,
-                  ),
-                  label: 'Home'),
-              BottomNavigationBarItem(
-                  icon: Icon(
-                    CupertinoIcons.clock,
-                  ),
-                  label: 'Status'),
-              BottomNavigationBarItem(
-                  icon: Icon(
-                    CupertinoIcons.person,
-                  ),
-                  label: 'Profile'),
-              BottomNavigationBarItem(
-                  icon: Icon(CupertinoIcons.exclamationmark_bubble),
-                  label: 'About us'),
-              BottomNavigationBarItem(
-                  icon: Icon(CupertinoIcons.exclamationmark_bubble),
-                  label: 'Documents'),
+            items: kycStepModelController.activeValue
+                ? activeItems
+                : inActiveItems,
+            // BottomNavigationBarItem(
+            //     icon: Icon(Icons.document_scanner), label: "Documents"),
 
-              // BottomNavigationBarItem(
-              //     icon: Icon(Icons.document_scanner), label: "Documents"),
-            ],
             onTap: (index) {
               setState(() {
                 _selectedIndex = index;
               });
             }),
-        body: _pages[_selectedIndex],
+        body: kycStepModelController.activeValue
+            ? _activePages[_selectedIndex]
+            : _inActivePages[_selectedIndex],
       ),
     );
   }
