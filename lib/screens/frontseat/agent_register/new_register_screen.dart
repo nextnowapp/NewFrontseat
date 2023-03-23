@@ -13,11 +13,11 @@ import 'package:rounded_loading_button/rounded_loading_button.dart';
 import 'package:sizer/sizer.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../services/api_list.dart';
-import '../services/kyc_api.dart';
 import '../../../utils/widget/textwidget.dart';
 import '../../../utils/widget/txtbox.dart';
 import '../agent_onboarding/verify_email_screen.dart';
+import '../services/api_list.dart';
+import '../services/kyc_api.dart';
 
 class NewRegisterScreen extends StatefulWidget {
   const NewRegisterScreen({Key? key}) : super(key: key);
@@ -55,6 +55,7 @@ class _NewRegisterScreenState extends State<NewRegisterScreen> {
 
   bool isObscure1 = true;
   bool isObscure2 = true;
+  bool? success;
 
   @override
   Widget build(BuildContext context) {
@@ -93,7 +94,7 @@ class _NewRegisterScreenState extends State<NewRegisterScreen> {
                             controller: nameController,
                             validator: (value) {
                               if (value!.isEmpty) {
-                                return 'Please enter an Name';
+                                return 'Name is required';
                               }
                               return null;
                             },
@@ -156,7 +157,7 @@ class _NewRegisterScreenState extends State<NewRegisterScreen> {
                                 }),
                             validator: (value) {
                               if (value!.isEmpty) {
-                                return 'password is required';
+                                return 'Password is required';
                               } else if (value.length < 8) {
                                 return 'password must be at least 8 characters';
                               } else if (!regExp.hasMatch(value)) {
@@ -186,7 +187,7 @@ class _NewRegisterScreenState extends State<NewRegisterScreen> {
                                 }),
                             validator: (value) {
                               if (value!.isEmpty) {
-                                return 'password is required';
+                                return 'Confirm password is required';
                               } else if (value.length < 8) {
                                 return 'password must be at least 8 characters';
                               } else if (!regExp.hasMatch(value)) {
@@ -263,54 +264,57 @@ class _NewRegisterScreenState extends State<NewRegisterScreen> {
                         borderRadius: 5,
                         color: Colors.red,
                         controller: _btnController,
-                        onPressed: () {
+                        onPressed: () async {
                           if (formKey.currentState!.validate() &&
                               passwordController.text ==
                                   confirmPasswordController.text &&
                               passwordController.text.isNotEmpty) {
-                            register();
-                            showDialog(
-                                barrierDismissible: false,
-                                context: context,
-                                builder: (BuildContext context) {
-                                  return AlertDialog(
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(10)),
-                                    backgroundColor: Colors.white,
-                                    insetPadding: const EdgeInsets.all(15),
-                                    title: TextWidget(
-                                      txt:
-                                          'We have sent an OTP to ${phoneController.text} , please check and verify',
-                                      size: 17,
-                                    ),
-                                    content: OtpTextField(
-                                        focusedBorderColor: Colors.red,
-                                        showFieldAsBox: true,
-                                        onSubmit: (value) async {
-                                          var body = {
-                                            'verification_code': value,
-                                          };
-                                          await KycApi.mobileVerified(
-                                              body, context);
-                                        },
-                                        borderWidth: 4.0,
-                                        numberOfFields: 6,
-                                        borderColor: Colors.red),
-                                    actions: [
-                                      TextButton(
-                                          child: const TextWidget(txt: 'Skip'),
-                                          onPressed: () async {
-                                            Navigator.pushReplacement(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      const VerifyEmailScreen(),
-                                                ));
-                                          })
-                                    ],
-                                  );
-                                });
+                            success = await register();
+                            if (success == true) {
+                              showDialog(
+                                  barrierDismissible: false,
+                                  context: context,
+                                  builder: (BuildContext context) {
+                                    return AlertDialog(
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(10)),
+                                      backgroundColor: Colors.white,
+                                      insetPadding: const EdgeInsets.all(15),
+                                      title: TextWidget(
+                                        txt:
+                                            'We have sent an OTP to ${phoneController.text} , please check and verify',
+                                        size: 17,
+                                      ),
+                                      content: OtpTextField(
+                                          focusedBorderColor: Colors.red,
+                                          showFieldAsBox: true,
+                                          onSubmit: (value) async {
+                                            var body = {
+                                              'verification_code': value,
+                                            };
+                                            await KycApi.mobileVerified(
+                                                body, context);
+                                          },
+                                          borderWidth: 4.0,
+                                          numberOfFields: 6,
+                                          borderColor: Colors.red),
+                                      actions: [
+                                        TextButton(
+                                            child:
+                                                const TextWidget(txt: 'Skip'),
+                                            onPressed: () async {
+                                              Navigator.pushReplacement(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        const VerifyEmailScreen(),
+                                                  ));
+                                            })
+                                      ],
+                                    );
+                                  });
+                            }
                           } else {
                             _btnController.reset();
                           }
@@ -356,7 +360,7 @@ class _NewRegisterScreenState extends State<NewRegisterScreen> {
     );
   }
 
-  register() async {
+  Future<bool?> register() async {
     int id;
     int roleId;
     String role;
@@ -431,17 +435,18 @@ class _NewRegisterScreenState extends State<NewRegisterScreen> {
       controller.isLogged = true;
       controller.schoolUrl = schoolUrl;
       await KycApi.getOtp();
+      _btnController.reset();
+      return true;
       // Utils.showToast('Agent has been created successfully');
       // Navigator.pushAndRemoveUntil(
       //     context,
       //     MaterialPageRoute(
       //         builder: (BuildContext context) => const BottomBar()),
       //     (Route<dynamic> route) => route is BottomBar);
-      _btnController.reset();
     } else {
       _btnController.reset();
       Utils.showErrorToast('The email has already been taken.');
-      Navigator.of(context, rootNavigator: true).pop('dialog');
+      // Navigator.of(context, rootNavigator: true).pop('dialog');
       throw Exception('Failed to load');
     }
   }

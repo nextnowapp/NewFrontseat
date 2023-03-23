@@ -267,14 +267,19 @@ class KycApi {
             (Route<dynamic> route) => route is BottomBar);
         btnController!.reset();
       } else if (response.statusCode == 400) {
-        Utils.showToast('Incorrect Email or Password');
+        Utils.showToast(
+            'The email address and/or password information you entered does not match the registration informatiom');
         btnController!.reset();
       } else {
-        Utils.showToast('Incorrect Email or Password');
+        Utils.showToast(
+            'The email address and/or password information you entered does not match the registration informatiom');
+
         btnController!.reset();
       }
     } on DioError catch (e) {
-      Utils.showToast('Incorrect Email or Password');
+      Utils.showToast(
+          'The email address and/or password information you entered does not match the registration informatiom');
+
       btnController!.reset();
       log(e.toString());
       return e.toString();
@@ -396,10 +401,10 @@ class KycApi {
         Navigator.pop(context);
         Navigator.pop(context);
         if (data == null) {
-          Navigator.pushReplacement(context,
+          Navigator.push(context,
               MaterialPageRoute(builder: (context) => const BankDetails()));
         } else {
-          Navigator.pushReplacement(
+          Navigator.push(
               context,
               MaterialPageRoute(
                   builder: (context) => BankDetails(

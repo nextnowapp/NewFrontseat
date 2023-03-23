@@ -1,17 +1,19 @@
+import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:nextschool/screens/frontseat/agent_onboarding/upload_govt_id/govt_id_upload_screen.dart';
+import 'package:nextschool/utils/Utils.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
+import 'package:searchfield/searchfield.dart';
 import 'package:sizer/sizer.dart';
 
-import '../../../../utils/Utils.dart';
-import '../../frontseat_constants.dart';
-import '../../model/frontseat_user_detail_model.dart';
 import '../../../../utils/widget/textwidget.dart';
 import '../../../../utils/widget/txtbox.dart';
+import '../../frontseat_constants.dart';
+import '../../model/frontseat_user_detail_model.dart';
 import 'controller/upload_govt_id_bloc.dart';
 
 class GovtIdDetails extends StatefulWidget {
@@ -26,6 +28,8 @@ class _GovtIdDetailsState extends State<GovtIdDetails> {
   final TextEditingController rsaID = TextEditingController();
   final TextEditingController passport = TextEditingController();
   final TextEditingController asylum = TextEditingController();
+  final TextEditingController country = TextEditingController();
+
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final RoundedLoadingButtonController _btnController =
       RoundedLoadingButtonController();
@@ -73,15 +77,15 @@ class _GovtIdDetailsState extends State<GovtIdDetails> {
               shadowColor: Colors.transparent,
               automaticallyImplyLeading: true,
               backgroundColor: Colors.transparent,
-              leading: IconButton(
-                icon: const Icon(
-                  Icons.arrow_back_ios,
-                  color: Colors.black,
-                ),
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-              ),
+              // leading: IconButton(
+              //   icon: const Icon(
+              //     Icons.arrow_back_ios,
+              //     color: Colors.black,
+              //   ),
+              //   onPressed: () {
+              //     Navigator.pop(context);
+              //   },
+              // ),
             ),
             body: SingleChildScrollView(
               child: Column(
@@ -114,191 +118,13 @@ class _GovtIdDetailsState extends State<GovtIdDetails> {
                           const SizedBox(
                             height: 20,
                           ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Identity Document type*',
-                                style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 10.sp,
-                                  fontFamily: GoogleFonts.inter(
-                                    fontWeight: FontWeight.w700,
-                                  ).fontFamily,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 0.5.h,
-                              ),
-                              FormField<String>(
-                                builder: (FormFieldState<String> stat) {
-                                  return InputDecorator(
-                                    decoration: InputDecoration(
-                                      fillColor: HexColor('#5374ff'),
-                                      errorStyle: TextStyle(
-                                        fontSize: 8.sp,
-                                        color: HexColor('#de5151'),
-                                        fontFamily: GoogleFonts.inter(
-                                          fontWeight: FontWeight.w500,
-                                        ).fontFamily,
-                                      ),
-                                      hintStyle: TextStyle(
-                                        color: HexColor('#8e9aa6'),
-                                        fontSize: 12.sp,
-                                        fontFamily: GoogleFonts.inter(
-                                          fontWeight: FontWeight.w500,
-                                        ).fontFamily,
-                                      ),
-                                      enabledBorder: OutlineInputBorder(
-                                        borderRadius: const BorderRadius.all(
-                                            Radius.circular(10)),
-                                        borderSide: BorderSide(
-                                          color: HexColor('#d5dce0'),
-                                        ),
-                                      ),
-                                      focusedBorder: OutlineInputBorder(
-                                        borderRadius: const BorderRadius.all(
-                                            Radius.circular(10)),
-                                        borderSide: BorderSide(
-                                          color: HexColor('#5374ff'),
-                                        ),
-                                      ),
-                                      errorBorder: OutlineInputBorder(
-                                        borderRadius: const BorderRadius.all(
-                                            Radius.circular(10)),
-                                        borderSide: BorderSide(
-                                          color: HexColor('#de5151'),
-                                        ),
-                                      ),
-                                      focusedErrorBorder: OutlineInputBorder(
-                                        borderRadius: const BorderRadius.all(
-                                            Radius.circular(10)),
-                                        borderSide: BorderSide(
-                                          color: HexColor('#de5151'),
-                                        ),
-                                      ),
-                                    ),
-                                    isEmpty: _selectedIdentityDocument == '',
-                                    child: DropdownButtonHideUnderline(
-                                      child: DropdownButton<String>(
-                                        value: _selectedIdentityDocument,
-                                        isDense: true,
-                                        onChanged: (String? newValue) {
-                                          setState(() {
-                                            _selectedIdentityDocument =
-                                                newValue;
-                                            stat.didChange(newValue);
-                                          });
-                                        },
-                                        items: identityDocuments
-                                            .map((String value) {
-                                          return DropdownMenuItem<String>(
-                                            value: value,
-                                            child: Text(value),
-                                          );
-                                        }).toList(),
-                                      ),
-                                    ),
-                                  );
-                                },
-                              ),
-                            ],
-                          ),
+                          getDocumentTypeDropdown(),
                           Visibility(
-                            visible: _selectedIdentityDocument ==
-                                    'Asylum Document' ||
-                                _selectedIdentityDocument ==
-                                    'Passport Document',
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Utils.sizedBoxHeight(20),
-                                Text(
-                                  'Country*',
-                                  style: TextStyle(
-                                    color: Colors.black87,
-                                    fontSize: 10.sp,
-                                    fontFamily: GoogleFonts.inter(
-                                      fontWeight: FontWeight.w700,
-                                    ).fontFamily,
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 0.5.h,
-                                ),
-                                FormField<String>(
-                                  builder: (FormFieldState<String> state) {
-                                    return InputDecorator(
-                                      decoration: InputDecoration(
-                                        fillColor: HexColor('#5374ff'),
-                                        errorStyle: TextStyle(
-                                          fontSize: 8.sp,
-                                          color: HexColor('#de5151'),
-                                          fontFamily: GoogleFonts.inter(
-                                            fontWeight: FontWeight.w500,
-                                          ).fontFamily,
-                                        ),
-                                        hintStyle: TextStyle(
-                                          color: HexColor('#8e9aa6'),
-                                          fontSize: 12.sp,
-                                          fontFamily: GoogleFonts.inter(
-                                            fontWeight: FontWeight.w500,
-                                          ).fontFamily,
-                                        ),
-                                        enabledBorder: OutlineInputBorder(
-                                          borderRadius: const BorderRadius.all(
-                                              Radius.circular(10)),
-                                          borderSide: BorderSide(
-                                            color: HexColor('#d5dce0'),
-                                          ),
-                                        ),
-                                        focusedBorder: OutlineInputBorder(
-                                          borderRadius: const BorderRadius.all(
-                                              Radius.circular(10)),
-                                          borderSide: BorderSide(
-                                            color: HexColor('#5374ff'),
-                                          ),
-                                        ),
-                                        errorBorder: OutlineInputBorder(
-                                          borderRadius: const BorderRadius.all(
-                                              Radius.circular(10)),
-                                          borderSide: BorderSide(
-                                            color: HexColor('#de5151'),
-                                          ),
-                                        ),
-                                        focusedErrorBorder: OutlineInputBorder(
-                                          borderRadius: const BorderRadius.all(
-                                              Radius.circular(10)),
-                                          borderSide: BorderSide(
-                                            color: HexColor('#de5151'),
-                                          ),
-                                        ),
-                                      ),
-                                      isEmpty: selectedCountry == '',
-                                      child: DropdownButtonHideUnderline(
-                                        child: DropdownButton<String>(
-                                          value: selectedCountry,
-                                          isDense: true,
-                                          onChanged: (String? newValue) {
-                                            setState(() {
-                                              selectedCountry = newValue;
-                                              state.didChange(newValue);
-                                            });
-                                          },
-                                          items: countries.map((String value) {
-                                            return DropdownMenuItem<String>(
-                                              value: value,
-                                              child: Text(value),
-                                            );
-                                          }).toList(),
-                                        ),
-                                      ),
-                                    );
-                                  },
-                                ),
-                              ],
-                            ),
-                          ),
+                              visible: _selectedIdentityDocument ==
+                                      'Asylum Document' ||
+                                  _selectedIdentityDocument ==
+                                      'Passport Document',
+                              child: getCountryDropDown()),
                           const SizedBox(
                             height: 20,
                           ),
@@ -477,6 +303,180 @@ class _GovtIdDetailsState extends State<GovtIdDetails> {
           );
         },
       ),
+    );
+  }
+
+  Widget getCountryDropDown() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Utils.sizedBoxHeight(20),
+        Text(
+          'Country*',
+          style: TextStyle(
+            color: Colors.black87,
+            fontSize: 10.sp,
+            fontFamily: GoogleFonts.inter(
+              fontWeight: FontWeight.w700,
+            ).fontFamily,
+          ),
+        ),
+        SizedBox(
+          height: 0.5.h,
+        ),
+        SearchField<String>(
+          controller: country,
+          autoCorrect: true,
+          suggestions:
+              countries.map((e) => SearchFieldListItem(e, item: e)).toList(),
+          suggestionState: Suggestion.expand,
+          hasOverlay: false,
+          searchStyle: const TextStyle(fontSize: 16, color: Colors.black),
+          validator: (x) {
+            if (x == null ||
+                x.isEmpty ||
+                !countries.map((e) => e).contains(x)) {
+              return 'Country is required';
+            }
+            return null;
+          },
+          searchInputDecoration: InputDecoration(
+            contentPadding: const EdgeInsets.all(20),
+            suffixIcon: const Icon(Icons.search),
+            fillColor: HexColor('#5374ff'),
+            errorStyle: TextStyle(
+              fontSize: 8.sp,
+              color: HexColor('#de5151'),
+              fontFamily: GoogleFonts.inter(
+                fontWeight: FontWeight.w500,
+              ).fontFamily,
+            ),
+            hintStyle: TextStyle(
+              color: HexColor('#8e9aa6'),
+              fontSize: 12.sp,
+              fontFamily: GoogleFonts.inter(
+                fontWeight: FontWeight.w500,
+              ).fontFamily,
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: const BorderRadius.all(Radius.circular(10)),
+              borderSide: BorderSide(
+                color: HexColor('#d5dce0'),
+              ),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderRadius: const BorderRadius.all(Radius.circular(10)),
+              borderSide: BorderSide(
+                color: HexColor('#5374ff'),
+              ),
+            ),
+            errorBorder: OutlineInputBorder(
+              borderRadius: const BorderRadius.all(Radius.circular(10)),
+              borderSide: BorderSide(
+                color: HexColor('#de5151'),
+              ),
+            ),
+            focusedErrorBorder: OutlineInputBorder(
+              borderRadius: const BorderRadius.all(Radius.circular(10)),
+              borderSide: BorderSide(
+                color: HexColor('#de5151'),
+              ),
+            ),
+          ),
+          onSuggestionTap: (x) {
+            setState(() {
+              selectedCountry = x.item!;
+            });
+            FocusScope.of(context).requestFocus(FocusNode());
+          },
+          maxSuggestionsInViewPort: 6,
+          itemHeight: 50,
+        ),
+      ],
+    );
+  }
+
+  Widget getDocumentTypeDropdown() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Identity document type*',
+          style: TextStyle(
+            color: Colors.black87,
+            fontSize: 10.sp,
+            fontFamily: GoogleFonts.inter(
+              fontWeight: FontWeight.w700,
+            ).fontFamily,
+          ),
+        ),
+        SizedBox(
+          height: 0.5.h,
+        ),
+        DropdownSearch<String>(
+          // mode: Mode.MENU,
+          validator: (value) {
+            if (value == null) {
+              return 'Document type is required';
+            }
+            return null;
+          },
+          // showSelectedItems: true,
+          items: identityDocuments,
+
+          dropdownBuilder: (context, selectedItem) {
+            return Text(
+              selectedItem ?? '',
+              style: TextStyle(
+                fontSize: 12.sp,
+                color: Colors.black,
+                fontFamily: GoogleFonts.inter(
+                  fontWeight: FontWeight.w500,
+                ).fontFamily,
+              ),
+            );
+          },
+
+          popupProps: PopupProps.menu(
+            itemBuilder: (context, item, isSelected) {
+              return Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                        horizontal: 20.sp, vertical: 10.sp),
+                    child: Text(
+                      item,
+                      style: TextStyle(
+                        fontSize: 12.sp,
+                        color: Colors.black,
+                        fontFamily: GoogleFonts.inter(
+                          fontWeight: FontWeight.w500,
+                        ).fontFamily,
+                      ),
+                    ),
+                  ),
+                  Divider(
+                    color: HexColor('#8e9aa6'),
+                    thickness: 0.5,
+                  )
+                ],
+              );
+            },
+            showSelectedItems: true,
+            constraints: BoxConstraints(
+              maxHeight: (3 * 42.sp) < 170.sp ? (3 * 42.sp) : 170.sp,
+            ),
+          ),
+          dropdownDecoratorProps: dropdownDecoratorProps,
+          onChanged: (dynamic newValue) {
+            setState(() {
+              _selectedIdentityDocument = newValue;
+            });
+          },
+          selectedItem: _selectedIdentityDocument,
+        ),
+      ],
     );
   }
 }

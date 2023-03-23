@@ -502,8 +502,7 @@ class _OnboardPersonalInformationState
                               ),
                               Flexible(
                                   flex: 1,
-                                  child: getProvinceDropdown(
-                                      selectedResidentialProvince)),
+                                  child: getResidentialProvinceDropdown()),
                             ],
                           ),
                           const SizedBox(
@@ -568,13 +567,13 @@ class _OnboardPersonalInformationState
                                         addressCopy();
                                       },
                                     ),
-                                    const Expanded(
+                                    Expanded(
                                       child: Text(
                                         'Same as Residential Address',
                                         style: TextStyle(
-                                          fontSize: 10,
-                                          fontWeight: FontWeight.w300,
-                                        ),
+                                            fontSize: 8.sp,
+                                            fontWeight: FontWeight.w600,
+                                            color: Colors.black),
                                       ),
                                     ),
                                   ],
@@ -625,9 +624,7 @@ class _OnboardPersonalInformationState
                                 width: 10,
                               ),
                               Flexible(
-                                  flex: 2,
-                                  child: getProvinceDropdown(
-                                      selectedPostalProvince)),
+                                  flex: 2, child: getPostalProvinceDropdown()),
                             ],
                           ),
                           Utils.sizedBoxHeight(20),
@@ -821,7 +818,7 @@ class _OnboardPersonalInformationState
                             ],
                           ),
                           Utils.sizedBoxHeight(20),
-                          getProvinceDropdown(selectedWorkProvince),
+                          getWorkProvinceDropdown(),
                           Utils.sizedBoxHeight(20),
                           SizedBox(
                             height: 80,
@@ -929,6 +926,7 @@ class _OnboardPersonalInformationState
                                               data: widget.data,
                                               isEdit: isEdit));
                                         } else {
+                                          // log('$selectedTitle $selectedGender $selectedMaritalStatus $selectedNationality $selectedCountryofBirth $selectedEquity $selectedDisability $selectedWorkProvince $selectedResidentialProvince $selectedPostalProvince $selectedEContactRelationship');
                                           _btnController.reset();
                                           ScaffoldMessenger.of(context)
                                               .showSnackBar(const SnackBar(
@@ -1582,7 +1580,7 @@ class _OnboardPersonalInformationState
     );
   }
 
-  Widget getProvinceDropdown(String? value) {
+  Widget getResidentialProvinceDropdown() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -1601,8 +1599,8 @@ class _OnboardPersonalInformationState
         ),
         DropdownSearch<String>(
           // mode: Mode.MENU,
-          validator: (value) {
-            if (value == null) {
+          validator: (newValue) {
+            if (newValue == null) {
               return 'Province is required';
             }
             return null;
@@ -1657,10 +1655,178 @@ class _OnboardPersonalInformationState
           dropdownDecoratorProps: dropdownDecoratorProps,
           onChanged: (dynamic newValue) {
             setState(() {
-              value = newValue;
+              selectedResidentialProvince = newValue;
             });
           },
-          selectedItem: value,
+          selectedItem: selectedResidentialProvince,
+        ),
+      ],
+    );
+  }
+
+  Widget getPostalProvinceDropdown() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Province*',
+          style: TextStyle(
+            color: Colors.black87,
+            fontSize: 10.sp,
+            fontFamily: GoogleFonts.inter(
+              fontWeight: FontWeight.w700,
+            ).fontFamily,
+          ),
+        ),
+        SizedBox(
+          height: 0.5.h,
+        ),
+        DropdownSearch<String>(
+          // mode: Mode.MENU,
+          validator: (newValue) {
+            if (newValue == null) {
+              return 'Province is required';
+            }
+            return null;
+          },
+          // showSelectedItems: true,
+          items: province,
+
+          dropdownBuilder: (context, selectedItem) {
+            return Text(
+              selectedItem ?? '',
+              style: TextStyle(
+                fontSize: 12.sp,
+                color: Colors.black,
+                fontFamily: GoogleFonts.inter(
+                  fontWeight: FontWeight.w500,
+                ).fontFamily,
+              ),
+            );
+          },
+
+          popupProps: PopupProps.menu(
+            itemBuilder: (context, item, isSelected) {
+              return Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                        horizontal: 20.sp, vertical: 10.sp),
+                    child: Text(
+                      item,
+                      style: TextStyle(
+                        fontSize: 12.sp,
+                        color: Colors.black,
+                        fontFamily: GoogleFonts.inter(
+                          fontWeight: FontWeight.w500,
+                        ).fontFamily,
+                      ),
+                    ),
+                  ),
+                  Divider(
+                    color: HexColor('#8e9aa6'),
+                    thickness: 0.5,
+                  )
+                ],
+              );
+            },
+            showSelectedItems: true,
+            constraints: BoxConstraints(
+              maxHeight: (10 * 42.sp) < 170.sp ? (10 * 42.sp) : 170.sp,
+            ),
+          ),
+          dropdownDecoratorProps: dropdownDecoratorProps,
+          onChanged: (dynamic newValue) {
+            setState(() {
+              selectedPostalProvince = newValue;
+            });
+          },
+          selectedItem: selectedPostalProvince,
+        ),
+      ],
+    );
+  }
+
+  Widget getWorkProvinceDropdown() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Province*',
+          style: TextStyle(
+            color: Colors.black87,
+            fontSize: 10.sp,
+            fontFamily: GoogleFonts.inter(
+              fontWeight: FontWeight.w700,
+            ).fontFamily,
+          ),
+        ),
+        SizedBox(
+          height: 0.5.h,
+        ),
+        DropdownSearch<String>(
+          // mode: Mode.MENU,
+          validator: (newValue) {
+            if (newValue == null) {
+              return 'Province is required';
+            }
+            return null;
+          },
+          // showSelectedItems: true,
+          items: province,
+
+          dropdownBuilder: (context, selectedItem) {
+            return Text(
+              selectedItem ?? '',
+              style: TextStyle(
+                fontSize: 12.sp,
+                color: Colors.black,
+                fontFamily: GoogleFonts.inter(
+                  fontWeight: FontWeight.w500,
+                ).fontFamily,
+              ),
+            );
+          },
+
+          popupProps: PopupProps.menu(
+            itemBuilder: (context, item, isSelected) {
+              return Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                        horizontal: 20.sp, vertical: 10.sp),
+                    child: Text(
+                      item,
+                      style: TextStyle(
+                        fontSize: 12.sp,
+                        color: Colors.black,
+                        fontFamily: GoogleFonts.inter(
+                          fontWeight: FontWeight.w500,
+                        ).fontFamily,
+                      ),
+                    ),
+                  ),
+                  Divider(
+                    color: HexColor('#8e9aa6'),
+                    thickness: 0.5,
+                  )
+                ],
+              );
+            },
+            showSelectedItems: true,
+            constraints: BoxConstraints(
+              maxHeight: (10 * 42.sp) < 170.sp ? (10 * 42.sp) : 170.sp,
+            ),
+          ),
+          dropdownDecoratorProps: dropdownDecoratorProps,
+          onChanged: (dynamic newValue) {
+            setState(() {
+              selectedWorkProvince = newValue;
+            });
+          },
+          selectedItem: selectedWorkProvince,
         ),
       ],
     );
