@@ -1,3 +1,4 @@
+import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -12,9 +13,9 @@ import 'package:sizer/sizer.dart';
 
 import '../../../../controller/kyc_step_model.dart';
 import '../../../../utils/Utils.dart';
+import '../../../../utils/widget/txtbox.dart';
 import '../../frontseat_constants.dart';
 import '../../model/frontseat_user_detail_model.dart';
-import '../../../../utils/widget/txtbox.dart';
 import 'controller/upload_personal_information_bloc.dart';
 
 class OnboardPersonalInformation extends StatefulWidget {
@@ -76,7 +77,15 @@ class _OnboardPersonalInformationState
       TextEditingController();
   final TextEditingController workLocationController = TextEditingController();
   final TextEditingController workCityController = TextEditingController();
+  final TextEditingController nationalityController = TextEditingController();
+  final TextEditingController countryController = TextEditingController();
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
+  List _genders = [
+    {'id': '1', 'gender': 'Male'},
+    {'id': '2', 'gender': 'Female'},
+    {'id': '3', 'gender': 'Others'}
+  ];
 
   @override
   void initState() {
@@ -95,6 +104,10 @@ class _OnboardPersonalInformationState
       selectedMaritalStatus = widget.data!.data!.agentDetails!.maritalStatus;
       selectedNationality = widget.data!.data!.agentDetails!.nationality;
       selectedCountryofBirth = widget.data!.data!.agentDetails!.countryOfBirth;
+      nationalityController.text =
+          widget.data!.data!.agentDetails!.nationality ?? '';
+      countryController.text =
+          widget.data!.data!.agentDetails!.countryOfBirth ?? '';
       selectedDisability = widget.data!.data!.agentDetails!.disability;
       selectedEquity = widget.data!.data!.agentDetails!.equityGroup;
       dobController.text = widget.data!.data!.agentDetails!.dateOfBirth ?? '';
@@ -167,129 +180,34 @@ class _OnboardPersonalInformationState
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
             child: SingleChildScrollView(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    children: const [
-                      Text(
-                        'Please provide your personal information',
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.grey,
-                          fontWeight: FontWeight.w500,
+              child: Padding(
+                padding: EdgeInsets.all(10.sp),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      children: const [
+                        Text(
+                          'Please provide your personal information',
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: Colors.grey,
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 20),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.9,
-                    child: Form(
+                      ],
+                    ),
+                    const SizedBox(height: 20),
+                    Form(
                       key: _formKey,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Row(
                             children: [
-                              Flexible(
-                                flex: 1,
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Title*',
-                                      style: TextStyle(
-                                        color: Colors.black87,
-                                        fontSize: 10.sp,
-                                        fontFamily: GoogleFonts.inter(
-                                          fontWeight: FontWeight.w700,
-                                        ).fontFamily,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 0.5.h,
-                                    ),
-                                    FormField<String>(
-                                      builder: (FormFieldState<String> state) {
-                                        return InputDecorator(
-                                          decoration: InputDecoration(
-                                            fillColor: HexColor('#5374ff'),
-                                            errorStyle: TextStyle(
-                                              fontSize: 8.sp,
-                                              color: HexColor('#de5151'),
-                                              fontFamily: GoogleFonts.inter(
-                                                fontWeight: FontWeight.w500,
-                                              ).fontFamily,
-                                            ),
-                                            hintStyle: TextStyle(
-                                              color: HexColor('#8e9aa6'),
-                                              fontSize: 12.sp,
-                                              fontFamily: GoogleFonts.inter(
-                                                fontWeight: FontWeight.w500,
-                                              ).fontFamily,
-                                            ),
-                                            enabledBorder: OutlineInputBorder(
-                                              borderRadius:
-                                                  const BorderRadius.all(
-                                                      Radius.circular(10)),
-                                              borderSide: BorderSide(
-                                                color: HexColor('#d5dce0'),
-                                              ),
-                                            ),
-                                            focusedBorder: OutlineInputBorder(
-                                              borderRadius:
-                                                  const BorderRadius.all(
-                                                      Radius.circular(10)),
-                                              borderSide: BorderSide(
-                                                color: HexColor('#5374ff'),
-                                              ),
-                                            ),
-                                            errorBorder: OutlineInputBorder(
-                                              borderRadius:
-                                                  const BorderRadius.all(
-                                                      Radius.circular(10)),
-                                              borderSide: BorderSide(
-                                                color: HexColor('#de5151'),
-                                              ),
-                                            ),
-                                            focusedErrorBorder:
-                                                OutlineInputBorder(
-                                              borderRadius:
-                                                  const BorderRadius.all(
-                                                      Radius.circular(10)),
-                                              borderSide: BorderSide(
-                                                color: HexColor('#de5151'),
-                                              ),
-                                            ),
-                                          ),
-                                          isEmpty: selectedTitle == '',
-                                          child: DropdownButtonHideUnderline(
-                                            child: DropdownButton<String>(
-                                              value: selectedTitle,
-                                              isDense: true,
-                                              onChanged: (String? newValue) {
-                                                setState(() {
-                                                  selectedTitle = newValue;
-                                                  state.didChange(newValue);
-                                                });
-                                              },
-                                              items: titles.map((String value) {
-                                                return DropdownMenuItem<String>(
-                                                  value: value,
-                                                  child: Text(value),
-                                                );
-                                              }).toList(),
-                                            ),
-                                          ),
-                                        );
-                                      },
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              const SizedBox(
-                                width: 10,
+                              Flexible(flex: 2, child: getTitleDropdown()),
+                              SizedBox(
+                                width: 2.w,
                               ),
                               Flexible(
                                   flex: 2,
@@ -297,7 +215,7 @@ class _OnboardPersonalInformationState
                                     hint: 'First Name*',
                                     controller: firstNameController,
                                     validator: (value) {
-                                      if (value == null) {
+                                      if (value!.isEmpty) {
                                         return 'First name is required';
                                       }
                                       return null;
@@ -323,7 +241,7 @@ class _OnboardPersonalInformationState
                                     hint: 'Last Name*',
                                     controller: lastNameController,
                                     validator: (value) {
-                                      if (value == null) {
+                                      if (value!.isEmpty) {
                                         return 'Last name is required';
                                       }
                                       return null;
@@ -359,7 +277,7 @@ class _OnboardPersonalInformationState
                             hint: 'Email*',
                             controller: emailController,
                             validator: (value) {
-                              if (value == null) {
+                              if (value == null || value.isEmpty) {
                                 return 'Email is required';
                               } else if (!(value.contains('@'))) {
                                 return 'Please enter valid email';
@@ -370,588 +288,27 @@ class _OnboardPersonalInformationState
                           Utils.sizedBoxHeight(20),
                           Row(
                             children: [
-                              Flexible(
-                                flex: 1,
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Gender*',
-                                      style: TextStyle(
-                                        color: Colors.black87,
-                                        fontSize: 10.sp,
-                                        fontFamily: GoogleFonts.inter(
-                                          fontWeight: FontWeight.w700,
-                                        ).fontFamily,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 0.5.h,
-                                    ),
-                                    FormField<String>(
-                                      builder: (FormFieldState<String> state) {
-                                        return InputDecorator(
-                                          decoration: InputDecoration(
-                                            fillColor: HexColor('#5374ff'),
-                                            errorStyle: TextStyle(
-                                              fontSize: 8.sp,
-                                              color: HexColor('#de5151'),
-                                              fontFamily: GoogleFonts.inter(
-                                                fontWeight: FontWeight.w500,
-                                              ).fontFamily,
-                                            ),
-                                            hintStyle: TextStyle(
-                                              color: HexColor('#8e9aa6'),
-                                              fontSize: 12.sp,
-                                              fontFamily: GoogleFonts.inter(
-                                                fontWeight: FontWeight.w500,
-                                              ).fontFamily,
-                                            ),
-                                            enabledBorder: OutlineInputBorder(
-                                              borderRadius:
-                                                  const BorderRadius.all(
-                                                      Radius.circular(10)),
-                                              borderSide: BorderSide(
-                                                color: HexColor('#d5dce0'),
-                                              ),
-                                            ),
-                                            focusedBorder: OutlineInputBorder(
-                                              borderRadius:
-                                                  const BorderRadius.all(
-                                                      Radius.circular(10)),
-                                              borderSide: BorderSide(
-                                                color: HexColor('#5374ff'),
-                                              ),
-                                            ),
-                                            errorBorder: OutlineInputBorder(
-                                              borderRadius:
-                                                  const BorderRadius.all(
-                                                      Radius.circular(10)),
-                                              borderSide: BorderSide(
-                                                color: HexColor('#de5151'),
-                                              ),
-                                            ),
-                                            focusedErrorBorder:
-                                                OutlineInputBorder(
-                                              borderRadius:
-                                                  const BorderRadius.all(
-                                                      Radius.circular(10)),
-                                              borderSide: BorderSide(
-                                                color: HexColor('#de5151'),
-                                              ),
-                                            ),
-                                          ),
-                                          isEmpty: selectedGender == '',
-                                          child: DropdownButtonHideUnderline(
-                                            child: DropdownButton<String>(
-                                              value: selectedGender,
-                                              isDense: true,
-                                              onChanged: (String? newValue) {
-                                                setState(() {
-                                                  selectedGender = newValue;
-                                                  if (newValue == 'Male') {
-                                                    genderId = 1;
-                                                  } else if (newValue ==
-                                                      'Female') {
-                                                    genderId = 2;
-                                                  } else {
-                                                    genderId = 3;
-                                                  }
-                                                  state.didChange(newValue);
-                                                });
-                                              },
-                                              items: gender.map((String value) {
-                                                return DropdownMenuItem<String>(
-                                                  value: value,
-                                                  child: Text(value),
-                                                );
-                                              }).toList(),
-                                            ),
-                                          ),
-                                        );
-                                      },
-                                    ),
-                                  ],
-                                ),
-                              ),
+                              Flexible(flex: 2, child: getGenderDropdown()),
                               const SizedBox(
                                 width: 10,
                               ),
                               Flexible(
-                                flex: 2,
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Marital Status*',
-                                      style: TextStyle(
-                                        color: Colors.black87,
-                                        fontSize: 10.sp,
-                                        fontFamily: GoogleFonts.inter(
-                                          fontWeight: FontWeight.w700,
-                                        ).fontFamily,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 0.5.h,
-                                    ),
-                                    FormField<String>(
-                                      builder: (FormFieldState<String> state) {
-                                        return InputDecorator(
-                                          decoration: InputDecoration(
-                                            fillColor: HexColor('#5374ff'),
-                                            errorStyle: TextStyle(
-                                              fontSize: 8.sp,
-                                              color: HexColor('#de5151'),
-                                              fontFamily: GoogleFonts.inter(
-                                                fontWeight: FontWeight.w500,
-                                              ).fontFamily,
-                                            ),
-                                            hintStyle: TextStyle(
-                                              color: HexColor('#8e9aa6'),
-                                              fontSize: 12.sp,
-                                              fontFamily: GoogleFonts.inter(
-                                                fontWeight: FontWeight.w500,
-                                              ).fontFamily,
-                                            ),
-                                            enabledBorder: OutlineInputBorder(
-                                              borderRadius:
-                                                  const BorderRadius.all(
-                                                      Radius.circular(10)),
-                                              borderSide: BorderSide(
-                                                color: HexColor('#d5dce0'),
-                                              ),
-                                            ),
-                                            focusedBorder: OutlineInputBorder(
-                                              borderRadius:
-                                                  const BorderRadius.all(
-                                                      Radius.circular(10)),
-                                              borderSide: BorderSide(
-                                                color: HexColor('#5374ff'),
-                                              ),
-                                            ),
-                                            errorBorder: OutlineInputBorder(
-                                              borderRadius:
-                                                  const BorderRadius.all(
-                                                      Radius.circular(10)),
-                                              borderSide: BorderSide(
-                                                color: HexColor('#de5151'),
-                                              ),
-                                            ),
-                                            focusedErrorBorder:
-                                                OutlineInputBorder(
-                                              borderRadius:
-                                                  const BorderRadius.all(
-                                                      Radius.circular(10)),
-                                              borderSide: BorderSide(
-                                                color: HexColor('#de5151'),
-                                              ),
-                                            ),
-                                          ),
-                                          isEmpty: selectedMaritalStatus == '',
-                                          child: DropdownButtonHideUnderline(
-                                            child: DropdownButton<String>(
-                                              value: selectedMaritalStatus,
-                                              isDense: true,
-                                              onChanged: (String? newValue) {
-                                                setState(() {
-                                                  selectedMaritalStatus =
-                                                      newValue;
-                                                  state.didChange(newValue);
-                                                });
-                                              },
-                                              items: maritalStatus
-                                                  .map((String value) {
-                                                return DropdownMenuItem<String>(
-                                                  value: value,
-                                                  child: Text(value),
-                                                );
-                                              }).toList(),
-                                            ),
-                                          ),
-                                        );
-                                      },
-                                    ),
-                                  ],
-                                ),
-                              ),
+                                  flex: 2, child: getMaritalStatusDropdown()),
                             ],
                           ),
                           Utils.sizedBoxHeight(20),
 
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Nationality*',
-                                style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 10.sp,
-                                  fontFamily: GoogleFonts.inter(
-                                    fontWeight: FontWeight.w700,
-                                  ).fontFamily,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 0.5.h,
-                              ),
-                              FormField<String>(
-                                builder: (FormFieldState<String> state) {
-                                  return InputDecorator(
-                                    decoration: InputDecoration(
-                                      fillColor: HexColor('#5374ff'),
-                                      errorStyle: TextStyle(
-                                        fontSize: 8.sp,
-                                        color: HexColor('#de5151'),
-                                        fontFamily: GoogleFonts.inter(
-                                          fontWeight: FontWeight.w500,
-                                        ).fontFamily,
-                                      ),
-                                      hintStyle: TextStyle(
-                                        color: HexColor('#8e9aa6'),
-                                        fontSize: 12.sp,
-                                        fontFamily: GoogleFonts.inter(
-                                          fontWeight: FontWeight.w500,
-                                        ).fontFamily,
-                                      ),
-                                      enabledBorder: OutlineInputBorder(
-                                        borderRadius: const BorderRadius.all(
-                                            Radius.circular(10)),
-                                        borderSide: BorderSide(
-                                          color: HexColor('#d5dce0'),
-                                        ),
-                                      ),
-                                      focusedBorder: OutlineInputBorder(
-                                        borderRadius: const BorderRadius.all(
-                                            Radius.circular(10)),
-                                        borderSide: BorderSide(
-                                          color: HexColor('#5374ff'),
-                                        ),
-                                      ),
-                                      errorBorder: OutlineInputBorder(
-                                        borderRadius: const BorderRadius.all(
-                                            Radius.circular(10)),
-                                        borderSide: BorderSide(
-                                          color: HexColor('#de5151'),
-                                        ),
-                                      ),
-                                      focusedErrorBorder: OutlineInputBorder(
-                                        borderRadius: const BorderRadius.all(
-                                            Radius.circular(10)),
-                                        borderSide: BorderSide(
-                                          color: HexColor('#de5151'),
-                                        ),
-                                      ),
-                                    ),
-                                    isEmpty: selectedNationality == '',
-                                    child: DropdownButtonHideUnderline(
-                                      child: DropdownButton<String>(
-                                        value: selectedNationality,
-                                        isDense: true,
-                                        onChanged: (String? newValue) {
-                                          setState(() {
-                                            selectedNationality = newValue;
-                                            state.didChange(newValue);
-                                          });
-                                        },
-                                        items: countries.map((String value) {
-                                          return DropdownMenuItem<String>(
-                                            value: value,
-                                            child: Text(value),
-                                          );
-                                        }).toList(),
-                                      ),
-                                    ),
-                                  );
-                                },
-                              ),
-                            ],
-                          ),
+                          getNationalityDown(),
                           Utils.sizedBoxHeight(20),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Country of Birth*',
-                                style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 10.sp,
-                                  fontFamily: GoogleFonts.inter(
-                                    fontWeight: FontWeight.w700,
-                                  ).fontFamily,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 0.5.h,
-                              ),
-                              FormField<String>(
-                                builder: (FormFieldState<String> state) {
-                                  return InputDecorator(
-                                    decoration: InputDecoration(
-                                      fillColor: HexColor('#5374ff'),
-                                      errorStyle: TextStyle(
-                                        fontSize: 8.sp,
-                                        color: HexColor('#de5151'),
-                                        fontFamily: GoogleFonts.inter(
-                                          fontWeight: FontWeight.w500,
-                                        ).fontFamily,
-                                      ),
-                                      hintStyle: TextStyle(
-                                        color: HexColor('#8e9aa6'),
-                                        fontSize: 12.sp,
-                                        fontFamily: GoogleFonts.inter(
-                                          fontWeight: FontWeight.w500,
-                                        ).fontFamily,
-                                      ),
-                                      enabledBorder: OutlineInputBorder(
-                                        borderRadius: const BorderRadius.all(
-                                            Radius.circular(10)),
-                                        borderSide: BorderSide(
-                                          color: HexColor('#d5dce0'),
-                                        ),
-                                      ),
-                                      focusedBorder: OutlineInputBorder(
-                                        borderRadius: const BorderRadius.all(
-                                            Radius.circular(10)),
-                                        borderSide: BorderSide(
-                                          color: HexColor('#5374ff'),
-                                        ),
-                                      ),
-                                      errorBorder: OutlineInputBorder(
-                                        borderRadius: const BorderRadius.all(
-                                            Radius.circular(10)),
-                                        borderSide: BorderSide(
-                                          color: HexColor('#de5151'),
-                                        ),
-                                      ),
-                                      focusedErrorBorder: OutlineInputBorder(
-                                        borderRadius: const BorderRadius.all(
-                                            Radius.circular(10)),
-                                        borderSide: BorderSide(
-                                          color: HexColor('#de5151'),
-                                        ),
-                                      ),
-                                    ),
-                                    isEmpty: selectedCountryofBirth == '',
-                                    child: DropdownButtonHideUnderline(
-                                      child: DropdownButton<String>(
-                                        value: selectedCountryofBirth,
-                                        isDense: true,
-                                        onChanged: (String? newValue) {
-                                          setState(() {
-                                            selectedCountryofBirth = newValue;
-                                            state.didChange(newValue);
-                                          });
-                                        },
-                                        items: countries.map((String value) {
-                                          return DropdownMenuItem<String>(
-                                            value: value,
-                                            child: Text(value),
-                                          );
-                                        }).toList(),
-                                      ),
-                                    ),
-                                  );
-                                },
-                              ),
-                            ],
-                          ),
+                          getCountryDropDown(),
                           Utils.sizedBoxHeight(20),
                           Row(
                             children: [
-                              Flexible(
-                                flex: 1,
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Equity Group*',
-                                      style: TextStyle(
-                                        color: Colors.black87,
-                                        fontSize: 10.sp,
-                                        fontFamily: GoogleFonts.inter(
-                                          fontWeight: FontWeight.w700,
-                                        ).fontFamily,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 0.5.h,
-                                    ),
-                                    FormField<String>(
-                                      builder: (FormFieldState<String> state) {
-                                        return InputDecorator(
-                                          decoration: InputDecoration(
-                                            fillColor: HexColor('#5374ff'),
-                                            errorStyle: TextStyle(
-                                              fontSize: 8.sp,
-                                              color: HexColor('#de5151'),
-                                              fontFamily: GoogleFonts.inter(
-                                                fontWeight: FontWeight.w500,
-                                              ).fontFamily,
-                                            ),
-                                            hintStyle: TextStyle(
-                                              color: HexColor('#8e9aa6'),
-                                              fontSize: 12.sp,
-                                              fontFamily: GoogleFonts.inter(
-                                                fontWeight: FontWeight.w500,
-                                              ).fontFamily,
-                                            ),
-                                            enabledBorder: OutlineInputBorder(
-                                              borderRadius:
-                                                  const BorderRadius.all(
-                                                      Radius.circular(10)),
-                                              borderSide: BorderSide(
-                                                color: HexColor('#d5dce0'),
-                                              ),
-                                            ),
-                                            focusedBorder: OutlineInputBorder(
-                                              borderRadius:
-                                                  const BorderRadius.all(
-                                                      Radius.circular(10)),
-                                              borderSide: BorderSide(
-                                                color: HexColor('#5374ff'),
-                                              ),
-                                            ),
-                                            errorBorder: OutlineInputBorder(
-                                              borderRadius:
-                                                  const BorderRadius.all(
-                                                      Radius.circular(10)),
-                                              borderSide: BorderSide(
-                                                color: HexColor('#de5151'),
-                                              ),
-                                            ),
-                                            focusedErrorBorder:
-                                                OutlineInputBorder(
-                                              borderRadius:
-                                                  const BorderRadius.all(
-                                                      Radius.circular(10)),
-                                              borderSide: BorderSide(
-                                                color: HexColor('#de5151'),
-                                              ),
-                                            ),
-                                          ),
-                                          isEmpty: selectedEquity == '',
-                                          child: DropdownButtonHideUnderline(
-                                            child: DropdownButton<String>(
-                                              value: selectedEquity,
-                                              isDense: true,
-                                              onChanged: (String? newValue) {
-                                                setState(() {
-                                                  selectedEquity = newValue;
-                                                  state.didChange(newValue);
-                                                });
-                                              },
-                                              items: equity.map((String value) {
-                                                return DropdownMenuItem<String>(
-                                                  value: value,
-                                                  child: Text(value),
-                                                );
-                                              }).toList(),
-                                            ),
-                                          ),
-                                        );
-                                      },
-                                    ),
-                                  ],
-                                ),
-                              ),
+                              Flexible(flex: 2, child: getEquityDropdown()),
                               Utils.sizedBoxWidth(10),
                               Flexible(
-                                flex: 1,
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Disability*',
-                                      style: TextStyle(
-                                        color: Colors.black87,
-                                        fontSize: 10.sp,
-                                        fontFamily: GoogleFonts.inter(
-                                          fontWeight: FontWeight.w700,
-                                        ).fontFamily,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 0.5.h,
-                                    ),
-                                    FormField<String>(
-                                      builder: (FormFieldState<String> state) {
-                                        return InputDecorator(
-                                          decoration: InputDecoration(
-                                            fillColor: HexColor('#5374ff'),
-                                            errorStyle: TextStyle(
-                                              fontSize: 8.sp,
-                                              color: HexColor('#de5151'),
-                                              fontFamily: GoogleFonts.inter(
-                                                fontWeight: FontWeight.w500,
-                                              ).fontFamily,
-                                            ),
-                                            hintStyle: TextStyle(
-                                              color: HexColor('#8e9aa6'),
-                                              fontSize: 12.sp,
-                                              fontFamily: GoogleFonts.inter(
-                                                fontWeight: FontWeight.w500,
-                                              ).fontFamily,
-                                            ),
-                                            enabledBorder: OutlineInputBorder(
-                                              borderRadius:
-                                                  const BorderRadius.all(
-                                                      Radius.circular(10)),
-                                              borderSide: BorderSide(
-                                                color: HexColor('#d5dce0'),
-                                              ),
-                                            ),
-                                            focusedBorder: OutlineInputBorder(
-                                              borderRadius:
-                                                  const BorderRadius.all(
-                                                      Radius.circular(10)),
-                                              borderSide: BorderSide(
-                                                color: HexColor('#5374ff'),
-                                              ),
-                                            ),
-                                            errorBorder: OutlineInputBorder(
-                                              borderRadius:
-                                                  const BorderRadius.all(
-                                                      Radius.circular(10)),
-                                              borderSide: BorderSide(
-                                                color: HexColor('#de5151'),
-                                              ),
-                                            ),
-                                            focusedErrorBorder:
-                                                OutlineInputBorder(
-                                              borderRadius:
-                                                  const BorderRadius.all(
-                                                      Radius.circular(10)),
-                                              borderSide: BorderSide(
-                                                color: HexColor('#de5151'),
-                                              ),
-                                            ),
-                                          ),
-                                          isEmpty: selectedDisability == '',
-                                          child: DropdownButtonHideUnderline(
-                                            child: DropdownButton<String>(
-                                              value: selectedDisability,
-                                              isDense: true,
-                                              onChanged: (String? newValue) {
-                                                setState(() {
-                                                  selectedDisability = newValue;
-                                                  state.didChange(newValue);
-                                                });
-                                              },
-                                              items: disability
-                                                  .map((String value) {
-                                                return DropdownMenuItem<String>(
-                                                  value: value,
-                                                  child: Text(value),
-                                                );
-                                              }).toList(),
-                                            ),
-                                          ),
-                                        );
-                                      },
-                                    ),
-                                  ],
-                                ),
+                                flex: 2,
+                                child: getDisabilityDropdown(),
                               ),
                             ],
                           ),
@@ -1064,7 +421,7 @@ class _OnboardPersonalInformationState
                                   setState(() {});
                                 },
                                 validator: (value) {
-                                  if (value == null) {
+                                  if (value == null || value.isEmpty) {
                                     return 'Date of Birth is required';
                                   }
                                   return null;
@@ -1100,7 +457,7 @@ class _OnboardPersonalInformationState
                             hint: 'Unit Number/Street Name/Complex*',
                             controller: residentialAddressController,
                             validator: (value) {
-                              if (value == null) {
+                              if (value == null || value.isEmpty) {
                                 return 'Address is required';
                               }
                               return null;
@@ -1112,7 +469,7 @@ class _OnboardPersonalInformationState
                             hint: 'Town/City*',
                             controller: residentialCityController,
                             validator: (value) {
-                              if (value == null) {
+                              if (value == null || value.isEmpty) {
                                 return 'Town/City is required';
                               }
                               return null;
@@ -1132,111 +489,20 @@ class _OnboardPersonalInformationState
                                     LengthLimitingTextInputFormatter(4),
                                   ],
                                   type: TextInputType.number,
+                                  validator: (value) {
+                                    if (value == null || value.isEmpty) {
+                                      return 'Postal code is required';
+                                    }
+                                    return null;
+                                  },
                                 ),
                               ),
                               const SizedBox(
                                 width: 10,
                               ),
                               Flexible(
-                                flex: 1,
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Province*',
-                                      style: TextStyle(
-                                        color: Colors.black87,
-                                        fontSize: 10.sp,
-                                        fontFamily: GoogleFonts.inter(
-                                          fontWeight: FontWeight.w700,
-                                        ).fontFamily,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 0.5.h,
-                                    ),
-                                    FormField<String>(
-                                      builder: (FormFieldState<String> state) {
-                                        return InputDecorator(
-                                          decoration: InputDecoration(
-                                            fillColor: HexColor('#5374ff'),
-                                            errorStyle: TextStyle(
-                                              fontSize: 8.sp,
-                                              color: HexColor('#de5151'),
-                                              fontFamily: GoogleFonts.inter(
-                                                fontWeight: FontWeight.w500,
-                                              ).fontFamily,
-                                            ),
-                                            hintStyle: TextStyle(
-                                              color: HexColor('#8e9aa6'),
-                                              fontSize: 12.sp,
-                                              fontFamily: GoogleFonts.inter(
-                                                fontWeight: FontWeight.w500,
-                                              ).fontFamily,
-                                            ),
-                                            enabledBorder: OutlineInputBorder(
-                                              borderRadius:
-                                                  const BorderRadius.all(
-                                                      Radius.circular(10)),
-                                              borderSide: BorderSide(
-                                                color: HexColor('#d5dce0'),
-                                              ),
-                                            ),
-                                            focusedBorder: OutlineInputBorder(
-                                              borderRadius:
-                                                  const BorderRadius.all(
-                                                      Radius.circular(10)),
-                                              borderSide: BorderSide(
-                                                color: HexColor('#5374ff'),
-                                              ),
-                                            ),
-                                            errorBorder: OutlineInputBorder(
-                                              borderRadius:
-                                                  const BorderRadius.all(
-                                                      Radius.circular(10)),
-                                              borderSide: BorderSide(
-                                                color: HexColor('#de5151'),
-                                              ),
-                                            ),
-                                            focusedErrorBorder:
-                                                OutlineInputBorder(
-                                              borderRadius:
-                                                  const BorderRadius.all(
-                                                      Radius.circular(10)),
-                                              borderSide: BorderSide(
-                                                color: HexColor('#de5151'),
-                                              ),
-                                            ),
-                                          ),
-                                          isEmpty:
-                                              selectedResidentialProvince == '',
-                                          child: DropdownButtonHideUnderline(
-                                            child: DropdownButton<String>(
-                                              value:
-                                                  selectedResidentialProvince,
-                                              isDense: true,
-                                              onChanged: (String? newValue) {
-                                                setState(() {
-                                                  selectedResidentialProvince =
-                                                      newValue;
-                                                  state.didChange(newValue);
-                                                });
-                                              },
-                                              items:
-                                                  province.map((String value) {
-                                                return DropdownMenuItem<String>(
-                                                  value: value,
-                                                  child: Text(value),
-                                                );
-                                              }).toList(),
-                                            ),
-                                          ),
-                                        );
-                                      },
-                                    ),
-                                  ],
-                                ),
-                              ),
+                                  flex: 1,
+                                  child: getResidentialProvinceDropdown()),
                             ],
                           ),
                           const SizedBox(
@@ -1301,13 +567,13 @@ class _OnboardPersonalInformationState
                                         addressCopy();
                                       },
                                     ),
-                                    const Expanded(
+                                    Expanded(
                                       child: Text(
                                         'Same as Residential Address',
                                         style: TextStyle(
-                                          fontSize: 10,
-                                          fontWeight: FontWeight.w300,
-                                        ),
+                                            fontSize: 8.sp,
+                                            fontWeight: FontWeight.w600,
+                                            color: Colors.black),
                                       ),
                                     ),
                                   ],
@@ -1319,7 +585,7 @@ class _OnboardPersonalInformationState
                             hint: 'Postal Number/Street Number*',
                             controller: postalAddressController,
                             validator: (value) {
-                              if (value == null) {
+                              if (value == null || value.isEmpty) {
                                 return 'Address is required';
                               }
                               return null;
@@ -1331,7 +597,7 @@ class _OnboardPersonalInformationState
                             hint: 'Town/City*',
                             controller: postalCityController,
                             validator: (value) {
-                              if (value == null) {
+                              if (value == null || value.isEmpty) {
                                 return 'Town/City is required';
                               }
                               return null;
@@ -1347,8 +613,8 @@ class _OnboardPersonalInformationState
                                   hint: 'Postal Code*',
                                   controller: postalPostalCodeController,
                                   validator: (value) {
-                                    if (value == null) {
-                                      return 'Postal Code is required';
+                                    if (value == null || value.isEmpty) {
+                                      return 'Postal code is required';
                                     }
                                     return null;
                                   },
@@ -1358,194 +624,11 @@ class _OnboardPersonalInformationState
                                 width: 10,
                               ),
                               Flexible(
-                                flex: 2,
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Province*',
-                                      style: TextStyle(
-                                        color: Colors.black87,
-                                        fontSize: 10.sp,
-                                        fontFamily: GoogleFonts.inter(
-                                          fontWeight: FontWeight.w700,
-                                        ).fontFamily,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 0.5.h,
-                                    ),
-                                    FormField<String>(
-                                      builder: (FormFieldState<String> state) {
-                                        return InputDecorator(
-                                          decoration: InputDecoration(
-                                            fillColor: HexColor('#5374ff'),
-                                            errorStyle: TextStyle(
-                                              fontSize: 8.sp,
-                                              color: HexColor('#de5151'),
-                                              fontFamily: GoogleFonts.inter(
-                                                fontWeight: FontWeight.w500,
-                                              ).fontFamily,
-                                            ),
-                                            hintStyle: TextStyle(
-                                              color: HexColor('#8e9aa6'),
-                                              fontSize: 12.sp,
-                                              fontFamily: GoogleFonts.inter(
-                                                fontWeight: FontWeight.w500,
-                                              ).fontFamily,
-                                            ),
-                                            enabledBorder: OutlineInputBorder(
-                                              borderRadius:
-                                                  const BorderRadius.all(
-                                                      Radius.circular(10)),
-                                              borderSide: BorderSide(
-                                                color: HexColor('#d5dce0'),
-                                              ),
-                                            ),
-                                            focusedBorder: OutlineInputBorder(
-                                              borderRadius:
-                                                  const BorderRadius.all(
-                                                      Radius.circular(10)),
-                                              borderSide: BorderSide(
-                                                color: HexColor('#5374ff'),
-                                              ),
-                                            ),
-                                            errorBorder: OutlineInputBorder(
-                                              borderRadius:
-                                                  const BorderRadius.all(
-                                                      Radius.circular(10)),
-                                              borderSide: BorderSide(
-                                                color: HexColor('#de5151'),
-                                              ),
-                                            ),
-                                            focusedErrorBorder:
-                                                OutlineInputBorder(
-                                              borderRadius:
-                                                  const BorderRadius.all(
-                                                      Radius.circular(10)),
-                                              borderSide: BorderSide(
-                                                color: HexColor('#de5151'),
-                                              ),
-                                            ),
-                                          ),
-                                          isEmpty: selectedPostalProvince == '',
-                                          child: DropdownButtonHideUnderline(
-                                            child: DropdownButton<String>(
-                                              value: selectedPostalProvince,
-                                              isDense: true,
-                                              onChanged: (String? newValue) {
-                                                setState(() {
-                                                  selectedPostalProvince =
-                                                      newValue;
-                                                  state.didChange(newValue);
-                                                });
-                                              },
-                                              items:
-                                                  province.map((String value) {
-                                                return DropdownMenuItem<String>(
-                                                  value: value,
-                                                  child: Text(value),
-                                                );
-                                              }).toList(),
-                                            ),
-                                          ),
-                                        );
-                                      },
-                                    ),
-                                  ],
-                                ),
-                              ),
+                                  flex: 2, child: getPostalProvinceDropdown()),
                             ],
                           ),
                           Utils.sizedBoxHeight(20),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'PO Box',
-                                style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 10.sp,
-                                  fontFamily: GoogleFonts.inter(
-                                    fontWeight: FontWeight.w700,
-                                  ).fontFamily,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 0.5.h,
-                              ),
-                              FormField<String>(
-                                builder: (FormFieldState<String> state) {
-                                  return InputDecorator(
-                                    decoration: InputDecoration(
-                                      fillColor: HexColor('#5374ff'),
-                                      errorStyle: TextStyle(
-                                        fontSize: 8.sp,
-                                        color: HexColor('#de5151'),
-                                        fontFamily: GoogleFonts.inter(
-                                          fontWeight: FontWeight.w500,
-                                        ).fontFamily,
-                                      ),
-                                      hintStyle: TextStyle(
-                                        color: HexColor('#8e9aa6'),
-                                        fontSize: 12.sp,
-                                        fontFamily: GoogleFonts.inter(
-                                          fontWeight: FontWeight.w500,
-                                        ).fontFamily,
-                                      ),
-                                      enabledBorder: OutlineInputBorder(
-                                        borderRadius: const BorderRadius.all(
-                                            Radius.circular(10)),
-                                        borderSide: BorderSide(
-                                          color: HexColor('#d5dce0'),
-                                        ),
-                                      ),
-                                      focusedBorder: OutlineInputBorder(
-                                        borderRadius: const BorderRadius.all(
-                                            Radius.circular(10)),
-                                        borderSide: BorderSide(
-                                          color: HexColor('#5374ff'),
-                                        ),
-                                      ),
-                                      errorBorder: OutlineInputBorder(
-                                        borderRadius: const BorderRadius.all(
-                                            Radius.circular(10)),
-                                        borderSide: BorderSide(
-                                          color: HexColor('#de5151'),
-                                        ),
-                                      ),
-                                      focusedErrorBorder: OutlineInputBorder(
-                                        borderRadius: const BorderRadius.all(
-                                            Radius.circular(10)),
-                                        borderSide: BorderSide(
-                                          color: HexColor('#de5151'),
-                                        ),
-                                      ),
-                                    ),
-                                    isEmpty: selectedPoBox == '',
-                                    child: DropdownButtonHideUnderline(
-                                      child: DropdownButton<String>(
-                                        value: selectedPoBox,
-                                        isDense: true,
-                                        onChanged: (String? newValue) {
-                                          setState(() {
-                                            selectedPoBox = newValue;
-                                            state.didChange(newValue);
-                                          });
-                                        },
-                                        items: pobox.map((String value) {
-                                          return DropdownMenuItem<String>(
-                                            value: value,
-                                            child: Text(value),
-                                          );
-                                        }).toList(),
-                                      ),
-                                    ),
-                                  );
-                                },
-                              ),
-                            ],
-                          ),
+                          getPOBoxDropdown(),
                           Utils.sizedBoxHeight(20),
                           Container(
                             alignment: Alignment.centerLeft,
@@ -1561,105 +644,13 @@ class _OnboardPersonalInformationState
                               ),
                             ),
                           ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Emergency Contact Relationship*',
-                                style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 10.sp,
-                                  fontFamily: GoogleFonts.inter(
-                                    fontWeight: FontWeight.w700,
-                                  ).fontFamily,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 0.5.h,
-                              ),
-                              FormField<String>(
-                                builder: (FormFieldState<String> state) {
-                                  return InputDecorator(
-                                    decoration: InputDecoration(
-                                      fillColor: HexColor('#5374ff'),
-                                      errorStyle: TextStyle(
-                                        fontSize: 8.sp,
-                                        color: HexColor('#de5151'),
-                                        fontFamily: GoogleFonts.inter(
-                                          fontWeight: FontWeight.w500,
-                                        ).fontFamily,
-                                      ),
-                                      hintStyle: TextStyle(
-                                        color: HexColor('#8e9aa6'),
-                                        fontSize: 12.sp,
-                                        fontFamily: GoogleFonts.inter(
-                                          fontWeight: FontWeight.w500,
-                                        ).fontFamily,
-                                      ),
-                                      enabledBorder: OutlineInputBorder(
-                                        borderRadius: const BorderRadius.all(
-                                            Radius.circular(10)),
-                                        borderSide: BorderSide(
-                                          color: HexColor('#d5dce0'),
-                                        ),
-                                      ),
-                                      focusedBorder: OutlineInputBorder(
-                                        borderRadius: const BorderRadius.all(
-                                            Radius.circular(10)),
-                                        borderSide: BorderSide(
-                                          color: HexColor('#5374ff'),
-                                        ),
-                                      ),
-                                      errorBorder: OutlineInputBorder(
-                                        borderRadius: const BorderRadius.all(
-                                            Radius.circular(10)),
-                                        borderSide: BorderSide(
-                                          color: HexColor('#de5151'),
-                                        ),
-                                      ),
-                                      focusedErrorBorder: OutlineInputBorder(
-                                        borderRadius: const BorderRadius.all(
-                                            Radius.circular(10)),
-                                        borderSide: BorderSide(
-                                          color: HexColor('#de5151'),
-                                        ),
-                                      ),
-                                    ),
-                                    isEmpty: selectedEContactRelationship == '',
-                                    child: DropdownButtonHideUnderline(
-                                      child: DropdownButton<String>(
-                                        dropdownColor: const Color.fromARGB(
-                                            255, 233, 231, 224),
-                                        value: selectedEContactRelationship,
-                                        isDense: true,
-                                        onChanged: (String? newValue) {
-                                          setState(() {
-                                            selectedEContactRelationship =
-                                                newValue;
-                                            state.didChange(newValue);
-                                          });
-                                        },
-                                        items: emergencyContactRelation
-                                            .map((String value) {
-                                          return DropdownMenuItem<String>(
-                                            alignment: Alignment.center,
-                                            value: value,
-                                            child: Text(value),
-                                          );
-                                        }).toList(),
-                                      ),
-                                    ),
-                                  );
-                                },
-                              ),
-                            ],
-                          ),
+                          getRelationDropdown(),
                           Utils.sizedBoxHeight(20),
                           TxtField(
                             hint: 'Full Name*',
                             controller: emergencyContactFullNameController,
                             validator: (value) {
-                              if (value == null) {
+                              if (value == null || value.isEmpty) {
                                 return 'Full name is required';
                               }
                               return null;
@@ -1713,7 +704,7 @@ class _OnboardPersonalInformationState
                               vertical: 10,
                             ),
                             child: const Text(
-                              'Preffered Work Location:',
+                              'Preferred Work Location:',
                               style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
@@ -1725,8 +716,8 @@ class _OnboardPersonalInformationState
                             hint: 'Location*',
                             controller: workLocationController,
                             validator: (value) {
-                              if (value == null) {
-                                return 'location is required';
+                              if (value == null || value.isEmpty) {
+                                return 'Location is required';
                               }
                               return null;
                             },
@@ -1763,7 +754,7 @@ class _OnboardPersonalInformationState
                                   if (x == null ||
                                       x.isEmpty ||
                                       !cities.map((e) => e).contains(x)) {
-                                    return 'Please select a city';
+                                    return 'City is required';
                                   }
                                   return null;
                                 },
@@ -1827,94 +818,7 @@ class _OnboardPersonalInformationState
                             ],
                           ),
                           Utils.sizedBoxHeight(20),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Province*',
-                                style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 10.sp,
-                                  fontFamily: GoogleFonts.inter(
-                                    fontWeight: FontWeight.w700,
-                                  ).fontFamily,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 0.5.h,
-                              ),
-                              FormField<String>(
-                                builder: (FormFieldState<String> state) {
-                                  return InputDecorator(
-                                    decoration: InputDecoration(
-                                      fillColor: HexColor('#5374ff'),
-                                      errorStyle: TextStyle(
-                                        fontSize: 8.sp,
-                                        color: HexColor('#de5151'),
-                                        fontFamily: GoogleFonts.inter(
-                                          fontWeight: FontWeight.w500,
-                                        ).fontFamily,
-                                      ),
-                                      hintStyle: TextStyle(
-                                        color: HexColor('#8e9aa6'),
-                                        fontSize: 12.sp,
-                                        fontFamily: GoogleFonts.inter(
-                                          fontWeight: FontWeight.w500,
-                                        ).fontFamily,
-                                      ),
-                                      enabledBorder: OutlineInputBorder(
-                                        borderRadius: const BorderRadius.all(
-                                            Radius.circular(10)),
-                                        borderSide: BorderSide(
-                                          color: HexColor('#d5dce0'),
-                                        ),
-                                      ),
-                                      focusedBorder: OutlineInputBorder(
-                                        borderRadius: const BorderRadius.all(
-                                            Radius.circular(10)),
-                                        borderSide: BorderSide(
-                                          color: HexColor('#5374ff'),
-                                        ),
-                                      ),
-                                      errorBorder: OutlineInputBorder(
-                                        borderRadius: const BorderRadius.all(
-                                            Radius.circular(10)),
-                                        borderSide: BorderSide(
-                                          color: HexColor('#de5151'),
-                                        ),
-                                      ),
-                                      focusedErrorBorder: OutlineInputBorder(
-                                        borderRadius: const BorderRadius.all(
-                                            Radius.circular(10)),
-                                        borderSide: BorderSide(
-                                          color: HexColor('#de5151'),
-                                        ),
-                                      ),
-                                    ),
-                                    isEmpty: selectedWorkProvince == '',
-                                    child: DropdownButtonHideUnderline(
-                                      child: DropdownButton<String>(
-                                        value: selectedWorkProvince,
-                                        isDense: true,
-                                        onChanged: (String? newValue) {
-                                          setState(() {
-                                            selectedWorkProvince = newValue;
-                                            state.didChange(newValue);
-                                          });
-                                        },
-                                        items: province.map((String value) {
-                                          return DropdownMenuItem<String>(
-                                            value: value,
-                                            child: Text(value),
-                                          );
-                                        }).toList(),
-                                      ),
-                                    ),
-                                  );
-                                },
-                              ),
-                            ],
-                          ),
+                          getWorkProvinceDropdown(),
                           Utils.sizedBoxHeight(20),
                           SizedBox(
                             height: 80,
@@ -2018,11 +922,11 @@ class _OnboardPersonalInformationState
                                                   emergencyContactNumberController
                                                       .text,
                                               emergencyAlternativeContactNumber:
-                                                  alternativeNoController
-                                                      .text,
-                                                      data: widget.data,
-                                                      isEdit: isEdit));
+                                                  alternativeNoController.text,
+                                              data: widget.data,
+                                              isEdit: isEdit));
                                         } else {
+                                          // log('$selectedTitle $selectedGender $selectedMaritalStatus $selectedNationality $selectedCountryofBirth $selectedEquity $selectedDisability $selectedWorkProvince $selectedResidentialProvince $selectedPostalProvince $selectedEContactRelationship');
                                           _btnController.reset();
                                           ScaffoldMessenger.of(context)
                                               .showSnackBar(const SnackBar(
@@ -2062,13 +966,1032 @@ class _OnboardPersonalInformationState
                         ],
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),
         );
       },
+    );
+  }
+
+  Widget getGenderDropdown() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Gender*',
+          style: TextStyle(
+            color: Colors.black87,
+            fontSize: 10.sp,
+            fontFamily: GoogleFonts.inter(
+              fontWeight: FontWeight.w700,
+            ).fontFamily,
+          ),
+        ),
+        SizedBox(
+          height: 0.5.h,
+        ),
+        DropdownSearch<String>(
+          // mode: Mode.MENU,
+          validator: (value) {
+            if (value == null) {
+              return 'Gender is required';
+            }
+            return null;
+          },
+          // showSelectedItems: true,
+          items: ['Male', 'Female', 'Others'],
+
+          dropdownBuilder: (context, selectedItem) {
+            return Text(
+              selectedItem ?? '',
+              style: TextStyle(
+                fontSize: 12.sp,
+                color: Colors.black,
+                fontFamily: GoogleFonts.inter(
+                  fontWeight: FontWeight.w500,
+                ).fontFamily,
+              ),
+            );
+          },
+
+          popupProps: PopupProps.menu(
+            itemBuilder: (context, item, isSelected) {
+              return Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                        horizontal: 20.sp, vertical: 10.sp),
+                    child: Text(
+                      item,
+                      style: TextStyle(
+                        fontSize: 12.sp,
+                        color: Colors.black,
+                        fontFamily: GoogleFonts.inter(
+                          fontWeight: FontWeight.w500,
+                        ).fontFamily,
+                      ),
+                    ),
+                  ),
+                  item == 'Female'
+                      ? Container()
+                      : Divider(
+                          color: HexColor('#8e9aa6'),
+                          thickness: 0.5,
+                        )
+                ],
+              );
+            },
+            showSelectedItems: true,
+            constraints: BoxConstraints(
+              maxHeight: (2 * 42.sp) < 170.sp ? (2 * 42.sp) : 170.sp,
+            ),
+          ),
+          dropdownDecoratorProps: dropdownDecoratorProps,
+          onChanged: (dynamic newValue) {
+            setState(() {
+              selectedGender = newValue;
+              genderId =
+                  _genders.singleWhere((e) => e['gender'] == newValue)['id'];
+              print(_genders.singleWhere((e) => e['gender'] == newValue)['id']);
+              debugPrint('User select $genderId');
+            });
+          },
+          selectedItem: selectedGender,
+        ),
+      ],
+    );
+  }
+
+  Widget getTitleDropdown() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Title*',
+          style: TextStyle(
+            color: Colors.black87,
+            fontSize: 10.sp,
+            fontFamily: GoogleFonts.inter(
+              fontWeight: FontWeight.w700,
+            ).fontFamily,
+          ),
+        ),
+        SizedBox(
+          height: 0.5.h,
+        ),
+        DropdownSearch<String>(
+          // mode: Mode.MENU,
+          validator: (value) {
+            if (value == null) {
+              return 'Title is required';
+            }
+            return null;
+          },
+          // showSelectedItems: true,
+          items: titles,
+
+          dropdownBuilder: (context, selectedItem) {
+            return Text(
+              selectedItem ?? '',
+              style: TextStyle(
+                fontSize: 12.sp,
+                color: Colors.black,
+                fontFamily: GoogleFonts.inter(
+                  fontWeight: FontWeight.w500,
+                ).fontFamily,
+              ),
+            );
+          },
+
+          popupProps: PopupProps.menu(
+            itemBuilder: (context, item, isSelected) {
+              return Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                        horizontal: 20.sp, vertical: 10.sp),
+                    child: Text(
+                      item,
+                      style: TextStyle(
+                        fontSize: 12.sp,
+                        color: Colors.black,
+                        fontFamily: GoogleFonts.inter(
+                          fontWeight: FontWeight.w500,
+                        ).fontFamily,
+                      ),
+                    ),
+                  ),
+                  Divider(
+                    color: HexColor('#8e9aa6'),
+                    thickness: 0.5,
+                  )
+                ],
+              );
+            },
+            showSelectedItems: true,
+            constraints: BoxConstraints(
+              maxHeight: (3 * 42.sp) < 170.sp ? (3 * 42.sp) : 170.sp,
+            ),
+          ),
+          dropdownDecoratorProps: dropdownDecoratorProps,
+          onChanged: (dynamic newValue) {
+            setState(() {
+              selectedTitle = newValue;
+            });
+          },
+          selectedItem: selectedTitle,
+        ),
+      ],
+    );
+  }
+
+  Widget getMaritalStatusDropdown() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Marital Status*',
+          style: TextStyle(
+            color: Colors.black87,
+            fontSize: 10.sp,
+            fontFamily: GoogleFonts.inter(
+              fontWeight: FontWeight.w700,
+            ).fontFamily,
+          ),
+        ),
+        SizedBox(
+          height: 0.5.h,
+        ),
+        DropdownSearch<String>(
+          // mode: Mode.MENU,
+          validator: (value) {
+            if (value == null) {
+              return 'Marital Status is required';
+            }
+            return null;
+          },
+          // showSelectedItems: true,
+          items: maritalStatus,
+
+          dropdownBuilder: (context, selectedItem) {
+            return Text(
+              selectedItem ?? '',
+              style: TextStyle(
+                fontSize: 12.sp,
+                color: Colors.black,
+                fontFamily: GoogleFonts.inter(
+                  fontWeight: FontWeight.w500,
+                ).fontFamily,
+              ),
+            );
+          },
+
+          popupProps: PopupProps.menu(
+            itemBuilder: (context, item, isSelected) {
+              return Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                        horizontal: 20.sp, vertical: 10.sp),
+                    child: Text(
+                      item,
+                      style: TextStyle(
+                        fontSize: 12.sp,
+                        color: Colors.black,
+                        fontFamily: GoogleFonts.inter(
+                          fontWeight: FontWeight.w500,
+                        ).fontFamily,
+                      ),
+                    ),
+                  ),
+                  Divider(
+                    color: HexColor('#8e9aa6'),
+                    thickness: 0.5,
+                  )
+                ],
+              );
+            },
+            showSelectedItems: true,
+            constraints: BoxConstraints(
+              maxHeight: (4 * 42.sp) < 170.sp ? (4 * 42.sp) : 170.sp,
+            ),
+          ),
+          dropdownDecoratorProps: dropdownDecoratorProps,
+          onChanged: (dynamic newValue) {
+            setState(() {
+              selectedMaritalStatus = newValue;
+            });
+          },
+          selectedItem: selectedMaritalStatus,
+        ),
+      ],
+    );
+  }
+
+  Widget getNationalityDown() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Nationality*',
+          style: TextStyle(
+            color: Colors.black87,
+            fontSize: 10.sp,
+            fontFamily: GoogleFonts.inter(
+              fontWeight: FontWeight.w700,
+            ).fontFamily,
+          ),
+        ),
+        SizedBox(
+          height: 0.5.h,
+        ),
+        SearchField<String>(
+          controller: nationalityController,
+          autoCorrect: true,
+          suggestions:
+              countries.map((e) => SearchFieldListItem(e, item: e)).toList(),
+          suggestionState: Suggestion.expand,
+          hasOverlay: false,
+          searchStyle: const TextStyle(fontSize: 16, color: Colors.black),
+          validator: (x) {
+            if (x == null ||
+                x.isEmpty ||
+                !countries.map((e) => e).contains(x)) {
+              return 'Nationality is required';
+            }
+            return null;
+          },
+          searchInputDecoration: InputDecoration(
+            contentPadding: const EdgeInsets.all(20),
+            suffixIcon: const Icon(Icons.search),
+            fillColor: HexColor('#5374ff'),
+            errorStyle: TextStyle(
+              fontSize: 8.sp,
+              color: HexColor('#de5151'),
+              fontFamily: GoogleFonts.inter(
+                fontWeight: FontWeight.w500,
+              ).fontFamily,
+            ),
+            hintStyle: TextStyle(
+              color: HexColor('#8e9aa6'),
+              fontSize: 12.sp,
+              fontFamily: GoogleFonts.inter(
+                fontWeight: FontWeight.w500,
+              ).fontFamily,
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: const BorderRadius.all(Radius.circular(10)),
+              borderSide: BorderSide(
+                color: HexColor('#d5dce0'),
+              ),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderRadius: const BorderRadius.all(Radius.circular(10)),
+              borderSide: BorderSide(
+                color: HexColor('#5374ff'),
+              ),
+            ),
+            errorBorder: OutlineInputBorder(
+              borderRadius: const BorderRadius.all(Radius.circular(10)),
+              borderSide: BorderSide(
+                color: HexColor('#de5151'),
+              ),
+            ),
+            focusedErrorBorder: OutlineInputBorder(
+              borderRadius: const BorderRadius.all(Radius.circular(10)),
+              borderSide: BorderSide(
+                color: HexColor('#de5151'),
+              ),
+            ),
+          ),
+          onSuggestionTap: (x) {
+            setState(() {
+              selectedNationality = x.item!;
+            });
+            FocusScope.of(context).requestFocus(FocusNode());
+          },
+          maxSuggestionsInViewPort: 6,
+          itemHeight: 50,
+        ),
+      ],
+    );
+  }
+
+  Widget getCountryDropDown() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Country of Birth*',
+          style: TextStyle(
+            color: Colors.black87,
+            fontSize: 10.sp,
+            fontFamily: GoogleFonts.inter(
+              fontWeight: FontWeight.w700,
+            ).fontFamily,
+          ),
+        ),
+        SizedBox(
+          height: 0.5.h,
+        ),
+        SearchField<String>(
+          controller: countryController,
+          autoCorrect: true,
+          suggestions:
+              countries.map((e) => SearchFieldListItem(e, item: e)).toList(),
+          suggestionState: Suggestion.expand,
+          hasOverlay: false,
+          searchStyle: const TextStyle(fontSize: 16, color: Colors.black),
+          validator: (x) {
+            if (x == null ||
+                x.isEmpty ||
+                !countries.map((e) => e).contains(x)) {
+              return 'Country of Birth is required';
+            }
+            return null;
+          },
+          searchInputDecoration: InputDecoration(
+            contentPadding: const EdgeInsets.all(20),
+            suffixIcon: const Icon(Icons.search),
+            fillColor: HexColor('#5374ff'),
+            errorStyle: TextStyle(
+              fontSize: 8.sp,
+              color: HexColor('#de5151'),
+              fontFamily: GoogleFonts.inter(
+                fontWeight: FontWeight.w500,
+              ).fontFamily,
+            ),
+            hintStyle: TextStyle(
+              color: HexColor('#8e9aa6'),
+              fontSize: 12.sp,
+              fontFamily: GoogleFonts.inter(
+                fontWeight: FontWeight.w500,
+              ).fontFamily,
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: const BorderRadius.all(Radius.circular(10)),
+              borderSide: BorderSide(
+                color: HexColor('#d5dce0'),
+              ),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderRadius: const BorderRadius.all(Radius.circular(10)),
+              borderSide: BorderSide(
+                color: HexColor('#5374ff'),
+              ),
+            ),
+            errorBorder: OutlineInputBorder(
+              borderRadius: const BorderRadius.all(Radius.circular(10)),
+              borderSide: BorderSide(
+                color: HexColor('#de5151'),
+              ),
+            ),
+            focusedErrorBorder: OutlineInputBorder(
+              borderRadius: const BorderRadius.all(Radius.circular(10)),
+              borderSide: BorderSide(
+                color: HexColor('#de5151'),
+              ),
+            ),
+          ),
+          onSuggestionTap: (x) {
+            setState(() {
+              selectedCountryofBirth = x.item!;
+            });
+            FocusScope.of(context).requestFocus(FocusNode());
+          },
+          maxSuggestionsInViewPort: 6,
+          itemHeight: 50,
+        ),
+      ],
+    );
+  }
+
+  Widget getEquityDropdown() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Equity Group*',
+          style: TextStyle(
+            color: Colors.black87,
+            fontSize: 10.sp,
+            fontFamily: GoogleFonts.inter(
+              fontWeight: FontWeight.w700,
+            ).fontFamily,
+          ),
+        ),
+        SizedBox(
+          height: 0.5.h,
+        ),
+        DropdownSearch<String>(
+          // mode: Mode.MENU,
+          validator: (value) {
+            if (value == null) {
+              return 'Equity Group is required';
+            }
+            return null;
+          },
+          // showSelectedItems: true,
+          items: equity,
+
+          dropdownBuilder: (context, selectedItem) {
+            return Text(
+              selectedItem ?? '',
+              style: TextStyle(
+                fontSize: 12.sp,
+                color: Colors.black,
+                fontFamily: GoogleFonts.inter(
+                  fontWeight: FontWeight.w500,
+                ).fontFamily,
+              ),
+            );
+          },
+
+          popupProps: PopupProps.menu(
+            itemBuilder: (context, item, isSelected) {
+              return Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                        horizontal: 20.sp, vertical: 10.sp),
+                    child: Text(
+                      item,
+                      style: TextStyle(
+                        fontSize: 12.sp,
+                        color: Colors.black,
+                        fontFamily: GoogleFonts.inter(
+                          fontWeight: FontWeight.w500,
+                        ).fontFamily,
+                      ),
+                    ),
+                  ),
+                  Divider(
+                    color: HexColor('#8e9aa6'),
+                    thickness: 0.5,
+                  )
+                ],
+              );
+            },
+            showSelectedItems: true,
+            constraints: BoxConstraints(
+              maxHeight: (5 * 42.sp) < 170.sp ? (5 * 42.sp) : 170.sp,
+            ),
+          ),
+          dropdownDecoratorProps: dropdownDecoratorProps,
+          onChanged: (dynamic newValue) {
+            setState(() {
+              selectedEquity = newValue;
+            });
+          },
+          selectedItem: selectedEquity,
+        ),
+      ],
+    );
+  }
+
+  Widget getDisabilityDropdown() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Disability*',
+          style: TextStyle(
+            color: Colors.black87,
+            fontSize: 10.sp,
+            fontFamily: GoogleFonts.inter(
+              fontWeight: FontWeight.w700,
+            ).fontFamily,
+          ),
+        ),
+        SizedBox(
+          height: 0.5.h,
+        ),
+        DropdownSearch<String>(
+          // mode: Mode.MENU,
+          validator: (value) {
+            if (value == null) {
+              return 'Disability is required';
+            }
+            return null;
+          },
+          // showSelectedItems: true,
+          items: disability,
+
+          dropdownBuilder: (context, selectedItem) {
+            return Text(
+              selectedItem ?? '',
+              style: TextStyle(
+                fontSize: 12.sp,
+                color: Colors.black,
+                fontFamily: GoogleFonts.inter(
+                  fontWeight: FontWeight.w500,
+                ).fontFamily,
+              ),
+            );
+          },
+
+          popupProps: PopupProps.menu(
+            itemBuilder: (context, item, isSelected) {
+              return Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                        horizontal: 20.sp, vertical: 10.sp),
+                    child: Text(
+                      item,
+                      style: TextStyle(
+                        fontSize: 12.sp,
+                        color: Colors.black,
+                        fontFamily: GoogleFonts.inter(
+                          fontWeight: FontWeight.w500,
+                        ).fontFamily,
+                      ),
+                    ),
+                  ),
+                  Divider(
+                    color: HexColor('#8e9aa6'),
+                    thickness: 0.5,
+                  )
+                ],
+              );
+            },
+            showSelectedItems: true,
+            constraints: BoxConstraints(
+              maxHeight: (2 * 42.sp) < 170.sp ? (2 * 42.sp) : 170.sp,
+            ),
+          ),
+          dropdownDecoratorProps: dropdownDecoratorProps,
+          onChanged: (dynamic newValue) {
+            setState(() {
+              selectedDisability = newValue;
+            });
+          },
+          selectedItem: selectedDisability,
+        ),
+      ],
+    );
+  }
+
+  Widget getResidentialProvinceDropdown() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Province*',
+          style: TextStyle(
+            color: Colors.black87,
+            fontSize: 10.sp,
+            fontFamily: GoogleFonts.inter(
+              fontWeight: FontWeight.w700,
+            ).fontFamily,
+          ),
+        ),
+        SizedBox(
+          height: 0.5.h,
+        ),
+        DropdownSearch<String>(
+          // mode: Mode.MENU,
+          validator: (newValue) {
+            if (newValue == null) {
+              return 'Province is required';
+            }
+            return null;
+          },
+          // showSelectedItems: true,
+          items: province,
+
+          dropdownBuilder: (context, selectedItem) {
+            return Text(
+              selectedItem ?? '',
+              style: TextStyle(
+                fontSize: 12.sp,
+                color: Colors.black,
+                fontFamily: GoogleFonts.inter(
+                  fontWeight: FontWeight.w500,
+                ).fontFamily,
+              ),
+            );
+          },
+
+          popupProps: PopupProps.menu(
+            itemBuilder: (context, item, isSelected) {
+              return Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                        horizontal: 20.sp, vertical: 10.sp),
+                    child: Text(
+                      item,
+                      style: TextStyle(
+                        fontSize: 12.sp,
+                        color: Colors.black,
+                        fontFamily: GoogleFonts.inter(
+                          fontWeight: FontWeight.w500,
+                        ).fontFamily,
+                      ),
+                    ),
+                  ),
+                  Divider(
+                    color: HexColor('#8e9aa6'),
+                    thickness: 0.5,
+                  )
+                ],
+              );
+            },
+            showSelectedItems: true,
+            constraints: BoxConstraints(
+              maxHeight: (10 * 42.sp) < 170.sp ? (10 * 42.sp) : 170.sp,
+            ),
+          ),
+          dropdownDecoratorProps: dropdownDecoratorProps,
+          onChanged: (dynamic newValue) {
+            setState(() {
+              selectedResidentialProvince = newValue;
+            });
+          },
+          selectedItem: selectedResidentialProvince,
+        ),
+      ],
+    );
+  }
+
+  Widget getPostalProvinceDropdown() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Province*',
+          style: TextStyle(
+            color: Colors.black87,
+            fontSize: 10.sp,
+            fontFamily: GoogleFonts.inter(
+              fontWeight: FontWeight.w700,
+            ).fontFamily,
+          ),
+        ),
+        SizedBox(
+          height: 0.5.h,
+        ),
+        DropdownSearch<String>(
+          // mode: Mode.MENU,
+          validator: (newValue) {
+            if (newValue == null) {
+              return 'Province is required';
+            }
+            return null;
+          },
+          // showSelectedItems: true,
+          items: province,
+
+          dropdownBuilder: (context, selectedItem) {
+            return Text(
+              selectedItem ?? '',
+              style: TextStyle(
+                fontSize: 12.sp,
+                color: Colors.black,
+                fontFamily: GoogleFonts.inter(
+                  fontWeight: FontWeight.w500,
+                ).fontFamily,
+              ),
+            );
+          },
+
+          popupProps: PopupProps.menu(
+            itemBuilder: (context, item, isSelected) {
+              return Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                        horizontal: 20.sp, vertical: 10.sp),
+                    child: Text(
+                      item,
+                      style: TextStyle(
+                        fontSize: 12.sp,
+                        color: Colors.black,
+                        fontFamily: GoogleFonts.inter(
+                          fontWeight: FontWeight.w500,
+                        ).fontFamily,
+                      ),
+                    ),
+                  ),
+                  Divider(
+                    color: HexColor('#8e9aa6'),
+                    thickness: 0.5,
+                  )
+                ],
+              );
+            },
+            showSelectedItems: true,
+            constraints: BoxConstraints(
+              maxHeight: (10 * 42.sp) < 170.sp ? (10 * 42.sp) : 170.sp,
+            ),
+          ),
+          dropdownDecoratorProps: dropdownDecoratorProps,
+          onChanged: (dynamic newValue) {
+            setState(() {
+              selectedPostalProvince = newValue;
+            });
+          },
+          selectedItem: selectedPostalProvince,
+        ),
+      ],
+    );
+  }
+
+  Widget getWorkProvinceDropdown() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Province*',
+          style: TextStyle(
+            color: Colors.black87,
+            fontSize: 10.sp,
+            fontFamily: GoogleFonts.inter(
+              fontWeight: FontWeight.w700,
+            ).fontFamily,
+          ),
+        ),
+        SizedBox(
+          height: 0.5.h,
+        ),
+        DropdownSearch<String>(
+          // mode: Mode.MENU,
+          validator: (newValue) {
+            if (newValue == null) {
+              return 'Province is required';
+            }
+            return null;
+          },
+          // showSelectedItems: true,
+          items: province,
+
+          dropdownBuilder: (context, selectedItem) {
+            return Text(
+              selectedItem ?? '',
+              style: TextStyle(
+                fontSize: 12.sp,
+                color: Colors.black,
+                fontFamily: GoogleFonts.inter(
+                  fontWeight: FontWeight.w500,
+                ).fontFamily,
+              ),
+            );
+          },
+
+          popupProps: PopupProps.menu(
+            itemBuilder: (context, item, isSelected) {
+              return Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                        horizontal: 20.sp, vertical: 10.sp),
+                    child: Text(
+                      item,
+                      style: TextStyle(
+                        fontSize: 12.sp,
+                        color: Colors.black,
+                        fontFamily: GoogleFonts.inter(
+                          fontWeight: FontWeight.w500,
+                        ).fontFamily,
+                      ),
+                    ),
+                  ),
+                  Divider(
+                    color: HexColor('#8e9aa6'),
+                    thickness: 0.5,
+                  )
+                ],
+              );
+            },
+            showSelectedItems: true,
+            constraints: BoxConstraints(
+              maxHeight: (10 * 42.sp) < 170.sp ? (10 * 42.sp) : 170.sp,
+            ),
+          ),
+          dropdownDecoratorProps: dropdownDecoratorProps,
+          onChanged: (dynamic newValue) {
+            setState(() {
+              selectedWorkProvince = newValue;
+            });
+          },
+          selectedItem: selectedWorkProvince,
+        ),
+      ],
+    );
+  }
+
+  Widget getRelationDropdown() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Emergency Contact Relationship*',
+          style: TextStyle(
+            color: Colors.black87,
+            fontSize: 10.sp,
+            fontFamily: GoogleFonts.inter(
+              fontWeight: FontWeight.w700,
+            ).fontFamily,
+          ),
+        ),
+        SizedBox(
+          height: 0.5.h,
+        ),
+        DropdownSearch<String>(
+          // mode: Mode.MENU,
+          validator: (value) {
+            if (value == null) {
+              return 'Emergency Contact Relationship is required';
+            }
+            return null;
+          },
+          // showSelectedItems: true,
+          items: emergencyContactRelation,
+
+          dropdownBuilder: (context, selectedItem) {
+            return Text(
+              selectedItem ?? '',
+              style: TextStyle(
+                fontSize: 12.sp,
+                color: Colors.black,
+                fontFamily: GoogleFonts.inter(
+                  fontWeight: FontWeight.w500,
+                ).fontFamily,
+              ),
+            );
+          },
+
+          popupProps: PopupProps.menu(
+            itemBuilder: (context, item, isSelected) {
+              return Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                        horizontal: 20.sp, vertical: 10.sp),
+                    child: Text(
+                      item,
+                      style: TextStyle(
+                        fontSize: 12.sp,
+                        color: Colors.black,
+                        fontFamily: GoogleFonts.inter(
+                          fontWeight: FontWeight.w500,
+                        ).fontFamily,
+                      ),
+                    ),
+                  ),
+                  Divider(
+                    color: HexColor('#8e9aa6'),
+                    thickness: 0.5,
+                  )
+                ],
+              );
+            },
+            showSelectedItems: true,
+            constraints: BoxConstraints(
+              maxHeight: (10 * 42.sp) < 170.sp ? (10 * 42.sp) : 170.sp,
+            ),
+          ),
+          dropdownDecoratorProps: dropdownDecoratorProps,
+          onChanged: (dynamic newValue) {
+            setState(() {
+              selectedEContactRelationship = newValue;
+            });
+          },
+          selectedItem: selectedEContactRelationship,
+        ),
+      ],
+    );
+  }
+
+  Widget getPOBoxDropdown() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'PO Box',
+          style: TextStyle(
+            color: Colors.black87,
+            fontSize: 10.sp,
+            fontFamily: GoogleFonts.inter(
+              fontWeight: FontWeight.w700,
+            ).fontFamily,
+          ),
+        ),
+        SizedBox(
+          height: 0.5.h,
+        ),
+        DropdownSearch<String>(
+          // mode: Mode.MENU,
+
+          // showSelectedItems: true,
+          items: pobox,
+
+          dropdownBuilder: (context, selectedItem) {
+            return Text(
+              selectedItem ?? '',
+              style: TextStyle(
+                fontSize: 12.sp,
+                color: Colors.black,
+                fontFamily: GoogleFonts.inter(
+                  fontWeight: FontWeight.w500,
+                ).fontFamily,
+              ),
+            );
+          },
+
+          popupProps: PopupProps.menu(
+            itemBuilder: (context, item, isSelected) {
+              return Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                        horizontal: 20.sp, vertical: 10.sp),
+                    child: Text(
+                      item,
+                      style: TextStyle(
+                        fontSize: 12.sp,
+                        color: Colors.black,
+                        fontFamily: GoogleFonts.inter(
+                          fontWeight: FontWeight.w500,
+                        ).fontFamily,
+                      ),
+                    ),
+                  ),
+                  Divider(
+                    color: HexColor('#8e9aa6'),
+                    thickness: 0.5,
+                  )
+                ],
+              );
+            },
+            showSelectedItems: true,
+            constraints: BoxConstraints(
+              maxHeight: (10 * 42.sp) < 170.sp ? (10 * 42.sp) : 170.sp,
+            ),
+          ),
+          dropdownDecoratorProps: dropdownDecoratorProps,
+          onChanged: (dynamic newValue) {
+            setState(() {
+              selectedPoBox = newValue;
+            });
+          },
+          selectedItem: selectedPoBox,
+        ),
+      ],
     );
   }
 }

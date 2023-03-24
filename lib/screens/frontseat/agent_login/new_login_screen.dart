@@ -72,7 +72,7 @@ class _LoginFrontSeatState extends State<LoginFrontSeat> {
                               controller: emailController,
                               validator: (value) {
                                 if (value!.isEmpty) {
-                                  return 'email is required';
+                                  return 'Email is required';
                                 } else if (!(value.contains('@'))) {
                                   return 'Please enter valid email';
                                 }
@@ -100,9 +100,9 @@ class _LoginFrontSeatState extends State<LoginFrontSeat> {
                                     }),
                                 validator: (value) {
                                   if (value!.isEmpty) {
-                                    return 'password is required';
+                                    return 'Password is required';
                                   } else if (value.length < 8) {
-                                    return 'password must be at least 8 characters';
+                                    return 'Password must be at least 8 characters';
                                   } else if (!regExp.hasMatch(value)) {
                                     return 'Atleast one uppercase,lowercase,numeric and\nspecial character is required ';
                                   }
