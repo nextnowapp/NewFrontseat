@@ -528,6 +528,7 @@ class KycApi {
     try {
       response = await dio.get(FrontSeatApi.agentData);
       if (response.statusCode == 200) {
+        log(response.data.toString());
         var userData = UserDetailModel.fromJson(response.data);
         return userData;
       } else {

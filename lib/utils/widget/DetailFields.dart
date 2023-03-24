@@ -20,7 +20,7 @@ class DetailFields extends StatelessWidget {
           ),
           Expanded(
             child: TextWidget(
-              txt: value,
+              txt: ' ' + value,
               size: 16,
             ),
           ),
