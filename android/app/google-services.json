@@ -1,0 +1,86 @@
+{
+  "project_info": {
+    "project_number": "1046183969926",
+    "project_id": "onboardingapp-4853b",
+    "storage_bucket": "onboardingapp-4853b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1046183969926:android:149067dec4007021b0bd07",
+        "android_client_info": {
+          "package_name": "com.frontseat.stockview"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1046183969926-alsf6repm6i5iaalll1ic46nad266np5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.frontseat.stockview",
+            "certificate_hash": "142882310b7fc408fd1a5e82433557baff822f2e"
+          }
+        },
+        {
+          "client_id": "1046183969926-jdja6mdirdabeua410806s33991jimnt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.frontseat.stockview",
+            "certificate_hash": "2523f13077eaf2f7fe37114c2fa54560660a61e1"
+          }
+        },
+        {
+          "client_id": "1046183969926-mo66dq7vspgrjqsksquj9d1okjbfmgdg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.frontseat.stockview",
+            "certificate_hash": "cf78b5fafe637dea6361f42c69b53da37fa0becf"
+          }
+        },
+        {
+          "client_id": "1046183969926-ofh1be5bknc7daurtjglb4fnu5vneuf2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.frontseat.stockview",
+            "certificate_hash": "b12f4d4043742ef461f77419412215b700a671b0"
+          }
+        },
+        {
+          "client_id": "1046183969926-sq4b8p73mkoueu1assfuqavjqkkll36r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.frontseat.stockview",
+            "certificate_hash": "545dc0eb5a62e0c240fa5699bb8b8acb4881b0ae"
+          }
+        },
+        {
+          "client_id": "1046183969926-l2lgp5luapgbiorpbkqs2p9dt8f4alao.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlE6ei_jgs0NDzYlglNQ9JKDlTeaygL_E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1046183969926-l2lgp5luapgbiorpbkqs2p9dt8f4alao.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1046183969926-aaoudl04hfvpm0bvrheia5mi1t5s3g1s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.frontseat.stockview"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -10,15 +10,14 @@ class UserDetailModel {
   });
 
   UserDetailModel.fromJson(Map<String, dynamic> json)
-    : success = json['success'] as bool?,
-      data = (json['data'] as Map<String,dynamic>?) != null ? Data.fromJson(json['data'] as Map<String,dynamic>) : null,
-      message = json['message'] as String?;
+      : success = json['success'] as bool?,
+        data = (json['data'] as Map<String, dynamic>?) != null
+            ? Data.fromJson(json['data'] as Map<String, dynamic>)
+            : null,
+        message = json['message'] as String?;
 
-  Map<String, dynamic> toJson() => {
-    'success' : success,
-    'data' : data?.toJson(),
-    'message' : message
-  };
+  Map<String, dynamic> toJson() =>
+      {'success': success, 'data': data?.toJson(), 'message': message};
 }
 
 class Data {
@@ -29,11 +28,12 @@ class Data {
   });
 
   Data.fromJson(Map<String, dynamic> json)
-    : agentDetails = (json['AgentDetails'] as Map<String,dynamic>?) != null ? AgentDetails.fromJson(json['AgentDetails'] as Map<String,dynamic>) : null;
+      : agentDetails = (json['AgentDetails'] as Map<String, dynamic>?) != null
+            ? AgentDetails.fromJson(
+                json['AgentDetails'] as Map<String, dynamic>)
+            : null;
 
-  Map<String, dynamic> toJson() => {
-    'AgentDetails' : agentDetails?.toJson()
-  };
+  Map<String, dynamic> toJson() => {'AgentDetails': agentDetails?.toJson()};
 }
 
 class AgentDetails {
@@ -100,6 +100,8 @@ class AgentDetails {
   final String? nationalIdFrontImage;
   final String? nationalIdRearImage;
   final String? bankStatement;
+  final String? mtnNo;
+  final String? agentCode;
   final List<AgentDocArray>? agentDocArray;
 
   AgentDetails({
@@ -166,141 +168,152 @@ class AgentDetails {
     this.nationalIdFrontImage,
     this.nationalIdRearImage,
     this.bankStatement,
+    this.mtnNo,
+    this.agentCode,
     this.agentDocArray,
   });
 
   AgentDetails.fromJson(Map<String, dynamic> json)
-    : agentId = json['agent_id'] as int?,
-      userId = json['user_id'] as int?,
-      admissionNo = json['admission_no'] as int?,
-      title = json['title'] as String?,
-      firstName = json['first_name'] as String?,
-      middleName = json['middle_name'] as String?,
-      lastName = json['last_name'] as String?,
-      fullName = json['full_name'] as String?,
-      dateOfBirth = json['date_of_birth'] as String?,
-      email = json['email'] as String?,
-      mobile = json['mobile'] as String?,
-      applicationEmail = json['application_email'] as String?,
-      applicationPhone = json['application_phone'] as String?,
-      agentPhoto = json['agent_photo'] as String?,
-      gender = json['gender'] as String?,
-      profileUpdated = json['profileUpdated'] as bool?,
-      govtIdUploaded = json['govtIdUploaded'] as bool?,
-      personalInformationUpdated = json['personalInformationUpdated'] as bool?,
-      bankingDocument = json['banking_document'] as bool?,
-      emailVerifiedAt = json['email_verified_at'] as bool?,
-      mobileVerified = json['mobile_verified'] as bool?,
-      passportNumber = json['passportNumber'] as String?,
-      maritalStatus = json['maritalStatus'] as String?,
-      equityGroup = json['equityGroup'] as String?,
-      incomeTax = json['incomeTax'] as String?,
-      disability = json['disability'] as String?,
-      nationality = json['nationality'] as String?,
-      countryOfBirth = json['country_of_birth'] as String?,
-      residentialAddress = json['residentialAddress'] as String?,
-      residentialCity = json['residentialCity'] as String?,
-      residentialprovince = json['residentialprovince'] as String?,
-      residentialPostalCode = json['residentialPostalCode'] as String?,
-      postalAddress = json['postalAddress'] as String?,
-      postalCity = json['postalCity'] as String?,
-      postalprovince = json['postalprovince'] as String?,
-      postalPostalCode = json['postalPostalCode'] as String?,
-      emergencyContactRelation = json['emergencyContactRelation'] as String?,
-      emergencyContactFullName = json['emergencyContactFullName'] as String?,
-      emergencyContactNumber = json['emergencyContactNumber'] as String?,
-      emergencyAlternativeNumber = json['emergencyAlternativeNumber'] as String?,
-      workLocation = json['workLocation'] as String?,
-      workCity = json['workCity'] as String?,
-      workProvince = json['workProvince'] as String?,
-      documentType = json['documentType'] as String?,
-      drivingLicenseId = json['drivingLicenseId'] as String?,
-      idNumber = json['id_number'] as String?,
-      countryName = json['countryName'] as String?,
-      asylumDocNo = json['asylumDocNo'] as String?,
-      passportNo = json['passportNo'] as String?,
-      accountType = json['accountType'] as String?,
-      accHolderRelationship = json['accHolderRelationship'] as String?,
-      bankName = json['bankName'] as String?,
-      bankBranchName = json['bankBranchName'] as String?,
-      bankBranchCode = json['bankBranchCode'] as String?,
-      bankAccountNumber = json['bankAccountNumber'] as String?,
-      bankAccountHolderName = json['bankAccountHolderName'] as String?,
-      agentStatus = json['agent_status'] as String?,
-      agentStatusComments = json['agent_status_comments'] as String?,
-      drivingLicenceFrontImage = json['drivingLicenceFrontImage'] as String?,
-      drivingLicenceRearImage = json['drivingLicenceRearImage'] as String?,
-      nationalIdFrontImage = json['nationalIdFrontImage'] as String?,
-      nationalIdRearImage = json['nationalIdRearImage'] as String?,
-      bankStatement = json['bankStatement'] as String?,
-      agentDocArray = (json['AgentDocArray'] as List?)?.map((dynamic e) => AgentDocArray.fromJson(e as Map<String,dynamic>)).toList();
+      : agentId = json['agent_id'] as int?,
+        userId = json['user_id'] as int?,
+        admissionNo = json['admission_no'] as int?,
+        title = json['title'] as String?,
+        firstName = json['first_name'] as String?,
+        middleName = json['middle_name'] as String?,
+        lastName = json['last_name'] as String?,
+        fullName = json['full_name'] as String?,
+        dateOfBirth = json['date_of_birth'] as String?,
+        email = json['email'] as String?,
+        mobile = json['mobile'] as String?,
+        applicationEmail = json['application_email'] as String?,
+        applicationPhone = json['application_phone'] as String?,
+        agentPhoto = json['agent_photo'] as String?,
+        gender = json['gender'] as String?,
+        profileUpdated = json['profileUpdated'] as bool?,
+        govtIdUploaded = json['govtIdUploaded'] as bool?,
+        personalInformationUpdated =
+            json['personalInformationUpdated'] as bool?,
+        bankingDocument = json['banking_document'] as bool?,
+        emailVerifiedAt = json['email_verified_at'] as bool?,
+        mobileVerified = json['mobile_verified'] as bool?,
+        passportNumber = json['passportNumber'] as String?,
+        maritalStatus = json['maritalStatus'] as String?,
+        equityGroup = json['equityGroup'] as String?,
+        incomeTax = json['incomeTax'] as String?,
+        disability = json['disability'] as String?,
+        nationality = json['nationality'] as String?,
+        countryOfBirth = json['country_of_birth'] as String?,
+        residentialAddress = json['residentialAddress'] as String?,
+        residentialCity = json['residentialCity'] as String?,
+        residentialprovince = json['residentialprovince'] as String?,
+        residentialPostalCode = json['residentialPostalCode'] as String?,
+        postalAddress = json['postalAddress'] as String?,
+        postalCity = json['postalCity'] as String?,
+        postalprovince = json['postalprovince'] as String?,
+        postalPostalCode = json['postalPostalCode'] as String?,
+        emergencyContactRelation = json['emergencyContactRelation'] as String?,
+        emergencyContactFullName = json['emergencyContactFullName'] as String?,
+        emergencyContactNumber = json['emergencyContactNumber'] as String?,
+        emergencyAlternativeNumber =
+            json['emergencyAlternativeNumber'] as String?,
+        workLocation = json['workLocation'] as String?,
+        workCity = json['workCity'] as String?,
+        workProvince = json['workProvince'] as String?,
+        documentType = json['documentType'] as String?,
+        drivingLicenseId = json['drivingLicenseId'] as String?,
+        idNumber = json['id_number'] as String?,
+        countryName = json['countryName'] as String?,
+        asylumDocNo = json['asylumDocNo'] as String?,
+        passportNo = json['passportNo'] as String?,
+        accountType = json['accountType'] as String?,
+        accHolderRelationship = json['accHolderRelationship'] as String?,
+        bankName = json['bankName'] as String?,
+        bankBranchName = json['bankBranchName'] as String?,
+        bankBranchCode = json['bankBranchCode'] as String?,
+        bankAccountNumber = json['bankAccountNumber'] as String?,
+        bankAccountHolderName = json['bankAccountHolderName'] as String?,
+        agentStatus = json['agent_status'] as String?,
+        agentStatusComments = json['agent_status_comments'] as String?,
+        drivingLicenceFrontImage = json['drivingLicenceFrontImage'] as String?,
+        drivingLicenceRearImage = json['drivingLicenceRearImage'] as String?,
+        nationalIdFrontImage = json['nationalIdFrontImage'] as String?,
+        nationalIdRearImage = json['nationalIdRearImage'] as String?,
+        bankStatement = json['bankStatement'] as String?,
+        mtnNo = json['mtn_mobile_no'] as String?,
+        agentCode = json['agent_code'] as String?,
+        agentDocArray = (json['AgentDocArray'] as List?)
+            ?.map((dynamic e) =>
+                AgentDocArray.fromJson(e as Map<String, dynamic>))
+            .toList();
 
   Map<String, dynamic> toJson() => {
-    'agent_id' : agentId,
-    'user_id' : userId,
-    'admission_no' : admissionNo,
-    'title' : title,
-    'first_name' : firstName,
-    'middle_name' : middleName,
-    'last_name' : lastName,
-    'full_name' : fullName,
-    'date_of_birth' : dateOfBirth,
-    'email' : email,
-    'mobile' : mobile,
-    'application_email' : applicationEmail,
-    'application_phone' : applicationPhone,
-    'agent_photo' : agentPhoto,
-    'gender' : gender,
-    'profileUpdated' : profileUpdated,
-    'govtIdUploaded' : govtIdUploaded,
-    'personalInformationUpdated' : personalInformationUpdated,
-    'banking_document' : bankingDocument,
-    'email_verified_at' : emailVerifiedAt,
-    'mobile_verified' : mobileVerified,
-    'passportNumber' : passportNumber,
-    'maritalStatus' : maritalStatus,
-    'equityGroup' : equityGroup,
-    'incomeTax' : incomeTax,
-    'disability' : disability,
-    'nationality' : nationality,
-    'country_of_birth' : countryOfBirth,
-    'residentialAddress' : residentialAddress,
-    'residentialCity' : residentialCity,
-    'residentialprovince' : residentialprovince,
-    'residentialPostalCode' : residentialPostalCode,
-    'postalAddress' : postalAddress,
-    'postalCity' : postalCity,
-    'postalprovince' : postalprovince,
-    'postalPostalCode' : postalPostalCode,
-    'emergencyContactRelation' : emergencyContactRelation,
-    'emergencyContactFullName' : emergencyContactFullName,
-    'emergencyContactNumber' : emergencyContactNumber,
-    'emergencyAlternativeNumber' : emergencyAlternativeNumber,
-    'workLocation' : workLocation,
-    'workCity' : workCity,
-    'workProvince' : workProvince,
-    'documentType' : documentType,
-    'drivingLicenseId' : drivingLicenseId,
-    'id_number' : idNumber,
-    'countryName' : countryName,
-    'asylumDocNo' : asylumDocNo,
-    'passportNo' : passportNo,
-    'accountType' : accountType,
-    'accHolderRelationship' : accHolderRelationship,
-    'bankName' : bankName,
-    'bankBranchName' : bankBranchName,
-    'bankBranchCode' : bankBranchCode,
-    'bankAccountNumber' : bankAccountNumber,
-    'bankAccountHolderName' : bankAccountHolderName,
-    'agent_status' : agentStatus,
-    'agent_status_comments' : agentStatusComments,
-    'drivingLicenceFrontImage' : drivingLicenceFrontImage,
-    'drivingLicenceRearImage' : drivingLicenceRearImage,
-    'nationalIdFrontImage' : nationalIdFrontImage,
-    'nationalIdRearImage' : nationalIdRearImage,
-    'bankStatement' : bankStatement,
-    'AgentDocArray' : agentDocArray?.map((e) => e.toJson()).toList()
-  };
+        'agent_id': agentId,
+        'user_id': userId,
+        'admission_no': admissionNo,
+        'title': title,
+        'first_name': firstName,
+        'middle_name': middleName,
+        'last_name': lastName,
+        'full_name': fullName,
+        'date_of_birth': dateOfBirth,
+        'email': email,
+        'mobile': mobile,
+        'application_email': applicationEmail,
+        'application_phone': applicationPhone,
+        'agent_photo': agentPhoto,
+        'gender': gender,
+        'profileUpdated': profileUpdated,
+        'govtIdUploaded': govtIdUploaded,
+        'personalInformationUpdated': personalInformationUpdated,
+        'banking_document': bankingDocument,
+        'email_verified_at': emailVerifiedAt,
+        'mobile_verified': mobileVerified,
+        'passportNumber': passportNumber,
+        'maritalStatus': maritalStatus,
+        'equityGroup': equityGroup,
+        'incomeTax': incomeTax,
+        'disability': disability,
+        'nationality': nationality,
+        'country_of_birth': countryOfBirth,
+        'residentialAddress': residentialAddress,
+        'residentialCity': residentialCity,
+        'residentialprovince': residentialprovince,
+        'residentialPostalCode': residentialPostalCode,
+        'postalAddress': postalAddress,
+        'postalCity': postalCity,
+        'postalprovince': postalprovince,
+        'postalPostalCode': postalPostalCode,
+        'emergencyContactRelation': emergencyContactRelation,
+        'emergencyContactFullName': emergencyContactFullName,
+        'emergencyContactNumber': emergencyContactNumber,
+        'emergencyAlternativeNumber': emergencyAlternativeNumber,
+        'workLocation': workLocation,
+        'workCity': workCity,
+        'workProvince': workProvince,
+        'documentType': documentType,
+        'drivingLicenseId': drivingLicenseId,
+        'id_number': idNumber,
+        'countryName': countryName,
+        'asylumDocNo': asylumDocNo,
+        'passportNo': passportNo,
+        'accountType': accountType,
+        'accHolderRelationship': accHolderRelationship,
+        'bankName': bankName,
+        'bankBranchName': bankBranchName,
+        'bankBranchCode': bankBranchCode,
+        'bankAccountNumber': bankAccountNumber,
+        'bankAccountHolderName': bankAccountHolderName,
+        'agent_status': agentStatus,
+        'agent_status_comments': agentStatusComments,
+        'drivingLicenceFrontImage': drivingLicenceFrontImage,
+        'drivingLicenceRearImage': drivingLicenceRearImage,
+        'nationalIdFrontImage': nationalIdFrontImage,
+        'nationalIdRearImage': nationalIdRearImage,
+        'bankStatement': bankStatement,
+        'mtn_mobile_no': mtnNo,
+        'agent_code': agentCode,
+        'AgentDocArray': agentDocArray?.map((e) => e.toJson()).toList()
+      };
 }
 
 class AgentDocArray {
@@ -313,11 +326,9 @@ class AgentDocArray {
   });
 
   AgentDocArray.fromJson(Map<String, dynamic> json)
-    : fileName = json['file_name'] as String?,
-      filePath = json['file_path'] as String?;
+      : fileName = json['file_name'] as String?,
+        filePath = json['file_path'] as String?;
 
-  Map<String, dynamic> toJson() => {
-    'file_name' : fileName,
-    'file_path' : filePath
-  };
+  Map<String, dynamic> toJson() =>
+      {'file_name': fileName, 'file_path': filePath};
 }

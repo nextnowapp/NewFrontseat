@@ -9,13 +9,13 @@ import 'package:nextschool/screens/frontseat/status_page/widgets/detail_card.dar
 
 import '../../../controller/kyc_step_model.dart';
 import '../../../utils/Utils.dart';
-import '../services/kyc_api.dart';
-import '../model/frontseat_user_detail_model.dart';
 import '../../../utils/widget/DetailFields.dart';
 import '../../../utils/widget/textwidget.dart';
 import '../agent_onboarding/form_resubmission_page.dart';
 import '../agent_onboarding/submitted_for_verification.dart';
 import '../agent_onboarding/verify_account.dart';
+import '../model/frontseat_user_detail_model.dart';
+import '../services/kyc_api.dart';
 import '../widgets/custom_appbar.dart';
 
 class CustomSidebar extends StatefulWidget {
@@ -31,6 +31,8 @@ class _CustomSidebarState extends State<CustomSidebar> {
   String? firstName;
   String? lastName;
   String? email;
+  String? agentCode;
+  String? mtnNo;
   bool? mobileVerified;
   bool? uploadDocuments;
   bool? emailVerified;
@@ -83,9 +85,12 @@ class _CustomSidebarState extends State<CustomSidebar> {
                       mobile = data.mobile;
                       firstName = data.fullName ?? '';
                       email = data.email;
+
                       emailVerified = data.emailVerifiedAt;
                       mobileVerified = data.mobileVerified;
                       uploadDocuments = data.bankingDocument;
+                      agentCode = data.agentCode;
+                      mtnNo = data.mtnNo;
                       status = data.agentStatus;
                     }
                     return Column(
@@ -119,20 +124,19 @@ class _CustomSidebarState extends State<CustomSidebar> {
                                 child: Column(
                                   children: [
                                     DetailFields(
-                                        title: 'Full Name : ',
+                                        title: 'Full Name: ',
                                         value: firstName ?? ''),
-                                    // Visibility(
-                                    //   visible: lastName != null &&
-                                    //       lastName != '',
-                                    //   child: DetailFields(
-                                    //       title: 'Last Name : ',
-                                    //       value: lastName ?? ''),
-                                    // ),
                                     DetailFields(
-                                        title: 'Phone Number : ',
+                                        title: 'Phone Number: ',
                                         value: mobile ?? ''),
                                     DetailFields(
-                                        title: 'Email :', value: email ?? ''),
+                                        title: 'Email:', value: email ?? ''),
+                                    DetailFields(
+                                        title: 'MTN Mobile No:',
+                                        value: mtnNo ?? ''),
+                                    DetailFields(
+                                        title: 'Agent Code:',
+                                        value: agentCode ?? ''),
                                   ],
                                 ),
                               )
@@ -166,7 +170,8 @@ class _CustomSidebarState extends State<CustomSidebar> {
                                   Navigator.push(
                                     context,
                                     CupertinoPageRoute(
-                                      builder: (context) => ContractScreen(),
+                                      builder: (context) =>
+                                          const ContractScreen(),
                                     ),
                                   );
                                 } else if (kycStepModelController
