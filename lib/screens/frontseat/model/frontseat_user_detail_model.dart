@@ -65,11 +65,17 @@ class AgentDetails {
   final String? disability;
   final String? nationality;
   final String? countryOfBirth;
-  final String? residentialAddress;
+  final String? residentialUnit;
+  final String? residentialStreet;
+  final String? residentialComplex;
+  final String? residentialSuburb;
   final String? residentialCity;
   final String? residentialprovince;
   final String? residentialPostalCode;
-  final String? postalAddress;
+  final String? postalUnit;
+  final String? postalStreet;
+  final String? postalComplex;
+  final String? postalSuburb;
   final String? postalCity;
   final String? postalprovince;
   final String? postalPostalCode;
@@ -133,11 +139,17 @@ class AgentDetails {
     this.disability,
     this.nationality,
     this.countryOfBirth,
-    this.residentialAddress,
+    this.residentialComplex,
+    this.residentialStreet,
+    this.residentialSuburb,
+    this.residentialUnit,
     this.residentialCity,
     this.residentialprovince,
     this.residentialPostalCode,
-    this.postalAddress,
+    this.postalComplex,
+    this.postalStreet,
+    this.postalSuburb,
+    this.postalUnit,
     this.postalCity,
     this.postalprovince,
     this.postalPostalCode,
@@ -203,11 +215,17 @@ class AgentDetails {
         disability = json['disability'] as String?,
         nationality = json['nationality'] as String?,
         countryOfBirth = json['country_of_birth'] as String?,
-        residentialAddress = json['residentialAddress'] as String?,
+        residentialUnit = json['residentialUnitNo'] as String?,
+        residentialStreet = json['residentialStreetNo'] as String?,
+        residentialComplex = json['residentialComplexName'] as String?,
+        residentialSuburb = json['residentialSuburb'] as String?,
         residentialCity = json['residentialCity'] as String?,
         residentialprovince = json['residentialprovince'] as String?,
         residentialPostalCode = json['residentialPostalCode'] as String?,
-        postalAddress = json['postalAddress'] as String?,
+        postalUnit = json['postalUnitNo'] as String?,
+        postalStreet = json['postalStreetNo'] as String?,
+        postalComplex = json['postalComplexName'] as String?,
+        postalSuburb = json['postalSuburb'] as String?,
         postalCity = json['postalCity'] as String?,
         postalprovince = json['postalprovince'] as String?,
         postalPostalCode = json['postalPostalCode'] as String?,
@@ -275,11 +293,17 @@ class AgentDetails {
         'disability': disability,
         'nationality': nationality,
         'country_of_birth': countryOfBirth,
-        'residentialAddress': residentialAddress,
+        'residentialUnitNo': residentialUnit,
+        'residentialComplexName': residentialComplex,
+        'residentialStreetNo': residentialStreet,
+        'residentialSuburb': residentialSuburb,
         'residentialCity': residentialCity,
         'residentialprovince': residentialprovince,
         'residentialPostalCode': residentialPostalCode,
-        'postalAddress': postalAddress,
+        'postalUnitNo': postalUnit,
+        'postalComplexName': postalComplex,
+        'postalStreetNo': postalStreet,
+        'postalSuburb': postalSuburb,
         'postalCity': postalCity,
         'postalprovince': postalprovince,
         'postalPostalCode': postalPostalCode,

@@ -8,16 +8,15 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
 import 'package:nextschool/screens/frontseat/agent_onboarding/agent_active_screen.dart';
 import 'package:nextschool/screens/frontseat/agent_onboarding/agent_contract/contract_screen.dart';
+import 'package:nextschool/screens/frontseat/agent_register/new_register_screen.dart';
 import 'package:nextschool/screens/frontseat/home_page/widgets/action_card.dart';
 import 'package:nextschool/screens/frontseat/home_page/widgets/contract_card.dart';
 import 'package:nextschool/screens/frontseat/landing_screen.dart';
-import 'package:nextschool/screens/frontseat/agent_register/new_register_screen.dart';
 import 'package:nextschool/screens/frontseat/services/api_list.dart';
 import 'package:rxdart/rxdart.dart';
 
 import '../../../controller/kyc_step_model.dart';
 import '../../../utils/Utils.dart';
-import '../services/kyc_api.dart';
 import '../../../utils/model/ReceivedSms.dart';
 import '../../../utils/widget/textwidget.dart';
 import '../agent_onboarding/form_resubmission_page.dart';
@@ -25,6 +24,7 @@ import '../agent_onboarding/submitted_for_verification.dart';
 import '../agent_onboarding/upload_signature/signature_screen.dart';
 import '../agent_onboarding/verify_account.dart';
 import '../ammendment/ammendment_screen.dart';
+import '../services/kyc_api.dart';
 import '../termination/termination_screen.dart';
 import '../widgets/custom_appbar.dart';
 
@@ -324,58 +324,33 @@ class _HomeScreenState extends State<HomeScreen> {
                       }
                     },
                   ),
-                  kycStepModelController.inContractingValue ||
-                          kycStepModelController.contractedValue
-                      ? ContractCards(
-                          bgColor: const Color(0Xffe4f2fd),
-                          title: 'Request Ammendments',
-                          ontap: () async {
-                            Navigator.push(
-                                context,
-                                CupertinoPageRoute(
-                                    builder: (context) =>
-                                        const AmmendementScreen()));
-                          },
-                        )
-                      : ActionCards(
-                          titleBg: Colors.black,
-                          bgColor: const Color(0xfffbe48a),
-                          asset: 'assets/images/Mask2.png',
-                          ontap: () async {
-                            Navigator.push(
-                                context,
-                                CupertinoPageRoute(
-                                    builder: (context) =>
-                                        const AmmendementScreen()));
-                          },
-                          title: 'Request\nAmmendments',
-                        ),
-                  kycStepModelController.inContractingValue ||
-                          kycStepModelController.contractedValue
-                      ? ContractCards(
-                          bgColor: const Color(0xfff2dde2),
-                          title: 'Request Termination',
-                          ontap: () async {
-                            Navigator.push(
-                                context,
-                                CupertinoPageRoute(
-                                    builder: (context) =>
-                                        const TerminationScreen()));
-                          },
-                        )
-                      : ActionCards(
-                          titleBg: Colors.white,
-                          asset: 'assets/images/Mask3.png',
-                          bgColor: const Color(0xffff907d),
-                          ontap: () async {
-                            Navigator.push(
-                                context,
-                                CupertinoPageRoute(
-                                    builder: (context) =>
-                                        const TerminationScreen()));
-                          },
-                          title: 'Request\nTermination',
-                        ),
+                  ContractCards(
+                    bgColor: kycStepModelController.inContractingValue ||
+                            kycStepModelController.contractedValue
+                        ? const Color(0Xffe4f2fd)
+                        : const Color(0xfffbe48a),
+                    title: 'Request Amendments',
+                    ontap: () async {
+                      Navigator.push(
+                          context,
+                          CupertinoPageRoute(
+                              builder: (context) => const AmmendementScreen()));
+                    },
+                  ),
+
+                  ContractCards(
+                    bgColor: kycStepModelController.inContractingValue ||
+                            kycStepModelController.contractedValue
+                        ? const Color(0xfff2dde2)
+                        : const Color(0xffff907d),
+                    title: 'Request Termination',
+                    ontap: () async {
+                      Navigator.push(
+                          context,
+                          CupertinoPageRoute(
+                              builder: (context) => const TerminationScreen()));
+                    },
+                  )
                 ],
               ),
               TextButton(
@@ -389,7 +364,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   kycStepModelController.isEditableValue = false;
                   kycStepModelController.inContractingValue = false;
                   kycStepModelController.contractedValue = false;
-                  kycStepModelController.activeValue = false;                  
+                  kycStepModelController.activeValue = false;
                   kycStepModelController.pdfReadyValue = false;
                   kycStepModelController.reviewerValue = '';
                   kycStepModelController.commentValue = '';

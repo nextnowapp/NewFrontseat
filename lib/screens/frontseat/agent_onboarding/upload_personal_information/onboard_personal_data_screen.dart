@@ -61,13 +61,22 @@ class _OnboardPersonalInformationState
   final TextEditingController alternativeNoController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController dobController = TextEditingController();
-  final TextEditingController residentialAddressController =
+  final TextEditingController residentialunitController =
+      TextEditingController();
+  final TextEditingController residentialStreetController =
+      TextEditingController();
+  final TextEditingController residentialComplexController =
+      TextEditingController();
+  final TextEditingController residentialSuburbController =
       TextEditingController();
   final TextEditingController residentialCityController =
       TextEditingController();
   final TextEditingController residentialPostalCodeController =
       TextEditingController();
-  final TextEditingController postalAddressController = TextEditingController();
+  final TextEditingController postalunitController = TextEditingController();
+  final TextEditingController postalStreetController = TextEditingController();
+  final TextEditingController postalComplexController = TextEditingController();
+  final TextEditingController postalSuburbController = TextEditingController();
   final TextEditingController postalCityController = TextEditingController();
   final TextEditingController postalPostalCodeController =
       TextEditingController();
@@ -111,16 +120,28 @@ class _OnboardPersonalInformationState
       selectedDisability = widget.data!.data!.agentDetails!.disability;
       selectedEquity = widget.data!.data!.agentDetails!.equityGroup;
       dobController.text = widget.data!.data!.agentDetails!.dateOfBirth ?? '';
-      residentialAddressController.text =
-          widget.data!.data!.agentDetails!.residentialAddress ?? '';
+      residentialunitController.text =
+          widget.data!.data!.agentDetails!.residentialUnit ?? '';
+      residentialStreetController.text =
+          widget.data!.data!.agentDetails!.residentialStreet ?? '';
+      residentialComplexController.text =
+          widget.data!.data!.agentDetails!.residentialComplex ?? '';
+      residentialSuburbController.text =
+          widget.data!.data!.agentDetails!.residentialSuburb ?? '';
       residentialCityController.text =
           widget.data!.data!.agentDetails!.residentialCity ?? '';
       residentialPostalCodeController.text =
           widget.data!.data!.agentDetails!.residentialPostalCode ?? '';
       selectedResidentialProvince =
           widget.data!.data!.agentDetails!.residentialprovince ?? '';
-      postalAddressController.text =
-          widget.data!.data!.agentDetails!.postalAddress ?? '';
+      postalunitController.text =
+          widget.data!.data!.agentDetails!.postalUnit ?? '';
+      postalStreetController.text =
+          widget.data!.data!.agentDetails!.postalStreet ?? '';
+      postalComplexController.text =
+          widget.data!.data!.agentDetails!.postalComplex ?? '';
+      postalSuburbController.text =
+          widget.data!.data!.agentDetails!.postalSuburb ?? '';
       postalCityController.text =
           widget.data!.data!.agentDetails!.postalCity ?? '';
       postalPostalCodeController.text =
@@ -453,15 +474,49 @@ class _OnboardPersonalInformationState
                               ),
                             ),
                           ),
-                          TxtField(
-                            hint: 'Unit Number/Street Name/Complex*',
-                            controller: residentialAddressController,
-                            validator: (value) {
-                              if (value == null || value.isEmpty) {
-                                return 'Address is required';
-                              }
-                              return null;
-                            },
+                          Row(
+                            children: [
+                              Flexible(
+                                flex: 1,
+                                child: TxtField(
+                                  hint: 'Unit Number',
+                                  controller: residentialunitController,
+                                ),
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              Flexible(
+                                flex: 1,
+                                child: TxtField(
+                                  hint: 'Street No',
+                                  controller: residentialStreetController,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Utils.sizedBoxHeight(20),
+
+                          Row(
+                            children: [
+                              Flexible(
+                                flex: 1,
+                                child: TxtField(
+                                  hint: 'Complex Name',
+                                  controller: residentialComplexController,
+                                ),
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              Flexible(
+                                flex: 1,
+                                child: TxtField(
+                                  hint: 'Suburb',
+                                  controller: residentialSuburbController,
+                                ),
+                              ),
+                            ],
                           ),
 
                           Utils.sizedBoxHeight(20),
@@ -541,8 +596,16 @@ class _OnboardPersonalInformationState
                                       onPressed: () {
                                         addressCopy() {
                                           if (state.sameAddress == false) {
-                                            postalAddressController.text =
-                                                residentialAddressController
+                                            postalunitController.text =
+                                                residentialunitController.text;
+                                            postalStreetController.text =
+                                                residentialStreetController
+                                                    .text;
+                                            postalComplexController.text =
+                                                residentialComplexController
+                                                    .text;
+                                            postalSuburbController.text =
+                                                residentialSuburbController
                                                     .text;
                                             postalCityController.text =
                                                 residentialCityController.text;
@@ -552,7 +615,10 @@ class _OnboardPersonalInformationState
                                             selectedPostalProvince =
                                                 selectedResidentialProvince;
                                           } else {
-                                            postalAddressController.text = '';
+                                            postalunitController.text = '';
+                                            postalStreetController.text = '';
+                                            postalSuburbController.text = '';
+                                            postalComplexController.text = '';
                                             postalCityController.text = '';
                                             postalPostalCodeController.text =
                                                 '';
@@ -581,15 +647,49 @@ class _OnboardPersonalInformationState
                               ),
                             ],
                           ),
-                          TxtField(
-                            hint: 'Postal Number/Street Number*',
-                            controller: postalAddressController,
-                            validator: (value) {
-                              if (value == null || value.isEmpty) {
-                                return 'Address is required';
-                              }
-                              return null;
-                            },
+                          Row(
+                            children: [
+                              Flexible(
+                                flex: 1,
+                                child: TxtField(
+                                  hint: 'Unit Number',
+                                  controller: postalunitController,
+                                ),
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              Flexible(
+                                flex: 1,
+                                child: TxtField(
+                                  hint: 'Street No',
+                                  controller: postalStreetController,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Utils.sizedBoxHeight(20),
+
+                          Row(
+                            children: [
+                              Flexible(
+                                flex: 1,
+                                child: TxtField(
+                                  hint: 'Complex Name',
+                                  controller: postalComplexController,
+                                ),
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              Flexible(
+                                flex: 1,
+                                child: TxtField(
+                                  hint: 'Suburb',
+                                  controller: postalSuburbController,
+                                ),
+                              ),
+                            ],
                           ),
 
                           Utils.sizedBoxHeight(20),
@@ -704,7 +804,7 @@ class _OnboardPersonalInformationState
                               vertical: 10,
                             ),
                             child: const Text(
-                              'Preferred Work Location:',
+                              'Preferred Trading Location:',
                               style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
@@ -893,8 +993,16 @@ class _OnboardPersonalInformationState
                                               countryofBirth:
                                                   selectedCountryofBirth!,
                                               dob: dobController.text,
-                                              residentialAddress:
-                                                  residentialAddressController
+                                              residentialUnit: residentialunitController
+                                                  .text,
+                                              residentialComplex:
+                                                  residentialComplexController
+                                                      .text,
+                                              residentialStreet:
+                                                  residentialStreetController
+                                                      .text,
+                                              residentialSuburb:
+                                                  residentialSuburbController
                                                       .text,
                                               residentialCity:
                                                   residentialCityController
@@ -904,25 +1012,24 @@ class _OnboardPersonalInformationState
                                               residentialPostalCode:
                                                   residentialPostalCodeController
                                                       .text,
-                                              postalAddress:
-                                                  postalAddressController.text,
+                                              postalUnit:
+                                                  postalunitController.text,
+                                              postalComplex:
+                                                  postalComplexController.text,
+                                              postalStreet:
+                                                  postalStreetController.text,
+                                              postalSuburb:
+                                                  postalSuburbController.text,
                                               postalCity:
                                                   postalCityController.text,
                                               postalProvince:
                                                   selectedPostalProvince!,
                                               postalPostalCode:
-                                                  postalPostalCodeController
-                                                      .text,
-                                              emergencyContactRelation:
-                                                  selectedEContactRelationship!,
-                                              emergencyContactFullName:
-                                                  emergencyContactFullNameController
-                                                      .text,
-                                              emergencyContactNumber:
-                                                  emergencyContactNumberController
-                                                      .text,
-                                              emergencyAlternativeContactNumber:
-                                                  alternativeNoController.text,
+                                                  postalPostalCodeController.text,
+                                              emergencyContactRelation: selectedEContactRelationship!,
+                                              emergencyContactFullName: emergencyContactFullNameController.text,
+                                              emergencyContactNumber: emergencyContactNumberController.text,
+                                              emergencyAlternativeContactNumber: alternativeNoController.text,
                                               data: widget.data,
                                               isEdit: isEdit));
                                         } else {

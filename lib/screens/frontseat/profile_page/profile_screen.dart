@@ -7,9 +7,9 @@ import 'package:sizer/sizer.dart';
 
 import '../../../controller/kyc_step_model.dart';
 import '../../../utils/Utils.dart';
-import '../services/kyc_api.dart';
-import '../model/frontseat_user_detail_model.dart';
 import '../../../utils/widget/textwidget.dart';
+import '../model/frontseat_user_detail_model.dart';
+import '../services/kyc_api.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key, this.data}) : super(key: key);
@@ -35,11 +35,17 @@ class _ProfileScreenState extends State<ProfileScreen>
   String? maritalStatus;
   String? equityGroup;
   String? dob;
-  String? residentialAddress;
+  String? residentialUnit;
+  String? residentialStreet;
+  String? residentialSuburb;
+  String? residentialComplex;
   String? residentialProvince;
   String? residentialCity;
   String? residentialPostalCode;
-  String? postalAddress;
+  String? postalUnit;
+  String? postalStreet;
+  String? postalSuburb;
+  String? postalComplex;
   String? postalProvince;
   String? postalCity;
   String? postalPostalCode;
@@ -204,13 +210,19 @@ class _ProfileScreenState extends State<ProfileScreen>
                       maritalStatus = data.maritalStatus;
                       equityGroup = data.equityGroup;
                       dob = data.dateOfBirth;
-                      residentialAddress = data.residentialAddress;
+                      residentialComplex = data.residentialComplex;
+                      residentialStreet = data.residentialStreet;
+                      residentialUnit = data.residentialUnit;
+                      residentialSuburb = data.residentialSuburb;
                       residentialCity = data.residentialCity;
                       residentialPostalCode = snapshot
                           .data!.data!.agentDetails!.residentialPostalCode;
                       residentialProvince = snapshot
                           .data!.data!.agentDetails!.residentialprovince;
-                      postalAddress = data.postalAddress;
+                      postalComplex = data.postalComplex;
+                      postalStreet = data.postalStreet;
+                      postalUnit = data.postalUnit;
+                      postalSuburb = data.postalSuburb;
                       postalCity = data.postalCity;
                       postalPostalCode = data.postalPostalCode;
                       postalProvince = data.postalprovince;
@@ -381,9 +393,21 @@ class _ProfileScreenState extends State<ProfileScreen>
                                           children: [
                                             DetailField(
                                                 icon: Icons.push_pin,
-                                                title: 'Address',
+                                                title: 'Unit No',
+                                                value: residentialUnit ?? ''),
+                                            DetailField(
+                                                icon: Icons.push_pin,
+                                                title: 'Street',
+                                                value: residentialStreet ?? ''),
+                                            DetailField(
+                                                icon: Icons.push_pin,
+                                                title: 'Complex',
                                                 value:
-                                                    residentialAddress ?? ''),
+                                                    residentialComplex ?? ''),
+                                            DetailField(
+                                                icon: Icons.push_pin,
+                                                title: 'Suburb',
+                                                value: residentialSuburb ?? ''),
                                             DetailField(
                                                 icon: Icons.place,
                                                 title: 'City',
@@ -424,8 +448,20 @@ class _ProfileScreenState extends State<ProfileScreen>
                                               children: [
                                                 DetailField(
                                                     icon: Icons.push_pin,
-                                                    title: 'Address',
-                                                    value: postalAddress ?? ''),
+                                                    title: 'Unit No',
+                                                    value: postalUnit ?? ''),
+                                                DetailField(
+                                                    icon: Icons.push_pin,
+                                                    title: 'Street',
+                                                    value: postalStreet ?? ''),
+                                                DetailField(
+                                                    icon: Icons.push_pin,
+                                                    title: 'Complex',
+                                                    value: postalComplex ?? ''),
+                                                DetailField(
+                                                    icon: Icons.push_pin,
+                                                    title: 'Suburb',
+                                                    value: postalSuburb ?? ''),
                                                 DetailField(
                                                     icon: Icons.place,
                                                     title: 'City',
