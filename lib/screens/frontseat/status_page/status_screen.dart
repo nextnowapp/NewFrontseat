@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -6,6 +8,7 @@ import 'package:nextschool/screens/frontseat/agent_onboarding/upload_signature/s
 import 'package:nextschool/screens/frontseat/agent_onboarding/verify_email_screen.dart';
 import 'package:nextschool/screens/frontseat/change_password_screen.dart';
 import 'package:nextschool/screens/frontseat/status_page/widgets/detail_card.dart';
+import 'package:sms_autofill/sms_autofill.dart';
 
 import '../../../controller/kyc_step_model.dart';
 import '../../../utils/Utils.dart';
@@ -33,6 +36,7 @@ class _CustomSidebarState extends State<CustomSidebar> {
   String? email;
   String? agentCode;
   String? mtnNo;
+  String? otpCode;
   bool? mobileVerified;
   bool? uploadDocuments;
   bool? emailVerified;
@@ -42,12 +46,19 @@ class _CustomSidebarState extends State<CustomSidebar> {
 
   @override
   void initState() {
+    SmsAutoFill().listenForCode();
     setState(() {
       userdata = KycApi.getUserDetails();
       KycApi.AgentStatus();
     });
 
     super.initState();
+  }
+
+  @override
+  void dispose() {
+    SmsAutoFill().unregisterListener();
+    super.dispose();
   }
 
   @override
@@ -287,22 +298,77 @@ class _CustomSidebarState extends State<CustomSidebar> {
                                     : const Color(0xfffb6869),
                               ),
                             ),
-                            DetailCard(
-                              scale: .58,
-                              asset: 'assets/images/phone verification.png',
-                              title: 'Phone',
-                              title2: 'Verification',
-                              buttonColor: mobileVerified == true
-                                  ? const Color(0xffd6ecdf)
-                                  : const Color(0xffffd7d7),
-                              buttonText:
-                                  mobileVerified == true ? 'Done' : 'Pending',
-                              buttonIcon: mobileVerified == true
-                                  ? Icons.check_circle
-                                  : Icons.alarm,
-                              buttonWidgetColor: mobileVerified == true
-                                  ? const Color(0xff40a366)
-                                  : const Color(0xfffb6869),
+                            InkWell(
+                              onTap: () async {
+                                if (mobileVerified == false) {
+                                  KycApi.getOtp();
+
+                                  showDialog(
+                                      barrierDismissible: false,
+                                      context: context,
+                                      builder: (BuildContext context) {
+                                        return AlertDialog(
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(10)),
+                                          backgroundColor: Colors.white,
+                                          insetPadding:
+                                              const EdgeInsets.all(10),
+                                          title: TextWidget(
+                                            txt:
+                                                'We have sent an OTP to ${mobile} , please check and verify',
+                                            size: 17,
+                                          ),
+                                          content: PinFieldAutoFill(
+                                            currentCode: otpCode,
+                                            decoration: BoxLooseDecoration(
+                                                radius:
+                                                    const Radius.circular(10),
+                                                strokeColorBuilder:
+                                                    const FixedColorBuilder(
+                                                        Colors.black)),
+                                            codeLength: 6,
+                                            onCodeChanged: (code) async {
+                                              print('OnCodeChanged : $code');
+                                            },
+                                            onCodeSubmitted: (val) async {
+                                              log(val.toString());
+                                              var body = {
+                                                'verification_code': val,
+                                              };
+                                              await KycApi.mobileVerified(
+                                                  body, context);
+                                            },
+                                          ),
+                                          actions: [
+                                            TextButton(
+                                                child: const TextWidget(
+                                                    txt: 'Skip'),
+                                                onPressed: () async {
+                                                  Navigator.pop(context);
+                                                })
+                                          ],
+                                        );
+                                      });
+                                }
+                              },
+                              child: DetailCard(
+                                scale: .58,
+                                asset: 'assets/images/phone verification.png',
+                                title: 'Phone',
+                                title2: 'Verification',
+                                buttonColor: mobileVerified == true
+                                    ? const Color(0xffd6ecdf)
+                                    : const Color(0xffffd7d7),
+                                buttonText:
+                                    mobileVerified == true ? 'Done' : 'Pending',
+                                buttonIcon: mobileVerified == true
+                                    ? Icons.check_circle
+                                    : Icons.alarm,
+                                buttonWidgetColor: mobileVerified == true
+                                    ? const Color(0xff40a366)
+                                    : const Color(0xfffb6869),
+                              ),
                             ),
                           ],
                         ),
@@ -314,7 +380,8 @@ class _CustomSidebarState extends State<CustomSidebar> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => ResetPassword(),
+                                      builder: (context) =>
+                                          const ResetPassword(),
                                     ));
                               },
                               child: const Text(

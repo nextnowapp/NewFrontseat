@@ -26,12 +26,23 @@ class UploadPersonalDataEvent extends UploadPersonalInformationEvent {
   String dob;
   String? tax;
   //Residential address
-  String residentialAddress;
+  String? residentialUnit;
+  String? residentialStreet;
+
+  String? residentialSuburb;
+
+  String? residentialComplex;
   String residentialProvince;
   String residentialCity;
   String residentialPostalCode;
   //Postal address
-  String postalAddress;
+  String? postalUnit;
+  String? postalStreet;
+
+  String? postalSuburb;
+
+  String? postalComplex;
+
   String postalProvince;
   String postalCity;
   String postalPostalCode;
@@ -59,11 +70,17 @@ class UploadPersonalDataEvent extends UploadPersonalInformationEvent {
       required this.workLocation,
       required this.workCity,
       required this.workProvince,
-      required this.residentialAddress,
+      this.residentialUnit,
+      this.residentialComplex,
+      this.residentialStreet,
+      this.residentialSuburb,
       required this.residentialCity,
       required this.residentialProvince,
       required this.residentialPostalCode,
-      required this.postalAddress,
+      this.postalComplex,
+      this.postalStreet,
+      this.postalSuburb,
+      this.postalUnit,
       required this.postalCity,
       required this.postalProvince,
       required this.postalPostalCode,

@@ -76,9 +76,7 @@ class KycApi {
     if (response.statusCode == 200) {
       log('success');
       KycApi.kycStatus();
-    } else {
-      log('heyda');
-    }
+    } else {}
     //combine data and extraData into one map
   }
 
