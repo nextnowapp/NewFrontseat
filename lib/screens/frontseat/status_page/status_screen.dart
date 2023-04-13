@@ -8,6 +8,7 @@ import 'package:nextschool/screens/frontseat/agent_onboarding/upload_signature/s
 import 'package:nextschool/screens/frontseat/agent_onboarding/verify_email_screen.dart';
 import 'package:nextschool/screens/frontseat/change_password_screen.dart';
 import 'package:nextschool/screens/frontseat/status_page/widgets/detail_card.dart';
+import 'package:sizer/sizer.dart';
 import 'package:sms_autofill/sms_autofill.dart';
 
 import '../../../controller/kyc_step_model.dart';
@@ -81,15 +82,10 @@ class _CustomSidebarState extends State<CustomSidebar> {
                   future: userdata,
                   builder: (context, AsyncSnapshot<UserDetailModel?> snapshot) {
                     if (snapshot.connectionState == ConnectionState.waiting) {
-                      return Center(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            const LinearProgressIndicator(),
-                          ],
-                        ),
-                      );
+                      return SizedBox(
+                          height: 90.h,
+                          child:
+                              const Center(child: CircularProgressIndicator()));
                     }
                     if (snapshot.data != null) {
                       var data = snapshot.data!.data!.agentDetails!;
