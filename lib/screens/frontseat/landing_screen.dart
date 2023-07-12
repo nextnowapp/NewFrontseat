@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:nextschool/screens/frontseat/agent_login/new_login_screen.dart';
+import 'package:nextschool/screens/frontseat/agent_register/new_register_screen.dart';
 
 class LandingScreen extends StatelessWidget {
   const LandingScreen({Key? key}) : super(key: key);
@@ -62,6 +63,7 @@ class LandingScreen extends StatelessWidget {
                       child: TextButton(
                         style: TextButton.styleFrom(
                             foregroundColor: Colors.white,
+                            backgroundColor: Colors.red,
                             shape: const RoundedRectangleBorder(
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(5)),
@@ -70,7 +72,7 @@ class LandingScreen extends StatelessWidget {
                                     width: 2,
                                     style: BorderStyle.solid))),
                         onPressed: () {
-                          Navigator.pushReplacement(
+                          Navigator.push(
                               context,
                               MaterialPageRoute(
                                   builder: (context) => LoginFrontSeat()));
@@ -82,10 +84,47 @@ class LandingScreen extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w500,
+                                color: Colors.white,
+                              )),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.8,
+                      child: TextButton(
+                        style: TextButton.styleFrom(
+                            foregroundColor: Colors.white,
+                            shape: const RoundedRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(5)),
+                                side: BorderSide(
+                                    color: Colors.red,
+                                    width: 2,
+                                    style: BorderStyle.solid))),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const NewRegisterScreen()));
+                        },
+                        child: const Padding(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 20, vertical: 10),
+                          child: Text('Register',
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500,
                                 color: Colors.red,
                               )),
                         ),
                       ),
+                    ),
+                    const SizedBox(
+                      height: 10,
                     ),
                   ],
                 ),

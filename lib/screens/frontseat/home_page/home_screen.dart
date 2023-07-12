@@ -355,24 +355,81 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               TextButton(
                 onPressed: () async {
-                  kycStepModelController.allStepsCompletedValue = false;
-                  kycStepModelController.bankDetailsValue = false;
-                  kycStepModelController.govtIdUploadedValue = false;
-                  kycStepModelController.personalInformationUpdatedValue =
-                      false;
-                  kycStepModelController.selfieUpdatedValue = false;
-                  kycStepModelController.isEditableValue = false;
-                  kycStepModelController.inContractingValue = false;
-                  kycStepModelController.contractedValue = false;
-                  kycStepModelController.activeValue = false;
-                  kycStepModelController.pdfReadyValue = false;
-                  kycStepModelController.reviewerValue = '';
-                  kycStepModelController.commentValue = '';
-                  await Utils.clearAllValue();
-                  Navigator.pushReplacement(
-                      context,
-                      CupertinoPageRoute(
-                          builder: (context) => const LandingScreen()));
+                  showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return AlertDialog(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        contentPadding:
+                            const EdgeInsets.fromLTRB(24, 20, 24, 0),
+                        title: const Text(
+                          'Sign Out',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        content: const Text(
+                          'Are you sure you want to sign out?',
+                          style: TextStyle(
+                            fontSize: 16,
+                          ),
+                        ),
+                        actionsPadding: const EdgeInsets.only(right: 8),
+                        actions: [
+                          MaterialButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            child: Text(
+                              'Cancel',
+                              style: TextStyle(
+                                color: Colors.grey[700],
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                          MaterialButton(
+                            onPressed: () async {
+                              // perform sign out logic here
+                              kycStepModelController.allStepsCompletedValue =
+                                  false;
+                              kycStepModelController.bankDetailsValue = false;
+                              kycStepModelController.govtIdUploadedValue =
+                                  false;
+                              kycStepModelController
+                                  .personalInformationUpdatedValue = false;
+                              kycStepModelController.selfieUpdatedValue = false;
+                              kycStepModelController.isEditableValue = false;
+                              kycStepModelController.inContractingValue = false;
+                              kycStepModelController.contractedValue = false;
+                              kycStepModelController.activeValue = false;
+                              kycStepModelController.pdfReadyValue = false;
+                              kycStepModelController.reviewerValue = '';
+                              kycStepModelController.commentValue = '';
+                              await Utils.clearAllValue();
+                              Navigator.pushReplacement(
+                                  context,
+                                  CupertinoPageRoute(
+                                      builder: (context) =>
+                                          const LandingScreen()));
+                            },
+                            child: const Text(
+                              'Sign Out',
+                              style: TextStyle(
+                                color: Colors.red,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      );
+                    },
+                  );
                 },
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
