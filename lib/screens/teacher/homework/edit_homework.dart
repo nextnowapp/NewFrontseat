@@ -493,7 +493,7 @@ class _EditHomeWorkState extends State<EditHomeWork> {
               hint: widget.homework!.subjectName == null
                   ? 'Type Subject Name'
                   : _selectedSubject,
-              hasOverlay: false,
+              //hasOverlay: false,
               searchStyle: TextStyle(fontSize: 16, color: HexColor('#8395ae')),
               validator: (x) {
                 if (x == null ||
@@ -670,7 +670,7 @@ class _EditHomeWorkState extends State<EditHomeWork> {
         Navigator.pop(context);
         Navigator.pop(context);
       }
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       print(e);
       final errorMessage = e.response!.data['message'];
       Utils.showToast(e.toString());

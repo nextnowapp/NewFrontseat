@@ -203,11 +203,11 @@ class _TeacherMyRoutineScreenState extends State<TeacherMyRoutineScreen>
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 70,
             child: Row(
               children: [
-                const Expanded(
+                Expanded(
                   flex: 2,
                   child: Center(
                       child: Text(
@@ -218,7 +218,7 @@ class _TeacherMyRoutineScreenState extends State<TeacherMyRoutineScreen>
                     ),
                   )),
                 ),
-                const Expanded(
+                Expanded(
                   flex: 4,
                   child: Center(
                     child: Text(

@@ -356,7 +356,7 @@ class _StudentSearchState extends State<StudentSearch> {
                     color: HexColor('#de5151'),
                   ),
                 ),
-                labelStyle: Theme.of(context).textTheme.headline5,
+                labelStyle: Theme.of(context).textTheme.headlineSmall,
               ),
             ),
             onChanged: (dynamic newValue) {

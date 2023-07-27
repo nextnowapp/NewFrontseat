@@ -105,11 +105,14 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
             value: item.examName,
             child: Text(
               item.examName!,
-              style: Theme.of(context).textTheme.subtitle1!.copyWith(),
+              style: Theme.of(context).textTheme.titleMedium!.copyWith(),
             ),
           );
         }).toList(),
-        style: Theme.of(context).textTheme.headline4!.copyWith(fontSize: 15.0),
+        style: Theme.of(context)
+            .textTheme
+            .headlineMedium!
+            .copyWith(fontSize: 15.0),
         onChanged: (dynamic value) {
           setState(() {
             _selected = value;

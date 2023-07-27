@@ -113,7 +113,7 @@ class _StudentAttendanceHomeState extends State<StudentAttendanceHome> {
                       //   Icons.calendar_today,
                       //   color: Theme.of(context)
                       //       .textTheme
-                      //       .subtitle1!
+                      //       .titleMedium!
                       //       .color,
                       //   size: 20.0,
                       // ),
@@ -258,7 +258,7 @@ class _StudentAttendanceHomeState extends State<StudentAttendanceHome> {
                   (classes.length * 60) < 200 ? (classes.length * 60) : 200,
             ),
           ),
-            clearButtonProps: const ClearButtonProps(
+          clearButtonProps: const ClearButtonProps(
             isVisible: true,
             icon: Icon(Icons.clear),
           ),

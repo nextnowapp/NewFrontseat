@@ -721,7 +721,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar>
                             ),
                           ),
                           InkWell(
-                            onTap: () => Wiredash.of(context).show(),
+                            onTap: () => Wiredash.of(context)!.show(),
                             child: const SidebarItem(
                               icon: CupertinoIcons.chat_bubble,
                               title: 'Suggest Feedback',

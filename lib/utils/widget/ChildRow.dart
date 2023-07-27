@@ -70,24 +70,28 @@ class _ChildRowState extends State<ChildRow> {
                           (child.name!).toLowerCase().titleCase,
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
-                          style:
-                              Theme.of(context).textTheme.headline4!.copyWith(
-                                    fontWeight: FontWeight.w600,
-                                    fontSize: 20,
-                                    color: Colors.black,
-                                  ),
+                          style: Theme.of(context)
+                              .textTheme
+                              .headlineMedium!
+                              .copyWith(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 20,
+                                color: Colors.black,
+                              ),
                         ),
                         Utils.sizedBoxHeight(10),
                         Visibility(
                           visible: child.age != null,
                           child: Text(
                             child.age == null ? '' : 'Age: ' + child.age!,
-                            style:
-                                Theme.of(context).textTheme.headline4!.copyWith(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 16,
-                                      color: Colors.black,
-                                    ),
+                            style: Theme.of(context)
+                                .textTheme
+                                .headlineMedium!
+                                .copyWith(
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 16,
+                                  color: Colors.black,
+                                ),
                           ),
                         ),
                         Row(
@@ -99,7 +103,7 @@ class _ChildRowState extends State<ChildRow> {
                                 overflow: TextOverflow.ellipsis,
                                 style: Theme.of(context)
                                     .textTheme
-                                    .headline4!
+                                    .headlineMedium!
                                     .copyWith(
                                       fontWeight: FontWeight.w500,
                                       fontSize: 16,

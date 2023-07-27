@@ -182,7 +182,7 @@ class _StudentTeacherRowLayoutState extends State<StudentTeacherRowLayout> {
     //             width: 10,
     //           ),
     //           Text(widget.teacher.teacherName,
-    //               style: Theme.of(context).textTheme.headline4.copyWith(
+    //               style: Theme.of(context).textTheme.headlineMedium.copyWith(
     //                   fontSize: ScreenUtil().setSp(18.0),
     //                   fontWeight: FontWeight.w500)),
     //         ],
@@ -215,7 +215,7 @@ class _StudentTeacherRowLayoutState extends State<StudentTeacherRowLayout> {
     //                   Text(widget.teacher.teacherEmail,
     //                       style: Theme.of(context)
     //                           .textTheme
-    //                           .headline4
+    //                           .headlineMedium
     //                           .copyWith(fontSize: ScreenUtil().setSp(14.0))),
     //                 ],
     //               ),
@@ -248,7 +248,7 @@ class _StudentTeacherRowLayoutState extends State<StudentTeacherRowLayout> {
     //                                 : 'not available',
     //                             style: Theme.of(context)
     //                                 .textTheme
-    //                                 .headline4
+    //                                 .headlineMedium
     //                                 .copyWith(
     //                                     fontSize: ScreenUtil().setSp(14.0))),
     //                       ],
@@ -270,21 +270,21 @@ class _StudentTeacherRowLayoutState extends State<StudentTeacherRowLayout> {
     //             child: Text(teacher.teacherName,
     //                 style: Theme.of(context)
     //                     .textTheme
-    //                     .headline4
+    //                     .headlineMedium
     //                     .copyWith(fontSize: 10.0)),
     //           ),
     //           Expanded(
     //             child: Text(teacher.teacherEmail,
     //                 style: Theme.of(context)
     //                     .textTheme
-    //                     .headline4
+    //                     .headlineMedium
     //                     .copyWith(fontSize: 10.0)),
     //           ),
     //           Expanded(
     //             child: Text(per == 1 ? teacher.teacherPhone : 'not available',
     //                 style: Theme.of(context)
     //                     .textTheme
-    //                     .headline4
+    //                     .headlineMedium
     //                     .copyWith(fontSize: 10.0)),
     //           ),
     //         ],

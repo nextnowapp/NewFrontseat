@@ -1,14 +1,11 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lottie/lottie.dart';
-import 'package:nextschool/screens/choose_school.dart';
 import 'package:nextschool/screens/frontseat/landing_screen.dart';
 import 'package:nextschool/utils/model/OnboardingScreenItems.dart';
 import 'package:nextschool/utils/widget/back_button.dart';
 import 'package:nextschool/utils/widget/next_button.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({Key? key}) : super(key: key);
@@ -342,7 +339,7 @@ class _OnboardingScreenState extends State<OnboardingScreen>
                                 Navigator.pushReplacement(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => LandingScreen()));
+                                        builder: (context) => const LandingScreen()));
                               } else {
                                 _pageController.nextPage(
                                     duration: const Duration(milliseconds: 500),

@@ -266,10 +266,10 @@ class _GovtIdDetailsState extends State<GovtIdDetails> {
                                         _btnController.reset();
                                       }
                                     },
-                                    child: Row(
+                                    child: const Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
-                                      children: const [
+                                      children: [
                                         Text(
                                           'NEXT',
                                           style: TextStyle(
@@ -330,7 +330,7 @@ class _GovtIdDetailsState extends State<GovtIdDetails> {
           suggestions:
               countries.map((e) => SearchFieldListItem(e, item: e)).toList(),
           suggestionState: Suggestion.expand,
-          hasOverlay: false,
+          //hasOverlay: false,
           searchStyle: const TextStyle(fontSize: 16, color: Colors.black),
           validator: (x) {
             if (x == null ||

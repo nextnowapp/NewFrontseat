@@ -170,7 +170,7 @@ class _StudentRowState extends State<StudentRow> {
             'Late',
             textAlign: TextAlign.center,
             maxLines: 1,
-            style: Theme.of(context).textTheme.headline4!.copyWith(
+            style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                   color: const Color(0xFFc08b02),
                   fontWeight: FontWeight.w500,
                   fontSize: 12,
@@ -189,7 +189,7 @@ class _StudentRowState extends State<StudentRow> {
             'Absent',
             textAlign: TextAlign.center,
             maxLines: 1,
-            style: Theme.of(context).textTheme.headline4!.copyWith(
+            style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                   color: const Color(0xFFff8989),
                   fontWeight: FontWeight.w500,
                   fontSize: 12,
@@ -208,7 +208,7 @@ class _StudentRowState extends State<StudentRow> {
             'Present',
             textAlign: TextAlign.center,
             maxLines: 1,
-            style: Theme.of(context).textTheme.headline4!.copyWith(
+            style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                   color: const Color(0xFF449e58),
                   fontWeight: FontWeight.w500,
                   fontSize: 12,
@@ -227,7 +227,7 @@ class _StudentRowState extends State<StudentRow> {
             '',
             textAlign: TextAlign.center,
             maxLines: 1,
-            style: Theme.of(context).textTheme.headline4.copyWith(
+            style: Theme.of(context).textTheme.headlineMedium.copyWith(
               color: Color(0xFF696969),
               fontWeight: FontWeight.w500,
               fontSize: 12,
@@ -248,7 +248,7 @@ class _StudentRowState extends State<StudentRow> {
             'Attendance not taken ',
             textAlign: TextAlign.center,
             maxLines: 1,
-            style: Theme.of(context).textTheme.headline4!.copyWith(
+            style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                   color: Colors.grey.shade800,
                   fontWeight: FontWeight.w500,
                   fontSize: 12,

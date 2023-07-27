@@ -107,19 +107,19 @@ class _NotificationListScreenState extends State<NotificationListScreen> {
                     if (snapshot.data!.userNotifications.length == 0) {
                       return Container(
                         width: MediaQuery.of(context).size.width,
-                        child: Column(
+                        child: const Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            const Icon(
+                            Icon(
                               Icons.notifications_none,
                               size: 50,
                               color: Colors.grey,
                             ),
-                            const SizedBox(
+                            SizedBox(
                               height: 20,
                             ),
-                            const Text(
+                            Text(
                               'No new notifications!!',
                               textAlign: TextAlign.center,
                               style:
@@ -231,7 +231,6 @@ class _NotificationListScreenState extends State<NotificationListScreen> {
       String? title, int? notificationId, int routeUserId) async {
     print(title);
     switch (title) {
-
       //routing for staff role
       // digital content
       case 'staff-content':
@@ -697,7 +696,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
                     padding: const EdgeInsets.only(left: 0.0),
                     child: Text(
                       widget.title!,
-                      style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                      style: Theme.of(context).textTheme.titleMedium!.copyWith(
                           fontSize: ScreenUtil().setSp(20),
                           color: Colors.white),
                     ),

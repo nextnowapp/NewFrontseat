@@ -385,69 +385,77 @@ class _NewRegisterScreenState extends State<NewRegisterScreen> {
       'phone_number': phoneController.text,
       'email': emailController.text,
       'password': passwordController.text,
+      'active_status': '2'
     };
-    final response = await http.post(
-      Uri.parse(FrontSeatApi.registerUser),
-      body: data,
-    );
-    if (response.statusCode == 200) {
-      log(response.body);
-      var data = jsonDecode(response.body);
-      var userData = data['data']['user'];
-      // getting the required data from the response
-      id = userData['id'];
-      roleId = userData['role_id'];
-      role = userData['role'];
-      fullName = userData['fullname'];
-      email = userData['email'] ?? '';
-      mobile = userData['mobile'] ?? '';
-      genderId = userData['genderId'] ?? 1;
-      zoom = userData['zoom'];
-      is_administrator = userData['is_administrator'];
-      token = userData['accessToken'];
-      schoolUrl = FrontSeatApi.base;
+    try {
+      final response = await http.post(
+        Uri.parse(FrontSeatApi.registerUser),
+        body: data,
+      );
+      log(response.statusCode.toString());
+      if (response.statusCode == 200) {
+        log(response.body);
+        log(response.body.toString());
+        var data = jsonDecode(response.body);
+        var userData = data['data']['user'];
+        // getting the required data from the response
+        id = userData['id'];
+        roleId = userData['role_id'];
+        role = userData['role'];
+        fullName = userData['fullname'];
+        email = userData['email'] ?? '';
+        mobile = userData['mobile'] ?? '';
+        genderId = userData['genderId'] ?? 1;
+        zoom = userData['zoom'];
+        is_administrator = userData['is_administrator'];
+        token = userData['accessToken'];
+        schoolUrl = FrontSeatApi.base;
 
-      //saving data in local
-      Utils.saveIntValue('id', id);
-      Utils.saveIntValue('roleId', roleId);
-      Utils.saveStringValue('rule', role);
-      Utils.saveStringValue('fullname', fullName);
-      Utils.saveStringValue('email', email);
-      Utils.saveStringValue('mobile', mobile);
-      Utils.saveIntValue('genderId', genderId);
-      Utils.saveIntValue('zoom', zoom);
-      Utils.saveStringValue('isAdministrator', is_administrator);
-      Utils.saveStringValue('token', token);
-      Utils.saveBooleanValue('isLogged', true);
-      Utils.saveStringValue('schoolUrl', schoolUrl);
+        //saving data in local
+        Utils.saveIntValue('id', id);
+        Utils.saveIntValue('roleId', roleId);
+        Utils.saveStringValue('rule', role);
+        Utils.saveStringValue('fullname', fullName);
+        Utils.saveStringValue('email', email);
+        Utils.saveStringValue('mobile', mobile);
+        Utils.saveIntValue('genderId', genderId);
+        Utils.saveIntValue('zoom', zoom);
+        Utils.saveStringValue('isAdministrator', is_administrator);
+        Utils.saveStringValue('token', token);
+        Utils.saveBooleanValue('isLogged', true);
+        Utils.saveStringValue('schoolUrl', schoolUrl);
 
-      //intialize the user controller with the required data
-      controller.id = id;
-      controller.roleId = roleId;
-      controller.role = role;
-      controller.fullName = fullName;
-      controller.email = email;
-      controller.mobile = mobile;
-      controller.genderId = genderId;
-      controller.zoom = zoom;
-      controller.is_administrator = is_administrator;
-      controller.token = token;
-      controller.isLogged = true;
-      controller.schoolUrl = schoolUrl;
-      await KycApi.getOtp();
-      _btnController.reset();
-      return true;
-      // Utils.showToast('Agent has been created successfully');
-      // Navigator.pushAndRemoveUntil(
-      //     context,
-      //     MaterialPageRoute(
-      //         builder: (BuildContext context) => const BottomBar()),
-      //     (Route<dynamic> route) => route is BottomBar);
-    } else {
-      _btnController.reset();
-      Utils.showErrorToast('The email has already been taken.');
-      // Navigator.of(context, rootNavigator: true).pop('dialog');
-      throw Exception('Failed to load');
+        //intialize the user controller with the required data
+        controller.id = id;
+        controller.roleId = roleId;
+        controller.role = role;
+        controller.fullName = fullName;
+        controller.email = email;
+        controller.mobile = mobile;
+        controller.genderId = genderId;
+        controller.zoom = zoom;
+        controller.is_administrator = is_administrator;
+        controller.token = token;
+        controller.isLogged = true;
+        controller.schoolUrl = schoolUrl;
+        await KycApi.getOtp();
+        _btnController.reset();
+        return true;
+        // Utils.showToast('Agent has been created successfully');
+        // Navigator.pushAndRemoveUntil(
+        //     context,
+        //     MaterialPageRoute(
+        //         builder: (BuildContext context) => const BottomBar()),
+        //     (Route<dynamic> route) => route is BottomBar);
+      } else {
+        _btnController.reset();
+        Utils.showErrorToast('The email has already been taken.');
+        // Navigator.of(context, rootNavigator: true).pop('dialog');
+        throw Exception('Failed to load');
+      }
+    } catch (e) {
+      log(e.toString());
     }
+    return null;
   }
 }

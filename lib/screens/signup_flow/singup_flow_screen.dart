@@ -314,10 +314,10 @@ class _SignupFlowScreenState extends State<SignupFlowScreen> {
                                               );
                                             }
                                           }
-                                        } on DioError catch (e) {
+                                        } on DioException catch (e) {
                                           _btnController.reset();
                                           switch (e.type) {
-                                            case DioErrorType.response:
+                                            case DioExceptionType.badResponse:
                                               {
                                                 setState(() {
                                                   errorMessage = e.response!
@@ -326,7 +326,7 @@ class _SignupFlowScreenState extends State<SignupFlowScreen> {
                                                 });
                                               }
                                               break;
-                                            case DioErrorType.other:
+                                            case DioExceptionType.sendTimeout:
                                               {
                                                 showDialog(
                                                   context: context,
@@ -335,7 +335,8 @@ class _SignupFlowScreenState extends State<SignupFlowScreen> {
                                                     return AlertDialog(
                                                       title:
                                                           const Text('Error'),
-                                                      content: Text(e.message),
+                                                      content:
+                                                          Text(e.message ?? ''),
                                                       actions: <Widget>[
                                                         TextButton(
                                                           child:
@@ -361,17 +362,17 @@ class _SignupFlowScreenState extends State<SignupFlowScreen> {
                                       _btnController.reset();
                                     }
                                   },
-                                  child: Row(
+                                  child: const Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceEvenly,
                                     children: [
-                                      const SizedBox(width: 10),
-                                      const TextWidget(
+                                      SizedBox(width: 10),
+                                      TextWidget(
                                           txt: 'Next',
                                           clr: Colors.white,
                                           size: 16,
                                           weight: FontWeight.w500),
-                                      const Icon(
+                                      Icon(
                                         Icons.navigate_next,
                                         color: Colors.white,
                                         size: 26,

@@ -17,7 +17,7 @@ import 'package:nextschool/utils/CustomAppBarWidget.dart';
 import 'package:nextschool/utils/Utils.dart';
 import 'package:nextschool/utils/model/Student.dart';
 import 'package:nextschool/utils/widget/StudentSearchRow.dart';
-import 'package:open_file_safe/open_file_safe.dart';
+import 'package:open_filex/open_filex.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:sizer/sizer.dart';
@@ -206,7 +206,7 @@ class _StudentListScreenState extends State<StudentListScreen> {
                                       bytes.lengthInBytes));
 
                               // view file using system default viewer
-                              OpenFile.open(filePath);
+                              OpenFilex.open(filePath);
                               Utils.showToast('File Saved at $filePath');
                             } catch (e) {
                               Utils.showToast('Error in downloading file');

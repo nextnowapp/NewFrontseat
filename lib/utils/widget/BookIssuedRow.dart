@@ -58,7 +58,7 @@ class _BookListRowState extends State<BookListRow>
                 books!.title!,
                 style: Theme.of(context)
                     .textTheme
-                    .headline6!
+                    .titleLarge!
                     .copyWith(fontSize: 15.0, fontWeight: FontWeight.w700),
                 maxLines: 1,
               ),
@@ -73,7 +73,7 @@ class _BookListRowState extends State<BookListRow>
                   parentAnimation!.value * width, 0.0, 0.0),
               child: Text(
                 books!.author!,
-                style: Theme.of(context).textTheme.headline6!.copyWith(
+                style: Theme.of(context).textTheme.titleLarge!.copyWith(
                     fontSize: ScreenUtil().setSp(14.0),
                     fontWeight: FontWeight.w500),
                 maxLines: 1,
@@ -100,7 +100,7 @@ class _BookListRowState extends State<BookListRow>
                             maxLines: 1,
                             style: Theme.of(context)
                                 .textTheme
-                                .headline6!
+                                .titleLarge!
                                 .copyWith(fontWeight: FontWeight.w500),
                           ),
                           const SizedBox(
@@ -109,7 +109,7 @@ class _BookListRowState extends State<BookListRow>
                           Text(
                             books!.issuedDate!,
                             maxLines: 1,
-                            style: Theme.of(context).textTheme.headline6,
+                            style: Theme.of(context).textTheme.titleLarge,
                           ),
                         ],
                       ),
@@ -123,7 +123,7 @@ class _BookListRowState extends State<BookListRow>
                             maxLines: 1,
                             style: Theme.of(context)
                                 .textTheme
-                                .headline6!
+                                .titleLarge!
                                 .copyWith(fontWeight: FontWeight.w500),
                           ),
                           const SizedBox(
@@ -132,7 +132,7 @@ class _BookListRowState extends State<BookListRow>
                           Text(
                             books!.returnDate!,
                             maxLines: 1,
-                            style: Theme.of(context).textTheme.headline6,
+                            style: Theme.of(context).textTheme.titleLarge,
                           ),
                         ],
                       ),
@@ -146,7 +146,7 @@ class _BookListRowState extends State<BookListRow>
                             maxLines: 1,
                             style: Theme.of(context)
                                 .textTheme
-                                .headline6!
+                                .titleLarge!
                                 .copyWith(fontWeight: FontWeight.w500),
                           ),
                           const SizedBox(
@@ -155,7 +155,7 @@ class _BookListRowState extends State<BookListRow>
                           Text(
                             books!.bookNo!,
                             maxLines: 1,
-                            style: Theme.of(context).textTheme.headline6,
+                            style: Theme.of(context).textTheme.titleLarge,
                           ),
                         ],
                       ),
@@ -169,7 +169,7 @@ class _BookListRowState extends State<BookListRow>
                             maxLines: 1,
                             style: Theme.of(context)
                                 .textTheme
-                                .headline6!
+                                .titleLarge!
                                 .copyWith(fontWeight: FontWeight.w500),
                           ),
                           const SizedBox(
@@ -212,7 +212,7 @@ class _BookListRowState extends State<BookListRow>
             maxLines: 1,
             style: Theme.of(context)
                 .textTheme
-                .headline6!
+                .titleLarge!
                 .copyWith(color: Colors.white, fontWeight: FontWeight.w500),
           ),
         ),
@@ -229,7 +229,7 @@ class _BookListRowState extends State<BookListRow>
             maxLines: 1,
             style: Theme.of(context)
                 .textTheme
-                .headline6!
+                .titleLarge!
                 .copyWith(color: Colors.white, fontWeight: FontWeight.w500),
           ),
         ),

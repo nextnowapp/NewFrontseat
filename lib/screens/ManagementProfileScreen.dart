@@ -209,7 +209,7 @@ class _ManagementScreenState extends State<ManagementScreen> {
     response = await dio
         .post(InfixApi.uploadProfilePicture, data: formData)
         .catchError((e) {
-      final errorMessage = DioExceptions.fromDioError(e).toString();
+      final errorMessage = DioExceptions.fromDioException(e).toString();
       Navigator.of(context).pop();
     });
     if (response.statusCode == 200) {

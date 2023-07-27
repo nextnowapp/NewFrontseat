@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
-import 'package:nextschool/screens/Home.dart';
-import 'package:nextschool/screens/choose_school.dart';
 
 class ConnectionLostScreen extends StatelessWidget {
   ConnectionLostScreen({Key? key}) : super(key: key);

@@ -166,7 +166,7 @@
 //                                               ? Text('No Voucher',
 //                                                   style: Theme.of(context)
 //                                                       .textTheme
-//                                                       .headline5!
+//                                                       .headlineSmall!
 //                                                       .copyWith(
 //                                                           color: HexColor(
 //                                                               '#8692b2'),
@@ -176,7 +176,7 @@
 //                                                   ? Text(data.tP1Pass!,
 //                                                       style: Theme.of(context)
 //                                                           .textTheme
-//                                                           .headline5!
+//                                                           .headlineSmall!
 //                                                           .copyWith(
 //                                                               color: HexColor(
 //                                                                   '#8692b2'),
@@ -186,7 +186,7 @@
 //                                                   : Text(data.tP1Pass!,
 //                                                       style: Theme.of(context)
 //                                                           .textTheme
-//                                                           .headline5!
+//                                                           .headlineSmall!
 //                                                           .copyWith(
 //                                                               color:
 //                                                                   HexColor('#8692b2'),
@@ -229,7 +229,7 @@
 //                                               ? Text('No Voucher',
 //                                                   style: Theme.of(context)
 //                                                       .textTheme
-//                                                       .headline5!
+//                                                       .headlineSmall!
 //                                                       .copyWith(
 //                                                           color: HexColor(
 //                                                               '#8692b2'),
@@ -239,7 +239,7 @@
 //                                                   ? Text(data.tP2Pass!,
 //                                                       style: Theme.of(context)
 //                                                           .textTheme
-//                                                           .headline5!
+//                                                           .headlineSmall!
 //                                                           .copyWith(
 //                                                               color: HexColor(
 //                                                                   '#8692b2'),
@@ -308,7 +308,7 @@
 //     )
 //         // print('==============${response.data}====================');
 //         .catchError((e) {
-//       final errorMessage = DioExceptions.fromDioError(e).toString();
+//       final errorMessage = DioExceptions.fromDioException(e).toString();
 //       print(errorMessage);
 //       Utils.showToast(errorMessage);
 //       Navigator.of(context).pop();

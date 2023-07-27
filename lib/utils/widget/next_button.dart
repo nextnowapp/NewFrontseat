@@ -16,16 +16,16 @@ class NextButton extends StatelessWidget {
         color: color,
         borderRadius: BorderRadius.circular(30),
       ),
-      child: Row(
+      child: const Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          const SizedBox(width: 10),
-          const TextWidget(
+          SizedBox(width: 10),
+          TextWidget(
               txt: 'Next',
               clr: Colors.white,
               size: 16,
               weight: FontWeight.w500),
-          const Icon(
+          Icon(
             Icons.navigate_next,
             color: Colors.white,
             size: 26,

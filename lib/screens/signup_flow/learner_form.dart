@@ -419,9 +419,9 @@ class _LearnerFormScreenState extends State<LearnerFormScreen> {
                                           );
                                         }
                                       }
-                                    } on DioError catch (e) {
+                                    } on DioException catch (e) {
                                       switch (e.type) {
-                                        case DioErrorType.response:
+                                        case DioExceptionType.badResponse:
                                           {
                                             showDialog(
                                               context: context,
@@ -506,7 +506,7 @@ class _LearnerFormScreenState extends State<LearnerFormScreen> {
                                             );
                                           }
                                           break;
-                                        case DioErrorType.other:
+                                        case DioExceptionType.sendTimeout:
                                           {
                                             showDialog(
                                               context: context,
@@ -538,17 +538,17 @@ class _LearnerFormScreenState extends State<LearnerFormScreen> {
                                     _btnController.reset();
                                   }
                                 },
-                                child: Row(
+                                child: const Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceEvenly,
                                   children: [
-                                    const SizedBox(width: 10),
-                                    const TextWidget(
+                                    SizedBox(width: 10),
+                                    TextWidget(
                                         txt: 'Next',
                                         clr: Colors.white,
                                         size: 16,
                                         weight: FontWeight.w500),
-                                    const Icon(
+                                    Icon(
                                       Icons.navigate_next,
                                       color: Colors.white,
                                       size: 26,

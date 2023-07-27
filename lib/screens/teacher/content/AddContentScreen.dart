@@ -100,8 +100,6 @@ class _AddContentScreeenState extends State<AddContentScreeen> {
 
   bool? rememberMe = false;
 
-  void _onRememberMeChanged(bool newValue) => setState(() {});
-
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
@@ -448,7 +446,9 @@ class _AddContentScreeenState extends State<AddContentScreeen> {
                                             .firstMatch(_file!.path)!
                                             .group(1)!,
                                     style: TextStyle(
-                                      color:_file != null ? Colors.blueAccent:  HexColor('#8e9aa6'),
+                                      color: _file != null
+                                          ? Colors.blueAccent
+                                          : HexColor('#8e9aa6'),
                                       fontSize: 10.sp,
                                       fontFamily: GoogleFonts.inter(
                                         fontWeight: FontWeight.w500,
@@ -561,7 +561,7 @@ class _AddContentScreeenState extends State<AddContentScreeen> {
           isExpanded: true,
           hint: Text(
             'Select Content Type',
-            style: Theme.of(context).textTheme.headline5,
+            style: Theme.of(context).textTheme.headlineSmall,
           ),
           borderRadius: BorderRadius.circular(5.0),
           items: contentType.map((item) {
@@ -573,15 +573,17 @@ class _AddContentScreeenState extends State<AddContentScreeen> {
                 ),
                 child: Text(
                   item,
-                  style: Theme.of(context).textTheme.headline5!.copyWith(
+                  style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                         color: Colors.black,
                       ),
                 ),
               ),
             );
           }).toList(),
-          style:
-              Theme.of(context).textTheme.headline5!.copyWith(fontSize: 15.0),
+          style: Theme.of(context)
+              .textTheme
+              .headlineSmall!
+              .copyWith(fontSize: 15.0),
           onChanged: (dynamic value) {
             setState(() {
               _selectedContentType = value;
@@ -658,10 +660,10 @@ class _AddContentScreeenState extends State<AddContentScreeen> {
                     : 200,
               ),
             ),
-              clearButtonProps: const ClearButtonProps(
-            isVisible: true,
-            icon: Icon(Icons.clear),
-          ),
+            clearButtonProps: const ClearButtonProps(
+              isVisible: true,
+              icon: Icon(Icons.clear),
+            ),
             dropdownDecoratorProps: DropDownDecoratorProps(
               dropdownSearchDecoration: InputDecoration(
                 errorStyle: TextStyle(
@@ -939,10 +941,10 @@ class _AddContentScreeenState extends State<AddContentScreeen> {
                     (classes.length * 60) < 200 ? (classes.length * 60) : 200,
               ),
             ),
-              clearButtonProps: const ClearButtonProps(
-            isVisible: true,
-            icon: Icon(Icons.clear),
-          ),
+            clearButtonProps: const ClearButtonProps(
+              isVisible: true,
+              icon: Icon(Icons.clear),
+            ),
             dropdownDecoratorProps: DropDownDecoratorProps(
               dropdownSearchDecoration: InputDecoration(
                 errorStyle: TextStyle(

@@ -3,7 +3,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:connectivity/connectivity.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +11,6 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nextschool/config/app_config.dart';
@@ -25,8 +24,8 @@ import 'package:nextschool/screens/frontseat/agent_onboarding/upload_selfie/cont
 import 'package:nextschool/screens/frontseat/agent_onboarding/upload_signature/controller/signature_bloc.dart';
 import 'package:nextschool/screens/frontseat/landing_screen.dart';
 import 'package:nextschool/screens/frontseat/nav_bar.dart';
-import 'package:nextschool/utils/Utils.dart';
 import 'package:nextschool/screens/frontseat/services/kyc_api.dart';
+import 'package:nextschool/utils/Utils.dart';
 import 'package:nextschool/utils/theme.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:sizer/sizer.dart';
@@ -76,10 +75,10 @@ void main() async {
   Utils.packageInfo = await PackageInfo.fromPlatform();
 
   HttpOverrides.global = new MyHttpoverrides();
-  await precachePicture(
-      ExactAssetPicture(
-          SvgPicture.svgStringDecoderBuilder, 'assets/images/doodle_bg.svg'),
-      null);
+  // await precachePicture(
+  //     ExactAssetPicture(
+  //         SvgPicture.svgStringDecoderBuilder, 'assets/images/doodle_bg.svg'),
+  //     null);
 
   bool isLogged = await Utils.getBooleanValue('isLogged');
   userDetailsController.isLogged = isLogged;
@@ -95,8 +94,8 @@ void main() async {
     var zoom = await Utils.getIntValue('zoom');
     var isAdministrator = await Utils.getStringValue('isAdministrator');
     var token = await Utils.getStringValue('token');
-   await KycApi.AgentStatus();
-   await KycApi.kycStatus();
+    await KycApi.AgentStatus();
+    await KycApi.kycStatus();
 
     //set values to controller
     userDetailsController.id = id;

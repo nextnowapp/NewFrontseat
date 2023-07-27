@@ -360,7 +360,7 @@ class _ClassTimeListState extends State<ClassTimeList> {
         'No',
         style: Theme.of(context)
             .textTheme
-            .headline5!
+            .headlineSmall!
             .copyWith(fontSize: ScreenUtil().setSp(14), color: Colors.white),
       ),
       style: TextButton.styleFrom(
@@ -377,7 +377,7 @@ class _ClassTimeListState extends State<ClassTimeList> {
       child: Center(
         child: Text(
           'Edit',
-          style: Theme.of(context).textTheme.headline5!.copyWith(
+          style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                 fontSize: ScreenUtil().setSp(14),
                 height: 0.6,
                 color: Colors.white,
@@ -447,22 +447,25 @@ class _ClassTimeListState extends State<ClassTimeList> {
       enableDrag: false,
       context: context,
       builder: (context) {
-        return DeleteBottomSheet(onDelete: () async {
-          Utils.showProcessingToast();
-          final response = await http.get(
-              Uri.parse(InfixApi.deleteClassTime(id.toString())),
-              headers: Utils.setHeader(_token.toString()));
-          if (response.statusCode == 200) {
-            var jsonData = jsonDecode(response.body);
-            Navigator.of(context).pop();
-            // Utils.showSnackBar(context, 'Class Time Deleted Successfully',
-            //     color: Colors.green);
-            Utils.showToast('Class Time Deleted Successfully');
-          } else {
-            throw Exception('Failed to load');
-          }
-          Navigator.pop(context);
-        }, title: 'Delete Class Time',);
+        return DeleteBottomSheet(
+          onDelete: () async {
+            Utils.showProcessingToast();
+            final response = await http.get(
+                Uri.parse(InfixApi.deleteClassTime(id.toString())),
+                headers: Utils.setHeader(_token.toString()));
+            if (response.statusCode == 200) {
+              var jsonData = jsonDecode(response.body);
+              Navigator.of(context).pop();
+              // Utils.showSnackBar(context, 'Class Time Deleted Successfully',
+              //     color: Colors.green);
+              Utils.showToast('Class Time Deleted Successfully');
+            } else {
+              throw Exception('Failed to load');
+            }
+            Navigator.pop(context);
+          },
+          title: 'Delete Class Time',
+        );
       },
     );
   }

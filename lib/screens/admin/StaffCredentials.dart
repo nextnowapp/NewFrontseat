@@ -8,7 +8,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:http/http.dart' as http;
 import 'package:nextschool/utils/CustomAppBarWidget.dart';
-import 'package:open_file_safe/open_file_safe.dart';
+import 'package:open_filex/open_filex.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:sizer/sizer.dart';
 
@@ -115,7 +115,7 @@ class _StaffCredentialScreenState extends State<StaffCredentialScreen> {
                             bytes.offsetInBytes, bytes.lengthInBytes));
 
                         // view file using system default viewer
-                        OpenFile.open(filePath);
+                        OpenFilex.open(filePath);
                         Utils.showToast('File Saved at $filePath');
                       } catch (e) {
                         Utils.showToast('Error in downloading file');

@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:get/instance_manager.dart';
 import 'package:nextschool/screens/frontseat/agent_onboarding/submitted_for_verification.dart';
-import 'package:nextschool/screens/frontseat/agent_onboarding/upload_bank_details/bank_details_page.dart';
+import 'package:nextschool/screens/frontseat/agent_onboarding/upload_bank_details/bank_details_confirmation.dart';
 import 'package:nextschool/screens/frontseat/agent_onboarding/upload_govt_id/govt_id_details.dart';
 import 'package:nextschool/screens/frontseat/agent_onboarding/upload_personal_information/onboard_personal_data_screen.dart';
 import 'package:nextschool/screens/frontseat/agent_onboarding/upload_selfie/upload_selfie_help_screen.dart';
@@ -11,7 +11,6 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../../../controller/kyc_step_model.dart';
 import '../../../utils/Utils.dart';
-
 
 class VerificationScreen extends StatefulWidget {
   const VerificationScreen({
@@ -86,10 +85,11 @@ class _VerificationScreenState extends State<VerificationScreen>
                     GestureDetector(
                       onTap: () {
                         if (!kycStepModelController.selfieUpdatedValue) {
-                           Navigator.push(
+                          Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const UploadSelfieHelpScreen()));
+                                  builder: (context) =>
+                                      const UploadSelfieHelpScreen()));
                         }
                       },
                       child: SizedBox(
@@ -141,10 +141,11 @@ class _VerificationScreenState extends State<VerificationScreen>
                         if (!kycStepModelController
                                 .personalInformationUpdatedValue &&
                             kycStepModelController.selfieUpdatedValue) {
-                            Navigator.push(
+                          Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const OnboardPersonalInformation()));
+                                  builder: (context) =>
+                                      const OnboardPersonalInformation()));
                         }
                       },
                       child: SizedBox(
@@ -265,10 +266,11 @@ class _VerificationScreenState extends State<VerificationScreen>
                             kycStepModelController
                                 .personalInformationUpdatedValue &&
                             kycStepModelController.govtIdUploadedValue) {
-                           Navigator.push(
+                          Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const BankDetails()));
+                                  builder: (context) =>
+                                      const BankConfirmation()));
                         }
                       },
                       child: SizedBox(
@@ -352,7 +354,7 @@ class _VerificationScreenState extends State<VerificationScreen>
                   InkWell(
                     onTap: () async {
                       await launchUrl(
-                          Uri.parse("https://schoolmanagement.co.za/terms"));
+                          Uri.parse('https://schoolmanagement.co.za/terms'));
                     },
                     child: const Text(
                       'privacy ',
@@ -363,7 +365,7 @@ class _VerificationScreenState extends State<VerificationScreen>
                     ),
                   ),
                   const Text(
-                    "and",
+                    'and',
                     style: TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w300,
@@ -372,7 +374,7 @@ class _VerificationScreenState extends State<VerificationScreen>
                   InkWell(
                     onTap: () async {
                       await launchUrl(
-                          Uri.parse("https://schoolmanagement.co.za/privacy"));
+                          Uri.parse('https://schoolmanagement.co.za/privacy'));
                     },
                     child: const Text(
                       ' data policy.',
@@ -403,10 +405,11 @@ class _VerificationScreenState extends State<VerificationScreen>
                   onPressed: () async {
                     if (kycStepModelController.bankDetailsValue) {
                       kycStepModelController.allStepsCompleted(true);
-                       Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const SubmittedForVerificationScreen()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const SubmittedForVerificationScreen()));
                       Utils.showToast('Application Submitted Successfully');
                     }
                   },

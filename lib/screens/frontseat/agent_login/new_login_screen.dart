@@ -201,10 +201,10 @@ class _LoginFrontSeatState extends State<LoginFrontSeat> {
                     const SizedBox(
                       height: 20,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 18.0, right: 18),
+                    const Padding(
+                      padding: EdgeInsets.only(left: 18.0, right: 18),
                       child: Row(
-                        children: const [
+                        children: [
                           Flexible(child: Divider()),
                           SizedBox(width: 10),
                           Text(

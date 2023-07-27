@@ -4,7 +4,6 @@ import 'dart:io';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:dio/dio.dart';
-import 'package:file_utils/file_utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
@@ -57,7 +56,7 @@ class _AdminNoticeDetailsState extends State<AdminNoticeDetails> {
               Text(
                 noticeList.noticeTitle ?? '',
                 maxLines: 3,
-                style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                style: Theme.of(context).textTheme.titleMedium!.copyWith(
                       fontWeight: FontWeight.w700,
                       fontSize: 22.sp,
                     ),
@@ -329,7 +328,9 @@ class _AdminNoticeDetailsState extends State<AdminNoticeDetails> {
                           ),
                         ],
                       ),
-                      SizedBox(height: 10,)
+                      const SizedBox(
+                        height: 10,
+                      )
                     ],
                   ),
                 ),
@@ -393,7 +394,7 @@ class _AdminNoticeDetailsState extends State<AdminNoticeDetails> {
     AlertDialog alert = AlertDialog(
       title: Text(
         'Download',
-        style: Theme.of(context).textTheme.headline5,
+        style: Theme.of(context).textTheme.headlineSmall,
       ),
       content: const Text('Would you like to download the file?'),
       actions: [
@@ -436,7 +437,7 @@ class _AdminNoticeDetailsState extends State<AdminNoticeDetails> {
       String downloadName = noticeList.noticeTitle!;
       String fullPath = '$dirloc/$downloadName.pdf';
       String fileSaved = '$dirloc/$downloadName.pdf/';
-      FileUtils.mkdir([fullPath]);
+
       await dio.download(
           InfixApi().root + url, fileSaved + AppFunction.getExtention(url),
           options: Options(headers: {HttpHeaders.acceptEncodingHeader: '*'}),

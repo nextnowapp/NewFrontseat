@@ -135,7 +135,7 @@
 //                                       Icons.calendar_today,
 //                                       color: Theme.of(context)
 //                                           .textTheme
-//                                           .subtitle1!
+//                                           .titleMedium!
 //                                           .color,
 //                                       size: 20.0,
 //                                     ),
@@ -361,7 +361,7 @@
 //                     color: HexColor('#de5151'),
 //                   ),
 //                 ),
-//                 labelStyle: Theme.of(context).textTheme.headline5,
+//                 labelStyle: Theme.of(context).textTheme.headlineSmall,
 //               ),
 //             ),
 //             onChanged: (dynamic newValue) {

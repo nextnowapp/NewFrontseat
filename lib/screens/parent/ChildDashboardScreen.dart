@@ -37,7 +37,7 @@ class _ChildHomeState extends State<ChildHome> {
   void initState() {
     super.initState();
     isTapped = false;
-    firstname = _name!.split(" ")[0];
+    firstname = _name!.split(' ')[0];
   }
 
   @override

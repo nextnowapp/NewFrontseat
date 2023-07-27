@@ -49,7 +49,7 @@ class ProfileRowList extends StatelessWidget {
                                   _key,
                                   style: Theme.of(context)
                                       .textTheme
-                                      .subtitle2!
+                                      .titleSmall!
                                       .copyWith(
                                         color: const Color(0xff415094),
                                         fontWeight: FontWeight.normal,
@@ -82,7 +82,7 @@ class ProfileRowList extends StatelessWidget {
                                   _value == null ? 'NA' : _value!,
                                   style: Theme.of(context)
                                       .textTheme
-                                      .subtitle2!
+                                      .titleSmall!
                                       .copyWith(
                                         color: const Color(0xff415094),
                                         fontWeight: FontWeight.normal,
@@ -119,7 +119,7 @@ class ProfileRowList extends StatelessWidget {
                                     : _key,
                                 style: Theme.of(context)
                                     .textTheme
-                                    .subtitle2!
+                                    .titleSmall!
                                     .copyWith(
                                       color: const Color(0xff415094),
                                       fontWeight: FontWeight.normal,
@@ -152,7 +152,7 @@ class ProfileRowList extends StatelessWidget {
                                 maxLines: 1,
                                 style: Theme.of(context)
                                     .textTheme
-                                    .subtitle2!
+                                    .titleSmall!
                                     .copyWith(
                                       color: const Color(0xff415094),
                                       fontWeight: FontWeight.normal,

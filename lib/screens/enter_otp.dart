@@ -379,7 +379,7 @@
 //                           'Verify OTP',
 //                           style: Theme.of(context)
 //                               .textTheme
-//                               .headline5!
+//                               .headlineSmall!
 //                               .copyWith(
 //                                   color: validatedPincodeField
 //                                       ? Colors.white

@@ -155,7 +155,7 @@ class _EditOthersProfileState extends State<EditOthersProfile> {
       },
     ).catchError((e) {
       print(e);
-      final errorMessage = DioExceptions.fromDioError(e).toString();
+      final errorMessage = DioExceptions.fromDioException(e).toString();
       setState(() {});
       Utils.showToast(errorMessage);
     });

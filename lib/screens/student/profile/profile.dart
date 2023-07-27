@@ -8,7 +8,6 @@ import 'dart:io';
 // Package imports:
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:dio/dio.dart';
-import 'package:file_utils/file_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart' hide FormData, MultipartFile, Response;
 import 'package:google_fonts/google_fonts.dart';
@@ -758,7 +757,7 @@ class _LearnerProfileScreenState extends State<LearnerProfileScreen>
     AlertDialog alert = AlertDialog(
       title: Text(
         'Download',
-        style: Theme.of(context).textTheme.headline5,
+        style: Theme.of(context).textTheme.headlineSmall,
       ),
       content: Text('Would you like to download the $title file?'),
       actions: [
@@ -786,7 +785,6 @@ class _LearnerProfileScreenState extends State<LearnerProfileScreen>
     dirloc = (await getApplicationDocumentsDirectory()).path;
 
     try {
-      FileUtils.mkdir([dirloc]);
       Utils.showToast('Downloading...');
       await dio.download(
           InfixApi().root + url, dirloc + AppFunction.getExtention(url),

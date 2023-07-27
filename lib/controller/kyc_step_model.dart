@@ -8,8 +8,8 @@ class KycStepModel extends GetxController {
   final Rx<bool> allStepsCompleted = false.obs;
   final Rx<bool> isEditable = false.obs;
   final Rx<bool> rejected = false.obs;
-  final Rx<String> comment = "".obs;
-  final Rx<String> reviewer = "".obs;
+  final Rx<String> comment = ''.obs;
+  final Rx<String> reviewer = ''.obs;
   final Rx<bool> inContracting = false.obs;
    final Rx<bool> contracted = false.obs;
    final Rx<bool> pdfReady = false.obs;

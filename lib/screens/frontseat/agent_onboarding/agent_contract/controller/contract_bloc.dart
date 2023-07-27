@@ -1,10 +1,5 @@
-import 'dart:io';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:nextschool/utils/Utils.dart';
-import 'package:path_provider/path_provider.dart';
-import 'package:signature/signature.dart';
-import 'dart:typed_data';
 import '../../../services/kyc_api.dart';
 part 'contract_event.dart';
 part 'contract_state.dart';

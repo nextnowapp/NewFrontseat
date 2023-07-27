@@ -20,7 +20,7 @@ class TeacherSubjectRowLayout extends StatelessWidget {
             children: <Widget>[
               Expanded(
                 child: Text(subject.subjectName!,
-                    style: Theme.of(context).textTheme.headline5),
+                    style: Theme.of(context).textTheme.headlineSmall),
               ),
             ],
           ),

@@ -60,7 +60,7 @@ class _AddClassRoomState extends State<AddClassRoom> {
               padding: const EdgeInsets.all(10.0),
               child: TextFormField(
                 keyboardType: TextInputType.number,
-                style: Theme.of(context).textTheme.headline5,
+                style: Theme.of(context).textTheme.headlineSmall,
                 maxLines: 1,
                 textAlign: TextAlign.start,
                 controller: classController,
@@ -68,7 +68,7 @@ class _AddClassRoomState extends State<AddClassRoom> {
                     hintText: 'Room No.',
                     alignLabelWithHint: true,
                     labelText: 'Room No.',
-                    labelStyle: Theme.of(context).textTheme.headline5,
+                    labelStyle: Theme.of(context).textTheme.headlineSmall,
                     errorStyle: const TextStyle(
                         color: Colors.pinkAccent, fontSize: 15.0),
                     border: OutlineInputBorder(
@@ -82,7 +82,7 @@ class _AddClassRoomState extends State<AddClassRoom> {
               padding: const EdgeInsets.all(10.0),
               child: TextFormField(
                 keyboardType: TextInputType.number,
-                style: Theme.of(context).textTheme.headline5,
+                style: Theme.of(context).textTheme.headlineSmall,
                 maxLines: 1,
                 textAlign: TextAlign.start,
                 controller: capacityController,
@@ -90,7 +90,7 @@ class _AddClassRoomState extends State<AddClassRoom> {
                     hintText: 'Capacity',
                     alignLabelWithHint: true,
                     labelText: 'Capacity',
-                    labelStyle: Theme.of(context).textTheme.headline5,
+                    labelStyle: Theme.of(context).textTheme.headlineSmall,
                     errorStyle: const TextStyle(
                         color: Colors.pinkAccent, fontSize: 15.0),
                     border: OutlineInputBorder(
@@ -117,7 +117,7 @@ class _AddClassRoomState extends State<AddClassRoom> {
                           'Save Class Room',
                           style: Theme.of(context)
                               .textTheme
-                              .headline5!
+                              .headlineSmall!
                               .copyWith(color: Colors.white),
                         ),
                       ),

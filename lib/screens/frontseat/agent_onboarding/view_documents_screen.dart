@@ -65,7 +65,7 @@
 //     dirloc = (await getApplicationDocumentsDirectory()).path;
 //     // Utils.showToast('Downloading in progress....');
 //     try {
-//       // FileUtils.mkdir([dirloc]);
+//       // 
 //       await dio.download(
 //           AppConfig.baseUrl + url, dirloc + Utils.getExtention(url),
 //           options: Options(headers: {HttpHeaders.acceptEncodingHeader: '*'}),

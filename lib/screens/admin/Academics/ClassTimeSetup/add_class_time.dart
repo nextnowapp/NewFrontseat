@@ -542,7 +542,7 @@ class _AddClassTimeState extends State<AddClassTime> {
                 .map((e) => SearchFieldListItem(e!.subjectName!, item: e))
                 .toList(),
             suggestionState: Suggestion.expand,
-            hasOverlay: false,
+            //hasOverlay: false,
             searchStyle: TextStyle(
               fontSize: 12.sp,
               color: Colors.black,

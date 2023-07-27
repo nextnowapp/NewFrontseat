@@ -213,7 +213,7 @@ class _EbookScreenState extends State<EbookScreen> {
               statusBarColor: Colors.transparent),
           title: Text(
             'Training Documents',
-            style: Theme.of(context).textTheme.subtitle1!.copyWith(
+            style: Theme.of(context).textTheme.titleMedium!.copyWith(
                 fontSize: ScreenUtil().setSp(20),
                 color: Colors.white,
                 fontWeight: FontWeight.bold),

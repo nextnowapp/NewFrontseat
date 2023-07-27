@@ -206,8 +206,8 @@ class _OnboardPersonalInformationState
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Column(
-                      children: const [
+                    const Column(
+                      children: [
                         Text(
                           'Please provide your personal information',
                           style: TextStyle(
@@ -847,7 +847,7 @@ class _OnboardPersonalInformationState
                                     .map((e) => SearchFieldListItem(e, item: e))
                                     .toList(),
                                 suggestionState: Suggestion.expand,
-                                hasOverlay: false,
+                                //hasOverlay: false,
                                 searchStyle: const TextStyle(
                                     fontSize: 16, color: Colors.black),
                                 validator: (x) {
@@ -1046,10 +1046,10 @@ class _OnboardPersonalInformationState
                                         _btnController.reset();
                                       }
                                     },
-                                    child: Row(
+                                    child: const Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
-                                      children: const [
+                                      children: [
                                         Text(
                                           'NEXT',
                                           style: TextStyle(
@@ -1364,7 +1364,7 @@ class _OnboardPersonalInformationState
           suggestions:
               countries.map((e) => SearchFieldListItem(e, item: e)).toList(),
           suggestionState: Suggestion.expand,
-          hasOverlay: false,
+          //hasOverlay: false,
           searchStyle: const TextStyle(fontSize: 16, color: Colors.black),
           validator: (x) {
             if (x == null ||
@@ -1453,7 +1453,7 @@ class _OnboardPersonalInformationState
           suggestions:
               countries.map((e) => SearchFieldListItem(e, item: e)).toList(),
           suggestionState: Suggestion.expand,
-          hasOverlay: false,
+          //hasOverlay: false,
           searchStyle: const TextStyle(fontSize: 16, color: Colors.black),
           validator: (x) {
             if (x == null ||

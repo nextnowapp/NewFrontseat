@@ -115,14 +115,14 @@ class _OnlineExamResultScreenState extends State<OnlineExamResultScreen> {
             value: item.title,
             child: Text(
               item.title,
-              style: Theme.of(context).textTheme.headline4!.copyWith(
+              style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                   color: const Color(0xff415094), fontWeight: FontWeight.w500),
             ),
           );
         }).toList(),
         style: Theme.of(context)
             .textTheme
-            .headline4!
+            .headlineMedium!
             .copyWith(color: const Color(0xff415094), fontSize: 15.0),
         onChanged: (dynamic value) {
           setState(() {

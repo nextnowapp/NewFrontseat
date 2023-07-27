@@ -10,7 +10,6 @@ import 'package:modal_bottom_sheet/modal_bottom_sheet.dart'
     as custom_modal_bottom_sheet;
 import 'package:nextschool/main.dart';
 import 'package:nextschool/screens/add_event_screen.dart';
-import 'package:nextschool/screens/choose_school.dart';
 import 'package:nextschool/screens/frontseat/landing_screen.dart';
 import 'package:nextschool/utils/Utils.dart';
 import 'package:nextschool/utils/apis/Apis.dart';
@@ -480,7 +479,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
     Widget cancelButton = TextButton(
       child: Text(
         'Cancel',
-        style: Theme.of(context).textTheme.headline5!.copyWith(
+        style: Theme.of(context).textTheme.headlineSmall!.copyWith(
               fontSize: ScreenUtil().setSp(12),
               color: Colors.red,
             ),
@@ -492,7 +491,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
     Widget yesButton = TextButton(
       child: Text(
         'Yes',
-        style: Theme.of(context).textTheme.headline5!.copyWith(
+        style: Theme.of(context).textTheme.headlineSmall!.copyWith(
               fontSize: ScreenUtil().setSp(12),
               color: Colors.green,
             ),
@@ -523,7 +522,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
     AlertDialog alert = AlertDialog(
       title: Text(
         'Logout',
-        style: Theme.of(context).textTheme.headline5,
+        style: Theme.of(context).textTheme.headlineSmall,
       ),
       content: const Text('Would you like to logout?'),
       actions: [
@@ -591,7 +590,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
                           widget.title!,
                           style: Theme.of(context)
                               .textTheme
-                              .subtitle1!
+                              .titleMedium!
                               .copyWith(
                                   fontSize: ScreenUtil().setSp(20),
                                   color: Colors.white),
@@ -641,7 +640,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => LandingScreen(),
+                            builder: (context) => const LandingScreen(),
                           ),
                         );
                       },

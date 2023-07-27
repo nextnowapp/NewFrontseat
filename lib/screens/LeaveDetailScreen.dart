@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:file_utils/file_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:intl/intl.dart';
@@ -153,7 +152,7 @@ class _LeaveDetailScreenState extends State<LeaveDetailScreen> {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) => PdfView(
-                                                  path:  InfixApi().root +
+                                                  path: InfixApi().root +
                                                       widget.leave.file!)),
                                         );
                                       } else if (widget.leave.file!
@@ -166,7 +165,7 @@ class _LeaveDetailScreenState extends State<LeaveDetailScreen> {
                                           MaterialPageRoute(
                                             builder: (context) =>
                                                 Utils.documentViewer(
-                                                     InfixApi().root +
+                                                    InfixApi().root +
                                                         widget.leave.file!,
                                                     context),
                                           ),
@@ -243,7 +242,7 @@ class _LeaveDetailScreenState extends State<LeaveDetailScreen> {
             'Pending',
             textAlign: TextAlign.center,
             maxLines: 1,
-            style: Theme.of(context).textTheme.headline4!.copyWith(
+            style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                   color: const Color(0xFFc08b02),
                   fontWeight: FontWeight.w500,
                   fontSize: 12,
@@ -262,7 +261,7 @@ class _LeaveDetailScreenState extends State<LeaveDetailScreen> {
             'Rejected',
             textAlign: TextAlign.center,
             maxLines: 1,
-            style: Theme.of(context).textTheme.headline4!.copyWith(
+            style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                   color: const Color(0xFFff8989),
                   fontWeight: FontWeight.w500,
                   fontSize: 12,
@@ -281,7 +280,7 @@ class _LeaveDetailScreenState extends State<LeaveDetailScreen> {
             'Approved',
             textAlign: TextAlign.center,
             maxLines: 1,
-            style: Theme.of(context).textTheme.headline4!.copyWith(
+            style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                   color: const Color(0xFF449e58),
                   fontWeight: FontWeight.w500,
                   fontSize: 12,
@@ -300,7 +299,7 @@ class _LeaveDetailScreenState extends State<LeaveDetailScreen> {
             'Denied',
             textAlign: TextAlign.center,
             maxLines: 1,
-            style: Theme.of(context).textTheme.headline4!.copyWith(
+            style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                   color: const Color(0xFFff8989),
                   fontWeight: FontWeight.w500,
                   fontSize: 12,
@@ -321,7 +320,7 @@ class _LeaveDetailScreenState extends State<LeaveDetailScreen> {
     dirloc = (await getApplicationDocumentsDirectory()).path;
 
     try {
-      FileUtils.mkdir([dirloc]);
+      //
       Utils.showToast('Downloading...');
 
       await dio.download(

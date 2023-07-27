@@ -484,7 +484,7 @@ class _BankDetailsState extends State<BankDetails> {
           suggestions:
               bankList.map((e) => SearchFieldListItem(e, item: e)).toList(),
           suggestionState: Suggestion.expand,
-          hasOverlay: false,
+          //hasOverlay: false,
           searchStyle: const TextStyle(fontSize: 16, color: Colors.black),
           validator: (x) {
             if (x == null || x.isEmpty || !bankList.map((e) => e).contains(x)) {

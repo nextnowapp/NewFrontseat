@@ -124,10 +124,8 @@ class _AddLearningAreaState extends State<AddLearningArea> {
                           codeController.text.isNotEmpty) {
                         if (widget.isEdit!) {
                           updateLearningAreas();
-                         
                         } else {
                           assignLearningAreas();
-                         
                         }
                       } else {
                         _btnController.reset();
@@ -136,8 +134,8 @@ class _AddLearningAreaState extends State<AddLearningArea> {
                         Utils.showToast('Please check all fields.');
                       }
                     },
-                    child: Text('Save Learning Area',
-                        style: const TextStyle(color: Colors.white)),
+                    child: const Text('Save Learning Area',
+                        style: TextStyle(color: Colors.white)),
                   ),
                 ),
               ],
@@ -164,7 +162,6 @@ class _AddLearningAreaState extends State<AddLearningArea> {
     } else if (response.statusCode == 404) {
       _btnController.reset();
       Utils.showToast('Learning Area already assigned!!!');
-    
     } else {
       throw Exception('Failed to load');
     }
@@ -221,7 +218,7 @@ class _AddLearningAreaState extends State<AddLearningArea> {
           // showAsSuffixIcons: true,
           // dropdownSearchDecoration: InputDecoration(
           //   border: OutlineInputBorder(),
-          //   labelStyle: Theme.of(context).textTheme.headline5,
+          //   labelStyle: Theme.of(context).textTheme.headlineSmall,
           // ),
           // popupItemDisabled: (String s) => s.startsWith('I'),
           popupProps: PopupProps.menu(

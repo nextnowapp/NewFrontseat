@@ -189,7 +189,7 @@ class _TerminationScreenState extends State<TerminationScreen> {
                     kycStepModelController.isEditableValue = false;
                     kycStepModelController.inContractingValue = false;
                     kycStepModelController.contractedValue = false;
-                    kycStepModelController.commentValue = "";
+                    kycStepModelController.commentValue = '';
 
                     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                       backgroundColor: Colors.red,
@@ -201,7 +201,7 @@ class _TerminationScreenState extends State<TerminationScreen> {
                         CupertinoPageRoute(
                             builder: (context) => const LandingScreen()));
                   } else {
-                    print("hey");
+                    print('hey');
                   }
                 },
                 child: const Padding(

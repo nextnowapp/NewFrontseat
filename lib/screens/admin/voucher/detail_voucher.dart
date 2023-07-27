@@ -74,7 +74,7 @@ class _DetailVoucherState extends State<DetailVoucher> {
                                 ' Current voucher code :',
                                 style: Theme.of(context)
                                     .textTheme
-                                    .headline6!
+                                    .titleLarge!
                                     .copyWith(
                                       color: const Color(0xff415094),
                                       fontWeight: FontWeight.normal,
@@ -88,7 +88,7 @@ class _DetailVoucherState extends State<DetailVoucher> {
                                 snapshot.data!,
                                 style: Theme.of(context)
                                     .textTheme
-                                    .headline6!
+                                    .titleLarge!
                                     .copyWith(
                                       color: Colors.black,
                                       fontWeight: FontWeight.w700,

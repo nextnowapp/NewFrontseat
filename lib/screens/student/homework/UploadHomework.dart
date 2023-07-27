@@ -105,7 +105,7 @@ class _UploadHomeworkState extends State<UploadHomework> {
                                             'Select Homework file',
                                             style: Theme.of(context)
                                                 .textTheme
-                                                .headline6!
+                                                .titleLarge!
                                                 .copyWith(),
                                             maxLines: 2,
                                           )
@@ -120,7 +120,7 @@ class _UploadHomeworkState extends State<UploadHomework> {
                                                       '$index - ${fileNames[index]}',
                                                       style: Theme.of(context)
                                                           .textTheme
-                                                          .headline4!
+                                                          .headlineMedium!
                                                           .copyWith(),
                                                     )),
                                           ),
@@ -130,7 +130,7 @@ class _UploadHomeworkState extends State<UploadHomework> {
                                   'Browse',
                                   style: Theme.of(context)
                                       .textTheme
-                                      .headline6!
+                                      .titleLarge!
                                       .copyWith(
                                         decoration: TextDecoration.underline,
                                       ),
@@ -189,7 +189,7 @@ class _UploadHomeworkState extends State<UploadHomework> {
                               },
                             ).catchError((e) {
                               final errorMessage =
-                                  DioExceptions.fromDioError(e).toString();
+                                  DioExceptions.fromDioException(e).toString();
                               print(errorMessage);
                               Utils.showToast(errorMessage);
                               Navigator.of(context).pop();
@@ -250,7 +250,7 @@ class _UploadHomeworkState extends State<UploadHomework> {
                                 'Submit',
                                 style: Theme.of(context)
                                     .textTheme
-                                    .headline5!
+                                    .headlineSmall!
                                     .copyWith(color: Colors.white),
                               ),
                             ],

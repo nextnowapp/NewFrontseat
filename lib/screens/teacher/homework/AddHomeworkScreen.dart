@@ -229,7 +229,7 @@ class _AddHomeworkScrrenState extends State<AddHomeworkScrren> {
                                   _file = null;
                                 });
                               },
-                              icon: Icon(
+                              icon: const Icon(
                                 Icons.clear,
                                 color: Colors.grey,
                               ))),
@@ -307,9 +307,8 @@ class _AddHomeworkScrrenState extends State<AddHomeworkScrren> {
                       _btnController.reset();
                     }
                   },
-                  child:
-                       Text('Add', style: TextStyle(color: Colors.white,fontSize: 12.sp
-                      )),
+                  child: Text('Add',
+                      style: TextStyle(color: Colors.white, fontSize: 12.sp)),
                 ),
               ),
             ],
@@ -495,7 +494,7 @@ class _AddHomeworkScrrenState extends State<AddHomeworkScrren> {
                 .toList(),
             suggestionState: Suggestion.expand,
             textInputAction: TextInputAction.search,
-            hasOverlay: false,
+            //hasOverlay: false,
             searchStyle: TextStyle(
               fontSize: 12.sp,
               color: Colors.black,
@@ -594,7 +593,7 @@ class _AddHomeworkScrrenState extends State<AddHomeworkScrren> {
         Utils.showToast('Homework added Successfully!');
         Navigator.pop(context);
       }
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       var errorMessage = e.response!.data['message'];
       Utils.showErrorToast(errorMessage);
       _btnController.reset();

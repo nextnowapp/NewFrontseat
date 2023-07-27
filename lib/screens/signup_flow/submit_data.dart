@@ -208,10 +208,10 @@ class _SubmitDataScreenState extends State<SubmitDataScreen> {
                                   );
                                 }
                               }
-                            } on DioError catch (e) {
+                            } on DioException catch (e) {
                               _btnController.reset();
                               switch (e.type) {
-                                case DioErrorType.response:
+                                case DioExceptionType.badResponse:
                                   {
                                     showDialog(
                                       context: context,
@@ -332,14 +332,14 @@ class _SubmitDataScreenState extends State<SubmitDataScreen> {
                                     );
                                   }
                                   break;
-                                case DioErrorType.other:
+                                case DioExceptionType.sendTimeout:
                                   {
                                     showDialog(
                                       context: context,
                                       builder: (BuildContext context) {
                                         return AlertDialog(
                                           title: const Text('Error'),
-                                          content: Text(e.message),
+                                          content: Text(e.message ?? ''),
                                           actions: <Widget>[
                                             TextButton(
                                               child: const Text('Ok'),

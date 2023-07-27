@@ -155,7 +155,7 @@ class _LeaveRowState extends State<LeaveRow> {
             'Pending',
             textAlign: TextAlign.center,
             maxLines: 1,
-            style: Theme.of(context).textTheme.headline4!.copyWith(
+            style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                   color: const Color(0xFFc08b02),
                   fontWeight: FontWeight.w500,
                   fontSize: 12,
@@ -174,7 +174,7 @@ class _LeaveRowState extends State<LeaveRow> {
             'Rejected',
             textAlign: TextAlign.center,
             maxLines: 1,
-            style: Theme.of(context).textTheme.headline4!.copyWith(
+            style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                   color: const Color(0xFFff8989),
                   fontWeight: FontWeight.w500,
                   fontSize: 12,
@@ -193,7 +193,7 @@ class _LeaveRowState extends State<LeaveRow> {
             'Approved',
             textAlign: TextAlign.center,
             maxLines: 1,
-            style: Theme.of(context).textTheme.headline4!.copyWith(
+            style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                   color: const Color(0xFF449e58),
                   fontWeight: FontWeight.w500,
                   fontSize: 12,
@@ -212,7 +212,7 @@ class _LeaveRowState extends State<LeaveRow> {
             'Denied',
             textAlign: TextAlign.center,
             maxLines: 1,
-            style: Theme.of(context).textTheme.headline4!.copyWith(
+            style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                   color: const Color(0xFFff8989),
                   fontWeight: FontWeight.w500,
                   fontSize: 12,
@@ -231,7 +231,7 @@ class _LeaveRowState extends State<LeaveRow> {
         'No',
         style: Theme.of(context)
             .textTheme
-            .headline5!
+            .headlineSmall!
             .copyWith(fontSize: ScreenUtil().setSp(14), color: Colors.white),
       ),
       style: TextButton.styleFrom(
@@ -248,7 +248,7 @@ class _LeaveRowState extends State<LeaveRow> {
       child: Center(
         child: Text(
           'Delete',
-          style: Theme.of(context).textTheme.headline5!.copyWith(
+          style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                 fontSize: ScreenUtil().setSp(14),
                 height: 0.6,
                 color: Colors.white,

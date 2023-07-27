@@ -3,7 +3,6 @@ import 'dart:io';
 
 // Package imports:
 import 'package:dio/dio.dart';
-import 'package:file_utils/file_utils.dart';
 // Flutter imports:
 import 'package:flutter/material.dart';
 // Project imports:
@@ -271,7 +270,6 @@ class _StudyMaterialListRowState extends State<StudyMaterialListRow> {
     dirloc = (await getApplicationDocumentsDirectory()).path;
     Utils.showToast('Downloading in progress....');
     try {
-      FileUtils.mkdir([dirloc]);
       await dio.download(
           InfixApi().root + url, dirloc + AppFunction.getExtention(url),
           options: Options(headers: {HttpHeaders.acceptEncodingHeader: '*'}),
@@ -325,7 +323,6 @@ class _StudyMaterialListRowState extends State<StudyMaterialListRow> {
     dirloc = (await getApplicationDocumentsDirectory()).path;
     Utils.showToast('Just a second...');
     try {
-      FileUtils.mkdir([dirloc]);
       await dio.download(
           InfixApi().root + url, dirloc + AppFunction.getExtention(url),
           options: Options(headers: {HttpHeaders.acceptEncodingHeader: '*'}),

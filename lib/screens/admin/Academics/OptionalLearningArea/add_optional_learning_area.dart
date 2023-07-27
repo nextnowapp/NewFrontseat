@@ -155,7 +155,7 @@ class _OptionalLearningAreaState extends State<OptionalLearningArea> {
                             'Save Learning Area',
                             style: Theme.of(context)
                                 .textTheme
-                                .headline5!
+                                .headlineSmall!
                                 .copyWith(color: Colors.white),
                           ),
                         ),
@@ -266,7 +266,7 @@ class _OptionalLearningAreaState extends State<OptionalLearningArea> {
           // showAsSuffixIcons: true,
           // dropdownSearchDecoration: InputDecoration(
           //   border: OutlineInputBorder(),
-          //   labelStyle: Theme.of(context).textTheme.headline5,
+          //   labelStyle: Theme.of(context).textTheme.headlineSmall,
           // ),
           // popupItemDisabled: (String s) => s.startsWith('I'),
           onChanged: (newValue) {
@@ -296,7 +296,7 @@ class _OptionalLearningAreaState extends State<OptionalLearningArea> {
             dropdownSearchDecoration: InputDecoration(
               label: const Text('Select Grade*'),
               border: const OutlineInputBorder(),
-              labelStyle: Theme.of(context).textTheme.headline5,
+              labelStyle: Theme.of(context).textTheme.headlineSmall,
             ),
           ),
           onChanged: (dynamic newValue) {
@@ -344,7 +344,7 @@ class _OptionalLearningAreaState extends State<OptionalLearningArea> {
             dropdownSearchDecoration: InputDecoration(
               label: const Text('Select Class*'),
               border: const OutlineInputBorder(),
-              labelStyle: Theme.of(context).textTheme.headline5,
+              labelStyle: Theme.of(context).textTheme.headlineSmall,
             ),
           ),
           onChanged: (dynamic newValue) {
@@ -378,7 +378,7 @@ class _OptionalLearningAreaState extends State<OptionalLearningArea> {
             dropdownSearchDecoration: InputDecoration(
               label: const Text('Select Class*'),
               border: const OutlineInputBorder(),
-              labelStyle: Theme.of(context).textTheme.headline5,
+              labelStyle: Theme.of(context).textTheme.headlineSmall,
             ),
           ),
           onChanged: (dynamic newValue) {

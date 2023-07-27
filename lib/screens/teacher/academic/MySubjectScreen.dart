@@ -179,10 +179,10 @@ class _MySubjectScreenState extends State<MySubjectScreen> {
                                               //         .subjectCode!,
                                               //     style: Theme.of(context)
                                               //         .textTheme
-                                              //         .headline5),
+                                              //         .headlineSmall),
                                               // Expanded(
                                               //   child: Text(subject.subjectType == 'T' ? 'Theory' : 'Lab',
-                                              //       style: Theme.of(context).textTheme.headline5),
+                                              //       style: Theme.of(context).textTheme.headlineSmall),
                                               // ),
                                             ),
                                           ),
