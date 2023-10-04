@@ -268,6 +268,7 @@ class _BankConfirmationState extends State<BankConfirmation> {
         await dio.post(FrontSeatApi.onboardAgent, data: data).catchError((e) {
       log(e.toString());
       Utils.showToast('Something went wrong');
+      return e;
     });
 
     //if response is successful

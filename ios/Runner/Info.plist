@@ -44,6 +44,8 @@
 	<string>To update/edit the profile picture</string>
 	<key>NSContactsUsageDescription</key>
 	<string>This will allow you to identify your classmates. </string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>To allow weather to show accurate info. based on your location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>To provide you relevant options of schools to choose from.</string>
 	<key>NSMicrophoneUsageDescription</key>
@@ -54,6 +56,8 @@
 	<string>To update/edit profile picture from your gallery. </string>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>To allow speech to text typing. </string>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -78,9 +82,5 @@
 	<false/>
 	<key>io.flutter.embedded_views_preview</key>
 	<true/>
-	<key>UIApplicationSupportsIndirectInputEvents</key>
-	<true/>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>To allow weather to show accurate info. based on your location</string>
 </dict>
 </plist>
