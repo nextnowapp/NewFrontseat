@@ -215,7 +215,7 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     super.initState();
     Utils.getIntValue(getKey(DateTime.now())).then((value) {
-      if (value == null || value < 200) {
+      if (value == null || value < 2) {
         showHelloWorld();
       }
     });
