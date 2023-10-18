@@ -219,11 +219,11 @@ class _RoutineState extends State<Routine> with SingleTickerProviderStateMixin {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 70,
             child: Row(
               children: [
-                const Expanded(
+                Expanded(
                   flex: 2,
                   child: Center(
                       child: Text(
@@ -234,7 +234,7 @@ class _RoutineState extends State<Routine> with SingleTickerProviderStateMixin {
                     ),
                   )),
                 ),
-                const Expanded(
+                Expanded(
                   flex: 4,
                   child: Center(
                     child: Text(

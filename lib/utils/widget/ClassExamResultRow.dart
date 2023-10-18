@@ -33,7 +33,7 @@ class _DormitoryScreenState extends State<ClassExamResultRow> {
               textAlign: TextAlign.start,
               style: Theme.of(context)
                   .textTheme
-                  .headline6!
+                  .titleLarge!
                   .copyWith(fontSize: ScreenUtil().setSp(15)),
             ),
             Padding(
@@ -49,7 +49,7 @@ class _DormitoryScreenState extends State<ClassExamResultRow> {
                           maxLines: 1,
                           style: Theme.of(context)
                               .textTheme
-                              .headline4!
+                              .headlineMedium!
                               .copyWith(fontWeight: FontWeight.w500),
                         ),
                         const SizedBox(
@@ -58,7 +58,7 @@ class _DormitoryScreenState extends State<ClassExamResultRow> {
                         Text(
                           result.subject!,
                           maxLines: 1,
-                          style: Theme.of(context).textTheme.headline4,
+                          style: Theme.of(context).textTheme.headlineMedium,
                         ),
                       ],
                     ),
@@ -72,7 +72,7 @@ class _DormitoryScreenState extends State<ClassExamResultRow> {
                           maxLines: 1,
                           style: Theme.of(context)
                               .textTheme
-                              .headline4!
+                              .headlineMedium!
                               .copyWith(fontWeight: FontWeight.w500),
                         ),
                         const SizedBox(
@@ -81,7 +81,7 @@ class _DormitoryScreenState extends State<ClassExamResultRow> {
                         Text(
                           result.marks.toString(),
                           maxLines: 1,
-                          style: Theme.of(context).textTheme.headline4,
+                          style: Theme.of(context).textTheme.headlineMedium,
                         ),
                       ],
                     ),
@@ -95,7 +95,7 @@ class _DormitoryScreenState extends State<ClassExamResultRow> {
                           maxLines: 1,
                           style: Theme.of(context)
                               .textTheme
-                              .headline4!
+                              .headlineMedium!
                               .copyWith(fontWeight: FontWeight.w500),
                         ),
                         const SizedBox(
@@ -104,7 +104,7 @@ class _DormitoryScreenState extends State<ClassExamResultRow> {
                         Text(
                           result.obtains.toString(),
                           maxLines: 1,
-                          style: Theme.of(context).textTheme.headline4,
+                          style: Theme.of(context).textTheme.headlineMedium,
                         ),
                       ],
                     ),
@@ -118,7 +118,7 @@ class _DormitoryScreenState extends State<ClassExamResultRow> {
                           maxLines: 1,
                           style: Theme.of(context)
                               .textTheme
-                              .headline4!
+                              .headlineMedium!
                               .copyWith(fontWeight: FontWeight.w500),
                         ),
                         const SizedBox(
@@ -127,7 +127,7 @@ class _DormitoryScreenState extends State<ClassExamResultRow> {
                         Text(
                           result.grade!,
                           maxLines: 1,
-                          style: Theme.of(context).textTheme.headline4,
+                          style: Theme.of(context).textTheme.headlineMedium,
                         ),
                       ],
                     ),

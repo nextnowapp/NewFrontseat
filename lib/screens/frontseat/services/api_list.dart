@@ -1,5 +1,6 @@
 class FrontSeatApi {
-  static const String baseUrl = 'https://frontseat.group';
+//  https://dev.frontseat.group/
+  static const String baseUrl = 'https://dev.frontseat.group/';
   static const String apiKey =
       'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiRnJvbnRTZWF0IEFwcCIsIm5hbWUiOiJmcm9udF9zZWF0X2FwcCIsIkFQSV9USU1FIjoxNjY1MTM2MzM4fQ.-mvmGOKzk6j1dZB75VoISNF6EEn9gHpDEzmRuNb2IvM';
   static const String base = 'https://frontseat.group';
@@ -17,8 +18,7 @@ class FrontSeatApi {
   static const String status = '$base/api/agentStatus';
   static const String agentData = '$base/api/agentDetails';
   static const String checkInOut = '$baseUrl/timesheets/api/check_in_out';
-  static const String acceptContract =
-      '$base/api/agentAcceptReject';
+  static const String acceptContract = '$base/api/agentAcceptReject';
   static const String getpdf = '$base/api/agentContractPdf';
   static String setToken(String? id, String? token) {
     return base + '/api/' + 'set-fcm-token?id=$id&token=$token';

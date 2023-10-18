@@ -113,7 +113,7 @@ class _SearchRoutineScreenState extends State<SearchRoutineScreen> {
             decoration: Utils.BtnDecoration,
             child: Text(
               'Search',
-              style: Theme.of(context).textTheme.headline4!.copyWith(
+              style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                   color: Colors.white, fontSize: ScreenUtil().setSp(16)),
             ),
           ),

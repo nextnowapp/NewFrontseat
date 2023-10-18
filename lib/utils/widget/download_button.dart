@@ -152,7 +152,7 @@ class SimulatedDownloadController extends DownloadController
           _isDownloading = false;
           notifyListeners();
         }
-      } on DioError {
+      } on DioException {
         if (cancelToken!.isCancelled) {
           Utils.showErrorToast('Download cancelled');
         } else {

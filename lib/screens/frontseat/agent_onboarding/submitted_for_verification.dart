@@ -66,7 +66,7 @@ class SubmittedForVerificationScreen extends StatelessWidget {
             const SizedBox(height: 10),
             TextButton(
               style: TextButton.styleFrom(
-                  primary: Colors.white, backgroundColor: Colors.red),
+                  foregroundColor: Colors.white, backgroundColor: Colors.red),
               onPressed: () {
                 Navigator.pushReplacement(
                     context,

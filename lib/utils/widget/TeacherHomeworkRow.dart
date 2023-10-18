@@ -4,7 +4,6 @@ import 'dart:math';
 
 // Package imports:
 import 'package:dio/dio.dart';
-import 'package:file_utils/file_utils.dart';
 // Flutter imports:
 import 'package:flutter/material.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
@@ -455,12 +454,12 @@ class _TeacherHomeworkRowState extends State<TeacherHomeworkRow> {
                           Expanded(
                             child: Text(
                               widget.homework.subjectName!,
-                              style: Theme.of(context).textTheme.headline5,
+                              style: Theme.of(context).textTheme.headlineSmall,
                             ),
                           ),
                           Text(
                             'Marks: ' + widget.homework.marks!,
-                            style: Theme.of(context).textTheme.headline5,
+                            style: Theme.of(context).textTheme.headlineSmall,
                             maxLines: 1,
                           ),
                         ],
@@ -478,7 +477,7 @@ class _TeacherHomeworkRowState extends State<TeacherHomeworkRow> {
                                     maxLines: 1,
                                     style: Theme.of(context)
                                         .textTheme
-                                        .headline4!
+                                        .headlineMedium!
                                         .copyWith(fontWeight: FontWeight.w500),
                                   ),
                                   const SizedBox(
@@ -487,8 +486,9 @@ class _TeacherHomeworkRowState extends State<TeacherHomeworkRow> {
                                   Text(
                                     widget.homework.homeworkDate!,
                                     maxLines: 1,
-                                    style:
-                                        Theme.of(context).textTheme.headline4,
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .headlineMedium,
                                   ),
                                 ],
                               ),
@@ -502,7 +502,7 @@ class _TeacherHomeworkRowState extends State<TeacherHomeworkRow> {
                                     maxLines: 1,
                                     style: Theme.of(context)
                                         .textTheme
-                                        .headline4!
+                                        .headlineMedium!
                                         .copyWith(fontWeight: FontWeight.w500),
                                   ),
                                   const SizedBox(
@@ -511,8 +511,9 @@ class _TeacherHomeworkRowState extends State<TeacherHomeworkRow> {
                                   Text(
                                     widget.homework.submissionDate!,
                                     maxLines: 1,
-                                    style:
-                                        Theme.of(context).textTheme.headline4,
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .headlineMedium,
                                   ),
                                 ],
                               ),
@@ -526,7 +527,7 @@ class _TeacherHomeworkRowState extends State<TeacherHomeworkRow> {
                                     maxLines: 1,
                                     style: Theme.of(context)
                                         .textTheme
-                                        .headline4!
+                                        .headlineMedium!
                                         .copyWith(fontWeight: FontWeight.w500),
                                   ),
                                   const SizedBox(
@@ -537,8 +538,9 @@ class _TeacherHomeworkRowState extends State<TeacherHomeworkRow> {
                                         ? 'not assigned'
                                         : widget.homework.evaluationDate!,
                                     maxLines: 1,
-                                    style:
-                                        Theme.of(context).textTheme.headline4,
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .headlineMedium,
                                   ),
                                 ],
                               ),
@@ -561,7 +563,7 @@ class _TeacherHomeworkRowState extends State<TeacherHomeworkRow> {
                                     : widget.homework.description!,
                                 style: Theme.of(context)
                                     .textTheme
-                                    .headline4!
+                                    .headlineMedium!
                                     .copyWith(fontSize: 16),
                               ),
                             ],
@@ -601,7 +603,7 @@ class _TeacherHomeworkRowState extends State<TeacherHomeworkRow> {
                                             progress,
                                             style: Theme.of(context)
                                                 .textTheme
-                                                .headline5!
+                                                .headlineSmall!
                                                 .copyWith(color: Colors.white),
                                           ),
                                         ],
@@ -640,7 +642,7 @@ class _TeacherHomeworkRowState extends State<TeacherHomeworkRow> {
             'Incomplete',
             textAlign: TextAlign.center,
             maxLines: 1,
-            style: Theme.of(context).textTheme.headline4!.copyWith(
+            style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                 color: Colors.white, fontWeight: FontWeight.w500, fontSize: 12),
           ),
         ),
@@ -658,7 +660,7 @@ class _TeacherHomeworkRowState extends State<TeacherHomeworkRow> {
             'Completed',
             textAlign: TextAlign.center,
             maxLines: 1,
-            style: Theme.of(context).textTheme.headline5!.copyWith(
+            style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                 color: Colors.white, fontWeight: FontWeight.w500, fontSize: 12),
           ),
         ),
@@ -745,7 +747,7 @@ class _TeacherHomeworkRowState extends State<TeacherHomeworkRow> {
     String downloadName = widget.homework.subjectName!;
     String fullPath = '$dirloc/$downloadName.pdf';
     String fileSaved = '$dirloc/$downloadName.pdf/';
-    FileUtils.mkdir([fullPath]);
+    //
 
     Utils.showToast('Downloading file Please wait...');
 
@@ -844,36 +846,35 @@ class _TeacherHomeworkRowState extends State<TeacherHomeworkRow> {
       }
     }
   }
-} 
-  // showDeleteAlertDialog(BuildContext context) {
-  //   custom_modal_bottom_sheet.showCupertinoModalBottomSheet(
-  //     shape: const RoundedRectangleBorder(
-  //         borderRadius: BorderRadius.only(
-  //             topRight: Radius.circular(100), topLeft: Radius.circular(100))),
-  //     isDismissible: false,
-  //     enableDrag: false,
-  //     context: context,
-  //     builder: (context) {
-  //       return DeleteBottomSheet(onDelete: () async {
-  //         Utils.showProcessingToast();
-  //         setState(() {
-  //           deleteContent(widget.homework.id);
-  //         });
-  //       });
-  //     },
-  //   );
-  // }
-  //
-  // Future<void> deleteContent(int? id) async {
-  //   final response = await http.get(Uri.parse(InfixApi.deletHomework(id)),
-  //       headers: Utils.setHeader(widget._token!));
-  //   if (response.statusCode == 200) {
-  //     Utils.showToast('Homework deleted successfully');
-  //     Navigator.pop(context);
-  //     Navigator.pop(context);
-  //     Navigator.pop(context);
-  //   } else {
-  //     throw Exception('failed to load');
-  //   }
-  // }
-
+}
+// showDeleteAlertDialog(BuildContext context) {
+//   custom_modal_bottom_sheet.showCupertinoModalBottomSheet(
+//     shape: const RoundedRectangleBorder(
+//         borderRadius: BorderRadius.only(
+//             topRight: Radius.circular(100), topLeft: Radius.circular(100))),
+//     isDismissible: false,
+//     enableDrag: false,
+//     context: context,
+//     builder: (context) {
+//       return DeleteBottomSheet(onDelete: () async {
+//         Utils.showProcessingToast();
+//         setState(() {
+//           deleteContent(widget.homework.id);
+//         });
+//       });
+//     },
+//   );
+// }
+//
+// Future<void> deleteContent(int? id) async {
+//   final response = await http.get(Uri.parse(InfixApi.deletHomework(id)),
+//       headers: Utils.setHeader(widget._token!));
+//   if (response.statusCode == 200) {
+//     Utils.showToast('Homework deleted successfully');
+//     Navigator.pop(context);
+//     Navigator.pop(context);
+//     Navigator.pop(context);
+//   } else {
+//     throw Exception('failed to load');
+//   }
+// }

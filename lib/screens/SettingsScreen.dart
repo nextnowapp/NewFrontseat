@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'package:nextschool/controller/user_controller.dart';
-import 'package:nextschool/screens/choose_school.dart';
 import 'package:nextschool/screens/frontseat/landing_screen.dart';
 import 'package:nextschool/utils/CustomAppBarWidget.dart';
 import 'package:nextschool/utils/Utils.dart';
@@ -97,7 +96,7 @@ class _SettingScreenState extends State<SettingScreen> {
         'No',
         style: Theme.of(context)
             .textTheme
-            .headline5!
+            .headlineSmall!
             .copyWith(fontSize: ScreenUtil().setSp(14), color: Colors.white),
       ),
       style: TextButton.styleFrom(
@@ -114,7 +113,7 @@ class _SettingScreenState extends State<SettingScreen> {
       child: Center(
         child: Text(
           'Yes',
-          style: Theme.of(context).textTheme.headline5!.copyWith(
+          style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                 fontSize: ScreenUtil().setSp(14),
                 color: Colors.white,
               ),
@@ -131,7 +130,8 @@ class _SettingScreenState extends State<SettingScreen> {
           Utils.clearAllValue();
           Navigator.of(context, rootNavigator: true).pop();
           await saveBooleanValue('hideOnboardingScreen', true);
-          Route route = MaterialPageRoute(builder: (context) => LandingScreen());
+          Route route =
+              MaterialPageRoute(builder: (context) => const LandingScreen());
           Navigator.pushAndRemoveUntil(
               context, route, ModalRoute.withName('/'));
         } else {
@@ -139,7 +139,8 @@ class _SettingScreenState extends State<SettingScreen> {
           Navigator.of(context, rootNavigator: true).pop();
           // Navigator.pop();
           await saveBooleanValue('hideOnboardingScreen', true);
-          Route route = MaterialPageRoute(builder: (context) => LandingScreen());
+          Route route =
+              MaterialPageRoute(builder: (context) => const LandingScreen());
           // Navigator.pushAndRemoveUntil(context, route, ModalRoute.withName('/'));
 
           var response = await http.post(Uri.parse(InfixApi.logout()),

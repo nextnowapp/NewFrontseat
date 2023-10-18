@@ -98,7 +98,7 @@ class _AddMemberState extends State<AddMember> {
               padding: const EdgeInsets.only(left: 10.0),
               child: TextField(
                 controller: idController,
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.titleLarge,
                 autofocus: false,
                 decoration: const InputDecoration(
                   hintText: 'Enter ID Here',
@@ -232,12 +232,12 @@ class _AddMemberState extends State<AddMember> {
               padding: const EdgeInsets.only(left: 8.0, bottom: 10.0),
               child: Text(
                 item.name!,
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.titleLarge,
               ),
             ),
           );
         }).toList(),
-        style: Theme.of(context).textTheme.headline6!.copyWith(fontSize: 13.0),
+        style: Theme.of(context).textTheme.titleLarge!.copyWith(fontSize: 13.0),
         onChanged: (dynamic value) {
           setState(() {
             selectedCategory = value;
@@ -288,12 +288,12 @@ class _AddMemberState extends State<AddMember> {
               padding: const EdgeInsets.only(left: 8.0, bottom: 10.0),
               child: Text(
                 item.name!,
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.titleLarge,
               ),
             ),
           );
         }).toList(),
-        style: Theme.of(context).textTheme.headline6!.copyWith(fontSize: 13.0),
+        style: Theme.of(context).textTheme.titleLarge!.copyWith(fontSize: 13.0),
         onChanged: (dynamic value) {
           setState(() {
             selectedClass = value;
@@ -327,12 +327,12 @@ class _AddMemberState extends State<AddMember> {
               padding: const EdgeInsets.only(left: 8.0, bottom: 10.0),
               child: Text(
                 item.name!,
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.titleLarge,
               ),
             ),
           );
         }).toList(),
-        style: Theme.of(context).textTheme.headline6!.copyWith(fontSize: 13.0),
+        style: Theme.of(context).textTheme.titleLarge!.copyWith(fontSize: 13.0),
         onChanged: (dynamic value) {
           setState(() {
             selectedSection = value;
@@ -367,12 +367,12 @@ class _AddMemberState extends State<AddMember> {
               padding: const EdgeInsets.only(left: 8.0, bottom: 10.0),
               child: Text(
                 item.fullName,
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.titleLarge,
               ),
             ),
           );
         }).toList(),
-        style: Theme.of(context).textTheme.headline6!.copyWith(fontSize: 13.0),
+        style: Theme.of(context).textTheme.titleLarge!.copyWith(fontSize: 13.0),
         onChanged: (dynamic value) {
           print(value);
           setState(() {
@@ -412,12 +412,12 @@ class _AddMemberState extends State<AddMember> {
               padding: const EdgeInsets.only(left: 8.0, bottom: 10.0),
               child: Text(
                 item.name,
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.titleLarge,
               ),
             ),
           );
         }).toList(),
-        style: Theme.of(context).textTheme.headline6!.copyWith(fontSize: 13.0),
+        style: Theme.of(context).textTheme.titleLarge!.copyWith(fontSize: 13.0),
         onChanged: (dynamic value) {
           setState(() {
             selectedStudent = value;
@@ -544,7 +544,7 @@ class _AddMemberState extends State<AddMember> {
       ),
     )
         .catchError((e) {
-      final errorMessage = DioExceptions.fromDioError(e).toString();
+      final errorMessage = DioExceptions.fromDioException(e).toString();
       print(errorMessage);
       Utils.showToast(errorMessage);
     });

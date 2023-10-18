@@ -87,7 +87,7 @@ class _LeaveAdminHomeScreenState extends State<LeaveAdminHomeScreen>
                 child: Builder(
                   builder: (context) {
                     final TabController tabController =
-                        DefaultTabController.of(context)!;
+                        DefaultTabController.of(context);
                     tabController.addListener(() {
                       if (tabController.indexIsChanging) {
                         print(tabController.index);

@@ -125,7 +125,7 @@ class _ChatDetailScreenState extends State<ChatDetailScreen> {
               ),
             ),
             Visibility(
-              visible: widget.data.chatImage != "" &&
+              visible: widget.data.chatImage != '' &&
                       widget.data.chatImage!.contains('.jpg') ||
                   widget.data.chatImage!.contains('.png') ||
                   widget.data.chatImage!.contains('.jpeg'),

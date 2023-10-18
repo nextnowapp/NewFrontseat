@@ -1,19 +1,30 @@
+import 'dart:convert';
 import 'dart:developer';
 
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dio/dio.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:get/get.dart';
+import 'package:get/get.dart' hide FormData;
+import 'package:google_fonts/google_fonts.dart';
+import 'package:hexcolor/hexcolor.dart';
+import 'package:http/http.dart' as http;
+import 'package:nextschool/controller/user_controller.dart';
 import 'package:nextschool/screens/frontseat/agent_onboarding/agent_active_screen.dart';
 import 'package:nextschool/screens/frontseat/agent_onboarding/agent_contract/contract_screen.dart';
 import 'package:nextschool/screens/frontseat/agent_register/new_register_screen.dart';
 import 'package:nextschool/screens/frontseat/home_page/widgets/action_card.dart';
 import 'package:nextschool/screens/frontseat/home_page/widgets/contract_card.dart';
 import 'package:nextschool/screens/frontseat/landing_screen.dart';
+import 'package:nextschool/screens/frontseat/model/banner_model.dart';
+import 'package:nextschool/screens/frontseat/model/thoughts_model.dart';
 import 'package:nextschool/screens/frontseat/services/api_list.dart';
 import 'package:rxdart/rxdart.dart';
+import 'package:sizer/sizer.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../controller/kyc_step_model.dart';
 import '../../../utils/Utils.dart';
@@ -70,21 +81,149 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  UserDetailsController _userDetailsController =
+      Get.put(UserDetailsController());
+
   FirebaseMessaging messaging = FirebaseMessaging.instance;
   final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
       FlutterLocalNotificationsPlugin();
+  final CarouselController _controller = CarouselController();
 
 // Streams are created so that app can respond to notification-related events since the plugin is initialised in the `main` function
   String? notificationToken;
   final kycStepModelController = Get.put(KycStepModel());
   var id;
   String? deviceToken;
+  String? bigAdsBanner;
+  String? smallAdsBanner;
+  int count = 0;
+  BannerModel? bannerList;
+  int _current = 0;
+  ThoughtsModel? thoughts;
+  Thought? thought;
+
+  Future fetchBannerDetails() async {
+    // https://schoolmanagement.co.za/signup/api/campaign-search
+    //use dio for post request
+    var dio = Dio();
+    var data = FormData.fromMap({
+      'school_id': 'LPVWDZCPWH07',
+      'role_id': _userDetailsController.roleId,
+      'age': 1,
+      'gender': 1
+    });
+    var response = await dio.post(
+      'https://manager.improovajobs.co.za/api/banner-search',
+      data: data,
+    );
+    log(response.data.toString() + 'banner');
+    if (response.statusCode == 200) {
+      setState(() {
+        bannerList = BannerModel.fromJson(response.data);
+      });
+    } else if (response.statusCode == 401) {
+      // Utils.invalidAuthenticationRedirection(Get.context!);
+    }
+    return bigAdsBanner;
+  }
+
+  String getKey(DateTime date) {
+    return '${date.year}-${date.month}-${date.day}';
+  }
+
+  Future fetchCampaignDetails() async {
+    DateTime now = DateTime.now();
+    count = await Utils.getIntValue(getKey(now)) ?? 0;
+    count++;
+    Utils.saveIntValue(getKey(now), count);
+    // https://schoolmanagement.co.za/signup/api/campaign-search
+    //use dio for post request
+
+    var dio = Dio();
+    var data = FormData.fromMap({
+      'school_id': 'LPVWDZCPWH07',
+      'role_id': _userDetailsController.roleId,
+      'age': 1,
+      'gender': 1
+    });
+
+    var response = await dio.post(
+      'https://manager.improovajobs.co.za/api/campaign-search',
+      data: data,
+    );
+    log(response.data.toString() + 'Campaign');
+
+    if (response.statusCode == 200) {
+      setState(() {
+        bigAdsBanner = response.data['data']['big_banner_image_url'];
+        smallAdsBanner = response.data['data']['small_banner_image_url'];
+      });
+    } else if (response.statusCode == 401) {
+      // Utils.invalidAuthenticationRedirection(Get.context!);
+    }
+    return bigAdsBanner;
+  }
+
+  void showHelloWorld() {
+    log('Banner shown in my_class_home.dart');
+    showDialog(
+        context: context,
+        builder: (context) {
+          return Center(
+            child: Stack(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 8.0),
+                  child: Container(
+                    padding: const EdgeInsets.only(
+                      right: 20,
+                      left: 20,
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(15.0),
+                      child: FutureBuilder(
+                        future: fetchCampaignDetails(),
+                        builder: (context, snapshot) {
+                          if (snapshot.hasData) {
+                            return CachedNetworkImage(imageUrl: bigAdsBanner!);
+                          } else
+                            return Container();
+                        },
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  top: 0,
+                  right: 13,
+                  height: 20,
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pop(true);
+                    },
+                    child: const Icon(CupertinoIcons.clear_thick_circled,
+                        color: Colors.black87, size: 30),
+                  ),
+                )
+              ],
+            ),
+          );
+        });
+  }
+
   @override
   void initState() {
     super.initState();
+    Utils.getIntValue(getKey(DateTime.now())).then((value) {
+      if (value == null || value < 2) {
+        showHelloWorld();
+      }
+    });
+    fetchBannerDetails();
 
     KycApi.kycStatus();
     KycApi.AgentStatus();
+    getThoughts();
     //init settings for android
     var initializationSettingsAndroid =
         const AndroidInitializationSettings('@mipmap/ic_launcher');
@@ -235,6 +374,83 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               Wrap(
                 children: [
+                  bannerList != null && bannerList!.data!.isNotEmpty
+                      ? Column(
+                          children: [
+                            SizedBox(
+                              height: 2.h,
+                            ),
+                            CarouselSlider(
+                              items: List.generate(
+                                  bannerList!.data!.length,
+                                  (index) => InkWell(
+                                        onTap: () {
+                                          launchUrl(Uri.parse(bannerList!
+                                                  .data![index].bannerSiteUrl ??
+                                              ''));
+                                        },
+                                        child: Container(
+                                          clipBehavior: Clip.antiAlias,
+                                          width: 100.w,
+                                          height: 20.h,
+                                          decoration: BoxDecoration(
+                                              color: HexColor('#f8f8f8'),
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                              image: DecorationImage(
+                                                  image: NetworkImage(
+                                                      bannerList!.data![index]
+                                                              .bannerimageurl ??
+                                                          ''),
+                                                  fit: BoxFit.contain)),
+                                        ),
+                                      )),
+                              carouselController: _controller,
+                              options: CarouselOptions(
+                                  autoPlayInterval: const Duration(seconds: 3),
+                                  viewportFraction: 0.75,
+                                  autoPlay: true,
+                                  enlargeCenterPage: true,
+                                  aspectRatio: 2.0,
+                                  autoPlayCurve: Curves.fastOutSlowIn,
+                                  enlargeFactor: 0.3,
+                                  onPageChanged: (index, reason) {
+                                    setState(() {
+                                      _current = index;
+                                    });
+                                  }),
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: bannerList!.data!
+                                  .asMap()
+                                  .entries
+                                  .map((entry) {
+                                return GestureDetector(
+                                  onTap: () =>
+                                      _controller.animateToPage(entry.key),
+                                  child: Container(
+                                    width: 7.0,
+                                    height: 7.0,
+                                    margin: const EdgeInsets.symmetric(
+                                        vertical: 8.0, horizontal: 4.0),
+                                    decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: (Theme.of(context).brightness ==
+                                                    Brightness.dark
+                                                ? Colors.white
+                                                : Colors.black)
+                                            .withOpacity(_current == entry.key
+                                                ? 0.9
+                                                : 0.4)),
+                                  ),
+                                );
+                              }).toList(),
+                            ),
+                          ],
+                        )
+                      : const SizedBox(),
+
                   // ActionCards(
                   //     title: 'My Work',
                   //     ontap: () async {
@@ -451,6 +667,46 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
         ),
+        thought != null
+            ? Center(
+                child: Container(
+                  width: 100.w,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        SizedBox(
+                          width: 70.w,
+                          child: Column(
+                            children: [
+                              Text(
+                                '\"${thought!.thought ?? ''}\"',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: 13.sp,
+                                    color: HexColor('#A9A9A9'),
+                                    fontFamily:
+                                        GoogleFonts.badScript().fontFamily,
+                                    fontWeight: FontWeight.w900),
+                              ),
+                              Text(
+                                '- ${thought!.author ?? ''}',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: 10.sp,
+                                    color: HexColor('#A9A9A9'),
+                                    fontFamily: GoogleFonts.inter().fontFamily),
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              )
+            : const SizedBox(),
       ],
     );
   }
@@ -497,6 +753,31 @@ class _HomeScreenState extends State<HomeScreen> {
       print('token updated : $deviceToken');
     } else {
       throw Exception('Failed to load');
+    }
+  }
+
+  getThoughts() async {
+    //check if the data is already in the cache
+    //key : thought_list
+
+    try {
+      final response = await http.get(
+          Uri.parse('https://manager.improovajobs.co.za/api/thought_list'),
+          headers: Utils.setHeader(_userDetailsController.token.toString()));
+
+      if (response.statusCode == 200) {
+        var decoded = jsonDecode(response.body);
+
+        setState(() {
+          thoughts = ThoughtsModel.fromJson(decoded);
+          int today = DateTime.now().day % thoughts!.data!.length;
+          thought = thoughts!.data![today];
+        });
+      }
+    } catch (e) {
+      log('error fetching');
+
+      Utils.showErrorToast(e.toString());
     }
   }
 

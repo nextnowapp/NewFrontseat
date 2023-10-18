@@ -4,6 +4,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart' as getx;
 import 'package:nextschool/controller/user_controller.dart';
+import 'package:nextschool/screens/frontseat/agent_onboarding/upload_bank_details/bank_details_confirmation.dart';
 import 'package:nextschool/screens/frontseat/agent_onboarding/upload_bank_details/bank_details_page.dart';
 import 'package:nextschool/screens/frontseat/agent_onboarding/upload_personal_information/onboard_personal_data_screen.dart';
 import 'package:nextschool/screens/frontseat/agent_onboarding/verify_account.dart';
@@ -54,7 +55,7 @@ class KycApi {
         Utils.saveStringValue('id', id);
         return id;
       }
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       log(e.toString());
       Navigator.pop(context!);
       Utils.showToast(
@@ -76,7 +77,9 @@ class KycApi {
     if (response.statusCode == 200) {
       log('success');
       KycApi.kycStatus();
-    } else {}
+    } else {
+      throw Exception('Failed to load');
+    }
     //combine data and extraData into one map
   }
 
@@ -119,7 +122,7 @@ class KycApi {
       } else if (response.statusCode == 404) {
         Utils.showToast(response.statusMessage.toString());
       }
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       log(e.toString());
       Utils.showToast('Invalid OTP');
       return e.toString();
@@ -151,7 +154,7 @@ class KycApi {
       } else if (response.statusCode == 404) {
         Utils.showToast(response.statusMessage.toString());
       }
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       log(e.toString());
       Utils.showToast('Invalid OTP');
 
@@ -274,7 +277,7 @@ class KycApi {
 
         btnController!.reset();
       }
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       Utils.showToast(
           'The email address and/or password information you entered does not match the registration informatiom');
 
@@ -319,7 +322,7 @@ class KycApi {
       } else {
         Utils.showToast('Failed to load');
       }
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       log(e.toString());
       return e.toString();
     }
@@ -346,7 +349,7 @@ class KycApi {
       } else {
         Utils.showToast('Failed to load');
       }
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       Utils.showToast('Failed to load');
       log(e.toString());
       return e.toString();
@@ -399,8 +402,10 @@ class KycApi {
         Navigator.pop(context);
         Navigator.pop(context);
         if (data == null) {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => const BankDetails()));
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const BankConfirmation()));
         } else {
           Navigator.push(
               context,
@@ -412,7 +417,7 @@ class KycApi {
       } else {
         Utils.showToast('Failed to load');
       }
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       Navigator.pop(context);
       Utils.showToast('Failed to load');
       return e.toString();
@@ -470,7 +475,7 @@ class KycApi {
         Navigator.pop(context);
         Utils.showToast('Failed to load');
       }
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       Navigator.pop(context);
       Utils.showToast('Failed to load');
       return e.toString();
@@ -509,7 +514,7 @@ class KycApi {
       } else {
         debugPrint('Error Encountered : ${response.data}');
       }
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       log(e.toString());
       debugPrint('Error Encountered : $e');
     }
@@ -532,7 +537,7 @@ class KycApi {
       } else {
         debugPrint('Error Encountered : ${response.data}');
       }
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       print(e);
       debugPrint('Error Encountered : $e');
     }
@@ -607,7 +612,7 @@ class KycApi {
       } else {
         debugPrint('Error Encountered : ${response.data}');
       }
-    } on DioError {
+    } on DioException {
       debugPrint('');
     }
     return status;
@@ -630,7 +635,7 @@ class KycApi {
       } else {
         debugPrint('Error Encountered : ${response.data}');
       }
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       print(e);
       debugPrint('Error Encountered : $e');
     }
@@ -662,7 +667,7 @@ class KycApi {
       } else {
         Utils.showToast('Something went wrong');
       }
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       Utils.showToast('Something went wrong');
       log(e.toString());
       return e.toString();
@@ -704,7 +709,7 @@ class KycApi {
       } else {
         Utils.showToast('Something went wrong');
       }
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       return e.toString();
     }
   }
@@ -736,7 +741,7 @@ class KycApi {
       } else {
         Utils.showToast('Failed to load');
       }
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       return e.toString();
     }
 

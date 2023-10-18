@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:developer';
 import 'dart:io';
+
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +15,7 @@ import 'package:intl/intl.dart';
 import 'package:nextschool/controller/grade_list_controller.dart';
 import 'package:nextschool/controller/user_controller.dart';
 import 'package:nextschool/utils/CustomAppBarWidget.dart';
-import 'package:open_file_safe/open_file_safe.dart';
+import 'package:open_filex/open_filex.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:sizer/sizer.dart';
 
@@ -292,14 +293,14 @@ class _ExportAttendanceScreenState extends State<ExportAttendanceScreen> {
       //file bytes
       var bytes = response.bodyBytes;
       //file name
-      var fileName = _selectedClass!+' Attendance';
+      var fileName = _selectedClass! + ' Attendance';
       //save file
       var status = await Permission.storage.status;
       if (!status.isGranted) {
         await Permission.storage.request();
       }
       // the downloads folder path
-     String tempPath = '/storage/emulated/0/Download';
+      String tempPath = '/storage/emulated/0/Download';
       var filePath = tempPath + '/${fileName}.xlsx';
       final buffer = bytes.buffer;
       //save file
@@ -308,7 +309,7 @@ class _ExportAttendanceScreenState extends State<ExportAttendanceScreen> {
             buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes));
 
         // view file using system default viewer
-        OpenFile.open(filePath);
+        OpenFilex.open(filePath);
         Utils.showToast('File Saved at $filePath');
       } catch (e) {
         Utils.showToast('Error in downloading file');

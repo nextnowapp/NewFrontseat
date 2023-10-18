@@ -2,7 +2,6 @@
 
 // Package imports:
 import 'package:dio/dio.dart';
-import 'package:file_utils/file_utils.dart';
 // Flutter imports:
 import 'package:flutter/material.dart';
 // Project imports:
@@ -62,7 +61,7 @@ class TimeLineView extends StatelessWidget {
                 maxLines: 1,
                 style: Theme.of(context)
                     .textTheme
-                    .headline6!
+                    .titleLarge!
                     .copyWith(fontWeight: FontWeight.w500),
               ),
               const SizedBox(
@@ -71,7 +70,7 @@ class TimeLineView extends StatelessWidget {
               Text(
                 timeline.date!,
                 maxLines: 1,
-                style: Theme.of(context).textTheme.headline4!.copyWith(
+                style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                       color: const Color(0xff415094),
                     ),
               ),
@@ -81,7 +80,7 @@ class TimeLineView extends StatelessWidget {
               Text(
                 timeline.description!,
                 maxLines: 5,
-                style: Theme.of(context).textTheme.headline4!.copyWith(
+                style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                       color: const Color(0xff415094),
                     ),
               ),
@@ -110,7 +109,7 @@ class TimeLineView extends StatelessWidget {
                           Text(
                             'Download',
                             textAlign: TextAlign.center,
-                            style: Theme.of(context).textTheme.headline6,
+                            style: Theme.of(context).textTheme.titleLarge,
                           ),
                         ],
                       ),
@@ -134,7 +133,7 @@ class TimeLineView extends StatelessWidget {
             context,
             MaterialPageRoute(
               builder: (context) => PdfView(
-                path:  InfixApi().root + timeline.file!,
+                path: InfixApi().root + timeline.file!,
               ),
             ),
           );
@@ -145,7 +144,7 @@ class TimeLineView extends StatelessWidget {
             context,
             MaterialPageRoute(
               builder: (context) => Utils.fullScreenImageView(
-                 InfixApi().root + timeline.file!,
+                InfixApi().root + timeline.file!,
               ),
             ),
           );
@@ -169,7 +168,7 @@ class TimeLineView extends StatelessWidget {
     AlertDialog alert = AlertDialog(
       title: Text(
         'Download',
-        style: Theme.of(context).textTheme.headline5,
+        style: Theme.of(context).textTheme.headlineSmall,
       ),
       content: const Text('Would you like to download the file?'),
       actions: [
@@ -195,7 +194,7 @@ class TimeLineView extends StatelessWidget {
     dirloc = (await getApplicationDocumentsDirectory()).path;
 
     try {
-      FileUtils.mkdir([dirloc]);
+      //
       Utils.showToast('Downloading...');
       await dio.download(
           InfixApi().root + url, dirloc + AppFunction.getExtention(url),

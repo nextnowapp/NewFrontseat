@@ -85,7 +85,7 @@ class _ClassRoutineState extends State<RoutineRow> {
                       child: Text(title!,
                           style: Theme.of(context)
                               .textTheme
-                              .headline6!
+                              .titleLarge!
                               .copyWith(color: Colors.black.withOpacity(0.5))),
                     ),
                     Padding(
@@ -97,21 +97,21 @@ class _ClassRoutineState extends State<RoutineRow> {
                             flex: 8,
                             child: Text(
                               'Time',
-                              style: Theme.of(context).textTheme.headline5,
+                              style: Theme.of(context).textTheme.headlineSmall,
                             ),
                           ),
                           Expanded(
                             flex: 6,
                             child: Text(
                               'Subject',
-                              style: Theme.of(context).textTheme.headline5,
+                              style: Theme.of(context).textTheme.headlineSmall,
                             ),
                           ),
                           /*Expanded(
                             flex: 3,
                             child: Text(
                               'Room',
-                              style: Theme.of(context).textTheme.headline5,
+                              style: Theme.of(context).textTheme.headlineSmall,
                             ),
                           ),*/
                         ],
@@ -138,7 +138,6 @@ class _ClassRoutineState extends State<RoutineRow> {
             );
 
             //Text(AppFunction.getAmPm(snapshot.data.schedules[0].startTime)+' - '+AppFunction.getAmPm(snapshot.data.schedules[0].endTime));
-
           } else {
             /* return Card(
                 child: Padding(

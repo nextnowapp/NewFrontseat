@@ -64,9 +64,9 @@ class _TeacherAttendanceScreenState extends State<TeacherAttendanceScreen> {
                   attendances = getTeacherAttendance(id, date.month, date.year);
                 });
               },
-              weekendTextStyle: Theme.of(context).textTheme.headline6,
+              weekendTextStyle: Theme.of(context).textTheme.titleLarge,
               thisMonthDayBorderColor: Colors.grey,
-              daysTextStyle: Theme.of(context).textTheme.headline4,
+              daysTextStyle: Theme.of(context).textTheme.headlineMedium,
 
 //      weekDays: null, /// for pass null when you do not want to render weekDays
 //      headerText: Container( /// Example for rendering custom header
@@ -75,11 +75,11 @@ class _TeacherAttendanceScreenState extends State<TeacherAttendanceScreen> {
               showOnlyCurrentMonthDate: false,
               headerTextStyle: Theme.of(context)
                   .textTheme
-                  .headline6!
+                  .titleLarge!
                   .copyWith(fontSize: 15.0),
               weekdayTextStyle: Theme.of(context)
                   .textTheme
-                  .headline4!
+                  .headlineMedium!
                   .copyWith(fontSize: 15.0, fontWeight: FontWeight.w500),
               customDayBuilder: (
                 /// you can provide your own build function to make custom day containers
@@ -123,7 +123,7 @@ class _TeacherAttendanceScreenState extends State<TeacherAttendanceScreen> {
                               Text(day.day.toString(),
                                   style: Theme.of(context)
                                       .textTheme
-                                      .headline4!
+                                      .headlineMedium!
                                       .copyWith(
                                           color: isToday == true
                                               ? Colors.white
@@ -152,7 +152,7 @@ class _TeacherAttendanceScreenState extends State<TeacherAttendanceScreen> {
                               Text(day.day.toString(),
                                   style: Theme.of(context)
                                       .textTheme
-                                      .headline4!
+                                      .headlineMedium!
                                       .copyWith(
                                           color: isToday == true
                                               ? Colors.white
@@ -214,11 +214,11 @@ class _TeacherAttendanceScreenState extends State<TeacherAttendanceScreen> {
                   Expanded(
                       child: Text(
                     title,
-                    style: Theme.of(context).textTheme.headline5!.copyWith(
+                    style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                         color: Colors.black45, fontWeight: FontWeight.w500),
                   )),
                   Text(getStatusCount(titleVal, snapshot.data!.attendances),
-                      style: Theme.of(context).textTheme.headline5),
+                      style: Theme.of(context).textTheme.headlineSmall),
                 ],
               ),
             );

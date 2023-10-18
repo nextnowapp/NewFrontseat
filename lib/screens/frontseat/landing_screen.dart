@@ -33,8 +33,8 @@ class LandingScreen extends StatelessWidget {
                     const SizedBox(height: 20),
                     SizedBox(
                       width: MediaQuery.of(context).size.width * 0.8,
-                      child: Row(
-                        children: const [
+                      child: const Row(
+                        children: [
                           Icon(
                             Icons.check_circle,
                             color: Colors.green,

@@ -143,7 +143,8 @@ class _LeaveStudentApplyState extends State<LeaveStudentApply> {
                                   applyDate == null
                                       ? 'Apply Date'
                                       : 'Leave Application Date :   $applyDate',
-                                  style: Theme.of(context).textTheme.headline5,
+                                  style:
+                                      Theme.of(context).textTheme.headlineSmall,
                                 ),
                               ),
                               const Icon(
@@ -183,7 +184,8 @@ class _LeaveStudentApplyState extends State<LeaveStudentApply> {
                                   fromDate == null
                                       ? 'Leave Start Date'
                                       : 'Leave Start Date : $fromDate',
-                                  style: Theme.of(context).textTheme.headline5,
+                                  style:
+                                      Theme.of(context).textTheme.headlineSmall,
                                 ),
                               ),
                               const Icon(
@@ -223,7 +225,8 @@ class _LeaveStudentApplyState extends State<LeaveStudentApply> {
                                   toDate == null
                                       ? 'Leave Return Date'
                                       : 'Leave Return Date : $toDate',
-                                  style: Theme.of(context).textTheme.headline5,
+                                  style:
+                                      Theme.of(context).textTheme.headlineSmall,
                                 ),
                               ),
                               const Icon(
@@ -266,8 +269,9 @@ class _LeaveStudentApplyState extends State<LeaveStudentApply> {
                                         ? 'Attach supporting document'
                                         : _file!.path.split('/').last,
                                     overflow: TextOverflow.ellipsis,
-                                    style:
-                                        Theme.of(context).textTheme.headline5,
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .headlineSmall,
                                     maxLines: 2,
                                   ),
                                 ),
@@ -276,7 +280,7 @@ class _LeaveStudentApplyState extends State<LeaveStudentApply> {
                                 'Browse',
                                 style: Theme.of(context)
                                     .textTheme
-                                    .headline5!
+                                    .headlineSmall!
                                     .copyWith(
                                         decoration: TextDecoration.underline),
                               ),
@@ -290,12 +294,13 @@ class _LeaveStudentApplyState extends State<LeaveStudentApply> {
                       child: TextField(
                         maxLines: 5,
                         keyboardType: TextInputType.text,
-                        style: Theme.of(context).textTheme.headline5,
+                        style: Theme.of(context).textTheme.headlineSmall,
                         controller: reasonController,
                         decoration: InputDecoration(
                             hintText: 'Reason',
                             labelText: 'Reason',
-                            labelStyle: Theme.of(context).textTheme.headline5,
+                            labelStyle:
+                                Theme.of(context).textTheme.headlineSmall,
                             errorStyle: const TextStyle(
                                 color: Colors.pinkAccent, fontSize: 15.0),
                             border: OutlineInputBorder(
@@ -329,7 +334,7 @@ class _LeaveStudentApplyState extends State<LeaveStudentApply> {
                 'Apply for Leave',
                 style: Theme.of(context)
                     .textTheme
-                    .headline5!
+                    .headlineSmall!
                     .copyWith(color: Colors.white, fontSize: 16.0),
               ),
             ),
@@ -391,14 +396,14 @@ class _LeaveStudentApplyState extends State<LeaveStudentApply> {
                 ),
                 child: Text(
                   item.type!,
-                  style: Theme.of(context).textTheme.headline5,
+                  style: Theme.of(context).textTheme.headlineSmall,
                 ),
               ),
             );
           }).toList(),
           style: Theme.of(context)
               .textTheme
-              .headline5!
+              .headlineSmall!
               .copyWith(fontSize: ScreenUtil().setSp(14)),
           onChanged: (dynamic value) {
             setState(() {
@@ -435,7 +440,7 @@ class _LeaveStudentApplyState extends State<LeaveStudentApply> {
               dropdownSearchDecoration: InputDecoration(
                 label: const Text('Select Leave Type*'),
                 border: const OutlineInputBorder(),
-                labelStyle: Theme.of(context).textTheme.headline5,
+                labelStyle: Theme.of(context).textTheme.headlineSmall,
               ),
             ),
             onChanged: (dynamic newValue) {
@@ -512,7 +517,7 @@ class _LeaveStudentApplyState extends State<LeaveStudentApply> {
       },
     ).catchError((e) {
       print(e);
-      final errorMessage = DioExceptions.fromDioError(e).toString();
+      final errorMessage = DioExceptions.fromDioException(e).toString();
       print(errorMessage);
 
       Utils.showToast(errorMessage);

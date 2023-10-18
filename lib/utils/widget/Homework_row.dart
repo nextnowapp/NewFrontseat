@@ -3,7 +3,6 @@ import 'dart:io';
 
 // Package imports:
 import 'package:dio/dio.dart';
-import 'package:file_utils/file_utils.dart';
 // Flutter imports:
 import 'package:flutter/material.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
@@ -271,7 +270,6 @@ class _StudentHomeworkRowState extends State<StudentHomeworkRow> {
     dirloc = (await getApplicationDocumentsDirectory()).path;
     Utils.showToast('Just a second...');
     try {
-      FileUtils.mkdir([dirloc]);
       await dio.download(
           InfixApi().root + url, dirloc + AppFunction.getExtention(url),
           options: Options(headers: {HttpHeaders.acceptEncodingHeader: '*'}),
@@ -330,7 +328,7 @@ class _StudentHomeworkRowState extends State<StudentHomeworkRow> {
       String downloadName = widget.homework.subjectName!;
       String fullPath = '$dirloc/$downloadName.pdf';
       String fileSaved = '$dirloc/$downloadName.pdf/';
-      FileUtils.mkdir([fullPath]);
+      //
 
       Utils.showToast('Downloading file Please wait...');
 

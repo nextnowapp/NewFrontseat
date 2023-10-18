@@ -4,7 +4,6 @@ import 'dart:math';
 
 // Package imports:
 import 'package:dio/dio.dart';
-import 'package:file_utils/file_utils.dart';
 // Flutter imports:
 import 'package:flutter/material.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
@@ -95,7 +94,7 @@ class _ContentRowState extends State<ContentRow> {
                                         widget.content.title!,
                                         style: Theme.of(context)
                                             .textTheme
-                                            .headline5,
+                                            .headlineSmall,
                                       ),
                                     ),
                                   ],
@@ -117,7 +116,7 @@ class _ContentRowState extends State<ContentRow> {
                                               : widget.content.description!,
                                           style: Theme.of(context)
                                               .textTheme
-                                              .headline4!
+                                              .headlineMedium!
                                               .copyWith(
                                                   fontSize:
                                                       ScreenUtil().setSp(12)),
@@ -148,7 +147,7 @@ class _ContentRowState extends State<ContentRow> {
                             : widget.content.title!,
                         style: Theme.of(context)
                             .textTheme
-                            .headline6!
+                            .titleLarge!
                             .copyWith(fontSize: ScreenUtil().setSp(12)),
                         maxLines: 1,
                       ),
@@ -196,7 +195,7 @@ class _ContentRowState extends State<ContentRow> {
                               maxLines: 1,
                               style: Theme.of(context)
                                   .textTheme
-                                  .headline4!
+                                  .headlineMedium!
                                   .copyWith(
                                       color: const Color(0xff415094),
                                       fontWeight: FontWeight.w500),
@@ -212,7 +211,7 @@ class _ContentRowState extends State<ContentRow> {
                               maxLines: 1,
                               style: Theme.of(context)
                                   .textTheme
-                                  .headline4!
+                                  .headlineMedium!
                                   .copyWith(
                                       color: const Color(0xff415094),
                                       fontWeight: FontWeight.w400),
@@ -229,7 +228,7 @@ class _ContentRowState extends State<ContentRow> {
                               maxLines: 1,
                               style: Theme.of(context)
                                   .textTheme
-                                  .headline4!
+                                  .headlineMedium!
                                   .copyWith(
                                       color: const Color(0xff415094),
                                       fontWeight: FontWeight.w500),
@@ -244,7 +243,7 @@ class _ContentRowState extends State<ContentRow> {
                               maxLines: 1,
                               style: Theme.of(context)
                                   .textTheme
-                                  .headline4!
+                                  .headlineMedium!
                                   .copyWith(
                                       color: const Color(0xff415094),
                                       fontWeight: FontWeight.w400),
@@ -261,7 +260,7 @@ class _ContentRowState extends State<ContentRow> {
                               maxLines: 1,
                               style: Theme.of(context)
                                   .textTheme
-                                  .headline4!
+                                  .headlineMedium!
                                   .copyWith(
                                       color: const Color(0xff415094),
                                       fontWeight: FontWeight.w500),
@@ -276,7 +275,7 @@ class _ContentRowState extends State<ContentRow> {
                                       .replaceAll('classes', 'grades'),
                               style: Theme.of(context)
                                   .textTheme
-                                  .headline4!
+                                  .headlineMedium!
                                   .copyWith(
                                       color: const Color(0xff415094),
                                       fontWeight: FontWeight.w400),
@@ -327,7 +326,7 @@ class _ContentRowState extends State<ContentRow> {
     AlertDialog alert = AlertDialog(
       title: Text(
         'Delete',
-        style: Theme.of(context).textTheme.headline5,
+        style: Theme.of(context).textTheme.headlineSmall,
       ),
       content: const Text('Would you like to delete the file?'),
       actions: [
@@ -390,7 +389,7 @@ class _ContentRowState extends State<ContentRow> {
     AlertDialog alert = AlertDialog(
       title: Text(
         'Download',
-        style: Theme.of(context).textTheme.headline5,
+        style: Theme.of(context).textTheme.headlineSmall,
       ),
       content: const Text('Would you like to download the file?'),
       actions: [
@@ -437,7 +436,6 @@ class _ContentRowState extends State<ContentRow> {
       String downloadName = widget.content.title!;
       String fullPath = '$dirloc/$downloadName.pdf';
       String fileSaved = '$dirloc/$downloadName.pdf/';
-      FileUtils.mkdir([fullPath]);
       await dio.download(
           InfixApi().root + url, fileSaved + AppFunction.getExtention(url),
           options: Options(headers: {HttpHeaders.acceptEncodingHeader: '*'}),

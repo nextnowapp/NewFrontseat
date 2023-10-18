@@ -149,7 +149,7 @@ class Login {
         return message;
       }
     } catch (e) {
-      message = (e as DIO.DioError).response!.data['message'];
+      message = (e as DIO.DioException).response!.data['message'];
       throw message;
     }
     return message;
@@ -319,7 +319,7 @@ class Login2 {
         return message;
       }
     } catch (e) {
-      message = (e as DIO.DioError).response!.data['message'];
+      message = (e as DIO.DioException).response!.data['message'];
       throw message;
     }
     return message;

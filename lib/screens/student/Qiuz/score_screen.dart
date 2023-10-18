@@ -9,7 +9,8 @@ class ScoreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     QuestionController _qnController = Get.put(QuestionController());
-    print(_qnController.correctAns.toString() + _qnController.questions.length.toString() );
+    print(_qnController.correctAns.toString() +
+        _qnController.questions.length.toString());
     return Scaffold(
       body: Stack(
         fit: StackFit.expand,
@@ -22,7 +23,7 @@ class ScoreScreen extends StatelessWidget {
                 'Score',
                 style: Theme.of(context)
                     .textTheme
-                    .headline3!
+                    .displaySmall!
                     .copyWith(color: kSecondaryColor),
               ),
               const Spacer(),
@@ -30,7 +31,7 @@ class ScoreScreen extends StatelessWidget {
                 '${_qnController.correctAns! * 10}/${_qnController.questions.length * 10}',
                 style: Theme.of(context)
                     .textTheme
-                    .headline4!
+                    .headlineMedium!
                     .copyWith(color: kSecondaryColor),
               ),
               const Spacer(flex: 3),

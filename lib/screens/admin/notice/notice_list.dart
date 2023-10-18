@@ -420,18 +420,18 @@ class _NoticeListScreenState extends State<NoticeListScreen> {
       decoration: const BoxDecoration(
           color: Colors.amber,
           borderRadius: BorderRadius.all(Radius.circular(12))),
-      child: Align(
+      child: const Align(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            const SizedBox(
+            SizedBox(
               width: 20,
             ),
-            const Icon(
+            Icon(
               Icons.edit,
               color: Colors.white,
             ),
-            const Text(
+            Text(
               ' Edit',
               style: TextStyle(
                 color: Colors.white,
@@ -451,15 +451,15 @@ class _NoticeListScreenState extends State<NoticeListScreen> {
       decoration: const BoxDecoration(
           color: Colors.red,
           borderRadius: BorderRadius.all(Radius.circular(12))),
-      child: Align(
+      child: const Align(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
-            const Icon(
+            Icon(
               Icons.delete,
               color: Colors.white,
             ),
-            const Text(
+            Text(
               ' Delete',
               style: TextStyle(
                 color: Colors.white,
@@ -467,7 +467,7 @@ class _NoticeListScreenState extends State<NoticeListScreen> {
               ),
               textAlign: TextAlign.right,
             ),
-            const SizedBox(
+            SizedBox(
               width: 20,
             ),
           ],

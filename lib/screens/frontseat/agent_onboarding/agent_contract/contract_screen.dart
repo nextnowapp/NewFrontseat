@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
-import 'package:open_file_safe/open_file_safe.dart';
+import 'package:open_filex/open_filex.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:pdf_viewer_plugin/pdf_viewer_plugin.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -12,8 +12,8 @@ import 'package:sizer/sizer.dart';
 
 import '../../../../controller/kyc_step_model.dart';
 import '../../../../utils/Utils.dart';
-import '../../services/kyc_api.dart';
 import '../../../../utils/widget/textwidget.dart';
+import '../../services/kyc_api.dart';
 import 'controller/contract_bloc.dart';
 
 class ContractScreen extends StatefulWidget {
@@ -143,7 +143,7 @@ class _ContractScreenState extends State<ContractScreen> {
                               bytes.offsetInBytes, bytes.lengthInBytes));
 
                           // view file using system default viewer
-                          OpenFile.open(filePath);
+                          OpenFilex.open(filePath);
                           Utils.showToast('File Saved at $filePath');
                         },
                         child: TextWidget(

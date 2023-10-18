@@ -62,7 +62,7 @@ class _ClassRoutineState extends State<TeacherRoutineRow> {
                     child: Text(title!,
                         style: Theme.of(context)
                             .textTheme
-                            .headline6!
+                            .titleLarge!
                             .copyWith(fontSize: ScreenUtil().setSp(15))),
                   ),
                   Padding(

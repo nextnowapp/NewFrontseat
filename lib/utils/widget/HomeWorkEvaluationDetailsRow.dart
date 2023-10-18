@@ -3,7 +3,6 @@ import 'dart:io';
 
 // Package imports:
 import 'package:dio/dio.dart';
-import 'package:file_utils/file_utils.dart';
 // Flutter imports:
 import 'package:flutter/material.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
@@ -99,7 +98,7 @@ class _HomeWorkEvaluationDetailsRowState
     AlertDialog alert = AlertDialog(
       title: Text(
         'Download',
-        style: Theme.of(context).textTheme.headline5,
+        style: Theme.of(context).textTheme.headlineSmall,
       ),
       content: const Text('Would you like to download the file?'),
       actions: [
@@ -132,7 +131,7 @@ class _HomeWorkEvaluationDetailsRowState
       String downloadName = widget.studentHomeworkEvaluation.subjectName!;
       String fullPath = '$dirloc/$downloadName.pdf';
       String fileSaved = '$dirloc/$downloadName.pdf/';
-      FileUtils.mkdir([fullPath]);
+      //
       Utils.showToast('Downloading...');
 
       await dio.download(
@@ -193,7 +192,7 @@ class _HomeWorkEvaluationDetailsRowState
               Text(
                 widget.studentHomeworkEvaluation.subjectName!,
                 maxLines: 1,
-                style: Theme.of(context).textTheme.headline4!.copyWith(
+                style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                     fontWeight: FontWeight.w500,
                     fontSize: ScreenUtil().setSp(14)),
               ),
@@ -228,7 +227,7 @@ class _HomeWorkEvaluationDetailsRowState
                       maxLines: 1,
                       style: Theme.of(context)
                           .textTheme
-                          .headline4!
+                          .headlineMedium!
                           .copyWith(fontWeight: FontWeight.w500),
                     ),
                     const SizedBox(
@@ -239,7 +238,7 @@ class _HomeWorkEvaluationDetailsRowState
                           ? 'not assigned'
                           : widget.studentHomeworkEvaluation.homeworkDate!,
                       maxLines: 1,
-                      style: Theme.of(context).textTheme.headline4,
+                      style: Theme.of(context).textTheme.headlineMedium,
                     ),
                   ],
                 ),
@@ -253,7 +252,7 @@ class _HomeWorkEvaluationDetailsRowState
                       maxLines: 1,
                       style: Theme.of(context)
                           .textTheme
-                          .headline4!
+                          .headlineMedium!
                           .copyWith(fontWeight: FontWeight.w500),
                     ),
                     const SizedBox(
@@ -264,7 +263,7 @@ class _HomeWorkEvaluationDetailsRowState
                           ? 'not assigned'
                           : widget.studentHomeworkEvaluation.submissionDate!,
                       maxLines: 1,
-                      style: Theme.of(context).textTheme.headline4,
+                      style: Theme.of(context).textTheme.headlineMedium,
                     ),
                   ],
                 ),
@@ -278,7 +277,7 @@ class _HomeWorkEvaluationDetailsRowState
                       maxLines: 1,
                       style: Theme.of(context)
                           .textTheme
-                          .headline4
+                          .headlineMedium
                           .copyWith(fontWeight: FontWeight.w500),
                     ),
                     SizedBox(
@@ -289,7 +288,7 @@ class _HomeWorkEvaluationDetailsRowState
                           ? 'N/A'
                           : widget.studentHomeworkEvaluation.evaluationDate,
                       maxLines: 1,
-                      style: Theme.of(context).textTheme.headline4,
+                      style: Theme.of(context).textTheme.headlineMedium,
                     ),
                   ],
                 ),
@@ -303,7 +302,7 @@ class _HomeWorkEvaluationDetailsRowState
                       maxLines: 1,
                       style: Theme.of(context)
                           .textTheme
-                          .headline4
+                          .headlineMedium
                           .copyWith(fontWeight: FontWeight.w500),
                     ),
                     SizedBox(
@@ -314,7 +313,7 @@ class _HomeWorkEvaluationDetailsRowState
                           ? 'not assigned'
                           : widget.studentHomeworkEvaluation.marks.toString(),
                       maxLines: 1,
-                      style: Theme.of(context).textTheme.headline4,
+                      style: Theme.of(context).textTheme.headlineMedium,
                     ),
                   ],
                 ),

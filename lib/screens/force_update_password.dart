@@ -85,7 +85,7 @@ class _ScreenOneState extends State<ScreenOne> {
             padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 24),
             child: TextFormField(
               keyboardType: TextInputType.number,
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headlineMedium,
               cursorHeight: 28,
               cursorWidth: 1.0,
               // validator: (String value) => mobileNumberValidator(value),
@@ -94,7 +94,7 @@ class _ScreenOneState extends State<ScreenOne> {
                   labelText: 'Enter Mobile Number',
                   hintText: 'Enter Mobile Number',
                   prefixIcon: const Icon(Icons.phone),
-                  labelStyle: Theme.of(context).textTheme.headline5,
+                  labelStyle: Theme.of(context).textTheme.headlineSmall,
                   errorStyle: TextStyle(
                       color: Colors.red, fontSize: ScreenUtil().setSp(12)),
                   border: OutlineInputBorder(
@@ -119,14 +119,14 @@ class _ScreenOneState extends State<ScreenOne> {
                   radius: 40,
                   lineWidth: 6,
                   percent: 0.33,
-                  center: Column(
+                  center: const Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text(
+                      Text(
                         'Step',
                         style: TextStyle(fontWeight: FontWeight.w600),
                       ),
-                      const Text(
+                      Text(
                         '1/3',
                         style: TextStyle(fontWeight: FontWeight.w600),
                       ),
@@ -216,7 +216,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
               padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 24),
               child: TextFormField(
                 keyboardType: TextInputType.number,
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headlineMedium,
                 cursorHeight: 28,
                 cursorWidth: 1.0,
                 // validator: (String value) => mobileNumberValidator(value),
@@ -225,7 +225,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
                     labelText: 'Enter E-mail ID',
                     hintText: 'Enter E-mail ID',
                     prefixIcon: const Icon(Icons.alternate_email_sharp),
-                    labelStyle: Theme.of(context).textTheme.headline5,
+                    labelStyle: Theme.of(context).textTheme.headlineSmall,
                     errorStyle: TextStyle(
                         color: Colors.red, fontSize: ScreenUtil().setSp(12)),
                     border: OutlineInputBorder(
@@ -269,14 +269,14 @@ class _ScreenTwoState extends State<ScreenTwo> {
                     radius: 40,
                     lineWidth: 6,
                     percent: 0.67,
-                    center: Column(
+                    center: const Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Text(
+                        Text(
                           'Step',
                           style: TextStyle(fontWeight: FontWeight.w600),
                         ),
-                        const Text(
+                        Text(
                           '2/3',
                           style: TextStyle(fontWeight: FontWeight.w600),
                         ),
@@ -376,7 +376,7 @@ class _ScreenThreeState extends State<ScreenThree> {
               padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
               child: TextFormField(
                 keyboardType: TextInputType.number,
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headlineMedium,
                 cursorHeight: 28,
                 cursorWidth: 1.0,
                 // validator: (String value) => mobileNumberValidator(value),
@@ -387,7 +387,7 @@ class _ScreenThreeState extends State<ScreenThree> {
                     prefixIcon: const Icon(Icons.lock),
                     suffixIcon: IconButton(
                         onPressed: () {}, icon: const Icon(Icons.visibility)),
-                    labelStyle: Theme.of(context).textTheme.headline5,
+                    labelStyle: Theme.of(context).textTheme.headlineSmall,
                     errorStyle: TextStyle(
                         color: Colors.red, fontSize: ScreenUtil().setSp(12)),
                     border: OutlineInputBorder(
@@ -399,7 +399,7 @@ class _ScreenThreeState extends State<ScreenThree> {
               padding: const EdgeInsets.symmetric(horizontal: 24),
               child: TextFormField(
                 keyboardType: TextInputType.number,
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headlineMedium,
                 cursorHeight: 28,
                 cursorWidth: 1.0,
                 // validator: (String value) => mobileNumberValidator(value),
@@ -410,7 +410,7 @@ class _ScreenThreeState extends State<ScreenThree> {
                     prefixIcon: const Icon(Icons.lock),
                     suffixIcon: IconButton(
                         onPressed: () {}, icon: const Icon(Icons.visibility)),
-                    labelStyle: Theme.of(context).textTheme.headline5,
+                    labelStyle: Theme.of(context).textTheme.headlineSmall,
                     errorStyle: TextStyle(
                         color: Colors.red, fontSize: ScreenUtil().setSp(12)),
                     border: OutlineInputBorder(
@@ -422,7 +422,7 @@ class _ScreenThreeState extends State<ScreenThree> {
               padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
               child: TextFormField(
                 keyboardType: TextInputType.number,
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headlineMedium,
                 cursorHeight: 28,
                 cursorWidth: 1.0,
                 // validator: (String value) => mobileNumberValidator(value),
@@ -433,7 +433,7 @@ class _ScreenThreeState extends State<ScreenThree> {
                     prefixIcon: const Icon(Icons.lock),
                     suffixIcon: IconButton(
                         onPressed: () {}, icon: const Icon(Icons.visibility)),
-                    labelStyle: Theme.of(context).textTheme.headline5,
+                    labelStyle: Theme.of(context).textTheme.headlineSmall,
                     errorStyle: TextStyle(
                         color: Colors.red, fontSize: ScreenUtil().setSp(12)),
                     border: OutlineInputBorder(
@@ -477,14 +477,14 @@ class _ScreenThreeState extends State<ScreenThree> {
                     radius: 40,
                     lineWidth: 6,
                     percent: 1,
-                    center: Column(
+                    center: const Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Text(
+                        Text(
                           'Step',
                           style: TextStyle(fontWeight: FontWeight.w600),
                         ),
-                        const Text(
+                        Text(
                           '3/3',
                           style: TextStyle(fontWeight: FontWeight.w600),
                         ),
@@ -592,7 +592,7 @@ class _BodyState extends State<ScreenOne> with SingleTickerProviderStateMixin{
             padding: const EdgeInsets.all(16),
             child: TextFormField(
               keyboardType: TextInputType.number,
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headlineMedium,
               cursorHeight: 28,
               cursorWidth: 1.0,
               validator: (String value) => mobileNumberValidator(value),
@@ -601,7 +601,7 @@ class _BodyState extends State<ScreenOne> with SingleTickerProviderStateMixin{
                   labelText: "Enter Mobile Number",
                   hintText: "Enter Mobile Number",
                   suffixIcon: const Icon(Icons.phone),
-                  labelStyle: Theme.of(context).textTheme.headline5,
+                  labelStyle: Theme.of(context).textTheme.headlineSmall,
                   errorStyle: TextStyle(
                       color: Colors.red,
                       fontSize: ScreenUtil().setSp(12)),
@@ -614,7 +614,7 @@ class _BodyState extends State<ScreenOne> with SingleTickerProviderStateMixin{
             padding: const EdgeInsets.all(16),
             child: TextFormField(
               keyboardType: TextInputType.emailAddress,
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headlineMedium,
               cursorHeight: 28,
               cursorWidth: 1.0,
               validator: (String value) => emailAddressValidator(value),
@@ -623,7 +623,7 @@ class _BodyState extends State<ScreenOne> with SingleTickerProviderStateMixin{
                   labelText: "Enter E-mail Address",
                   hintText: "Enter E-mail Address",
                   suffixIcon: const Icon(Icons.alternate_email),
-                  labelStyle: Theme.of(context).textTheme.headline5,
+                  labelStyle: Theme.of(context).textTheme.headlineSmall,
                   errorStyle: TextStyle(
                       color: Colors.red,
                       fontSize: ScreenUtil().setSp(12)),
@@ -642,7 +642,7 @@ class _BodyState extends State<ScreenOne> with SingleTickerProviderStateMixin{
                       thickness: 1,
                     )),
                 Utils.sizedBoxWidth(8),
-              Text('Enter Old Password',style: Theme.of(context).textTheme.headline5,),
+              Text('Enter Old Password',style: Theme.of(context).textTheme.headlineSmall,),
                 Utils.sizedBoxWidth(8),
                 Expanded(
                     flex: 8,
@@ -741,7 +741,7 @@ class _BodyState extends State<ScreenOne> with SingleTickerProviderStateMixin{
                       thickness: 1,
                     )),
                 Utils.sizedBoxWidth(8),
-              Text('Enter New Password',style: Theme.of(context).textTheme.headline5,),
+              Text('Enter New Password',style: Theme.of(context).textTheme.headlineSmall,),
                 Utils.sizedBoxWidth(8),
                 Expanded(
                     flex: 8,
@@ -840,7 +840,7 @@ class _BodyState extends State<ScreenOne> with SingleTickerProviderStateMixin{
                       thickness: 1,
                     )),
                 Utils.sizedBoxWidth(8),
-              Text('Confirm New Password',style: Theme.of(context).textTheme.headline5,),
+              Text('Confirm New Password',style: Theme.of(context).textTheme.headlineSmall,),
                 Utils.sizedBoxWidth(8),
                 Expanded(
                     flex: 8,
@@ -948,7 +948,7 @@ class _BodyState extends State<ScreenOne> with SingleTickerProviderStateMixin{
                           "Update",
                           style: Theme.of(context)
                               .textTheme
-                              .headline5
+                              .headlineSmall
                               .copyWith(color: Colors.white),
                         ),
                       ),
@@ -1256,7 +1256,7 @@ class _StepperBodyState extends State<StepperBody> {
                             'Update Password',
                             style: Theme.of(context)
                                 .textTheme
-                                .subtitle1
+                                .titleMedium
                                 .copyWith(
                                     fontSize: ScreenUtil().setSp(20),
                                     color: Colors.white),

@@ -4,7 +4,6 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:nextschool/screens/choose_Login.dart';
-import 'package:nextschool/screens/choose_school.dart';
 import 'package:nextschool/screens/frontseat/landing_screen.dart';
 import 'package:nextschool/screens/signup_flow/singup_flow_screen.dart';
 import 'package:nextschool/utils/FunctionsData.dart';
@@ -347,23 +346,23 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                   visible: ((firstCheckBox == false ||
                                           secondCheckBox == false) &&
                                       buttonPressed),
-                                  child: Padding(
-                                    padding: const EdgeInsets.only(
+                                  child: const Padding(
+                                    padding: EdgeInsets.only(
                                         left: 10.0, right: 10.0),
                                     child: Center(
                                       child: Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
-                                          const Icon(
+                                          Icon(
                                             Icons.error,
                                             size: 18,
                                             color: Colors.red,
                                           ),
-                                          const SizedBox(
+                                          SizedBox(
                                             width: 10,
                                           ),
-                                          const Text(
+                                          Text(
                                             'Please accept the terms and conditions',
                                             style: TextStyle(
                                                 fontSize: 12,
@@ -391,7 +390,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                 Navigator.pop(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => LandingScreen()),
+                                      builder: (context) => const LandingScreen()),
                                 );
                               },
                               child: const BackBtn())

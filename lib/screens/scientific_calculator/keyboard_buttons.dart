@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:sizer/sizer.dart';
 
@@ -66,7 +65,7 @@ class KeyboardButtons extends StatelessWidget {
                   color: (_colorTextButtons())
                       ? Colors.blueAccent
                       : (buttons == EQUAL_SIGN)
-                          ? Theme.of(context).buttonColor
+                          ? Theme.of(context).primaryColor
                           : (_basicOperators())
                               ? HexColor('#e74239')
                               : const Color(0xFF444444),

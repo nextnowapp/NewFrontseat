@@ -65,7 +65,7 @@ class _UploadedFilesViewState extends State<UploadedFilesView> {
                                     'View',
                                     style: Theme.of(context)
                                         .textTheme
-                                        .headline4!
+                                        .headlineMedium!
                                         .copyWith(
                                             fontWeight: FontWeight.w500,
                                             fontSize: 20),

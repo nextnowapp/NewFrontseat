@@ -6,7 +6,6 @@ import 'dart:io';
 import 'package:cached_network_image/cached_network_image.dart';
 // Package imports:
 import 'package:dio/dio.dart';
-import 'package:file_utils/file_utils.dart';
 // Flutter imports:
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -249,7 +248,7 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
                                     context,
                                     MaterialPageRoute(
                                       builder: (context) => PdfView(
-                                        path:  InfixApi().root +
+                                        path: InfixApi().root +
                                             widget.leave.file!,
                                       ),
                                     ),
@@ -263,7 +262,7 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
                                     MaterialPageRoute(
                                       builder: (context) =>
                                           Utils.documentViewer(
-                                               InfixApi().root +
+                                              InfixApi().root +
                                                   widget.leave.file!,
                                               context),
                                     ),
@@ -350,7 +349,7 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
                                 'Leave Status',
                                 style: Theme.of(context)
                                     .textTheme
-                                    .headline4!
+                                    .headlineMedium!
                                     .copyWith(fontSize: ScreenUtil().setSp(14)),
                                 maxLines: 1,
                               ),
@@ -360,7 +359,7 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
                               title: Text('Pending',
                                   style: Theme.of(context)
                                       .textTheme
-                                      .headline4!
+                                      .headlineMedium!
                                       .copyWith(
                                           fontSize: ScreenUtil().setSp(14))),
                               value: 'Pending',
@@ -378,7 +377,7 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
                               title: Text('Approved',
                                   style: Theme.of(context)
                                       .textTheme
-                                      .headline4!
+                                      .headlineMedium!
                                       .copyWith(
                                           fontSize: ScreenUtil().setSp(14))),
                               value: 'Approve',
@@ -396,7 +395,7 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
                               title: Text('Denied',
                                   style: Theme.of(context)
                                       .textTheme
-                                      .headline4!
+                                      .headlineMedium!
                                       .copyWith(
                                           fontSize: ScreenUtil().setSp(14))),
                               value: 'Cancel',
@@ -424,7 +423,7 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
                                     'Save',
                                     style: Theme.of(context)
                                         .textTheme
-                                        .headline4!
+                                        .headlineMedium!
                                         .copyWith(
                                             color: Colors.white,
                                             fontSize: ScreenUtil().setSp(14)),
@@ -482,7 +481,7 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
             context,
             MaterialPageRoute(
               builder: (context) => PdfView(
-                path:  InfixApi().root + widget.leave.file!,
+                path: InfixApi().root + widget.leave.file!,
               ),
             ),
           );
@@ -493,7 +492,7 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
             context,
             MaterialPageRoute(
               builder: (context) => Utils.fullScreenImageView(
-                 InfixApi().root + widget.leave.file!,
+                InfixApi().root + widget.leave.file!,
               ),
             ),
           );
@@ -519,7 +518,7 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
     AlertDialog alert = AlertDialog(
       title: Text(
         'Download',
-        style: Theme.of(context).textTheme.headline5,
+        style: Theme.of(context).textTheme.headlineSmall,
       ),
       content: const Text('Would you like to download the file?'),
       actions: [
@@ -551,7 +550,6 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
       String downloadName = widget.leave.fullName!;
       String fullPath = '$dirloc/$downloadName.pdf';
       String fileSaved = '$dirloc/$downloadName.pdf/';
-      FileUtils.mkdir([fullPath]);
       Utils.showToast('Downloading...');
 
       await dio.download(
@@ -627,7 +625,7 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
         ),
       )
           .catchError((e) {
-        final errorMessage = DioExceptions.fromDioError(e).toString();
+        final errorMessage = DioExceptions.fromDioException(e).toString();
         print(errorMessage);
         Utils.showToast(errorMessage);
       });
@@ -652,7 +650,7 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
             'Pending',
             textAlign: TextAlign.center,
             maxLines: 1,
-            style: Theme.of(context).textTheme.headline4!.copyWith(
+            style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                   color: const Color(0xFFc08b02),
                   fontWeight: FontWeight.w500,
                   fontSize: 12,
@@ -671,7 +669,7 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
             'Rejected',
             textAlign: TextAlign.center,
             maxLines: 1,
-            style: Theme.of(context).textTheme.headline4!.copyWith(
+            style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                   color: const Color(0xFFff8989),
                   fontWeight: FontWeight.w500,
                   fontSize: 12,
@@ -690,7 +688,7 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
             'Approved',
             textAlign: TextAlign.center,
             maxLines: 1,
-            style: Theme.of(context).textTheme.headline4!.copyWith(
+            style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                   color: const Color(0xFF449e58),
                   fontWeight: FontWeight.w500,
                   fontSize: 12,
@@ -709,7 +707,7 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
             'Denied',
             textAlign: TextAlign.center,
             maxLines: 1,
-            style: Theme.of(context).textTheme.headline4!.copyWith(
+            style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                   color: const Color(0xFFff8989),
                   fontWeight: FontWeight.w500,
                   fontSize: 12,

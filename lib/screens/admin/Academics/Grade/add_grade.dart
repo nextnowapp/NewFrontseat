@@ -151,8 +151,8 @@ class _AddGradeState extends State<AddGrade> {
       },
     ).catchError((e) {
       print(e);
-      final errorMessage = DioExceptions.fromDioError(e).toString();
-     _btnController.reset();
+      final errorMessage = DioExceptions.fromDioException(e).toString();
+      _btnController.reset();
       Utils.showToast('Class already assigned..!');
     });
     if (response.statusCode == 200) {
@@ -190,7 +190,6 @@ class _AddGradeState extends State<AddGrade> {
       // Utils.showSnackBar(context, 'Grade already assigned!!!',
       //     color: Colors.red);
       Utils.showToast('Grade already assigned!!!');
-     
     } else {
       _btnController.reset();
       throw Exception('Failed to load');

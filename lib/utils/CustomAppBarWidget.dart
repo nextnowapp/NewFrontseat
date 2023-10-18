@@ -63,7 +63,7 @@ class _CustomAppBarWidgetState extends State<CustomAppBarWidget> {
     Widget cancelButton = TextButton(
       child: Text(
         'Cancel',
-        style: Theme.of(context).textTheme.headline5!.copyWith(
+        style: Theme.of(context).textTheme.headlineSmall!.copyWith(
               fontSize: ScreenUtil().setSp(12),
               color: Colors.red,
             ),
@@ -75,7 +75,7 @@ class _CustomAppBarWidgetState extends State<CustomAppBarWidget> {
     Widget yesButton = TextButton(
       child: Text(
         'Yes',
-        style: Theme.of(context).textTheme.headline5!.copyWith(
+        style: Theme.of(context).textTheme.headlineSmall!.copyWith(
               fontSize: ScreenUtil().setSp(12),
               color: Colors.green,
             ),
@@ -106,7 +106,7 @@ class _CustomAppBarWidgetState extends State<CustomAppBarWidget> {
     AlertDialog alert = AlertDialog(
       title: Text(
         'Logout',
-        style: Theme.of(context).textTheme.headline5,
+        style: Theme.of(context).textTheme.headlineSmall,
       ),
       content: const Text('Would you like to logout?'),
       actions: [
@@ -219,7 +219,7 @@ class _CustomAppBarWidgetState extends State<CustomAppBarWidget> {
         fit: BoxFit.fitWidth,
         child: Text(
           widget.title!,
-          style: Theme.of(context).textTheme.subtitle1!.copyWith(
+          style: Theme.of(context).textTheme.titleMedium!.copyWith(
                 fontFamily:
                     GoogleFonts.inter(fontWeight: FontWeight.w600).fontFamily,
                 fontSize: 18.sp,

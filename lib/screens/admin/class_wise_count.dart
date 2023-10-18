@@ -529,7 +529,7 @@ class _ClassSectionWiseCountState extends State<ClassSectionWiseCount> {
         }
       },
     ).catchError((e) {
-      final errorMessage = DioExceptions.fromDioError(e).toString();
+      final errorMessage = DioExceptions.fromDioException(e).toString();
       print(errorMessage);
       Utils.showToast(errorMessage);
       Navigator.of(context).pop();

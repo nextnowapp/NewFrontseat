@@ -139,8 +139,9 @@ class _ApplyLeaveScreenState extends State<ApplyLeaveScreen> {
                                     applyDate == null
                                         ? 'Apply Date'
                                         : 'Leave Application Date : $applyDate',
-                                    style:
-                                        Theme.of(context).textTheme.headline5,
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .headlineSmall,
                                   ),
                                 ),
                                 const Icon(
@@ -183,7 +184,8 @@ class _ApplyLeaveScreenState extends State<ApplyLeaveScreen> {
                                       : 'Leave Start Date : ' +
                                           dateFormat.format(
                                               DateTime.parse(fromDate!)),
-                                  style: Theme.of(context).textTheme.headline5,
+                                  style:
+                                      Theme.of(context).textTheme.headlineSmall,
                                 ),
                               ),
                               const Icon(
@@ -225,7 +227,8 @@ class _ApplyLeaveScreenState extends State<ApplyLeaveScreen> {
                                       : 'Leave Return Date : ' +
                                           dateFormat
                                               .format(DateTime.parse(toDate!)),
-                                  style: Theme.of(context).textTheme.headline5,
+                                  style:
+                                      Theme.of(context).textTheme.headlineSmall,
                                 ),
                               ),
                               const Icon(
@@ -269,7 +272,7 @@ class _ApplyLeaveScreenState extends State<ApplyLeaveScreen> {
                                             .group(1)!,
                                     style: Theme.of(context)
                                         .textTheme
-                                        .headline4!
+                                        .headlineMedium!
                                         .copyWith(
                                             fontSize: ScreenUtil().setSp(14)),
                                     maxLines: 2,
@@ -286,7 +289,7 @@ class _ApplyLeaveScreenState extends State<ApplyLeaveScreen> {
                                   child: Text('Browse',
                                       style: Theme.of(context)
                                           .textTheme
-                                          .headline4!
+                                          .headlineMedium!
                                           .copyWith(
                                             color: Colors.white,
                                           )),
@@ -302,13 +305,14 @@ class _ApplyLeaveScreenState extends State<ApplyLeaveScreen> {
                       child: TextField(
                         maxLines: 5,
                         keyboardType: TextInputType.text,
-                        style: Theme.of(context).textTheme.headline5,
+                        style: Theme.of(context).textTheme.headlineSmall,
                         controller: reasonController,
                         decoration: InputDecoration(
                             hintText: 'Reason',
                             labelText: 'Reason',
                             alignLabelWithHint: true,
-                            labelStyle: Theme.of(context).textTheme.headline5,
+                            labelStyle:
+                                Theme.of(context).textTheme.headlineSmall,
                             errorStyle: const TextStyle(
                                 color: Colors.pinkAccent, fontSize: 15.0),
                             border: OutlineInputBorder(
@@ -334,7 +338,7 @@ class _ApplyLeaveScreenState extends State<ApplyLeaveScreen> {
                                       'Apply for Leave',
                                       style: Theme.of(context)
                                           .textTheme
-                                          .headline4!
+                                          .headlineMedium!
                                           .copyWith(
                                               color: Colors.white,
                                               fontSize: ScreenUtil().setSp(14)),
@@ -362,7 +366,8 @@ class _ApplyLeaveScreenState extends State<ApplyLeaveScreen> {
                                 child: Text(
                                   'No Leave type Available. Please check back later.',
                                   textAlign: TextAlign.center,
-                                  style: Theme.of(context).textTheme.headline5,
+                                  style:
+                                      Theme.of(context).textTheme.headlineSmall,
                                 ),
                               ),
                         isResponse == true
@@ -424,14 +429,14 @@ class _ApplyLeaveScreenState extends State<ApplyLeaveScreen> {
                 ),
                 child: Text(
                   item.type!,
-                  style: Theme.of(context).textTheme.headline5,
+                  style: Theme.of(context).textTheme.headlineSmall,
                 ),
               ),
             );
           }).toList(),
           style: Theme.of(context)
               .textTheme
-              .headline5!
+              .headlineSmall!
               .copyWith(fontSize: ScreenUtil().setSp(14)),
           onChanged: (dynamic value) {
             setState(() {
@@ -490,7 +495,7 @@ class _ApplyLeaveScreenState extends State<ApplyLeaveScreen> {
               dropdownSearchDecoration: InputDecoration(
                 label: const Text('Select Leave type'),
                 border: const OutlineInputBorder(),
-                labelStyle: Theme.of(context).textTheme.headline5,
+                labelStyle: Theme.of(context).textTheme.headlineSmall,
               ),
             ),
             onChanged: (dynamic newValue) {
@@ -541,7 +546,7 @@ class _ApplyLeaveScreenState extends State<ApplyLeaveScreen> {
     )
         .catchError((e) {
       print(e);
-      final errorMessage = DioExceptions.fromDioError(e).toString();
+      final errorMessage = DioExceptions.fromDioException(e).toString();
       // Utils.showSnackBar(context, errorMessage);
       Utils.showToast(errorMessage);
     });

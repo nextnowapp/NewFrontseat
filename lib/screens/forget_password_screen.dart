@@ -7,7 +7,6 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:nextschool/controller/user_controller.dart';
-import 'package:nextschool/screens/choose_school.dart';
 import 'package:nextschool/screens/frontseat/landing_screen.dart';
 import 'package:nextschool/utils/CustomAppBarWidget.dart';
 import 'package:nextschool/utils/Utils.dart';
@@ -306,19 +305,19 @@ class _RecoverPasswordScreenState extends State<RecoverPasswordScreen> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Column(
+                      const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text(
+                          Text(
                             'Recover Passcode',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontSize: 35, fontWeight: FontWeight.w600),
                           ),
-                          const SizedBox(
+                          SizedBox(
                             height: 10,
                           ),
-                          const Text(
+                          Text(
                             'Select which contact details you would\nlike to use to recieve your new Passcode',
                             textAlign: TextAlign.start,
                             style: TextStyle(
@@ -338,16 +337,16 @@ class _RecoverPasswordScreenState extends State<RecoverPasswordScreen> {
                           decoration: BoxDecoration(
                               color: Colors.red[50],
                               borderRadius: BorderRadius.circular(10)),
-                          child: Row(
+                          child: const Row(
                             children: [
-                              const Icon(
+                              Icon(
                                 Icons.warning,
                                 color: Colors.red,
                               ),
-                              const SizedBox(
+                              SizedBox(
                                 width: 20,
                               ),
-                              const Expanded(
+                              Expanded(
                                 child: Text(
                                     'Sorry! We are not able to contact you. Please contact your school administrator for assistance.',
                                     style: TextStyle(
@@ -388,7 +387,7 @@ class _RecoverPasswordScreenState extends State<RecoverPasswordScreen> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => LandingScreen()));
+                                      builder: (context) => const LandingScreen()));
                             }
                           },
                           child: Card(
@@ -463,7 +462,7 @@ class _RecoverPasswordScreenState extends State<RecoverPasswordScreen> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => LandingScreen()));
+                                      builder: (context) => const LandingScreen()));
                             }
                           },
                           child: Card(

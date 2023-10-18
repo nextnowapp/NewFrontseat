@@ -91,7 +91,7 @@ class _TeacherChatListScreenState extends State<TeacherChatListScreen> {
                               Visibility(
                                 visible:
                                     snapshot.data!.data![index].chatImage !=
-                                            "",
+                                            '',
                                 child: Row(
                                   children: [
                                     Padding(

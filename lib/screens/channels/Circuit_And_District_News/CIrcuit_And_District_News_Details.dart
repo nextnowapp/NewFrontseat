@@ -10,7 +10,6 @@ import 'package:nextschool/utils/Utils.dart';
 import 'package:nextschool/utils/apis/Apis.dart';
 import 'package:recase/recase.dart';
 import 'package:sizer/sizer.dart';
-import 'package:video_viewer/video_viewer.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 // Project imports:
@@ -35,22 +34,22 @@ class _CircuitAndDistrictNewsDetailsScreenState
 
   _CircuitAndDistrictNewsDetailsScreenState(this.newsList);
 
-  final VideoViewerController controller = VideoViewerController();
+  // final VideoViewerController controller = VideoViewerController();
 
   late YoutubePlayerController _controller;
 
-  @override
-  void deactivate() {
-    // Pauses video while navigating to next page.
-    controller.pause();
-    super.deactivate();
-  }
+  // @override
+  // void deactivate() {
+  //   // Pauses video while navigating to next page.
+  //   controller.pause();
+  //   super.deactivate();
+  // }
 
-  @override
-  void dispose() {
-    controller.dispose();
-    super.dispose();
-  }
+  // @override
+  // void dispose() {
+  //   controller.dispose();
+  //   super.dispose();
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -246,46 +245,46 @@ class _CircuitAndDistrictNewsDetailsScreenState
                 ],
               ),
             ),
-            newsList.videoType != null
-                ? Container(
-                    width: MediaQuery.of(context).size.width,
-                    padding: const EdgeInsets.all(15),
-                    decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                          topRight: Radius.circular(40.0),
-                          bottomRight: Radius.circular(40.0),
-                          topLeft: Radius.circular(40.0),
-                          bottomLeft: Radius.circular(40.0)),
-                    ),
-                    child: Center(
-                        child: ClipRRect(
-                            borderRadius:
-                                const BorderRadius.all(Radius.circular(20)),
-                            child: newsList.videoType != 'url'
-                                ? VideoViewer(
-                                    controller: controller,
-                                    source: {
-                                      'SubRip Text': VideoSource(
-                                        video: VideoPlayerController.network(
-                                            'https://vhembewest.co.za/' +
-                                                newsList.videoFile!),
-                                      )
-                                    },
-                                    autoPlay: false,
-                                  )
-                                : YoutubePlayer(
-                                    controller: _controller =
-                                        YoutubePlayerController(
-                                      initialVideoId:
-                                          YoutubePlayer.convertUrlToId(
-                                              newsList.videoUrl)!,
-                                      flags: const YoutubePlayerFlags(
-                                        autoPlay: false,
-                                        mute: false,
-                                      ),
-                                    ),
-                                  ))))
-                : Container()
+            // newsList.videoType != null
+            //     ? Container(
+            //         width: MediaQuery.of(context).size.width,
+            //         padding: const EdgeInsets.all(15),
+            //         decoration: const BoxDecoration(
+            //           borderRadius: BorderRadius.only(
+            //               topRight: Radius.circular(40.0),
+            //               bottomRight: Radius.circular(40.0),
+            //               topLeft: Radius.circular(40.0),
+            //               bottomLeft: Radius.circular(40.0)),
+            //         ),
+            //         child: Center(
+            //             child: ClipRRect(
+            //                 borderRadius:
+            //                     const BorderRadius.all(Radius.circular(20)),
+            //                 child: newsList.videoType != 'url'
+            //                     ? VideoViewer(
+            //                         controller: controller,
+            //                         source: {
+            //                           'SubRip Text': VideoSource(
+            //                             video: VideoPlayerController.network(
+            //                                 'https://vhembewest.co.za/' +
+            //                                     newsList.videoFile!),
+            //                           )
+            //                         },
+            //                         autoPlay: false,
+            //                       )
+            //                     : YoutubePlayer(
+            //                         controller: _controller =
+            //                             YoutubePlayerController(
+            //                           initialVideoId:
+            //                               YoutubePlayer.convertUrlToId(
+            //                                   newsList.videoUrl)!,
+            //                           flags: const YoutubePlayerFlags(
+            //                             autoPlay: false,
+            //                             mute: false,
+            //                           ),
+            //                         ),
+            //                       ))))
+            //     : Container()
           ],
         ),
       ),

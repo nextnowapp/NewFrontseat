@@ -32,7 +32,7 @@ class StudentExamRow extends StatelessWidget {
                         'Subject:',
                         style: Theme.of(context)
                             .textTheme
-                            .subtitle1!
+                            .titleMedium!
                             .copyWith(fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(
@@ -41,7 +41,7 @@ class StudentExamRow extends StatelessWidget {
                       Expanded(
                         child: Text(
                           exam.subjectName == null ? 'N/A' : exam.subjectName!,
-                          style: Theme.of(context).textTheme.subtitle1,
+                          style: Theme.of(context).textTheme.titleMedium,
                         ),
                       ),
                     ],
@@ -56,8 +56,12 @@ class StudentExamRow extends StatelessWidget {
                     Text(
                       'Room No : ',
                       maxLines: 1,
-                      style: Theme.of(context).textTheme.headline4!.copyWith(
-                          color: Colors.black54, fontWeight: FontWeight.w500),
+                      style: Theme.of(context)
+                          .textTheme
+                          .headlineMedium!
+                          .copyWith(
+                              color: Colors.black54,
+                              fontWeight: FontWeight.w500),
                     ),
                     const SizedBox(
                       height: 10.0,
@@ -65,8 +69,12 @@ class StudentExamRow extends StatelessWidget {
                     Text(
                       exam.roomNo == null ? 'N/A' : exam.roomNo!,
                       maxLines: 1,
-                      style: Theme.of(context).textTheme.headline4!.copyWith(
-                          color: Colors.black54, fontWeight: FontWeight.w400),
+                      style: Theme.of(context)
+                          .textTheme
+                          .headlineMedium!
+                          .copyWith(
+                              color: Colors.black54,
+                              fontWeight: FontWeight.w400),
                     ),
                   ],
                 ),
@@ -84,7 +92,7 @@ class StudentExamRow extends StatelessWidget {
                               maxLines: 1,
                               style: Theme.of(context)
                                   .textTheme
-                                  .headline4!
+                                  .headlineMedium!
                                   .copyWith(
                                       color: Colors.black54,
                                       fontWeight: FontWeight.w500),
@@ -97,7 +105,7 @@ class StudentExamRow extends StatelessWidget {
                               maxLines: 1,
                               style: Theme.of(context)
                                   .textTheme
-                                  .headline5!
+                                  .headlineSmall!
                                   .copyWith(
                                       color: Colors.black87,
                                       fontWeight: FontWeight.w400),
@@ -114,7 +122,7 @@ class StudentExamRow extends StatelessWidget {
                               maxLines: 1,
                               style: Theme.of(context)
                                   .textTheme
-                                  .headline4!
+                                  .headlineMedium!
                                   .copyWith(
                                       color: Colors.black54,
                                       fontWeight: FontWeight.w500),
@@ -129,7 +137,7 @@ class StudentExamRow extends StatelessWidget {
                               maxLines: 1,
                               style: Theme.of(context)
                                   .textTheme
-                                  .headline4!
+                                  .headlineMedium!
                                   .copyWith(
                                       color: Colors.black87,
                                       fontWeight: FontWeight.w400),
@@ -146,7 +154,7 @@ class StudentExamRow extends StatelessWidget {
                               maxLines: 1,
                               style: Theme.of(context)
                                   .textTheme
-                                  .headline4!
+                                  .headlineMedium!
                                   .copyWith(
                                       color: Colors.black54,
                                       fontWeight: FontWeight.w500),
@@ -161,7 +169,7 @@ class StudentExamRow extends StatelessWidget {
                               maxLines: 1,
                               style: Theme.of(context)
                                   .textTheme
-                                  .headline4!
+                                  .headlineMedium!
                                   .copyWith(
                                       color: Colors.black87,
                                       fontWeight: FontWeight.w400),

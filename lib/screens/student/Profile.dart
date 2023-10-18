@@ -8,7 +8,6 @@ import 'dart:io';
 // Package imports:
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:dio/dio.dart';
-import 'package:file_utils/file_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart' hide FormData, MultipartFile, Response;
@@ -253,7 +252,7 @@ class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin {
     ));
     var response =
         await dio.post(InfixApi.learnerPhoto(), data: formData).catchError((e) {
-      final errorMessage = DioExceptions.fromDioError(e).toString();
+      final errorMessage = DioExceptions.fromDioException(e).toString();
     });
     if (response.statusCode == 200) {
       String imageFile = '';
@@ -1190,7 +1189,7 @@ class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin {
     AlertDialog alert = AlertDialog(
       title: Text(
         'Download',
-        style: Theme.of(context).textTheme.headline5,
+        style: Theme.of(context).textTheme.headlineSmall,
       ),
       content: Text('Would you like to download the $title file?'),
       actions: [
@@ -1216,7 +1215,6 @@ class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin {
     dirloc = (await getApplicationDocumentsDirectory()).path;
 
     try {
-      FileUtils.mkdir([dirloc]);
       Utils.showToast('Downloading...');
       await dio.download(
           InfixApi().root + url, dirloc + AppFunction.getExtention(url),
@@ -1275,7 +1273,7 @@ class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin {
               InfixApi.deleteLearner(widget.id.toString()),
             )
                 .catchError((e) {
-              final errorMessage = DioExceptions.fromDioError(e).toString();
+              final errorMessage = DioExceptions.fromDioException(e).toString();
 
               Utils.showToast(errorMessage);
             });

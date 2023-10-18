@@ -230,7 +230,7 @@ class _ContentListScreenState extends State<ContentListScreen>
   void _removeItem(int index, List<Content> cList) {
     int removeIndex = index;
     Content removeItem = cList.removeAt(removeIndex);
-    AnimatedListRemovedItemBuilder builder = (context, animation) {
+    AnimatedRemovedItemBuilder builder = (context, animation) {
       return ContentRow(removeItem, animation, index: index);
     };
     _listKey.currentState!.removeItem(removeIndex, builder);

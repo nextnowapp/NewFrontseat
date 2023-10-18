@@ -229,11 +229,11 @@ class _ClassWiseTimeTableScreenState extends State<ClassWiseTimeTableScreen>
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 70,
             child: Row(
               children: [
-                const Expanded(
+                Expanded(
                   flex: 2,
                   child: Center(
                       child: Text(
@@ -244,7 +244,7 @@ class _ClassWiseTimeTableScreenState extends State<ClassWiseTimeTableScreen>
                     ),
                   )),
                 ),
-                const Expanded(
+                Expanded(
                   flex: 4,
                   child: Center(
                     child: Text(

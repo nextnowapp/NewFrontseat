@@ -7,7 +7,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>NextSchool</string>
+	<string>FrontSeat</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -15,7 +15,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>FrontSeat Group</string>
+	<string>FrontSeat</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -44,6 +44,8 @@
 	<string>To update/edit the profile picture</string>
 	<key>NSContactsUsageDescription</key>
 	<string>This will allow you to identify your classmates. </string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>To allow weather to show accurate info. based on your location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>To provide you relevant options of schools to choose from.</string>
 	<key>NSMicrophoneUsageDescription</key>
@@ -54,6 +56,8 @@
 	<string>To update/edit profile picture from your gallery. </string>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>To allow speech to text typing. </string>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

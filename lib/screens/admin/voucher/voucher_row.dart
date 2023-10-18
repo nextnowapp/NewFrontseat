@@ -93,12 +93,12 @@
 //             ),
 //             title: Text(
 //               student.name!,
-//               style: Theme.of(context).textTheme.headline4,
+//               style: Theme.of(context).textTheme.headlineMedium,
 //             ),
 //             subtitle: Row(
 //               children: [
 //                 Text('Grade : ${student.}',
-//                     style: Theme.of(context).textTheme.headline6!.copyWith(
+//                     style: Theme.of(context).textTheme.titleLarge!.copyWith(
 //                         color: const Color(0xff415094),
 //                         fontWeight: FontWeight.w400)),
 //               ],

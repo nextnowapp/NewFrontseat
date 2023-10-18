@@ -116,7 +116,7 @@ class _EvaluateScreenState extends State<EvaluateScreen> {
                       controller: marksController,
                       keyboardType: TextInputType.numberWithOptions(
                           decimal: false, signed: false),
-                      style: Theme.of(context).textTheme.headline6,
+                      style: Theme.of(context).textTheme.titleLarge,
                       autovalidateMode: AutovalidateMode.onUserInteraction,
                       validator: (String value) {
                         RegExp regExp = new RegExp(r'^[0-9]*$');
@@ -135,7 +135,7 @@ class _EvaluateScreenState extends State<EvaluateScreen> {
                       decoration: InputDecoration(
                         hintText: "Set Marks out of ${widget.totalMarks}",
                         labelText: "Set Marks out of ${widget.totalMarks}",
-                        labelStyle: Theme.of(context).textTheme.headline4,
+                        labelStyle: Theme.of(context).textTheme.headlineMedium,
                         errorStyle:
                             TextStyle(color: Colors.pinkAccent, fontSize: 15.0),
                         errorMaxLines: 3,
@@ -154,7 +154,7 @@ class _EvaluateScreenState extends State<EvaluateScreen> {
                       Padding(
                         padding: const EdgeInsets.only(left: 2.0),
                         child: Text('Comment',
-                            style: Theme.of(context).textTheme.headline4),
+                            style: Theme.of(context).textTheme.headlineMedium),
                       ),
                       const SizedBox(
                         height: 5,
@@ -215,7 +215,7 @@ class _EvaluateScreenState extends State<EvaluateScreen> {
                       Padding(
                         padding: const EdgeInsets.only(left: 2.0),
                         child: Text('Homework Status',
-                            style: Theme.of(context).textTheme.headline4),
+                            style: Theme.of(context).textTheme.headlineMedium),
                       ),
                       const SizedBox(
                         height: 5,
@@ -285,7 +285,7 @@ class _EvaluateScreenState extends State<EvaluateScreen> {
                           'Evaluate',
                           style: Theme.of(context)
                               .textTheme
-                              .headline5!
+                              .headlineSmall!
                               .copyWith(color: Colors.white),
                         ),
                       ),
@@ -340,7 +340,7 @@ class _EvaluateScreenState extends State<EvaluateScreen> {
                                               'View',
                                               style: Theme.of(context)
                                                   .textTheme
-                                                  .headline4!
+                                                  .headlineMedium!
                                                   .copyWith(
                                                       fontWeight:
                                                           FontWeight.w500,

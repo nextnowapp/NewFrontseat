@@ -181,16 +181,16 @@ class _SchoolManagementScreenState extends State<SchoolManagementScreen> {
             padding: const EdgeInsets.only(left: 20.0, top: 30, bottom: 30),
             color: HexColor('#eaeaea'),
             height: 35.h,
-            child: Row(
+            child: const Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                const AuthoritiesCard(
+                AuthoritiesCard(
                   imageUrl:
                       'https://schoolmanagement.co.za/wp-content/uploads/SGBChairpersonDefault.jpeg',
                   name: 'Abresh Abiba',
                   designation: 'SGB Chairperson',
                 ),
-                const AuthoritiesCard(
+                AuthoritiesCard(
                   imageUrl:
                       'https://schoolmanagement.co.za/wp-content/uploads/DefaultCM.jpeg',
                   name: 'Takalani Thi..',

@@ -22,17 +22,17 @@ class _StudyGuideHomeScreenState extends State<StudyGuideHomeScreen> {
         padding: const EdgeInsets.all(20),
         child: Column(
           children: [
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
+                Text(
                   'Explore Categories',
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                const Text('See all',
+                Text('See all',
                     style: TextStyle(
                       fontSize: 12,
                       color: Colors.blue,

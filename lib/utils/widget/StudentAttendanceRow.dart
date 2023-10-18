@@ -11,7 +11,6 @@ import 'package:nextschool/controller/attendance_list_controller.dart';
 import 'package:nextschool/utils/apis/Apis.dart';
 import 'package:nextschool/utils/custom_widgets/CustomRadioButton/CustomButton/ButtonTextStyle.dart';
 import 'package:nextschool/utils/custom_widgets/CustomRadioButton/custom_radio_button.dart';
-import 'package:nextschool/utils/model/GlobalClass.dart';
 import 'package:nextschool/utils/widget/customLoader.dart';
 
 // ignore: must_be_immutable
@@ -29,7 +28,7 @@ class _StudentAttendanceRowState extends State<StudentAttendanceRow> {
   int? mClass;
   int index;
   String? date;
-  var function = GlobalDatae();
+  // var function = GlobalDatae();
   Future<bool>? isChecked;
   String? token;
   late Color selectedColor;
@@ -103,7 +102,7 @@ class _StudentAttendanceRowState extends State<StudentAttendanceRow> {
                     attendanceListController.attendanceList[index].name!,
                     style: const TextStyle(
                         fontWeight: FontWeight.w700, fontSize: 20),
-                    // style: Theme.of(context).textTheme.headline4,
+                    // style: Theme.of(context).textTheme.headlineMedium,
                   ),
                 ),
                 Text(
@@ -233,10 +232,10 @@ class _StudentAttendanceRowState extends State<StudentAttendanceRow> {
   }
 
   showLoaderDialog(BuildContext context) {
-    AlertDialog alert = AlertDialog(
+    AlertDialog alert = const AlertDialog(
       content: Wrap(
         children: [
-          const CustomLoader(),
+          CustomLoader(),
         ],
       ),
     );

@@ -1,10 +1,12 @@
 // Flutter imports:
 import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:http/http.dart' as http;
 import 'package:nextschool/controller/staff_list_controller.dart';
 import 'package:nextschool/controller/user_controller.dart';
 // Project imports:
@@ -14,11 +16,11 @@ import 'package:nextschool/screens/admin/staff/AdminStaffDetails.dart';
 import 'package:nextschool/utils/CustomAppBarWidget.dart';
 import 'package:nextschool/utils/apis/Apis.dart';
 import 'package:nextschool/utils/widget/customLoader.dart';
-import 'package:open_file_safe/open_file_safe.dart';
+import 'package:open_filex/open_filex.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:recase/recase.dart';
 import 'package:sizer/sizer.dart';
-import 'package:http/http.dart' as http;
+
 import '../../../utils/Utils.dart';
 
 // ignore: must_be_immutable
@@ -35,7 +37,7 @@ class StaffListScreen extends StatefulWidget {
 class _StaffListScreenState extends State<StaffListScreen> {
   late StaffListBloc listBloc;
   var indicator = new GlobalKey<RefreshIndicatorState>();
-  
+
   var _staffListController = Get.put(StaffListController());
   var userDetailController = Get.put(UserDetailsController());
   @override
@@ -98,36 +100,37 @@ class _StaffListScreenState extends State<StaffListScreen> {
                           ),
                         ),
                         onTap: () async {
-                           final response = await http.get(
-                          Uri.parse(InfixApi.exportStaffs()),
-                          headers: Utils.setHeader(
-                              userDetailController.token.toString()));
-                      if (response.statusCode == 200) {
-                        //file bytes
-                        var bytes = response.bodyBytes;
-                        //file name
-                        var fileName = 'Staff List';
-                         var status = await Permission.storage.status;
-                      if (!status.isGranted) {
-                        await Permission.storage.request();
-                      }
-                      // the downloads folder path         
-                      String tempPath = '/storage/emulated/0/Download';
-                      var filePath = tempPath + '/${fileName}.xlsx';
-                      final buffer = bytes.buffer;
+                          final response = await http.get(
+                              Uri.parse(InfixApi.exportStaffs()),
+                              headers: Utils.setHeader(
+                                  userDetailController.token.toString()));
+                          if (response.statusCode == 200) {
+                            //file bytes
+                            var bytes = response.bodyBytes;
+                            //file name
+                            var fileName = 'Staff List';
+                            var status = await Permission.storage.status;
+                            if (!status.isGranted) {
+                              await Permission.storage.request();
+                            }
+                            // the downloads folder path
+                            String tempPath = '/storage/emulated/0/Download';
+                            var filePath = tempPath + '/${fileName}.xlsx';
+                            final buffer = bytes.buffer;
 
-                      //save file
-                      try {
-                        await File(filePath).writeAsBytes(buffer.asUint8List(
-                            bytes.offsetInBytes, bytes.lengthInBytes));
+                            //save file
+                            try {
+                              await File(filePath).writeAsBytes(
+                                  buffer.asUint8List(bytes.offsetInBytes,
+                                      bytes.lengthInBytes));
 
-                        // view file using system default viewer
-                        OpenFile.open(filePath);
-                        Utils.showToast('File Saved at $filePath');
-                        } catch (e) {
-                          Utils.showToast('Error in downloading file');
-                        }
-                      }
+                              // view file using system default viewer
+                              OpenFilex.open(filePath);
+                              Utils.showToast('File Saved at $filePath');
+                            } catch (e) {
+                              Utils.showToast('Error in downloading file');
+                            }
+                          }
                         },
                       ),
                     ],
@@ -136,7 +139,8 @@ class _StaffListScreenState extends State<StaffListScreen> {
               ),
               Expanded(
                 child: FutureBuilder(
-                  future: _staffListController.fetchData(userDetailController.id),
+                  future:
+                      _staffListController.fetchData(userDetailController.id),
                   builder: (context, snap) {
                     if (snap.hasData) {
                       if (snap.error != null) {
@@ -212,7 +216,7 @@ class _StaffListScreenState extends State<StaffListScreen> {
   Widget _buildStaffListWidget() {
     var data = Get.put(StaffListController());
     return Container(
-      height: MediaQuery.of(context).size.height ,
+      height: MediaQuery.of(context).size.height,
       color: HexColor('#eaeaea'),
       child: Obx(
         () => GridView.builder(

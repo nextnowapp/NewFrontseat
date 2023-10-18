@@ -11,7 +11,6 @@ import 'package:http/http.dart' as http;
 import 'package:nextschool/utils/CustomAppBarWidget.dart';
 import 'package:nextschool/utils/Utils.dart';
 import 'package:nextschool/utils/model/event_model.dart';
-import 'package:nextschool/utils/widget/textwidget.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
 import 'package:sizer/sizer.dart';
 
@@ -162,7 +161,7 @@ class _AddEventScreenState extends State<AddEventScreen> {
                 }
               },
               child: Text(widget.isEdit ? 'Update Event' : 'Add Event',
-                  style: TextStyle(color: Colors.white)),
+                  style: const TextStyle(color: Colors.white)),
             ),
           ),
         ],

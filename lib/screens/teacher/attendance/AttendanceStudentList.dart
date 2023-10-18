@@ -567,7 +567,6 @@ import 'package:nextschool/controller/user_controller.dart';
 import 'package:nextschool/utils/CustomAppBarWidget.dart';
 import 'package:nextschool/utils/Utils.dart';
 import 'package:nextschool/utils/apis/Apis.dart';
-import 'package:nextschool/utils/model/GlobalClass.dart';
 import 'package:nextschool/utils/model/Student.dart';
 import 'package:nextschool/utils/widget/ShimmerListWidget.dart';
 import 'package:nextschool/utils/widget/StudentAttendanceRow.dart';
@@ -594,7 +593,7 @@ class _StudentListAttendanceState extends State<StudentListAttendance> {
   Future<StudentList>? students;
   String? date;
   List<String> absent = [];
-  var function = GlobalDatae();
+  // var function = GlobalDatae();
   String? token;
   bool attendanceDone = false;
   AttendanceListController attendanceListController =

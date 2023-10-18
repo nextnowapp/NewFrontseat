@@ -238,7 +238,7 @@ class _LearningAreaListState extends State<LearningAreaList> {
         'No',
         style: Theme.of(context)
             .textTheme
-            .headline5!
+            .headlineSmall!
             .copyWith(fontSize: 14.sp, color: Colors.white),
       ),
       style: TextButton.styleFrom(
@@ -255,7 +255,7 @@ class _LearningAreaListState extends State<LearningAreaList> {
       child: Center(
         child: Text(
           'Edit',
-          style: Theme.of(context).textTheme.headline5!.copyWith(
+          style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                 fontSize: 14.sp,
                 height: 0.6,
                 color: Colors.white,

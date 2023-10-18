@@ -83,7 +83,7 @@ class _AddClassTimeTypeState extends State<AddClassTimeType> {
                           'Save Class Time Type',
                           style: Theme.of(context)
                               .textTheme
-                              .headline5!
+                              .headlineSmall!
                               .copyWith(color: Colors.white),
                         ),
                       ),
@@ -118,7 +118,7 @@ class _AddClassTimeTypeState extends State<AddClassTimeType> {
             dropdownSearchDecoration: InputDecoration(
               label: const Text('Select Grade*'),
               border: const OutlineInputBorder(),
-              labelStyle: Theme.of(context).textTheme.headline5,
+              labelStyle: Theme.of(context).textTheme.headlineSmall,
             ),
           ),
           onChanged: (dynamic newValue) {
@@ -143,7 +143,7 @@ class _AddClassTimeTypeState extends State<AddClassTimeType> {
           // showAsSuffixIcons: true,
           // dropdownSearchDecoration: InputDecoration(
           //   border: OutlineInputBorder(),
-          //   labelStyle: Theme.of(context).textTheme.headline5,
+          //   labelStyle: Theme.of(context).textTheme.headlineSmall,
           // ),
           // popupItemDisabled: (String s) => s.startsWith('I'),
           onChanged: (newValue) {

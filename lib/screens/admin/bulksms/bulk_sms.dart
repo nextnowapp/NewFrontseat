@@ -66,8 +66,6 @@ class _BulkSMSScreenState extends State<BulkSMSScreen> {
 
   bool? isAllStaffSelected = false;
 
-  void _onRememberMeChanged(bool newValue) => setState(() {});
-
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
@@ -259,12 +257,12 @@ class _BulkSMSScreenState extends State<BulkSMSScreen> {
             });
           }
         }
-      } on DioError catch (e) {
+      } on DioException catch (e) {
         setState(() {
           submitController.submitStatus = SubmitStatus.error;
         });
         switch (e.type) {
-          case DioErrorType.response:
+          case DioExceptionType.badResponse:
             {
               print(e.response!.data);
               print(e.response!.headers);
@@ -272,7 +270,7 @@ class _BulkSMSScreenState extends State<BulkSMSScreen> {
               errorMessage = e.response!.data['message'];
             }
             break;
-          case DioErrorType.other:
+          case DioExceptionType.sendTimeout:
             {
               errorMessage = e.message;
             }
@@ -351,7 +349,7 @@ class _BulkSMSScreenState extends State<BulkSMSScreen> {
                   color: HexColor('#de5151'),
                 ),
               ),
-              labelStyle: Theme.of(context).textTheme.headline5,
+              labelStyle: Theme.of(context).textTheme.headlineSmall,
             ),
           ),
           itemBuilder: (context, item, isSelected) {

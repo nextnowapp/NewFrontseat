@@ -68,7 +68,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                       padding: const EdgeInsets.all(10.0),
                       child: TextFormField(
                         keyboardType: const TextInputType.numberWithOptions(),
-                        style: Theme.of(context).textTheme.headline6,
+                        style: Theme.of(context).textTheme.titleLarge,
                         controller: _currentPasscodeController,
                         obscureText: _currentPasscodeVisible,
                         maxLength: 6,
@@ -94,7 +94,8 @@ class _ChangePasswordState extends State<ChangePassword> {
                           hintText: 'Enter your current Passcode',
                           floatingLabelBehavior: FloatingLabelBehavior.always,
                           labelText: 'Current Passcode',
-                          labelStyle: Theme.of(context).textTheme.headline4,
+                          labelStyle:
+                              Theme.of(context).textTheme.headlineMedium,
                           errorStyle: const TextStyle(
                               color: Colors.pinkAccent, fontSize: 15.0),
                           border: OutlineInputBorder(
@@ -122,7 +123,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                       padding: const EdgeInsets.all(10.0),
                       child: TextFormField(
                         keyboardType: const TextInputType.numberWithOptions(),
-                        style: Theme.of(context).textTheme.headline6,
+                        style: Theme.of(context).textTheme.titleLarge,
                         controller: _newPasscodeController,
                         obscureText: _newPasscodeVisible,
                         maxLength: 6,
@@ -147,7 +148,8 @@ class _ChangePasswordState extends State<ChangePassword> {
                           hintText: 'Enter your new Passcode',
                           labelText: 'New Passcode',
                           floatingLabelBehavior: FloatingLabelBehavior.always,
-                          labelStyle: Theme.of(context).textTheme.headline4,
+                          labelStyle:
+                              Theme.of(context).textTheme.headlineMedium,
                           errorStyle: const TextStyle(
                               color: Colors.pinkAccent, fontSize: 15.0),
                           border: OutlineInputBorder(
@@ -173,7 +175,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                       padding: const EdgeInsets.all(10.0),
                       child: TextFormField(
                         keyboardType: const TextInputType.numberWithOptions(),
-                        style: Theme.of(context).textTheme.headline6,
+                        style: Theme.of(context).textTheme.titleLarge,
                         controller: _confirmPasscodeController,
                         maxLength: 6,
                         inputFormatters: [
@@ -201,7 +203,8 @@ class _ChangePasswordState extends State<ChangePassword> {
                           hintText: 'Confirm your new Passcode',
                           labelText: 'Confirm Passcode',
                           floatingLabelBehavior: FloatingLabelBehavior.always,
-                          labelStyle: Theme.of(context).textTheme.headline4,
+                          labelStyle:
+                              Theme.of(context).textTheme.headlineMedium,
                           errorStyle: const TextStyle(
                               color: Colors.pinkAccent, fontSize: 15.0),
                           border: OutlineInputBorder(
@@ -245,7 +248,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                             'Change Passcode',
                             style: Theme.of(context)
                                 .textTheme
-                                .headline5!
+                                .headlineSmall!
                                 .copyWith(color: Colors.white),
                           ),
                         ),

@@ -209,17 +209,17 @@ class _StudentAttendanceScreenState extends State<StudentAttendanceScreen> {
                       //         .toString(),
                       weekendTextStyle: const TextStyle(color: Colors.red),
                       thisMonthDayBorderColor: Colors.grey,
-                      daysTextStyle: Theme.of(context).textTheme.headline4,
+                      daysTextStyle: Theme.of(context).textTheme.headlineMedium,
                       showOnlyCurrentMonthDate: false,
                       headerTitleTouchable: true,
                       prevMonthDayBorderColor: Colors.green,
                       headerTextStyle: Theme.of(context)
                           .textTheme
-                          .headline6!
+                          .titleLarge!
                           .copyWith(fontSize: ScreenUtil().setSp(14.0)),
                       weekdayTextStyle: Theme.of(context)
                           .textTheme
-                          .headline4!
+                          .headlineMedium!
                           .copyWith(
                               fontSize: ScreenUtil().setSp(13.0),
                               fontWeight: FontWeight.w500,
@@ -274,7 +274,7 @@ class _StudentAttendanceScreenState extends State<StudentAttendanceScreen> {
                                               Text(day.day.toString(),
                                                   style: Theme.of(context)
                                                       .textTheme
-                                                      .headline5!
+                                                      .headlineSmall!
                                                       .copyWith(
                                                         color: const Color
                                                                 .fromARGB(
@@ -313,7 +313,7 @@ class _StudentAttendanceScreenState extends State<StudentAttendanceScreen> {
                                                 day.day.toString(),
                                                 style: Theme.of(context)
                                                     .textTheme
-                                                    .headline6!
+                                                    .titleLarge!
                                                     .copyWith(
                                                       color:
                                                           HexColor('#6f83a0'),
@@ -349,7 +349,7 @@ class _StudentAttendanceScreenState extends State<StudentAttendanceScreen> {
                                         child: Text(day.day.toString(),
                                             style: Theme.of(context)
                                                 .textTheme
-                                                .headline6!
+                                                .titleLarge!
                                                 .copyWith(
                                                     fontSize: ScreenUtil()
                                                         .setSp(14.0),
@@ -370,7 +370,7 @@ class _StudentAttendanceScreenState extends State<StudentAttendanceScreen> {
                                       child: Text(day.day.toString(),
                                           style: Theme.of(context)
                                               .textTheme
-                                              .headline6!
+                                              .titleLarge!
                                               .copyWith(
                                                   color:
                                                       const Color(0xFF727FC8))),
@@ -390,7 +390,7 @@ class _StudentAttendanceScreenState extends State<StudentAttendanceScreen> {
                       todayBorderColor: Colors.transparent,
                       todayTextStyle: Theme.of(context)
                           .textTheme
-                          .headline6!
+                          .titleLarge!
                           .copyWith(color: Colors.white)),
                 ),
               ),
@@ -446,11 +446,11 @@ class _StudentAttendanceScreenState extends State<StudentAttendanceScreen> {
                   Expanded(
                       child: Text(
                     title,
-                    style: Theme.of(context).textTheme.headline5!.copyWith(
+                    style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                         color: Colors.black45, fontWeight: FontWeight.w500),
                   )),
                   Text(getStatusCount(titleVal, snapshot.data!.attendances),
-                      style: Theme.of(context).textTheme.headline5),
+                      style: Theme.of(context).textTheme.headlineSmall),
                   // Expanded(
                   //   child: SizedBox(
                   //     height: 100,

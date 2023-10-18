@@ -82,10 +82,10 @@ class SubjectRowLayout extends StatelessWidget {
               //         .subjectCode!,
               //     style: Theme.of(context)
               //         .textTheme
-              //         .headline5),
+              //         .headlineSmall),
               // Expanded(
               //   child: Text(subject.subjectType == 'T' ? 'Theory' : 'Lab',
-              //       style: Theme.of(context).textTheme.headline5),
+              //       style: Theme.of(context).textTheme.headlineSmall),
               // ),
             ),
           ),
@@ -184,7 +184,7 @@ class SubjectRowLayout extends StatelessWidget {
       //     // ),
       //     // Expanded(
       //     //   child: Text(subject.subjectType == 'T' ? 'Theory' : 'Lab',
-      //     //       style: Theme.of(context).textTheme.headline6),
+      //     //       style: Theme.of(context).textTheme.titleLarge),
       //     // ),
       //   ],
       // ),

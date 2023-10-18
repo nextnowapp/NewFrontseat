@@ -47,7 +47,7 @@ class _NoticDetailsLayoutState extends State<NoticDetailsLayout> {
               //       child: Text(
               //         notice.title ?? '',
               //         maxLines: 1,
-              //         style: Theme.of(context).textTheme.subtitle1!.copyWith(
+              //         style: Theme.of(context).textTheme.titleMedium!.copyWith(
               //               fontWeight: FontWeight.w500,
               //               fontSize: ScreenUtil().setSp(19),
               //             ),
@@ -66,7 +66,7 @@ class _NoticDetailsLayoutState extends State<NoticDetailsLayout> {
               //               : '',
               //           maxLines: 1,
               //           style:
-              //               Theme.of(context).textTheme.subtitle1!.copyWith(
+              //               Theme.of(context).textTheme.titleMedium!.copyWith(
               //                     color: Colors.black87,
               //                     fontWeight: FontWeight.w300,
               //                     fontSize: ScreenUtil().setSp(13),
@@ -142,7 +142,7 @@ class _NoticDetailsLayoutState extends State<NoticDetailsLayout> {
                 child: Text(
                   notice.title ?? '',
                   maxLines: 1,
-                  style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                  style: Theme.of(context).textTheme.titleMedium!.copyWith(
                         fontWeight: FontWeight.w500,
                         fontSize: ScreenUtil().setSp(19),
                       ),
@@ -166,7 +166,7 @@ class _NoticDetailsLayoutState extends State<NoticDetailsLayout> {
                         ? notice.publish_on!
                         : '',
                     maxLines: 1,
-                    style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                    style: Theme.of(context).textTheme.titleMedium!.copyWith(
                           color: Colors.black87,
                           fontWeight: FontWeight.w300,
                           fontSize: ScreenUtil().setSp(13),

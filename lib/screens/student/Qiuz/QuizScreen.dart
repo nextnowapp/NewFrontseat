@@ -17,7 +17,8 @@ class QuizScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         actions: [
-          TextButton(onPressed: _controller.nextQuestion, child: const Text('Skip')),
+          TextButton(
+              onPressed: _controller.nextQuestion, child: const Text('Skip')),
         ],
       ),
       body: const Body(),
@@ -42,8 +43,7 @@ class Body extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Padding(
-                padding:
-                    EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
                 child: ProgressBar(),
               ),
               const SizedBox(height: kDefaultPadding),
@@ -57,14 +57,14 @@ class Body extends StatelessWidget {
                           'Question ${_questionController.questionNumber.value}',
                       style: Theme.of(context)
                           .textTheme
-                          .headline4!
+                          .headlineMedium!
                           .copyWith(color: kSecondaryColor),
                       children: [
                         TextSpan(
                           text: '/${_questionController.questions.length}',
                           style: Theme.of(context)
                               .textTheme
-                              .headline5!
+                              .headlineSmall!
                               .copyWith(color: kSecondaryColor),
                         ),
                       ],
@@ -240,7 +240,7 @@ class QuestionCard extends StatelessWidget {
             question.question!,
             style: Theme.of(context)
                 .textTheme
-                .headline6!
+                .titleLarge!
                 .copyWith(color: kBlackColor),
           ),
           const SizedBox(height: kDefaultPadding / 2),

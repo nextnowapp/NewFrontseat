@@ -33,7 +33,7 @@ class _DormitoryScreenState extends State<OnlineExamResultRow> {
               textAlign: TextAlign.start,
               style: Theme.of(context)
                   .textTheme
-                  .headline6!
+                  .titleLarge!
                   .copyWith(fontSize: ScreenUtil().setSp(15.0)),
             ),
             Padding(
@@ -50,8 +50,10 @@ class _DormitoryScreenState extends State<OnlineExamResultRow> {
                           maxLines: 1,
                           style: Theme.of(context)
                               .textTheme
-                              .headline4!
-                              .copyWith(color: const Color(0xff415094), fontWeight: FontWeight.w500),
+                              .headlineMedium!
+                              .copyWith(
+                                  color: const Color(0xff415094),
+                                  fontWeight: FontWeight.w500),
                         ),
                         const SizedBox(
                           height: 10.0,
@@ -59,8 +61,12 @@ class _DormitoryScreenState extends State<OnlineExamResultRow> {
                         Text(
                           result.marks.toString(),
                           maxLines: 1,
-                          style: Theme.of(context).textTheme.headline4!
-                              .copyWith(color: const Color(0xff415094), fontWeight: FontWeight.w400),
+                          style: Theme.of(context)
+                              .textTheme
+                              .headlineMedium!
+                              .copyWith(
+                                  color: const Color(0xff415094),
+                                  fontWeight: FontWeight.w400),
                         ),
                       ],
                     ),
@@ -74,8 +80,10 @@ class _DormitoryScreenState extends State<OnlineExamResultRow> {
                           maxLines: 1,
                           style: Theme.of(context)
                               .textTheme
-                              .headline4!
-                              .copyWith(color: const Color(0xff415094), fontWeight: FontWeight.w500),
+                              .headlineMedium!
+                              .copyWith(
+                                  color: const Color(0xff415094),
+                                  fontWeight: FontWeight.w500),
                         ),
                         const SizedBox(
                           height: 10.0,
@@ -83,8 +91,12 @@ class _DormitoryScreenState extends State<OnlineExamResultRow> {
                         Text(
                           result.passMarks.toString(),
                           maxLines: 1,
-                          style: Theme.of(context).textTheme.headline4!.
-                          copyWith(color: const Color(0xff415094), fontWeight: FontWeight.w400),
+                          style: Theme.of(context)
+                              .textTheme
+                              .headlineMedium!
+                              .copyWith(
+                                  color: const Color(0xff415094),
+                                  fontWeight: FontWeight.w400),
                         ),
                       ],
                     ),
@@ -98,8 +110,10 @@ class _DormitoryScreenState extends State<OnlineExamResultRow> {
                           maxLines: 1,
                           style: Theme.of(context)
                               .textTheme
-                              .headline4!
-                              .copyWith(color: const Color(0xff415094), fontWeight: FontWeight.w500),
+                              .headlineMedium!
+                              .copyWith(
+                                  color: const Color(0xff415094),
+                                  fontWeight: FontWeight.w500),
                         ),
                         const SizedBox(
                           height: 10.0,
@@ -107,8 +121,12 @@ class _DormitoryScreenState extends State<OnlineExamResultRow> {
                         Text(
                           result.obtains.toString(),
                           maxLines: 1,
-                          style: Theme.of(context).textTheme.headline4!
-                              .copyWith(color: const Color(0xff415094), fontWeight: FontWeight.w400),
+                          style: Theme.of(context)
+                              .textTheme
+                              .headlineMedium!
+                              .copyWith(
+                                  color: const Color(0xff415094),
+                                  fontWeight: FontWeight.w400),
                         ),
                       ],
                     ),
@@ -122,8 +140,10 @@ class _DormitoryScreenState extends State<OnlineExamResultRow> {
                           maxLines: 1,
                           style: Theme.of(context)
                               .textTheme
-                              .headline4!
-                              .copyWith(color: const Color(0xff415094), fontWeight: FontWeight.w500),
+                              .headlineMedium!
+                              .copyWith(
+                                  color: const Color(0xff415094),
+                                  fontWeight: FontWeight.w500),
                         ),
                         const SizedBox(
                           height: 10.0,
@@ -131,8 +151,12 @@ class _DormitoryScreenState extends State<OnlineExamResultRow> {
                         Text(
                           result.grade!,
                           maxLines: 1,
-                          style: Theme.of(context).textTheme.headline4!
-                              .copyWith(color: const Color(0xff415094), fontWeight: FontWeight.w400),
+                          style: Theme.of(context)
+                              .textTheme
+                              .headlineMedium!
+                              .copyWith(
+                                  color: const Color(0xff415094),
+                                  fontWeight: FontWeight.w400),
                         ),
                       ],
                     ),

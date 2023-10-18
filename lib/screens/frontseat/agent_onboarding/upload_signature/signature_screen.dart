@@ -76,9 +76,9 @@ class _SignatureScreenState extends State<SignatureScreen> {
                         },
                       ),
                       Utils.sizedBoxHeight(30),
-                      Row(
+                      const Row(
                         children: [
-                          const TextWidget(
+                          TextWidget(
                             txt: 'Draw your signature below',
                             weight: FontWeight.w500,
                             size: 15,

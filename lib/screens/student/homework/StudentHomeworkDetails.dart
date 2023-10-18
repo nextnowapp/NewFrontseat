@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:file_utils/file_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -348,8 +347,7 @@ class _StudentHomeworkDetailsScreenState
                   MaterialPageRoute(
                     builder: (context) => DownloadViewer(
                       title: title,
-                      filePath:
-                           InfixApi().root + widget.homework.fileUrl!,
+                      filePath: InfixApi().root + widget.homework.fileUrl!,
                     ),
                   ),
                 );
@@ -360,8 +358,7 @@ class _StudentHomeworkDetailsScreenState
                   context,
                   MaterialPageRoute(
                     builder: (context) => Utils.documentViewer(
-                         InfixApi().root + widget.homework.fileUrl!,
-                        context),
+                        InfixApi().root + widget.homework.fileUrl!, context),
                   ),
                 );
               } else {
@@ -385,7 +382,7 @@ class _StudentHomeworkDetailsScreenState
             MaterialPageRoute(
               builder: (context) => DownloadViewer(
                 title: title,
-                filePath:  InfixApi().root + widget.homework.fileUrl!,
+                filePath: InfixApi().root + widget.homework.fileUrl!,
               ),
             ),
           );
@@ -396,7 +393,7 @@ class _StudentHomeworkDetailsScreenState
             context,
             MaterialPageRoute(
               builder: (context) => Utils.documentViewer(
-                   InfixApi().root + widget.homework.fileUrl!, context),
+                  InfixApi().root + widget.homework.fileUrl!, context),
             ),
           );
         } else {
@@ -418,7 +415,7 @@ class _StudentHomeworkDetailsScreenState
     AlertDialog alert = AlertDialog(
       title: Text(
         'Download',
-        style: Theme.of(context).textTheme.headline5,
+        style: Theme.of(context).textTheme.headlineSmall,
       ),
       content: const Text('Would you like to download the file?'),
       actions: [
@@ -461,7 +458,7 @@ class _StudentHomeworkDetailsScreenState
       String downloadName = widget.homework.subjectName!;
       String fullPath = '$dirloc/$downloadName.pdf';
       String fileSaved = '$dirloc/$downloadName.pdf/';
-      FileUtils.mkdir([fullPath]);
+
       await dio.download(
           InfixApi().root + url, fileSaved + AppFunction.getExtention(url),
           options: Options(headers: {HttpHeaders.acceptEncodingHeader: '*'}),

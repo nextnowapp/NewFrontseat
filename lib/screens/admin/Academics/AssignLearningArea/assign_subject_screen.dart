@@ -173,7 +173,7 @@ class _AssignSubjectScreenState extends State<AssignSubjectScreen> {
                                   'Assign Learning Area',
                                   style: Theme.of(context)
                                       .textTheme
-                                      .headline6!
+                                      .titleLarge!
                                       .copyWith(
                                           color: Colors.white,
                                           fontSize: ScreenUtil().setSp(14)),
@@ -309,7 +309,7 @@ class _AssignSubjectScreenState extends State<AssignSubjectScreen> {
             dropdownSearchDecoration: InputDecoration(
               label: const Text('Select Grade*'),
               border: const OutlineInputBorder(),
-              labelStyle: Theme.of(context).textTheme.headline5,
+              labelStyle: Theme.of(context).textTheme.headlineSmall,
             ),
           ),
           onChanged: (dynamic newValue) {
@@ -357,7 +357,7 @@ class _AssignSubjectScreenState extends State<AssignSubjectScreen> {
             dropdownSearchDecoration: InputDecoration(
               label: const Text('Select Class*'),
               border: const OutlineInputBorder(),
-              labelStyle: Theme.of(context).textTheme.headline5,
+              labelStyle: Theme.of(context).textTheme.headlineSmall,
             ),
           ),
           onChanged: (dynamic newValue) {
@@ -395,7 +395,7 @@ class _AssignSubjectScreenState extends State<AssignSubjectScreen> {
             dropdownSearchDecoration: InputDecoration(
               label: const Text('Select Teacher*'),
               border: const OutlineInputBorder(),
-              labelStyle: Theme.of(context).textTheme.headline5,
+              labelStyle: Theme.of(context).textTheme.headlineSmall,
             ),
           ),
           onChanged: (dynamic newValue) {
@@ -435,7 +435,7 @@ class _AssignSubjectScreenState extends State<AssignSubjectScreen> {
             dropdownSearchDecoration: InputDecoration(
               label: const Text('Select Class*'),
               border: const OutlineInputBorder(),
-              labelStyle: Theme.of(context).textTheme.headline5,
+              labelStyle: Theme.of(context).textTheme.headlineSmall,
             ),
           ),
           onChanged: (dynamic newValue) {

@@ -4,7 +4,6 @@ import 'dart:io';
 
 // Flutter imports:
 import 'package:dio/dio.dart';
-import 'package:file_utils/file_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -141,7 +140,7 @@ class _LeaveListStudentState extends State<LeaveListStudent>
                 child: Builder(
                   builder: (context) {
                     final TabController tabController =
-                        DefaultTabController.of(context)!;
+                        DefaultTabController.of(context);
                     tabController.addListener(() {
                       if (tabController.indexIsChanging) {
                         print(tabController.index);
@@ -409,7 +408,7 @@ class _LeaveListStudentState extends State<LeaveListStudent>
             'Pending',
             textAlign: TextAlign.center,
             maxLines: 1,
-            style: Theme.of(context).textTheme.headline4!.copyWith(
+            style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                   color: const Color(0xFFc08b02),
                   fontWeight: FontWeight.w500,
                   fontSize: 12,
@@ -428,7 +427,7 @@ class _LeaveListStudentState extends State<LeaveListStudent>
             'Rejected',
             textAlign: TextAlign.center,
             maxLines: 1,
-            style: Theme.of(context).textTheme.headline4!.copyWith(
+            style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                   color: const Color(0xFFff8989),
                   fontWeight: FontWeight.w500,
                   fontSize: 12,
@@ -447,7 +446,7 @@ class _LeaveListStudentState extends State<LeaveListStudent>
             'Approved',
             textAlign: TextAlign.center,
             maxLines: 1,
-            style: Theme.of(context).textTheme.headline4!.copyWith(
+            style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                   color: const Color(0xFF449e58),
                   fontWeight: FontWeight.w500,
                   fontSize: 12,
@@ -466,7 +465,7 @@ class _LeaveListStudentState extends State<LeaveListStudent>
             'Denied',
             textAlign: TextAlign.center,
             maxLines: 1,
-            style: Theme.of(context).textTheme.headline4!.copyWith(
+            style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                   color: const Color(0xFFff8989),
                   fontWeight: FontWeight.w500,
                   fontSize: 12,
@@ -506,7 +505,7 @@ class _LeaveListStudentState extends State<LeaveListStudent>
                                 'Leave Status',
                                 style: Theme.of(context)
                                     .textTheme
-                                    .headline4!
+                                    .headlineMedium!
                                     .copyWith(fontSize: ScreenUtil().setSp(14)),
                                 maxLines: 1,
                               ),
@@ -516,7 +515,7 @@ class _LeaveListStudentState extends State<LeaveListStudent>
                               title: Text('Pending',
                                   style: Theme.of(context)
                                       .textTheme
-                                      .headline4!
+                                      .headlineMedium!
                                       .copyWith(
                                           fontSize: ScreenUtil().setSp(14))),
                               value: 'Pending',
@@ -534,7 +533,7 @@ class _LeaveListStudentState extends State<LeaveListStudent>
                               title: Text('Approved',
                                   style: Theme.of(context)
                                       .textTheme
-                                      .headline4!
+                                      .headlineMedium!
                                       .copyWith(
                                           fontSize: ScreenUtil().setSp(14))),
                               value: 'Approve',
@@ -552,7 +551,7 @@ class _LeaveListStudentState extends State<LeaveListStudent>
                               title: Text('Denied',
                                   style: Theme.of(context)
                                       .textTheme
-                                      .headline4!
+                                      .headlineMedium!
                                       .copyWith(
                                           fontSize: ScreenUtil().setSp(14))),
                               value: 'Cancel',
@@ -580,7 +579,7 @@ class _LeaveListStudentState extends State<LeaveListStudent>
                                     'Save',
                                     style: Theme.of(context)
                                         .textTheme
-                                        .headline4!
+                                        .headlineMedium!
                                         .copyWith(
                                             color: Colors.white,
                                             fontSize: ScreenUtil().setSp(14)),
@@ -665,7 +664,7 @@ class _LeaveListStudentState extends State<LeaveListStudent>
     }
 
     try {
-      FileUtils.mkdir([dirloc]);
+      
       Utils.showToast('Downloading...');
 
       await dio.download(
@@ -733,7 +732,7 @@ class _LeaveListStudentState extends State<LeaveListStudent>
       ),
     )
         .catchError((e) {
-      final errorMessage = DioExceptions.fromDioError(e).toString();
+      final errorMessage = DioExceptions.fromDioException(e).toString();
       print(errorMessage);
       Utils.showToast(errorMessage);
     });

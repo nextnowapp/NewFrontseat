@@ -134,7 +134,7 @@ class _AddAdminBookState extends State<AddAdminBook> {
                   ),
                   TextField(
                     controller: titleController,
-                    style: Theme.of(context).textTheme.headline6,
+                    style: Theme.of(context).textTheme.titleLarge,
                     autofocus: false,
                     decoration: const InputDecoration(
                         hintText: 'Enter title here', border: InputBorder.none),
@@ -145,7 +145,7 @@ class _AddAdminBookState extends State<AddAdminBook> {
                       Expanded(
                         child: TextField(
                           controller: bookNoController,
-                          style: Theme.of(context).textTheme.headline6,
+                          style: Theme.of(context).textTheme.titleLarge,
                           autofocus: false,
                           decoration: const InputDecoration(
                               hintText: 'Book number',
@@ -155,7 +155,7 @@ class _AddAdminBookState extends State<AddAdminBook> {
                       Expanded(
                         child: TextField(
                           controller: isbnNoController,
-                          style: Theme.of(context).textTheme.headline6,
+                          style: Theme.of(context).textTheme.titleLarge,
                           autofocus: false,
                           decoration: const InputDecoration(
                               hintText: 'ISBN', border: InputBorder.none),
@@ -166,7 +166,7 @@ class _AddAdminBookState extends State<AddAdminBook> {
                   BottomLine(),
                   TextField(
                     controller: publisherNameController,
-                    style: Theme.of(context).textTheme.headline6,
+                    style: Theme.of(context).textTheme.titleLarge,
                     autofocus: false,
                     decoration: const InputDecoration(
                         hintText: 'Publisher name', border: InputBorder.none),
@@ -174,7 +174,7 @@ class _AddAdminBookState extends State<AddAdminBook> {
                   BottomLine(),
                   TextField(
                     controller: authorController,
-                    style: Theme.of(context).textTheme.headline6,
+                    style: Theme.of(context).textTheme.titleLarge,
                     autofocus: false,
                     decoration: const InputDecoration(
                         hintText: 'Author name', border: InputBorder.none),
@@ -185,7 +185,7 @@ class _AddAdminBookState extends State<AddAdminBook> {
                       Expanded(
                         child: TextField(
                           controller: rackNoController,
-                          style: Theme.of(context).textTheme.headline6,
+                          style: Theme.of(context).textTheme.titleLarge,
                           autofocus: false,
                           decoration: const InputDecoration(
                               hintText: 'Rack number',
@@ -195,7 +195,7 @@ class _AddAdminBookState extends State<AddAdminBook> {
                       Expanded(
                         child: TextField(
                           controller: quantityController,
-                          style: Theme.of(context).textTheme.headline6,
+                          style: Theme.of(context).textTheme.titleLarge,
                           autofocus: false,
                           decoration: const InputDecoration(
                               hintText: 'Quantity', border: InputBorder.none),
@@ -210,7 +210,7 @@ class _AddAdminBookState extends State<AddAdminBook> {
                         child: TextField(
                           autofocus: false,
                           controller: priceController,
-                          style: Theme.of(context).textTheme.headline6,
+                          style: Theme.of(context).textTheme.titleLarge,
                           decoration: const InputDecoration(
                               hintText: 'Price', border: InputBorder.none),
                         ),
@@ -252,7 +252,7 @@ class _AddAdminBookState extends State<AddAdminBook> {
                           },
                           child: Text(
                             _selectedaAssignDate,
-                            style: Theme.of(context).textTheme.headline6,
+                            style: Theme.of(context).textTheme.titleLarge,
                           ),
                         ),
                       ),
@@ -261,7 +261,7 @@ class _AddAdminBookState extends State<AddAdminBook> {
                   BottomLine(),
                   TextField(
                     controller: descriptionController,
-                    style: Theme.of(context).textTheme.headline6,
+                    style: Theme.of(context).textTheme.titleLarge,
                     autofocus: false,
                     decoration: const InputDecoration(
                         hintText: 'Description', border: InputBorder.none),
@@ -272,7 +272,7 @@ class _AddAdminBookState extends State<AddAdminBook> {
                     width: double.infinity,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.deepPurpleAccent,
+                        backgroundColor: Colors.deepPurpleAccent,
                       ),
                       onPressed: () {
                         String title = titleController.text;
@@ -343,12 +343,12 @@ class _AddAdminBookState extends State<AddAdminBook> {
               padding: const EdgeInsets.only(left: 8.0, bottom: 10.0),
               child: Text(
                 item.title!,
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.titleLarge,
               ),
             ),
           );
         }).toList(),
-        style: Theme.of(context).textTheme.headline6!.copyWith(fontSize: 13.0),
+        style: Theme.of(context).textTheme.titleLarge!.copyWith(fontSize: 13.0),
         onChanged: (dynamic value) {
           setState(() {
             //_selectedClass = value;
@@ -375,12 +375,12 @@ class _AddAdminBookState extends State<AddAdminBook> {
               padding: const EdgeInsets.only(left: 8.0, bottom: 10.0),
               child: Text(
                 item.title!,
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.titleLarge,
               ),
             ),
           );
         }).toList(),
-        style: Theme.of(context).textTheme.headline6!.copyWith(fontSize: 13.0),
+        style: Theme.of(context).textTheme.titleLarge!.copyWith(fontSize: 13.0),
         onChanged: (dynamic value) {
           setState(() {
             //_selectedClass = value;
@@ -491,7 +491,7 @@ class _AddAdminBookState extends State<AddAdminBook> {
       ),
     )
         .catchError((e) {
-      final errorMessage = DioExceptions.fromDioError(e).toString();
+      final errorMessage = DioExceptions.fromDioException(e).toString();
       print(errorMessage);
       // Utils.showSnackBar(context, errorMessage);
       Utils.showToast(errorMessage);

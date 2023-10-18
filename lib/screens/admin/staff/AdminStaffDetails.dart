@@ -252,7 +252,7 @@ class _StaffDetailsScreenState extends State<StaffDetailsScreen> {
     ));
     response =
         await dio.post(InfixApi.staffPhoto(), data: formData).catchError((e) {
-      final errorMessage = DioExceptions.fromDioError(e).toString();
+      final errorMessage = DioExceptions.fromDioException(e).toString();
       Navigator.of(context).pop();
     });
     if (response.statusCode == 200) {
